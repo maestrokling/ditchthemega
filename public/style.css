@@ -6,10 +6,10 @@ a:hover { text-decoration: underline; }
 
 /* ── Nav ──────────────────────────────────── */
 header { background: #0f1117; border-bottom: 1px solid #1e2433; padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; }
-.site-nav { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; height: 56px; }
+.site-nav { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; padding: 0.6rem 0; min-height: 56px; }
 .nav-logo { font-weight: 800; font-size: 1.1rem; color: #f59e0b; letter-spacing: -0.02em; }
 .nav-logo:hover { text-decoration: none; opacity: 0.85; }
-.nav-link { font-size: 0.9rem; color: #94a3b8; }
+.nav-link { font-size: 0.8rem; color: #94a3b8; }
 .nav-link:hover { color: #e2e8f0; text-decoration: none; }
 
 /* ── Main ─────────────────────────────────── */
