@@ -150,6 +150,7 @@ def nav_html(active_slug=""):
     <a href="/meta/" class="nav-link">Meta</a>
     <a href="/microsoft/" class="nav-link">Microsoft</a>
     <a href="/alternatives/" class="nav-link">Alternatives</a>
+    <a href="/guides/secure-home-automation/" class="nav-link">Home Automation</a>
     <a href="/about/" class="nav-link">About</a>
   </nav>
 </header>'''
@@ -558,6 +559,7 @@ def build_landing():
 <div class="philosophy">
   <p>No data collected. No affiliate links. No paid recommendations. 
   <a href="/about/">Why we built this →</a></p>
+  <p style="margin-top:.75rem;"><strong>Deep dive:</strong> <a href="/guides/secure-home-automation/">Secure home automation without Big Tech</a> — the complete Home Assistant guide.</p>
 </div>'''
 
     website_schema = f'''<script type="application/ld+json">
