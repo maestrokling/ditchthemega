@@ -938,7 +938,7 @@ def build_about():
     <li><strong>No data collection.</strong> We don't track you. We don't have analytics. We don't use cookies.</li>
     <li><strong>No paid recommendations.</strong> No company pays to be listed. Recommendations exist because they're good.</li>
     <li><strong>Honest about tradeoffs.</strong> We have a page called <a href="/amazon/what-you-lose/">What You Actually Lose</a>. Amazon does some things well. We say so.</li>
-    <li><strong>Honest about tradeoffs.</strong> Corrections and improvements are welcome — <a href="/about/#affiliate">see our principles</a>.</li>
+    <li><strong>Open to corrections.</strong> Something wrong or out of date? Corrections and improvements are welcome — <a href="/about/#affiliate">see our principles</a>.</li>
   </ul>
 </section>
 <section class="card" id="affiliate">
