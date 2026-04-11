@@ -94,6 +94,9 @@ footer { border-top: 1px solid #1e2433; padding: 2.5rem 1rem; text-align: center
 footer a { color: #64748b; }
 footer a:hover { color: #94a3b8; }
 
+/* ── Affiliate badge ─────────────────────── */
+.aff-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.03em; padding: 1px 5px; border-radius: 3px; background: #1c2a1c; color: #6ee7b7; vertical-align: middle; margin-left: 3px; text-transform: uppercase; cursor: help; }
+
 /* ── Responsive ───────────────────────────── */
 @media (max-width: 600px) {
   .landing-hero h1 { font-size: 1.6rem; }

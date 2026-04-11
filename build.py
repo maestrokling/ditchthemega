@@ -7,6 +7,48 @@ Run: python3 build.py
 import yaml, os, glob, html, shutil, json
 from datetime import date
 
+# ── Affiliate Links ───────────────────────────────────────────────────────────
+# Replace PLACEHOLDER values with your real affiliate URLs once approved.
+# Keys are matched against alternative 'url' fields (partial match on domain).
+# Build script will use the affiliate URL when a match is found.
+# Format: "domain-fragment": "full-affiliate-url"
+AFFILIATE_LINKS = {
+    # ShareASale programs (get IDs from shareasale.com after approval)
+    "kobo.com":          "PLACEHOLDER_kobo_shareasale",
+    "libro.fm":          "PLACEHOLDER_librofm_shareasale",
+    "bookshop.org":      "PLACEHOLDER_bookshop_shareasale",
+    "chewy.com":         "PLACEHOLDER_chewy_shareasale",
+    "grove.co":          "PLACEHOLDER_grove_shareasale",
+    "thrivemarket.com":  "PLACEHOLDER_thrive_shareasale",
+    "chirpbooks.com":    "PLACEHOLDER_chirp_shareasale",
+    "iherb.com":         "PLACEHOLDER_iherb_shareasale",
+    "thredup.com":       "PLACEHOLDER_thredup_shareasale",
+    # Impact.com / direct programs
+    "shopify.com":       "PLACEHOLDER_shopify_impact",       # $150/merchant
+    "shipbob.com":       "PLACEHOLDER_shipbob_impact",
+    "scribd.com":        "PLACEHOLDER_scribd_direct",
+    "proton.me":         "PLACEHOLDER_proton_direct",
+    # Add more as you join programs
+}
+
+def affiliate_url(url):
+    """Return affiliate URL if one exists for this domain, else original URL."""
+    if not url:
+        return url
+    for domain, aff_url in AFFILIATE_LINKS.items():
+        if domain in url and not aff_url.startswith("PLACEHOLDER"):
+            return aff_url
+    return url
+
+def is_affiliate(url):
+    """Return True if this URL has a live (non-placeholder) affiliate link."""
+    if not url:
+        return False
+    for domain, aff_url in AFFILIATE_LINKS.items():
+        if domain in url and not aff_url.startswith("PLACEHOLDER"):
+            return True
+    return False
+
 CONTENT_DIR = "content/services"
 PUBLIC_DIR  = "public"
 SITE_URL    = "https://ditchthemega.com"
@@ -79,7 +121,10 @@ def render_alternatives(alts):
         url  = a.get("url","")
         cost = a.get("cost","")
         note = e(a.get("notes",""))
-        link = f'<a href="{e(url)}" target="_blank" rel="noopener">{name}</a>' if url else f"<strong>{name}</strong>"
+        dest = affiliate_url(url)
+        aff_badge = ' <span class="aff-badge" title="Affiliate link — we may earn a commission">aff</span>' if is_affiliate(url) else ""
+        rel = 'noopener sponsored' if is_affiliate(url) else 'noopener'
+        link = f'<a href="{e(dest)}" target="_blank" rel="{rel}">{name}</a>{aff_badge}' if url else f"<strong>{name}</strong>"
         cost_str = f' <span class="alt-cost">{e(cost)}</span>' if cost else ""
         items.append(f"<li>{link}{cost_str} — {note}</li>")
     return "<ul>" + "".join(items) + "</ul>"
@@ -101,7 +146,7 @@ def nav_html(active_slug=""):
 
 def footer_html():
     return f'''<footer>
-  <p>Free. Open source. No tracking. No affiliate links.</p>
+  <p>Free. Open source. No tracking. <a href="/about/#affiliate">Some links are affiliate links.</a> We only recommend services we'd list anyway.</p>
   <p>Part of the data sovereignty toolkit: 
      <a href="https://cancelfreely.com">CancelFreely</a> &middot; 
      <a href="https://deletefreely.com">DeleteFreely</a>
@@ -522,19 +567,24 @@ def build_about():
   <h2>Principles</h2>
   <ul>
     <li><strong>No data collection.</strong> We don't track you. We don't have analytics. We don't use cookies.</li>
-    <li><strong>No affiliate links.</strong> Every alternative listed is listed because it's good, not because we get paid.</li>
-    <li><strong>No paid recommendations.</strong> No one pays to be listed here.</li>
+    <li><strong>No paid recommendations.</strong> No company pays to be listed. Recommendations exist because they're good.</li>
     <li><strong>Honest about tradeoffs.</strong> We have a page called <a href="/amazon/what-you-lose/">What You Actually Lose</a>. Amazon does some things well. We say so.</li>
     <li><strong>Open source.</strong> All content is on <a href="https://github.com/maestrokling/ditchthemega" target="_blank" rel="noopener">GitHub</a>. Corrections and additions welcome.</li>
   </ul>
+</section>
+<section class="card" id="affiliate">
+  <h2>On affiliate links</h2>
+  <p>Some links on this site are affiliate links, marked with a small <span class="aff-badge">aff</span> badge. If you click one and make a purchase, we may earn a commission at no extra cost to you.</p>
+  <p>Our policy: <strong>we only link to services we would recommend regardless of whether an affiliate program exists.</strong> The alternative was listed first; the affiliate link was added after. If a better option exists that doesn't have an affiliate program, we list it anyway — you can see this throughout the site.</p>
+  <p>Affiliate commissions keep this resource free and fund continued development. CancelFreely and DeleteFreely remain completely affiliate-free. DitchTheMega is different — it's a deeper guide that takes more to maintain, and affiliate revenue is how we sustain it honestly.</p>
 </section>
 <section class="card">
   <h2>Part of a portfolio</h2>
   <p>DitchTheMega is part of a small set of data sovereignty tools:</p>
   <ul>
-    <li><a href="https://cancelfreely.com">CancelFreely</a> — cancel any subscription, step by step</li>
-    <li><a href="https://deletefreely.com">DeleteFreely</a> — delete your data from major companies</li>
-    <li>DitchTheMega — leave the most entrenched ecosystems</li>
+    <li><a href="https://cancelfreely.com">CancelFreely</a> — cancel any subscription, step by step. No affiliate links.</li>
+    <li><a href="https://deletefreely.com">DeleteFreely</a> — delete your data from major companies. No affiliate links.</li>
+    <li>DitchTheMega — leave the most entrenched ecosystems. Affiliate links disclosed.</li>
   </ul>
 </section>'''
 
