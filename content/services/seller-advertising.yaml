@@ -1,0 +1,79 @@
+slug: seller-advertising
+title: Advertising Without Amazon
+subtitle: Reaching buyers when you're not on the shelf
+category: seller
+difficulty: 3
+what_it_is: >
+  Amazon Advertising (formerly AMS) is a pay-to-play system where sellers bid to appear
+  in search results on Amazon.com. It's become effectively mandatory — organic rank alone
+  no longer drives meaningful sales in competitive categories. The average Amazon seller
+  spends 25–35% of revenue on advertising just to stay visible. Leaving Amazon means
+  rebuilding your advertising stack from scratch, but often at dramatically lower cost.
+what_you_lose:
+  - Amazon's high-intent buyer audience (people searching Amazon are ready to buy)
+  - Sponsored Products placement in Amazon search results
+  - Amazon DSP (display retargeting across Amazon properties)
+  - The closed-loop attribution Amazon provides (click → purchase on same platform)
+honest_assessment: >
+  Amazon advertising is expensive and getting more expensive. Average cost-per-click
+  has roughly tripled since 2018. In many categories, you're essentially renting
+  visibility on a platform that can also compete against you with its own private label.
+  Off-Amazon advertising costs more to set up and requires more skill, but once working,
+  the economics are typically far better — because you own the customer after the first sale.
+amazon_ad_costs:
+  - Average ACoS (Advertising Cost of Sale) — 25–35% in competitive categories
+  - Cost-per-click has risen 3x since 2018
+  - Amazon can show competitor ads on your own product pages
+  - Amazon's own private label brands compete directly in high-margin categories
+  - No customer data from ad clicks — Amazon keeps it
+alternatives:
+  - name: Google Shopping
+    url: https://merchants.google.com
+    notes: >
+      Free product listings in Google Shopping (via Google Merchant Center) + paid
+      Shopping ads. Reaches buyers searching Google — often higher intent than Amazon for
+      branded/specific product searches. Average CPC typically 20–40% lower than Amazon.
+      Best first channel after Amazon.
+  - name: Meta (Facebook/Instagram) Ads
+    url: https://www.facebook.com/business/ads
+    notes: >
+      Excellent for visual products, lifestyle brands, and reaching new audiences.
+      Not as high-intent as search, but unmatched for targeting by interest/demographic.
+      Works well for building brand awareness and remarketing to website visitors.
+  - name: TikTok Shop + TikTok Ads
+    url: https://ads.tiktok.com
+    notes: >
+      Fastest growing commerce platform. Strong for products with demo/visual appeal.
+      Native TikTok Shop ads convert directly in-feed. Early mover advantage still
+      significant in many categories. Commission 2–8% vs Amazon's 15%+.
+  - name: Pinterest Ads
+    url: https://ads.pinterest.com
+    notes: >
+      Underrated for home goods, fashion, food, beauty, and craft. High purchase intent.
+      Lower CPCs than Facebook. Strong for evergreen content that keeps driving traffic.
+  - name: Google Search Ads (non-Shopping)
+    notes: >
+      Brand name + competitor + category keywords. Captures buyers who already know
+      what they want. Essential once you have a direct website worth protecting.
+  - name: Email marketing (your list)
+    notes: >
+      Your highest-ROI channel once you have a list. Zero cost per send beyond platform
+      fees. Klaviyo automated flows (welcome, post-purchase, win-back) typically generate
+      30–40% of direct channel revenue with no ongoing ad spend.
+  - name: Influencer / creator partnerships
+    notes: >
+      Product seeding + affiliate commissions. Particularly effective on TikTok and
+      Instagram. Lower upfront cost than ads; performance-based economics.
+channel_strategy:
+  - Phase 1 — Build the foundation: Google Merchant Center (free listings) + Google Shopping ads. Lowest risk, highest intent.
+  - Phase 2 — Add retargeting: Meta pixel on your site from day one. Retarget visitors with Facebook/Instagram ads once you hit 1,000+ monthly visitors.
+  - Phase 3 — Build the list: Klaviyo email flows. Every new customer goes into automation. This becomes your lowest-cost channel.
+  - Phase 4 — Scale what works: TikTok if your category fits. Pinterest if visual/lifestyle. Creator partnerships if the economics work.
+migration_steps:
+  - Set up Google Merchant Center and connect your Shopify/WooCommerce store (free product listings start driving traffic immediately)
+  - Install the Meta Pixel on your website before running any Meta ads (you need 1,000+ events before Meta's algorithm optimizes well)
+  - Launch Google Shopping campaigns for your top 5 SKUs — start with $20–30/day budget
+  - Set up Klaviyo (or Mailchimp) with at minimum a welcome sequence and post-purchase flow
+  - Track your blended CAC (customer acquisition cost) by channel monthly — not just ROAS
+  - At 90 days, compare Google Shopping ACoS to your Amazon ACoS — most sellers find Google is 15–25% cheaper for equivalent sales
+  - Gradually shift budget from Amazon PPC to off-Amazon channels as direct channel revenue grows
