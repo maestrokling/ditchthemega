@@ -4,7 +4,7 @@ DitchTheMega build script
 Reads content/services/*.yaml → generates public/ static site
 Run: python3 build.py
 """
-import yaml, os, glob, html, shutil
+import yaml, os, glob, html, shutil, json
 from datetime import date
 
 CONTENT_DIR = "content/services"
@@ -109,6 +109,33 @@ def page_shell(title, description, canonical, content, extra_head=""):
 {footer_html()}
 </body>
 </html>'''
+
+def howto_jsonld(svc):
+    steps = svc.get("migration_steps", [])
+    if not steps:
+        return ""
+    step_items = ",\n".join(
+        f'{{"@type":"HowToStep","text":{json.dumps(str(s))}}}' for s in steps
+    )
+    title = svc["title"]
+    subtitle = svc.get("subtitle", "")
+    schema = f'''<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"HowTo",
+"name":{json.dumps(f'How to leave {title}')},
+"description":{json.dumps(subtitle)},
+"step":[{step_items}]}}
+</script>'''
+    return schema
+
+def breadcrumb_jsonld(title, slug):
+    schema = f'''<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {{"@type":"ListItem","position":1,"name":"Home","item":"{SITE_URL}/"}},
+  {{"@type":"ListItem","position":2,"name":"Amazon","item":"{SITE_URL}/amazon/"}},
+  {{"@type":"ListItem","position":3,"name":{json.dumps(title)},"item":"{SITE_URL}/amazon/{slug}/"}}
+]}}
+</script>'''
+    return schema
 
 def build_service_page(svc):
     slug = svc["slug"]
@@ -225,7 +252,8 @@ def build_service_page(svc):
     content = "\n".join(sections)
     canonical = f"{SITE_URL}/amazon/{slug}/"
     description = subtitle or f"How to leave Amazon {title} — alternatives, data export, and migration guide."
-    return page_shell(f"{title} — DitchTheMega", description, canonical, content)
+    extra_head = howto_jsonld(svc) + "\n" + breadcrumb_jsonld(title, slug)
+    return page_shell(f"{title} — DitchTheMega", description, canonical, content, extra_head=extra_head)
 
 def build_sellers_hub(services):
     seller_svcs = [s for s in services if s.get("category") == "seller"]
@@ -367,11 +395,17 @@ def build_landing():
   <a href="/about/">Why we built this →</a></p>
 </div>'''
 
+    website_schema = f'''<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"WebSite",
+"name":"DitchTheMega","url":"{SITE_URL}/",
+"description":"Practical guides to leaving Big Tech ecosystems. Free. No tracking."}}
+</script>'''
     return page_shell(
         "DitchTheMega — Leave Big Tech Ecosystems",
         "Practical guides to leaving Amazon, Google, Meta, Apple, and Microsoft. Step-by-step. Honest about tradeoffs. Free.",
         f"{SITE_URL}/",
-        content
+        content,
+        extra_head=website_schema
     )
 
 def build_about():
