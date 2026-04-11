@@ -1,0 +1,51 @@
+slug: audible
+title: Audible
+subtitle: Your audiobooks stay — your subscription doesn't have to
+category: digital-content
+difficulty: 2
+what_it_is: >
+  Audible is Amazon's audiobook subscription service ($14.95/month), the dominant
+  platform in audiobooks with a large exclusive catalog. Good news: unlike many
+  subscriptions, audiobooks you purchased on Audible remain accessible even after
+  you cancel — you just lose the monthly credit.
+what_you_lose:
+  - Monthly credit (1 credit = 1 audiobook, typically worth $15–40)
+  - Audible Originals exclusives (some titles are Audible-only)
+  - Whispersync (listen/read sync with Kindle)
+  - Member discounts on additional purchases
+honest_assessment: >
+  Audible has by far the largest audiobook catalog and the most Originals. Some titles
+  genuinely aren't available elsewhere. But $14.95/month is steep if you're listening
+  to fewer than 2 books per month — the library is usually the better deal.
+data_to_export:
+  - Your purchased audiobooks remain in your library after canceling
+  - To back up locally, use OpenAudible (free, open source) to download DRM-free versions
+  - Note same legal gray area as Kindle DRM — personal backup, not distribution
+how_to_cancel:
+  - Log in → Account Details → Cancel Membership
+  - Amazon will offer a pause option (3 months) and credit bank reminder
+  - Your purchased titles remain accessible after cancellation
+cancelfreely_link: https://cancelfreely.com/cancel/audible
+alternatives:
+  - name: Libro.fm
+    url: https://libro.fm
+    notes: Best Audible alternative. Same price. Your purchase supports a local bookstore of your choice. DRM-free MP3 downloads.
+  - name: Libby / OverDrive
+    url: https://libbyapp.com
+    notes: Free audiobooks from your library. Wait times on popular titles but always worth checking first.
+  - name: Chirp
+    url: https://www.chirpbooks.com
+    notes: Daily deals on audiobooks, often $1–4. No subscription. Great for deal hunters.
+  - name: Downpour
+    url: https://www.downpour.com
+    notes: DRM-free audiobooks. You actually own what you buy.
+  - name: Speechify
+    url: https://speechify.com
+    notes: Text-to-speech for any content. Different experience but worth knowing about.
+migration_steps:
+  - Check your credit balance before canceling — use any remaining credits on titles you want to keep
+  - Note your purchased library (Account → Library → Purchased)
+  - Cancel the subscription (your library stays accessible)
+  - Sign up for Libro.fm for future audiobook purchases
+  - Link your library card to Libby for free audiobooks
+  - Browse Chirp for discounted titles you've been putting off

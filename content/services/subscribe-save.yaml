@@ -1,0 +1,61 @@
+slug: subscribe-save
+title: Subscribe & Save
+subtitle: Auto-orders you might have forgotten about
+category: shopping
+difficulty: 2
+what_it_is: >
+  Amazon's Subscribe & Save lets you set recurring deliveries on household goods,
+  pet food, supplements, and more, with 5–15% discounts. Convenient, but also a
+  mechanism that keeps you ordering from Amazon by default without thinking about it.
+what_you_lose:
+  - The discount (typically 5–15%)
+  - Autopilot convenience for recurring purchases
+honest_assessment: >
+  Subscribe & Save is designed to make Amazon your default. The discounts are real,
+  but many brands offer their own subscriptions with equivalent or better pricing,
+  plus you build a direct relationship with the brand. Worth auditing what you're
+  actually auto-buying.
+data_to_export:
+  - Go to Amazon → Account → Subscribe & Save → Your Subscriptions
+  - Screenshot or list every active subscription before canceling
+how_to_cancel:
+  - Account → Subscribe & Save → Your Subscriptions → Cancel each item individually
+  - Or cancel your entire Amazon account which terminates all subscriptions
+alternatives_by_type:
+  - type: Household Cleaning & Personal Care
+    options:
+      - name: Grove Collaborative
+        url: https://www.grove.co
+        notes: Natural household products. Auto-ship model. Often competitive with Amazon pricing.
+      - name: Brand-direct websites
+        notes: Method, Seventh Generation, Mrs. Meyer's all sell direct with subscriptions.
+  - type: Pet Food & Supplies
+    options:
+      - name: Chewy
+        url: https://www.chewy.com
+        notes: Autoship available. Often cheaper than Amazon. Exceptional customer service.
+  - type: Natural Foods & Pantry
+    options:
+      - name: Thrive Market
+        url: https://www.thrivemarket.com
+        cost: $60/year membership
+        notes: Organic/natural at wholesale prices. Auto-ship available. Pantry staples category.
+  - type: Supplements & Vitamins
+    options:
+      - name: Brand-direct websites
+        notes: Most supplement brands (Garden of Life, NOW, Thorne) offer subscriptions direct at better pricing.
+      - name: iHerb
+        url: https://www.iherb.com
+        notes: Wide supplement selection. Auto-ship available.
+  - type: Baby & Family
+    options:
+      - name: Grove Collaborative
+        notes: Diapers, wipes, natural baby products.
+      - name: Brand-direct
+        notes: Pampers, Huggies offer direct subscription programs.
+migration_steps:
+  - Go to Account → Subscribe & Save and list every active subscription
+  - For each item, check if the brand sells direct or if a category-specific retailer covers it
+  - Set up replacements before canceling (Chewy autoship, Grove subscription, etc.)
+  - Cancel each Amazon Subscribe & Save item once the replacement is confirmed
+  - Set a calendar reminder to verify your new autoships are working after 30 days

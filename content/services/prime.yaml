@@ -1,0 +1,50 @@
+slug: prime
+title: Amazon Prime
+subtitle: The membership that bundles everything together
+category: membership
+difficulty: 2
+what_it_is: >
+  Amazon Prime is a $139/year (or $14.99/month) subscription that bundles free shipping,
+  Prime Video, Prime Music, Prime Reading, Prime Gaming, Amazon Photos storage, and
+  Whole Foods discounts. Most people signed up for shipping and stayed for the bundle.
+what_you_lose:
+  - Free 2-day (and sometimes same-day) shipping on millions of items
+  - Prime Video access (unless you pay separately at $8.99/month)
+  - Prime Music (2 million songs ad-free)
+  - Prime Reading (rotating selection of books/magazines)
+  - Prime Gaming (free games + Twitch channel sub)
+  - Unlimited Amazon Photos storage
+  - Whole Foods 10% discount + exclusive deals
+honest_assessment: >
+  The shipping benefit is real. If you order frequently, the math often works out.
+  Run the numbers: how much would you spend on shipping without Prime? Many people
+  find they order less once they're paying per shipment — which may be the point.
+data_to_export:
+  - Your complete order history (Account → Order History → Download Order Reports)
+  - Amazon Photos (download before canceling — storage drops to 5GB after)
+  - Saved lists and wishlists (manual screenshot/export)
+how_to_cancel:
+  - Go to Account & Lists → Prime Membership
+  - Click "Manage membership" → "End membership"
+  - Amazon will present 3–4 retention screens. Keep clicking through.
+  - You retain Prime benefits until the end of your current billing period
+cancelfreely_link: https://cancelfreely.com/cancel/amazon-prime
+alternatives:
+  - name: Walmart+
+    url: https://www.walmart.com/plus
+    cost: $98/year
+    notes: Free delivery on orders $35+, Paramount+ included, Walmart grocery discounts. Closest like-for-like.
+  - name: Target Circle 360
+    url: https://www.target.com/circle
+    cost: $99/year
+    notes: Free same-day delivery, Shipt included. Strong for household + grocery.
+  - name: Free shipping thresholds
+    notes: Most major retailers (Best Buy, Chewy, Zappos, Nordstrom) offer free shipping at $25–50. Order strategically.
+  - name: Local pickup / BOPIS
+    notes: Buy online, pick up in store. No shipping cost. Often same-day. Works at Target, Best Buy, Home Depot, most pharmacies.
+migration_steps:
+  - Download your order history report before canceling (Account → Order History → Download Order Reports → select date range → Request Report)
+  - Download all Amazon Photos before canceling (Photos app → select all → Download). You have until end of billing period.
+  - Identify your most-used Prime Video content (see Prime Video page for migration path)
+  - Sign up for Walmart+ or Target Circle 360 if you want a shipping membership replacement
+  - Cancel Prime. Work through the retention screens. Done.

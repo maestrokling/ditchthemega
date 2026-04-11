@@ -1,0 +1,65 @@
+slug: seller-direct-channel
+title: Building a Direct Channel
+subtitle: The customer relationship Amazon won't let you have
+category: seller
+difficulty: 3
+what_it_is: >
+  Amazon deliberately prevents sellers from building direct customer relationships.
+  No email addresses. No post-purchase contact outside Amazon's messaging system.
+  Reviews belong to Amazon. This is the core of Amazon seller dependency — and building
+  a direct channel is the most important move you can make to escape it.
+what_you_lose:
+  - Amazon's built-in traffic (you have to generate your own)
+  - Amazon's buyer trust signals (you have to build your own)
+  - The ease of listing on an existing marketplace
+honest_assessment: >
+  A direct channel costs more to build and more to maintain than Amazon listings.
+  You pay for your own traffic (ads, SEO, content). You handle your own customer service.
+  You build trust from scratch. The payoff: you own the customer relationship, the data,
+  and the brand. Every customer you acquire directly is one Amazon can't hold over you.
+email_list_as_asset: >
+  The most valuable thing an Amazon seller can build is an email list. Amazon has your
+  customers' email addresses. You don't. An email list of 10,000 buyers who know your
+  brand is worth more for long-term business value than 10x the Amazon reviews —
+  because you can take it with you when you leave.
+alternatives:
+  - name: Shopify
+    url: https://www.shopify.com
+    notes: >
+      The default recommendation for most product sellers. Full-featured, integrates
+      with everything, strong app ecosystem. $29–79/month. You own your storefront,
+      customer data, and brand experience.
+  - name: WooCommerce (WordPress)
+    url: https://woocommerce.com
+    notes: >
+      Open source. Runs on your own WordPress site. More technical setup but lower ongoing
+      costs and complete control. Good for sellers who already have a WordPress presence.
+  - name: BigCommerce
+    url: https://www.bigcommerce.com
+    notes: >
+      Enterprise-friendly alternative to Shopify. Slightly more technical, strong built-in
+      SEO features. Worth considering at higher volume.
+  - name: Squarespace Commerce
+    url: https://www.squarespace.com/ecommerce
+    notes: >
+      Simpler than Shopify. Better design templates. Good for lower-volume sellers or
+      when design matters as much as commerce features.
+email_tools:
+  - name: Klaviyo
+    url: https://www.klaviyo.com
+    notes: The standard for ecommerce email. Deep Shopify integration. Powerful automation.
+  - name: Mailchimp
+    url: https://mailchimp.com
+    notes: Simpler, lower cost for small lists. Good starting point.
+  - name: ConvertKit
+    url: https://convertkit.com
+    notes: Creator-focused. Good for sellers with content/blog strategy.
+migration_steps:
+  - Register your brand's domain (if you don't have one)
+  - Set up Shopify (or WooCommerce if you prefer self-hosted)
+  - Import your product catalog from Amazon (Shopify has Amazon import tools)
+  - Set up email capture — at minimum, a pop-up with a discount offer for first-time visitors
+  - Configure Klaviyo or Mailchimp for post-purchase emails (review request, reorder reminders)
+  - Start driving traffic via one channel (Google Shopping ads are the fastest path to purchase-intent traffic)
+  - Package inserts — include a card in Amazon orders directing customers to register at your site for warranty/support (Amazon allows this; it's how you build the list from your existing sales)
+  - Set a 6-month goal: X email subscribers, Y% revenue from direct channel

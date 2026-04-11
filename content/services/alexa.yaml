@@ -1,0 +1,82 @@
+slug: alexa
+title: Alexa & Smart Home
+subtitle: The hardest migration — and the most worth doing
+category: smart-home
+difficulty: 5
+what_it_is: >
+  Alexa is Amazon's voice assistant, running on Echo devices and integrated into
+  thousands of third-party smart home products. It controls lights, locks, thermostats,
+  music, shopping lists, routines, and drop-in calls. For many households, it's deeply
+  embedded infrastructure.
+what_you_lose:
+  - Voice control hub (unless you replace it)
+  - Alexa Routines (complex automations tied to the ecosystem)
+  - Alexa Skills you've configured
+  - Drop-in intercom between Echo devices
+  - Shopping list integration with Amazon ordering
+  - Alexa Guard (home monitoring)
+honest_assessment: >
+  This is genuinely the most complex migration in the Amazon ecosystem. Don't
+  underestimate it. The good news: every alternative is meaningfully better for privacy.
+  Alexa processes voice commands on Amazon's servers. Amazon has faced repeated
+  controversies over employees listening to recordings. Home Assistant runs entirely
+  locally — no cloud required, no data leaving your home.
+privacy_case: >
+  Amazon retains Alexa voice recordings indefinitely by default (you can delete them
+  at alexa.amazon.com/spa/index.html#settings/pages/history). In 2019, Bloomberg reported
+  Amazon employees review thousands of Alexa recordings daily. Ring has partnerships
+  with over 2,000 police departments for footage sharing. The data sovereignty argument
+  is strongest in the smart home category.
+data_to_export:
+  - Review and delete Alexa voice history at alexa.amazon.com → History
+  - Export your Routines (screenshot or note them — no export tool)
+  - List all connected smart home devices (Alexa app → Devices)
+alternatives:
+  - name: Home Assistant
+    url: https://www.home-assistant.io
+    notes: >
+      Open source, runs locally on a Raspberry Pi or mini PC. No cloud required.
+      Your data never leaves your home. Steep learning curve but deeply capable.
+      The privacy-respecting gold standard. Free.
+  - name: Apple HomeKit / Siri
+    url: https://www.apple.com/home-app
+    notes: >
+      Simple setup, excellent privacy (processing on-device), works well if you're
+      in the Apple ecosystem. Limited compared to Alexa but improving. HomePod Mini
+      ($99) is the hub.
+  - name: Google Home
+    url: https://home.google.com
+    notes: >
+      Easiest migration from Alexa. Wide device compatibility. Trades Amazon's
+      surveillance for Google's. Not a privacy win, but a dependency diversification win.
+      Nest Hub ($100) as the hub.
+device_migration:
+  - category: Smart Lights
+    notes: >
+      Philips Hue, LIFX, and most major brands support all three ecosystems.
+      Your bulbs likely work with HomeKit or Google Home already — check the app.
+  - category: Smart Plugs
+    notes: >
+      Kasa, Govee, and TP-Link plugs support Matter (the new universal standard).
+      Matter-compatible devices work with any ecosystem.
+  - category: Smart Thermostat
+    notes: >
+      Ecobee and Nest both support HomeKit, Google Home, and most support
+      Home Assistant via integrations.
+  - category: Smart Locks
+    notes: >
+      Schlage and Yale Assure work with HomeKit. Check your specific model.
+  - category: Echo Devices
+    notes: >
+      Echo hardware only works with Alexa. You'll need new hub hardware
+      (HomePod Mini, Nest Hub, or a Pi for Home Assistant).
+migration_steps:
+  - Inventory your Alexa ecosystem: open the Alexa app → Devices. List everything.
+  - Delete your Alexa voice history at alexa.amazon.com → History → Review Voice History
+  - Screenshot or document your Routines (Alexa app → More → Routines)
+  - Check each smart device for HomeKit or Google Home compatibility in its app or manual
+  - Choose your target ecosystem (Home Assistant for privacy, HomeKit for Apple users, Google Home for ease)
+  - Buy the hub (HomePod Mini $99, Nest Hub $100, or Raspberry Pi ~$80 for Home Assistant)
+  - Reconfigure devices in the new ecosystem (most take 5 minutes per device)
+  - Deregister Echo devices from your Amazon account (Alexa app → Device → Deregister)
+  - Echo devices become e-waste or donation candidates after deregistering

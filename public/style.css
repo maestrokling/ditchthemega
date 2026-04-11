@@ -1,0 +1,102 @@
+/* ── Reset & Base ─────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; background: #0f1117; color: #e2e8f0; line-height: 1.65; }
+a { color: #f59e0b; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Nav ──────────────────────────────────── */
+header { background: #0f1117; border-bottom: 1px solid #1e2433; padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; }
+.site-nav { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; height: 56px; }
+.nav-logo { font-weight: 800; font-size: 1.1rem; color: #f59e0b; letter-spacing: -0.02em; }
+.nav-logo:hover { text-decoration: none; opacity: 0.85; }
+.nav-link { font-size: 0.9rem; color: #94a3b8; }
+.nav-link:hover { color: #e2e8f0; text-decoration: none; }
+
+/* ── Main ─────────────────────────────────── */
+main { max-width: 960px; margin: 0 auto; padding: 0 1rem 4rem; }
+
+/* ── Landing ──────────────────────────────── */
+.landing-hero { text-align: center; padding: 5rem 1rem 3rem; max-width: 700px; margin: 0 auto; }
+.landing-hero h1 { font-size: 2.2rem; font-weight: 800; line-height: 1.2; color: #f1f5f9; margin-bottom: 1rem; }
+.landing-sub { font-size: 1.05rem; color: #94a3b8; line-height: 1.7; }
+
+/* ── Doors Grid ───────────────────────────── */
+.doors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
+.door { border-radius: 12px; border: 1.5px solid #1e2433; background: #161b27; transition: border-color 0.15s, transform 0.15s; }
+.door-open { border-color: #f59e0b; cursor: pointer; }
+.door-open:hover { border-color: #fbbf24; transform: translateY(-2px); text-decoration: none; }
+.door-coming { opacity: 0.5; cursor: default; }
+.door-inner { padding: 1.75rem 1.5rem; }
+.door-icon { font-size: 1.75rem; display: block; margin-bottom: 0.75rem; }
+.door h2 { font-size: 1.1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.4rem; }
+.door p { font-size: 0.85rem; color: #64748b; line-height: 1.5; margin-bottom: 0.75rem; }
+.door-status { font-size: 0.78rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+.door-status.open { background: #451a03; color: #f59e0b; }
+.door-status.coming { background: #1e2433; color: #475569; }
+
+.philosophy { text-align: center; color: #475569; font-size: 0.85rem; margin-top: 1rem; padding: 1.5rem; }
+
+/* ── Page Hero ────────────────────────────── */
+.page-hero { padding: 3rem 0 2rem; max-width: 700px; }
+.amazon-hero { max-width: 100%; }
+.breadcrumb { font-size: 0.8rem; color: #475569; margin-bottom: 0.75rem; }
+.breadcrumb a { color: #64748b; }
+.page-hero h1 { font-size: 1.9rem; font-weight: 800; color: #f1f5f9; margin-bottom: 0.5rem; line-height: 1.2; }
+.page-hero .subtitle { font-size: 1rem; color: #94a3b8; margin-bottom: 1rem; }
+
+/* ── Service Grid (Amazon hub) ────────────── */
+.service-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.service-card { display: block; background: #161b27; border: 1.5px solid #1e2433; border-radius: 10px; padding: 1.5rem; transition: border-color 0.15s, transform 0.15s; }
+.service-card:hover { border-color: #f59e0b; transform: translateY(-2px); text-decoration: none; }
+.card-honest-link { border-color: #292524; }
+.card-honest-link:hover { border-color: #d97706; }
+.service-card h2 { font-size: 1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.35rem; }
+.service-card p { font-size: 0.85rem; color: #64748b; margin-bottom: 0.6rem; }
+
+/* ── Cards ────────────────────────────────── */
+.card { background: #161b27; border: 1px solid #1e2433; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; }
+.card h2 { font-size: 1rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.75rem; }
+.card h3 { font-size: 0.9rem; font-weight: 600; color: #cbd5e1; margin: 0.75rem 0 0.4rem; }
+.card p { font-size: 0.9rem; color: #94a3b8; }
+.card ul, .card ol { padding-left: 1.25rem; font-size: 0.9rem; color: #94a3b8; }
+.card li { margin-bottom: 0.4rem; }
+.card-privacy { border-color: #3b1f1f; background: #1a1010; }
+.card-privacy h2 { color: #fca5a5; }
+.card-note { border-color: #2d2a1a; background: #16140c; }
+.card-note h2 { color: #fcd34d; }
+.card-honest { border-color: #1a2e1a; background: #0f1a0f; }
+.card-honest h2 { color: #86efac; }
+.card-steps { border-color: #1e2b3a; }
+.card-steps h2 { color: #7dd3fc; }
+
+/* ── Difficulty badge ─────────────────────── */
+.difficulty { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-top: 0.5rem; }
+.d1 { background: #052e16; color: #86efac; }
+.d2 { background: #1a2e0f; color: #a3e635; }
+.d3 { background: #2d2200; color: #fcd34d; }
+.d4 { background: #2d1500; color: #fb923c; }
+.d5 { background: #2d0d0d; color: #fca5a5; }
+
+/* ── Alternatives ─────────────────────────── */
+.card ul li a { color: #7dd3fc; }
+.alt-cost { font-size: 0.78rem; color: #64748b; margin-left: 0.3rem; }
+
+/* ── CancelFreely link ────────────────────── */
+.cf-link { font-size: 0.8rem; font-weight: 500; margin-left: 0.5rem; color: #6ee7b7; }
+
+/* ── Device / loss items ──────────────────── */
+.device-item, .loss-item { margin-bottom: 1rem; }
+.device-item strong, .loss-item h3 { font-size: 0.9rem; color: #cbd5e1; }
+.device-item p, .loss-item p { font-size: 0.875rem; color: #64748b; margin-top: 0.25rem; }
+
+/* ── Footer ───────────────────────────────── */
+footer { border-top: 1px solid #1e2433; padding: 2.5rem 1rem; text-align: center; color: #475569; font-size: 0.82rem; line-height: 1.8; }
+footer a { color: #64748b; }
+footer a:hover { color: #94a3b8; }
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 600px) {
+  .landing-hero h1 { font-size: 1.6rem; }
+  .page-hero h1 { font-size: 1.5rem; }
+  .doors-grid, .service-grid { grid-template-columns: 1fr; }
+}

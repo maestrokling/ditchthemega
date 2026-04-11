@@ -1,0 +1,66 @@
+slug: seller-fulfillment
+title: Fulfillment Without FBA
+subtitle: Amazon's best product — and how to replace it
+category: seller
+difficulty: 4
+what_it_is: >
+  Fulfillment by Amazon (FBA) is Amazon's warehousing and shipping service. You send
+  inventory to Amazon's fulfillment centers; they pick, pack, and ship. It's the logistics
+  infrastructure that powers the Prime badge and two-day shipping. It's also the deepest
+  operational dependency an Amazon seller has.
+what_you_lose:
+  - Prime badge (the most visible trust signal on Amazon — affects conversion significantly)
+  - Amazon's logistics network (150+ fulfillment centers in the US)
+  - Hands-off fulfillment (FBA handles storage, packing, shipping, and returns)
+  - Amazon's negotiated shipping rates
+honest_assessment: >
+  FBA is genuinely excellent. The cost of replacing it is real — both in dollars and
+  operational complexity. A seller moving from FBA to 3PL should expect 10–30% higher
+  fulfillment costs and significantly more operational involvement. The tradeoff: you
+  own the customer relationship, you control your inventory, and Amazon can't hold your
+  stock hostage if your account gets suspended.
+fba_real_costs:
+  - Referral fees (8–17% of sale price, regardless of fulfillment method)
+  - FBA fulfillment fees ($3.22–$6.10+ per unit depending on size/weight)
+  - Monthly storage fees ($0.87/cubic foot October–December, $0.56 off-peak)
+  - Long-term storage fees for slow-moving inventory
+  - Returns processing fees
+  - Removal fees when you want your inventory back
+alternatives:
+  - name: ShipBob
+    url: https://www.shipbob.com
+    notes: >
+      Largest independent 3PL for ecommerce. Good Shopify integration. Distributed
+      network reduces shipping costs. Transparent pricing. Strong for direct-to-consumer.
+  - name: ShipMonk
+    url: https://www.shipmonk.com
+    notes: >
+      Strong for subscription boxes and DTC brands. Flexible pricing model.
+      Good for lower-volume sellers.
+  - name: Deliverr (now Shopify Fulfillment Network)
+    url: https://www.shopify.com/fulfillment
+    notes: >
+      Shopify's built-in fulfillment network. If you're going full Shopify stack,
+      worth evaluating. Fast 2-day delivery promise.
+  - name: ShipStation
+    url: https://www.shipstation.com
+    notes: >
+      Shipping software, not a 3PL. Connects your store to any carrier. You still
+      need warehouse space, but it automates the shipping workflow. $9.99–$229/month.
+  - name: Self-fulfillment
+    notes: >
+      For low-volume sellers, fulfilling from home or a small warehouse remains viable.
+      ShipStation + your own storage. Works until you're shipping 50+ orders/day.
+  - name: Manufacturer / dropship direct
+    notes: >
+      For some product categories, working with manufacturers who dropship directly
+      eliminates the fulfillment problem entirely. Lower margins but zero inventory risk.
+migration_steps:
+  - Calculate your true FBA cost per unit (use Amazon's FBA fee calculator)
+  - Get quotes from ShipBob and ShipMonk for your top SKUs
+  - Compare total landed cost (product + fulfillment + shipping) for each option
+  - Plan inventory transition — you can run FBA and a 3PL simultaneously during transition
+  - Request inventory removal from FBA for SKUs you're moving (removal fees apply)
+  - Set up 3PL integration with your Shopify store
+  - Monitor shipping times closely — the Prime badge requires 2-day delivery; you'll lose it without FBA
+  - Consider Seller Fulfilled Prime (SFP) if you want to keep the Prime badge while leaving FBA (strict performance requirements)

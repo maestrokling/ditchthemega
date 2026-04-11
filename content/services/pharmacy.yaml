@@ -1,0 +1,53 @@
+slug: pharmacy
+title: Amazon Pharmacy
+subtitle: Your medication history is sensitive data
+category: health
+difficulty: 3
+what_it_is: >
+  Amazon Pharmacy is a mail-order pharmacy offering prescription delivery, often with
+  significant discounts for Prime members and the uninsured. Acquired via PillPack in 2018.
+  It has your complete prescription history, insurance information, and health conditions.
+what_you_lose:
+  - Prime prescription savings (many generics free or $1–5 for Prime members)
+  - Convenient home delivery
+  - Simple refill management
+honest_assessment: >
+  Amazon Pharmacy's pricing is genuinely competitive, especially for generics. But your
+  prescription history is among the most sensitive data you have — it reveals chronic
+  conditions, mental health treatment, and health vulnerabilities. Amazon's terms permit
+  using this data for advertising. Cost Plus Drugs (Mark Cuban's pharmacy) offers similar
+  pricing with far better privacy practices.
+data_to_export:
+  - Request prescription history from Amazon Pharmacy customer service (1-855-745-5725)
+  - Download your account information at privacy.amazon.com → Request My Data
+  - Your prescribing doctor can also provide prescription history
+how_to_transfer:
+  - Contact your new pharmacy and give them your name, DOB, and current pharmacy info
+  - They handle the transfer — you don't need to contact Amazon Pharmacy directly
+  - Transfers typically take 24–48 hours
+  - Confirm transfer is complete before canceling Amazon Pharmacy account
+alternatives:
+  - name: Cost Plus Drugs (Mark Cuban)
+    url: https://costplusdrugs.com
+    notes: >
+      Transparent pricing — publishes actual drug costs + 15% markup. Often dramatically
+      cheaper than insurance copays. Strong privacy practices. Best overall alternative.
+  - name: GoodRx
+    url: https://www.goodrx.com
+    notes: Free discount card/app. Works at any local pharmacy. Often matches or beats Amazon Pharmacy pricing.
+  - name: Your local pharmacy
+    notes: >
+      Walgreens, CVS, Rite Aid, and independent pharmacies. Less convenient but keeps
+      your data local and supports your community pharmacy.
+  - name: Insurance mail-order pharmacy
+    notes: Many insurance plans include mail-order pharmacy at 90-day supply pricing. Often free generics.
+  - name: Walmart Pharmacy
+    url: https://www.walmart.com/pharmacy
+    notes: Aggressively priced generics. $4 for many common generics. In-person option.
+migration_steps:
+  - Choose your new pharmacy
+  - Have your new pharmacy request the transfer (they initiate it, not you)
+  - Wait for confirmation that transfers are complete (24–48 hours)
+  - Request your full prescription history from Amazon Pharmacy before closing
+  - Close your Amazon Pharmacy account via customer service or account settings
+  - Delete Amazon Pharmacy data via privacy.amazon.com → Manage Your Data

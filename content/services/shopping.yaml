@@ -1,0 +1,90 @@
+slug: shopping
+title: Amazon Shopping
+subtitle: The store that isn't just a store
+category: shopping
+difficulty: 2
+what_it_is: >
+  Amazon's core marketplace — where third-party sellers and Amazon's own brands compete
+  on the same page, often with Amazon's private label listed first. Over 60% of product
+  searches now start on Amazon. It's become default infrastructure for online shopping.
+what_you_lose:
+  - Unmatched selection breadth (billions of products)
+  - Easy A-to-Z Guarantee returns
+  - One-click reorder
+  - The ability to find truly obscure items in one place
+honest_assessment: >
+  For common items, alternatives exist and are often price-competitive or cheaper.
+  For truly obscure, niche, or specialty items, Amazon may still be your only practical
+  option. The goal isn't zero Amazon purchases forever — it's reducing dependency and
+  conscious use rather than reflexive default.
+data_to_export:
+  - Order history report (Account → Order History → Download Order Reports)
+  - Saved addresses (note them manually)
+  - Payment methods (remove after canceling)
+alternatives_by_category:
+  - category: Books
+    options:
+      - name: Bookshop.org
+        url: https://bookshop.org
+        notes: Independent bookstore network. Same prices as Amazon. Profits go to local bookstores.
+      - name: ThriftBooks
+        url: https://www.thriftbooks.com
+        notes: Used books at significant discount. Often cheaper than Amazon used.
+      - name: Your local library (Libby)
+        url: https://libbyapp.com
+        notes: Free. Ebooks and audiobooks. Criminally underused.
+  - category: Electronics
+    options:
+      - name: Best Buy
+        url: https://www.bestbuy.com
+        notes: Price-match guarantee. Same-day pickup. Geek Squad support. Often same price.
+      - name: B&H Photo
+        url: https://www.bhphotovideo.com
+        notes: Professional-grade electronics, cameras, audio. Exceptional for tech.
+      - name: Newegg
+        url: https://www.newegg.com
+        notes: PC components, peripherals. Competitive pricing.
+  - category: Household & Cleaning
+    options:
+      - name: Grove Collaborative
+        url: https://www.grove.co
+        notes: Natural/sustainable household products. Subscribe-and-save model.
+      - name: Target
+        url: https://www.target.com
+        notes: Strong household category. Same-day pickup or delivery.
+      - name: Brand-direct
+        notes: Many brands (Method, Seventh Generation, Burt's Bees) sell direct with better pricing than Amazon.
+  - category: Clothing & Apparel
+    options:
+      - name: Brand-direct websites
+        notes: Nike, Patagonia, Levi's, etc. all sell direct, often with better selection and returns.
+      - name: Poshmark / ThredUp
+        url: https://www.thredup.com
+        notes: Secondhand. Often dramatically cheaper. Better for the planet.
+      - name: Nordstrom
+        url: https://www.nordstrom.com
+        notes: Free shipping and returns. Strong selection across price points.
+  - category: Pet Supplies
+    options:
+      - name: Chewy
+        url: https://www.chewy.com
+        notes: Often cheaper than Amazon for pet food. Auto-ship available. Exceptional customer service.
+  - category: Groceries
+    options:
+      - name: Instacart
+        notes: Works with your existing local grocery stores.
+      - name: Walmart Grocery
+        notes: Competitive pricing, strong selection.
+      - name: Local grocery delivery
+        notes: Many regional chains offer direct delivery without the Amazon middleman.
+  - category: Handmade & Unique Items
+    options:
+      - name: Etsy
+        url: https://www.etsy.com
+        notes: Handmade, vintage, craft. Supports independent makers directly.
+migration_steps:
+  - For your most frequent purchases, identify the brand. Check if they sell direct.
+  - Bookmark 2–3 category-specific retailers for your biggest spend categories.
+  - Install the Honey or Capital One Shopping extension — they surface better prices across retailers.
+  - Try Bookshop.org for your next book purchase. The price is the same.
+  - For recurring household items, set up Chewy (pets) or Grove (household) subscriptions.

@@ -1,0 +1,63 @@
+slug: kindle
+title: Kindle & Digital Books
+subtitle: Books you bought but don't own
+category: digital-content
+difficulty: 4
+what_it_is: >
+  Kindle is Amazon's ebook ecosystem — hardware readers, the iOS/Android app, and a
+  library of purchased ebooks and Kindle Unlimited titles. The critical detail: ebooks
+  you "bought" on Kindle are licenses, not ownership. Amazon can revoke access. In 2009,
+  Amazon remotely deleted copies of 1984 from customers' Kindles. That happened.
+what_you_lose:
+  - Access to your entire purchased Kindle library if you close your Amazon account
+  - Kindle device functionality (hardware still works; purchasing/syncing stops)
+  - Kindle Unlimited subscription library access
+  - X-Ray, Whispersync, and other Kindle-specific features
+honest_assessment: >
+  This is the hardest digital migration emotionally. People have hundreds of "purchased"
+  books. The DRM reality is uncomfortable: you don't own them. Calibre + DeDRM can
+  create personal backups of books you've purchased — this is legally complex (see note
+  below) but widely practiced for personal archiving. The better long-term move is buying
+  DRM-free ebooks going forward.
+drm_note: >
+  LEGAL NOTE: Circumventing DRM (copy protection) is technically prohibited under the
+  DMCA in the US and similar laws elsewhere, even for personal backup of content you
+  purchased. In practice, Amazon has never sued an individual for personal Calibre use,
+  and the EFF considers personal backup a reasonable practice. This is a gray area. We're
+  documenting it honestly, not recommending you break the law.
+data_to_export:
+  - Kindle books (via Calibre + DeDRM plugin — see legal note)
+  - Kindle highlights and notes (export at read.amazon.com/notebook)
+  - Purchase history (Amazon account → Digital Orders)
+how_to_backup_legally:
+  - Download the Kindle desktop app (Mac/PC)
+  - Download all your purchased books to the desktop app
+  - Install Calibre (free, open source ebook manager) from calibre-ebook.com
+  - With DeDRM plugin installed, imported books become DRM-free personal backups
+  - Note: This is for personal use only. Distribution is piracy.
+alternatives:
+  - name: Kobo
+    url: https://www.kobo.com
+    notes: Best Kindle alternative. Supports open epub format. Works with library books (Libby). Owned by Rakuten. Highly recommended.
+  - name: Libby / OverDrive
+    url: https://libbyapp.com
+    notes: Free library ebooks and audiobooks. Works on any device. Your library card is a subscription you already paid for.
+  - name: Standard Ebooks
+    url: https://standardebooks.org
+    notes: Free, beautifully formatted public domain ebooks. DRM-free.
+  - name: Smashwords / Draft2Digital
+    url: https://www.draft2digital.com
+    notes: Many indie authors sell DRM-free directly here. Buy once, own forever.
+  - name: Humble Bundle (books)
+    url: https://www.humblebundle.com/books
+    notes: DRM-free ebook bundles at steep discounts. Proceeds to charity.
+  - name: Bookshop.org (physical)
+    url: https://bookshop.org
+    notes: If you're moving away from ebooks entirely, physical books from Bookshop.org support indie bookstores.
+migration_steps:
+  - Go to read.amazon.com/notebook and export your highlights and notes (download before leaving)
+  - Download all purchased Kindle books to the desktop app while your account is active
+  - Create personal backups using Calibre (see DRM note — your decision to make)
+  - Create a Kobo account — it supports epub format and Libby library integration
+  - For future ebook purchases, buy from Kobo, direct from publishers, or DRM-free sources
+  - Get a Libby account linked to your library card. It's free.

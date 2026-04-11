@@ -1,0 +1,51 @@
+slug: photos
+title: Amazon Photos
+subtitle: Unlimited storage with strings attached
+category: storage
+difficulty: 2
+what_it_is: >
+  Amazon Photos offers unlimited full-resolution photo storage for Prime members
+  (5GB free for non-Prime). It includes automatic backup via mobile app, a shared
+  family vault (up to 6 people), and basic editing tools. The catch: it requires
+  Prime, and your photos live on Amazon's servers.
+what_you_lose:
+  - Unlimited photo storage (drops to 5GB free tier after Prime cancellation)
+  - Automatic photo backup from your phone
+  - Family vault sharing
+  - Amazon's AI-powered photo organization (faces, objects, places)
+honest_assessment: >
+  Amazon Photos is genuinely good — unlimited storage at Prime pricing is hard to beat.
+  But your photos are among your most personal data. They reveal your location history,
+  your relationships, your home. Storing them with Amazon means Amazon can analyze them.
+  iCloud and Google Photos involve the same tradeoff with different companies. Proton Drive
+  and local NAS are the privacy-first alternatives.
+data_to_export:
+  - Amazon Photos app → select all → Download (mobile)
+  - Web: photos.amazon.com → select all → Download
+  - Large libraries: use Amazon's data export at privacy.amazon.com → Request My Data
+  - Export before your Prime subscription ends — post-cancellation access drops to 5GB
+alternatives:
+  - name: iCloud Photos
+    url: https://www.icloud.com
+    cost: Free 5GB; $0.99/month 50GB; $2.99/month 200GB
+    notes: Apple ecosystem. On-device processing for facial recognition. Better privacy than Amazon or Google.
+  - name: Google Photos
+    url: https://photos.google.com
+    cost: Free 15GB; $2.99/month 100GB
+    notes: Best AI organization features. Trades Amazon's analysis for Google's. Not a privacy win, but a diversification win.
+  - name: Proton Drive
+    url: https://proton.me/drive
+    cost: Free 1GB; from $3.99/month 200GB
+    notes: End-to-end encrypted. Photos stay private even from Proton. Best privacy option if you trust a cloud service.
+  - name: Local NAS (Synology/QNAP)
+    notes: Your photos, on your hardware, in your home. Synology Photos is excellent. One-time hardware cost (~$200–400).
+  - name: Immich (self-hosted)
+    url: https://immich.app
+    notes: Open-source Google Photos alternative. Self-hosted on your own server or NAS. Free. Full privacy.
+migration_steps:
+  - Go to photos.amazon.com and select all photos → Download (do this while Prime is active)
+  - For large libraries, request your data at privacy.amazon.com (takes 1–7 days to prepare)
+  - Choose your new photo home (iCloud for Apple users, Proton Drive for privacy, Synology for full control)
+  - Install your new photo app and let it back up your library
+  - Verify the backup is complete before canceling Amazon Photos access
+  - After Prime cancellation, storage drops to 5GB — delete Amazon Photos data at that point

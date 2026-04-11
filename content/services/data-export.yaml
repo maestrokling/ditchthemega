@@ -1,0 +1,61 @@
+slug: data-export
+title: Your Amazon Data
+subtitle: What Amazon knows about you — and how to get it back
+category: data-privacy
+difficulty: 3
+what_it_is: >
+  Amazon has accumulated years of data about you: every product you've searched,
+  every page you've viewed, everything you've bought, every Alexa command you've spoken,
+  every Ring visitor, every photo you've stored, every book you've highlighted. Before
+  you leave, get your data — and understand what you're leaving behind.
+what_amazon_has:
+  - Purchase history (every order, ever)
+  - Browsing history (every product page visited)
+  - Search history (every search on Amazon.com)
+  - Alexa voice recordings (every command to every Echo device)
+  - Alexa smart home data (when you turned lights on/off, your routines)
+  - Ring footage and motion event history
+  - Amazon Photos (your complete photo library)
+  - Kindle reading history, highlights, notes, and reading pace data
+  - Prime Video watch history and search history
+  - Amazon Pharmacy prescription history
+  - Location data (from Alexa, Ring, and delivery tracking)
+  - Payment and financial information
+  - Reviews and ratings you've submitted
+  - Wishlists and saved items
+  - Customer service interactions
+honest_assessment: >
+  Amazon's data profile on you is one of the most comprehensive any company holds.
+  The combination of what you buy, what you say to Alexa, who comes to your door via Ring,
+  what you read, and what you search paints an extraordinarily detailed picture of your
+  life. Download it. Review it. Then delete it.
+how_to_request:
+  - Go to privacy.amazon.com
+  - Click "Request My Data"
+  - Select data types (select all)
+  - Amazon will email you when the download is ready (typically 1–7 days)
+  - Download is a ZIP file with your complete data profile
+what_to_do_with_it:
+  - Review the Alexa voice recordings — you can listen to them
+  - Check the browsing history — it reveals what Amazon has inferred about you
+  - Keep the order history as your own record
+  - Delete the rest
+how_to_delete:
+  - Alexa voice history → alexa.amazon.com → History → Delete All Recordings
+  - Amazon browsing history → amazon.com → Browsing History → Manage History → Remove All Items
+  - Prime Video history → primevideo.com → Account & Settings → Watch History
+  - Amazon search history → amazon.com → Search → Browsing History (manage in account)
+  - Full account deletion → amazon.com/privacy/data-handling/delete-your-account
+account_deletion_warning: >
+  Closing your Amazon account is permanent. You lose access to all digital purchases
+  (Kindle books, Prime Video purchases, music), order history, and the ability to
+  contact sellers about past orders. Download everything first. This is a significant
+  decision — many people reduce Amazon use significantly without full account closure.
+migration_steps:
+  - Request your data download at privacy.amazon.com (takes 1–7 days — do this first)
+  - While waiting, download Kindle books, Amazon Photos, and Prime Video purchases
+  - When data arrives, review and save anything you want to keep
+  - Delete Alexa voice history, browsing history, and Prime Video watch history
+  - Cancel all active subscriptions (Prime, Audible, Subscribe & Save items)
+  - If closing account: verify all other services migrated first, then delete at amazon.com/privacy/data-handling/delete-your-account
+  - After account deletion, Amazon retains some data per their privacy policy (order records for tax/legal purposes) but your active profile is removed

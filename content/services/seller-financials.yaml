@@ -1,0 +1,45 @@
+slug: seller-financials
+title: The Financial Reality
+subtitle: What you actually keep on Amazon vs. everywhere else
+category: seller
+difficulty: 2
+what_it_is: >
+  Most Amazon sellers know their Amazon margins. Fewer have run the numbers on what
+  they'd keep selling direct, through Etsy, or on Walmart. The comparison is not always
+  in Amazon's favor — especially once you account for advertising spend.
+honest_assessment: >
+  Amazon's fee structure is designed to obscure the true cost. Referral fees, FBA fees,
+  storage fees, and advertising costs each arrive on separate invoices. When you add
+  them all up for a typical mid-market product, Amazon often takes 35–50% of the sale
+  price. The question isn't "does Amazon take less than Shopify?" — it's "does Amazon's
+  traffic justify the premium?"
+amazon_fee_structure:
+  - Referral fee — 8–17% of sale price (category-dependent; books 15%, electronics 8%, clothing 17%)
+  - FBA fulfillment fee — $3.22–$6.10+ per unit (size/weight dependent)
+  - FBA storage — $0.56–$0.87/cubic foot/month
+  - Advertising (PPC) — Amazon average ACoS is 25–35% for competitive categories
+  - Returns — Amazon's return rate is often higher than direct (easy returns policy)
+  - Long-term storage — additional penalty for slow-moving inventory
+channel_comparison:
+  - channel: Amazon (FBA, with advertising)
+    typical_take: 35–50% of sale price
+    notes: High traffic, high competition, no customer data, account suspension risk
+  - channel: Shopify (direct, with Google Shopping ads)
+    typical_take: 15–25% of sale price
+    notes: You own customer data, lower fees, but you pay for your own traffic
+  - channel: Etsy
+    typical_take: 15–20% of sale price
+    notes: 6.5% transaction + listing fees + optional Etsy Ads. Built-in audience for handmade/unique
+  - channel: Walmart Marketplace
+    typical_take: 8–15% of sale price
+    notes: Referral fees only (no fulfillment fees if self-fulfilling). Lower ad costs than Amazon currently.
+  - channel: Direct (no ads, organic/email)
+    typical_take: 5–10% of sale price
+    notes: Best margin but requires established brand and traffic. This is the long-term goal.
+migration_steps:
+  - Pull your last 90 days of Amazon seller reports and calculate true margin per SKU (after all fees + ads)
+  - Run the same SKU through ShipBob's calculator at the Shopify price you'd charge
+  - Compare the net dollar amount per unit — not the percentage
+  - For high-margin products, direct channel economics are usually compelling
+  - For commodity/low-margin products, Amazon's traffic may still justify the fee premium
+  - Build a 12-month financial model: current state vs. target state (60% Amazon, 40% other channels)

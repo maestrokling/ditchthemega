@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexa &amp; Smart Home — DitchTheMega</title>
+  <meta name="description" content="The hardest migration — and the most worth doing">
+  <link rel="canonical" href="https://ditchthemega.com/amazon/alexa/">
+  <meta property="og:title" content="Alexa &amp; Smart Home — DitchTheMega">
+  <meta property="og:description" content="The hardest migration — and the most worth doing">
+  <meta property="og:url" content="https://ditchthemega.com/amazon/alexa/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+<header>
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">DitchTheMega</a>
+    <a href="/amazon/" class="nav-link">Amazon Guide</a>
+    <a href="/about/" class="nav-link">About</a>
+  </nav>
+</header>
+<main>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="/amazon/">Amazon</a> › Alexa &amp; Smart Home</div>
+  <h1>Alexa &amp; Smart Home</h1>
+  <p class="subtitle">The hardest migration — and the most worth doing</p>
+  <span class="difficulty d5">Very Hard migration</span>
+</div>
+<section class="card"><h2>What it is</h2><p>Alexa is Amazon&#x27;s voice assistant, running on Echo devices and integrated into thousands of third-party smart home products. It controls lights, locks, thermostats, music, shopping lists, routines, and drop-in calls. For many households, it&#x27;s deeply embedded infrastructure.
+</p></section>
+<section class="card card-privacy"><h2>⚠️ The privacy case</h2><p>Amazon retains Alexa voice recordings indefinitely by default (you can delete them at alexa.amazon.com/spa/index.html#settings/pages/history). In 2019, Bloomberg reported Amazon employees review thousands of Alexa recordings daily. Ring has partnerships with over 2,000 police departments for footage sharing. The data sovereignty argument is strongest in the smart home category.
+</p></section>
+<section class="card card-honest"><h2>Honest assessment</h2><p>This is genuinely the most complex migration in the Amazon ecosystem. Don&#x27;t underestimate it. The good news: every alternative is meaningfully better for privacy. Alexa processes voice commands on Amazon&#x27;s servers. Amazon has faced repeated controversies over employees listening to recordings. Home Assistant runs entirely locally — no cloud required, no data leaving your home.
+</p></section>
+<section class="card"><h2>What you lose</h2><ul><li>Voice control hub (unless you replace it)</li><li>Alexa Routines (complex automations tied to the ecosystem)</li><li>Alexa Skills you&#x27;ve configured</li><li>Drop-in intercom between Echo devices</li><li>Shopping list integration with Amazon ordering</li><li>Alexa Guard (home monitoring)</li></ul></section>
+<section class="card"><h2>Data to export first</h2><ul><li>Review and delete Alexa voice history at alexa.amazon.com → History</li><li>Export your Routines (screenshot or note them — no export tool)</li><li>List all connected smart home devices (Alexa app → Devices)</li></ul></section>
+<section class="card"><h2>Alternatives</h2><ul><li><a href="https://www.home-assistant.io" target="_blank" rel="noopener">Home Assistant</a> — Open source, runs locally on a Raspberry Pi or mini PC. No cloud required. Your data never leaves your home. Steep learning curve but deeply capable. The privacy-respecting gold standard. Free.
+</li><li><a href="https://www.apple.com/home-app" target="_blank" rel="noopener">Apple HomeKit / Siri</a> — Simple setup, excellent privacy (processing on-device), works well if you&#x27;re in the Apple ecosystem. Limited compared to Alexa but improving. HomePod Mini ($99) is the hub.
+</li><li><a href="https://home.google.com" target="_blank" rel="noopener">Google Home</a> — Easiest migration from Alexa. Wide device compatibility. Trades Amazon&#x27;s surveillance for Google&#x27;s. Not a privacy win, but a dependency diversification win. Nest Hub ($100) as the hub.
+</li></ul></section>
+<section class="card"><h2>Device-by-device migration</h2><div class="device-item"><strong>Smart Lights</strong><p>Philips Hue, LIFX, and most major brands support all three ecosystems. Your bulbs likely work with HomeKit or Google Home already — check the app.
+</p></div><div class="device-item"><strong>Smart Plugs</strong><p>Kasa, Govee, and TP-Link plugs support Matter (the new universal standard). Matter-compatible devices work with any ecosystem.
+</p></div><div class="device-item"><strong>Smart Thermostat</strong><p>Ecobee and Nest both support HomeKit, Google Home, and most support Home Assistant via integrations.
+</p></div><div class="device-item"><strong>Smart Locks</strong><p>Schlage and Yale Assure work with HomeKit. Check your specific model.
+</p></div><div class="device-item"><strong>Echo Devices</strong><p>Echo hardware only works with Alexa. You&#x27;ll need new hub hardware (HomePod Mini, Nest Hub, or a Pi for Home Assistant).
+</p></div></section>
+<section class="card card-steps"><h2>Migration steps</h2><ol><li>{&#x27;Inventory your Alexa ecosystem&#x27;: &#x27;open the Alexa app → Devices. List everything.&#x27;}</li><li>Delete your Alexa voice history at alexa.amazon.com → History → Review Voice History</li><li>Screenshot or document your Routines (Alexa app → More → Routines)</li><li>Check each smart device for HomeKit or Google Home compatibility in its app or manual</li><li>Choose your target ecosystem (Home Assistant for privacy, HomeKit for Apple users, Google Home for ease)</li><li>Buy the hub (HomePod Mini $99, Nest Hub $100, or Raspberry Pi ~$80 for Home Assistant)</li><li>Reconfigure devices in the new ecosystem (most take 5 minutes per device)</li><li>Deregister Echo devices from your Amazon account (Alexa app → Device → Deregister)</li><li>Echo devices become e-waste or donation candidates after deregistering</li></ol></section>
+</main>
+<footer>
+  <p>Free. Open source. No tracking. No affiliate links.</p>
+  <p>Part of the data sovereignty toolkit: 
+     <a href="https://cancelfreely.com">CancelFreely</a> &middot; 
+     <a href="https://deletefreely.com">DeleteFreely</a>
+  </p>
+  <p><a href="https://github.com/maestrokling/ditchthemega">GitHub</a> &middot; <a href="/about/">About</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+slug: prime-video
+title: Prime Video
+subtitle: What you purchased vs. what you rented
+category: streaming
+difficulty: 2
+what_it_is: >
+  Prime Video is Amazon's streaming service, bundled with Prime at no extra charge or
+  available standalone at $8.99/month. It includes Prime Originals (The Boys, Rings of
+  Power, Reacher), licensed content, and the ability to purchase/rent individual titles.
+what_you_lose:
+  - Access to Prime Originals catalog (some genuinely excellent shows)
+  - Licensed content included with Prime
+  - Purchased/rented titles remain accessible even after canceling Prime
+  - Channels add-ons you may have subscribed to through Prime Video
+honest_assessment: >
+  Prime Video's value is mostly as a bundle add-on — it's hard to justify $8.99/month
+  standalone when Netflix, Max, or Apple TV+ exist. The real question is which Originals
+  you'd miss. Make a list before canceling. Some (Rings of Power, The Boys, Fallout) are
+  Amazon-exclusive and unavailable elsewhere. That's a real loss if you're watching them.
+data_to_export:
+  - Purchased titles: remain in your library after canceling Prime
+  - Watchlist: screenshot or manually note it — no export tool exists
+  - Watch history: accessible at primevideo.com/settings/watch-history
+alternatives:
+  - name: Netflix
+    url: https://www.netflix.com
+    cost: $7–23/month
+    notes: Largest original content library. Strong films and prestige TV.
+  - name: Apple TV+
+    url: https://tv.apple.com
+    cost: $9.99/month
+    notes: Small but high-quality original catalog (Severance, Ted Lasso, The Morning Show). Free with Apple device purchase.
+  - name: Max (HBO)
+    url: https://www.max.com
+    cost: $9.99–16.99/month
+    notes: HBO prestige content + Warner Bros. films. Best single-service content quality.
+  - name: Disney+
+    url: https://www.disneyplus.com
+    cost: $7.99–13.99/month
+    notes: Marvel, Star Wars, Disney, Pixar, National Geographic.
+  - name: Tubi / Pluto TV
+    url: https://tubitv.com
+    notes: Free, ad-supported. Surprisingly deep catalog. No cost alternative for casual viewing.
+migration_steps:
+  - Screenshot your watchlist before canceling (no export option exists)
+  - Check your purchase history — titles you bought remain accessible
+  - Identify which Prime Originals you're actively watching and would miss
+  - If Originals are a dealbreaker, keep Prime Video standalone ($8.99/month) rather than full Prime
+  - Sign up for whichever streaming service covers your actual viewing habits
+  - Cancel Prime — purchased content stays in your library

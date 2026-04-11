@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ditchthemega.com/sitemap.xml

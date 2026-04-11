@@ -1,0 +1,36 @@
+slug: seller-assessment
+title: Seller Assessment
+subtitle: Where are you actually dependent on Amazon?
+category: seller
+difficulty: 3
+what_it_is: >
+  Before you can reduce Amazon dependency as a seller, you need an honest picture of
+  how dependent you actually are. Most sellers underestimate it — not just revenue
+  concentration, but the invisible dependencies: customer relationships Amazon controls,
+  data Amazon withholds, and the "Prime badge" that determines whether you're
+  discoverable at all.
+what_you_lose:
+  - Prime badge (dramatically affects conversion rates for many categories)
+  - Amazon's built-in buyer trust and A-to-Z Guarantee
+  - FBA logistics network (if using it)
+  - Access to Amazon's buyer base (300 million+ active accounts)
+  - Amazon's search as a discovery channel
+honest_assessment: >
+  Amazon has built a system where seller dependency is structural, not accidental.
+  They deliberately prevent seller-buyer relationships: you don't get customer email
+  addresses, you can't contact buyers off-platform, and reviews belong to Amazon, not you.
+  This isn't a bug. It's the product. Reducing dependency means rebuilding the customer
+  relationship Amazon has been holding hostage.
+what_to_measure:
+  - Revenue: What % of your total revenue comes through Amazon?
+  - Customer data: Do you have a direct email list for your customers? (If Amazon is your primary channel, the answer is probably no.)
+  - Reviews: All your Amazon reviews belong to Amazon. You cannot take them with you.
+  - Traffic: Are buyers finding you through Amazon search, or do they know your brand directly?
+  - Fulfillment: Are you using FBA? What would fulfillment cost without it?
+migration_steps:
+  - Calculate your Amazon revenue concentration (Amazon revenue ÷ total revenue)
+  - Audit your customer data — do you have direct email contact for any of your customers?
+  - List your top 10 SKUs and check if they exist on your own website or other channels
+  - Check if your product category has strong alternatives (Etsy for handmade, Faire for wholesale, etc.)
+  - Set a target: most advisors suggest getting Amazon below 50% of revenue as a first milestone
+  - Read the Building a Direct Channel and Alternative Marketplaces guides before making any moves

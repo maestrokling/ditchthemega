@@ -1,0 +1,63 @@
+slug: ring
+title: Ring Security Cameras
+subtitle: Footage you share with more people than you think
+category: smart-home
+difficulty: 4
+what_it_is: >
+  Ring makes video doorbells and security cameras, acquired by Amazon in 2018 for $1 billion.
+  Ring footage is stored in Amazon's cloud. The company has had extensive partnerships
+  with law enforcement, facing widespread criticism for enabling surveillance infrastructure
+  without meaningful user consent.
+privacy_case: >
+  Ring has partnered with over 2,000 US police departments through its "Neighbors" app,
+  allowing law enforcement to request footage from Ring owners. In 2022, Ring admitted
+  giving police footage without user consent or a warrant in at least 11 cases. In 2023,
+  the FTC fined Ring $5.8 million for allowing employees and contractors to access
+  customer videos. Your front door footage is shared more broadly than most people assume.
+what_you_lose:
+  - Existing Ring hardware (cannot be migrated to another platform)
+  - Cloud-stored footage history (download before leaving)
+  - Ring Neighbors community feed
+  - Ring Alarm integration if you use it
+honest_assessment: >
+  Ring hardware is sunk cost. You will need to replace it with new hardware.
+  The privacy argument here is unusually strong — this isn't about convenience,
+  it's about who has access to footage of your front door.
+data_to_export:
+  - Download all footage before canceling (Ring app → Event History → download clips)
+  - Ring only stores 60 days of footage — download before you cancel
+  - Export your Ring account data at ring.com/account/data-privacy
+how_to_cancel:
+  - Download all footage first (see above)
+  - Cancel Ring Protect subscription at ring.com → Account → Ring Protect Plan
+  - Delete your Ring account at ring.com/account/data-privacy → Delete Account
+alternatives:
+  - name: UniFi Protect (Ubiquiti)
+    url: https://ui.com/camera-security
+    notes: >
+      Local storage only — footage stays on your network, never goes to a cloud server.
+      Excellent hardware quality. Requires a UniFi NVR or Dream Machine as hub (~$200+).
+      Best choice for privacy-first users willing to invest in setup.
+  - name: Eufy Security
+    url: https://www.eufylife.com
+    notes: >
+      Local storage option available. No mandatory cloud subscription. HomeBase hub
+      stores footage locally. More privacy-conscious than Ring, easier than UniFi.
+  - name: Arlo
+    url: https://www.arlo.com
+    notes: >
+      Cloud-based but not Amazon. Better privacy policies than Ring. No law enforcement
+      partnerships. Free tier available.
+  - name: Reolink
+    url: https://reolink.com
+    notes: >
+      Budget-friendly. Local storage via SD card or NAS. No subscription required.
+      Good option for simple setups.
+migration_steps:
+  - Download all Ring footage immediately (Ring app → three dots → Save Video for each clip, or use third-party batch downloader)
+  - Cancel Ring Protect subscription to stop billing
+  - Export your account data at ring.com/account/data-privacy
+  - Decide on replacement hardware (UniFi for maximum privacy, Eufy for ease, Reolink for budget)
+  - Install new hardware and verify coverage before removing Ring devices
+  - Delete your Ring account (ring.com → Account → Delete Account)
+  - Physically remove Ring devices — they have no value after account deletion
