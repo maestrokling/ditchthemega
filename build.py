@@ -666,6 +666,21 @@ def build_google_hub(services):
   </div>
 </a>'''
 
+    # Add featured cards for the custom pages
+    cards += '''<a href="/google/cutting-the-pipeline/" class="service-card" style="border-color:#f59e0b;">
+  <div class="service-card-inner">
+    <h2>Cutting the Pipeline</h2>
+    <p>The phased 3-month plan. Stop the flow, drain the reservoir.</p>
+    <span class="difficulty d1">Start here</span>
+  </div>
+</a>'''
+    cards += '''<a href="/google/your-content/" class="service-card card-honest-link">
+  <div class="service-card-inner">
+    <h2>Your Digital Content</h2>
+    <p>What to export, what transfers, what Google keeps</p>
+  </div>
+</a>'''
+
     content = f'''<div class="page-hero amazon-hero">
   <div class="breadcrumb"><a href="/">Home</a> › Google</div>
   <h1>Leaving the Google Ecosystem</h1>
@@ -999,6 +1014,221 @@ def build_your_content_page(ecosystem, slug_prefix, title_subtitle, intro, secti
         f"Your {ecosystem} Digital Content | DitchTheMega",
         f"What you can take from {ecosystem}\'s ecosystem, what you can replace, and what you effectively lose.",
         f"{SITE_URL}/{slug_prefix}/your-content/",
+        content
+    )
+
+def build_google_cutting_pipeline():
+    content = '''
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="/google/">Google</a> › Cutting the Pipeline</div>
+  <h1>Cutting the Pipeline</h1>
+  <p class="subtitle">A phased, realistic guide to disentangling your life from Google\'s surveillance infrastructure. Not a product swap list. A migration plan organized by what actually matters most.</p>
+</div>
+
+<div class="card card-privacy">
+  <h2>Two separate projects</h2>
+  <p><strong>Project 1: Stop the flow.</strong> Replace Google services so new data stops being collected. This is what every other guide covers.</p>
+  <p style="margin-top:.5rem;"><strong>Project 2: Drain the reservoir.</strong> Delete, export, or restrict the data Google already has about you. Almost nobody covers this.</p>
+  <p style="margin-top:.5rem;">Both projects take time. Both matter. This guide covers both, in the order that actually works.</p>
+</div>
+
+<section class="card">
+  <h2>The order of operations</h2>
+  <p>Most guides say \"start with the easy things.\" That\'s wrong. <strong>Start with the services that leak the most data per day, regardless of difficulty.</strong></p>
+  <p style="margin-top:.75rem;margin-bottom:.5rem;color:#94a3b8;font-size:0.85rem;">Ranked by daily data leakage:</p>
+  <ol style="font-size:0.875rem;">
+    <li><strong>Chrome</strong> — every page you visit, every search, every form you fill, every password you save</li>
+    <li><strong>Google Search</strong> — every question you ask, every curiosity, every fear, every symptom</li>
+    <li><strong>Android / Google Play Services</strong> — your location, app usage, contacts, call log, WiFi connections</li>
+    <li><strong>Google Maps</strong> — everywhere you go, how long you stay, how you get there</li>
+    <li><strong>Gmail</strong> — every email sent and received, every receipt, every password reset</li>
+    <li><strong>YouTube</strong> — everything you watch, how long, what you search for, what you click away from</li>
+    <li>Google Drive, Photos, Calendar, Contacts, Assistant/Nest (significant but lower volume)</li>
+  </ol>
+  <p style="margin-top:.75rem;">The top four account for the vast majority of data Google collects. Replace those four first.</p>
+</section>
+
+<h2>Phase 1 — The Big Four (Week 1–2)</h2>
+
+<section class="card card-steps">
+  <h2>1A: Replace Chrome</h2>
+  <p><em>Why first:</em> Chrome gives Google visibility into every URL you visit, every search, every form you fill, every password. Replacing it reduces Google\'s visibility more than any other single change.</p>
+  <ul>
+    <li><strong>Brave</strong> — Chromium-based; your extensions still work; built-in ad/tracker blocking; no telemetry to Google</li>
+    <li><strong>Firefox</strong> — independent engine; more customizable; strong privacy with the right settings</li>
+  </ul>
+  <p>How: Install Brave or Firefox → import bookmarks/passwords from Chrome (one-click) → set as system default → sign out of Chrome → after two weeks without issues, uninstall Chrome.</p>
+  <p style="color:#94a3b8;font-size:0.85rem;">Time: 15 minutes.</p>
+</section>
+
+<section class="card card-steps">
+  <h2>1B: Replace Google Search</h2>
+  <p><em>Why second:</em> Every search query is a direct transmission of your questions, fears, and interests. Search is the most intimate data pipeline.</p>
+  <ul>
+    <li><strong>Brave Search</strong> — independent index, not a Google/Bing wrapper, private</li>
+    <li><strong>DuckDuckGo</strong> — established, reliable, does not track</li>
+    <li><strong>Startpage</strong> — Google results without Google tracking; best transition option</li>
+  </ul>
+  <p>How: Browser Settings → Search Engine → change default. On your phone: change search engine in browser app. Delete the Google Search app.</p>
+  <p style="color:#94a3b8;font-size:0.85rem;">Time: 2 minutes. Honest note: results are equivalent for most searches. For the rare query where you need Google specifically, add \"!g\" to search it directly via DuckDuckGo\'s bang syntax.</p>
+</section>
+
+<section class="card card-steps">
+  <h2>1C: Contain Android</h2>
+  <p><em>Why third:</em> Android collects your location, app usage, contacts, call history, and WiFi connections continuously. Three options by disruption level:</p>
+  <h3>Option A — Restrict on existing phone (30 min)</h3>
+  <ul>
+    <li>Turn off Location History: Settings → Location → Google Location History. <em>Also</em> turn it off at myactivity.google.com/activitycontrols (phone setting and account setting are separate; both must be off)</li>
+    <li>Turn off Web & App Activity: myactivity.google.com/activitycontrols</li>
+    <li>Turn off YouTube History: same page</li>
+    <li>Disable Ad Personalization: Settings → Google → Ads → opt out</li>
+    <li>Revoke unnecessary permissions from all Google apps (especially Location, Microphone, Camera, Contacts)</li>
+    <li>Disable Google Assistant: Settings → Google → Google Assistant → turn off</li>
+    <li>Replace Gboard (sends typing data to Google) with OpenBoard or FlorisBoard (F-Droid)</li>
+  </ul>
+  <h3>Option B — Replace Google apps while keeping Play Services</h3>
+  <p>Swap Gmail for Proton Mail, Maps for OsmAnd, Photos for a local gallery, Drive for Proton Drive, Calendar for Proton Calendar. Install F-Droid for open-source apps without Google Play Services.</p>
+  <h3>Option C — De-Googled OS (advanced)</h3>
+  <p>GrapheneOS (Pixel hardware, best security, sandboxed Google Play option), CalyxOS (Pixel + some Motorola, microG compatibility), LineageOS (wide device support, more technical). Option A + B provides 80% of the privacy benefit with 20% of the disruption.</p>
+</section>
+
+<section class="card card-steps">
+  <h2>1D: Delete your Google Maps location history</h2>
+  <p>Go to <strong>timeline.google.com</strong> and look at what Google has recorded. This is often shocking.</p>
+  <ul>
+    <li>Delete all: timeline.google.com → Settings → Delete all Location History</li>
+    <li>Set auto-delete: myactivity.google.com/activitycontrols → Location History → auto-delete → 3 months</li>
+    <li>Replace the app: OsmAnd or Organic Maps for navigation; browser (not the app, not signed in) for the occasional business lookup</li>
+  </ul>
+  <p style="color:#94a3b8;font-size:0.85rem;">Honest note: Google Maps\' business data (hours, reviews, real-time info) has no equivalent. Use it in a browser when you genuinely need it. Just don\'t make it the default.</p>
+</section>
+
+<h2>Phase 2 — Email and identity (Week 2–6)</h2>
+
+<section class="card">
+  <h2>2A: Migrate from Gmail</h2>
+  <p>Gmail is the hardest Google service to leave, not because the migration is technically difficult, but because your Gmail address is your identity across the internet. It\'s the login for dozens or hundreds of other services.</p>
+  <ol>
+    <li><strong>Choose your new email provider</strong> — Proton Mail (E2E encrypted, Easy Switch Gmail import), Tuta (encrypted including subject lines), Fastmail (fast, excellent UX, Australian)</li>
+    <li><strong>Import your Gmail archive</strong> — Proton\'s Easy Switch imports messages, labels, contacts, and calendar automatically via IMAP</li>
+    <li><strong>Set up Gmail forwarding</strong> — Gmail settings → forward all incoming mail to your new address. Keep this active for 6–12 months</li>
+    <li><strong>Update other services</strong> — prioritize: financial accounts, government accounts, healthcare, insurance, then everything else. This takes weeks. The forwarding catches what you miss.</li>
+    <li><strong>Do NOT delete your Gmail yet</strong> — keep it active with forwarding for at least 6–12 months</li>
+  </ol>
+  <p style="color:#94a3b8;font-size:0.85rem;">Time: 1 hour setup; weeks to months for address migration. This is the hard one.</p>
+</section>
+
+<h2>Phase 3 — Media and storage (Week 4–8)</h2>
+
+<section class="card">
+  <h2>3A: YouTube</h2>
+  <p>You cannot fully replace YouTube. The content you watch is there because creators publish there. <strong>The realistic goal is to watch YouTube without being tracked.</strong></p>
+  <ul>
+    <li><strong>Use YouTube without signing in</strong> — your history isn\'t tied to your identity. Use Brave (blocks YouTube ads natively) or Firefox + uBlock Origin.</li>
+    <li><strong>Use Invidious or FreeTube (desktop app)</strong> — privacy frontends that strip tracking entirely</li>
+    <li><strong>Nebula</strong> ($30/year) — many top educational creators publish here first or exclusively</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>3B–3E: Photos, Drive, Calendar, Contacts</h2>
+  <ul>
+    <li><strong>Photos:</strong> Export via Takeout, move to iCloud, Proton Drive, or a local NAS. See <a href="/google/your-content/">your content guide</a> for the metadata sidecar issue.</li>
+    <li><strong>Drive:</strong> Move to Proton Drive, Nextcloud, or local storage. Export → Google formats auto-convert to .docx/.xlsx on export.</li>
+    <li><strong>Calendar:</strong> Export as .ics → import into Proton Calendar, Apple Calendar, or Fastmail.</li>
+    <li><strong>Contacts:</strong> Export as vCard → import into your new email provider\'s contacts system.</li>
+  </ul>
+</section>
+
+<h2>Phase 4 — Drain the reservoir (Week 6–10)</h2>
+
+<div class="card card-caution">
+  <p>This is the phase nobody else covers. You\'ve stopped the flow of new data. Now deal with the data Google already has.</p>
+</div>
+
+<section class="card">
+  <h2>4A: Audit what Google has</h2>
+  <p>Go to <strong>myaccount.google.com/data-and-privacy</strong>. Spend 30 minutes looking at it. Not because you need to — because understanding the scope is the most effective motivation for completing this guide. Most people are disturbed by what they find.</p>
+  <ul>
+    <li>Web & App Activity: every search, every app interaction, every Chrome page visit</li>
+    <li>Location History: everywhere you\'ve been. timeline.google.com.</li>
+    <li>YouTube History: everything you\'ve watched and searched</li>
+    <li>Voice & Audio Activity: every Google Assistant interaction, recorded as actual audio files</li>
+    <li>Ad Personalization: the advertising profile built from all of the above</li>
+  </ul>
+</section>
+
+<section class="card card-steps">
+  <h2>4B: Delete historical data</h2>
+  <ul>
+    <li><strong>Location:</strong> timeline.google.com → Settings → Delete all. Set auto-delete to 3 months.</li>
+    <li><strong>Web & App Activity:</strong> myactivity.google.com → Delete activity by → All time → All products. Set auto-delete to 3 months.</li>
+    <li><strong>YouTube History:</strong> myactivity.google.com → filter by YouTube → Delete all. Set auto-delete to 3 months.</li>
+    <li><strong>Voice & Audio:</strong> myactivity.google.com → filter by Voice & Audio → Delete all. Turn off Voice & Audio Activity.</li>
+    <li><strong>Ad Personalization:</strong> adssettings.google.com → turn off.</li>
+  </ul>
+  <p><strong>Before deleting:</strong> download everything first via <a href="https://takeout.google.com" target="_blank" rel="noopener">takeout.google.com</a>. This is your personal archive of everything Google has collected about you. Store it securely.</p>
+</section>
+
+<section class="card">
+  <h2>4C: Close or contain the account</h2>
+  <p><strong>If keeping (for YouTube fallback or other services):</strong> Remove all personal info from your Google Profile, turn off all Activity Controls, remove payment methods, enable Inactive Account Manager to auto-delete if abandoned.</p>
+  <p style="margin-top:.5rem;"><strong>If deleting entirely:</strong> myaccount.google.com → Data and Privacy → Delete your Google Account. 30-day grace period. Do not do this until Phase 2 (Gmail migration) is complete and verified. The most common mistake: deleting before updating a financial institution\'s email, then being locked out of the financial account.</p>
+</section>
+
+<h2>Phase 5 — Ongoing containment (permanent)</h2>
+
+<section class="card card-note">
+  <h2>What you can\'t fully escape</h2>
+  <ul>
+    <li><strong>Google Analytics</strong> — on most websites. Brave and Firefox + uBlock Origin block it.</li>
+    <li><strong>Google Fonts</strong> — loaded from Google servers on many sites. Privacy browsers handle this.</li>
+    <li><strong>reCAPTCHA</strong> — on millions of sites. There is no avoiding this without breaking many websites. One area where Google\'s surveillance is inescapable.</li>
+    <li><strong>AMP</strong> — Brave and Firefox redirect AMP links to original sources automatically.</li>
+    <li><strong>Gmail contacts</strong> — people who email you from Gmail are tracked by Google. Encrypted email (Proton-to-Proton) solves this for contacts who are also leaving Google.</li>
+  </ul>
+</section>
+
+<section class="card card-honest">
+  <h2>What you genuinely can\'t replace</h2>
+  <ul>
+    <li><strong>Google Maps\' business data</strong> — hours, reviews, real-time info. Use OsmAnd for navigation. Use a browser (not the app, not signed in) for business lookups.</li>
+    <li><strong>YouTube\'s content library</strong> — no alternative matches the breadth. Watch without tracking instead.</li>
+    <li><strong>Google Scholar</strong> — academic research. No real equivalent yet. Use through Brave.</li>
+    <li><strong>Gmail\'s deliverability</strong> — Proton and Tuta emails occasionally land in spam at servers that trust Google implicitly. Real consideration for professional email.</li>
+    <li><strong>Android app compatibility</strong> — some banking and messaging apps require Google Play Services. GrapheneOS\'s sandboxed Play approach resolves most, not all.</li>
+  </ul>
+  <p style="margin-top:.75rem;">Being honest about these gaps doesn\'t undermine the guide. It strengthens it. Knowing where the limits are helps you work with them instead of being surprised by them.</p>
+</section>
+
+<section class="card">
+  <h2>The realistic timeline</h2>
+  <ul>
+    <li><strong>Week 1–2:</strong> Replace Chrome (15 min), Search (2 min), contain Android (30 min–2 hrs), delete Maps history (15 min)</li>
+    <li><strong>Week 2–6:</strong> Gmail migration setup (1 hr); update other services (ongoing for weeks)</li>
+    <li><strong>Week 4–8:</strong> Photos, Drive, Calendar, Contacts migration (a few hours each)</li>
+    <li><strong>Week 6–10:</strong> Drain the reservoir (2–4 hours, emotionally intense, technically simple)</li>
+    <li><strong>Ongoing:</strong> New habits, occasional Google use via browser only, maintaining the new defaults</li>
+  </ul>
+  <p style="margin-top:.75rem;color:#94a3b8;font-size:0.875rem;">Total: about 3 months for a thorough de-Googling. The browser and search changes are instant. The email migration takes weeks. The data cleanup takes a focused afternoon. The habit changes take a month before they feel natural.</p>
+</section>
+
+<section class="card">
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/google/your-content/">Export your Google data</a></li>
+    <li><a href="/google/gmail/">Gmail migration guide</a></li>
+    <li><a href="/google/google-search/">Google Search alternatives</a></li>
+    <li><a href="/google/android/">Android de-Googling</a></li>
+    <li><a href="/google/google-maps/">Google Maps alternatives</a></li>
+    <li><a href="/google/youtube/">YouTube without tracking</a></li>
+  </ul>
+</section>
+'''
+    return page_shell(
+        "Cutting the Pipeline — Google | DitchTheMega",
+        "A phased, realistic guide to leaving Google. Stop the flow of new data and drain the reservoir of what Google already holds. Takes about 3 months. Start with the browser.",
+        f"{SITE_URL}/google/cutting-the-pipeline/",
         content
     )
 
@@ -1639,6 +1869,13 @@ def main():
     with open(f"{out_dir}/index.html", "w") as f:
         f.write(build_apple_your_content())
     print("Built: apple/apple-your-content/index.html")
+
+    # Google Cutting the Pipeline
+    out_dir = f"{PUBLIC_DIR}/google/cutting-the-pipeline"
+    os.makedirs(out_dir, exist_ok=True)
+    with open(f"{out_dir}/index.html", "w") as f:
+        f.write(build_google_cutting_pipeline())
+    print("Built: google/cutting-the-pipeline/index.html")
 
     # Google Your Content
     out_dir = f"{PUBLIC_DIR}/google/your-content"
