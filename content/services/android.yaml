@@ -1,61 +1,85 @@
 slug: android
 title: Android & Google Mobile
-subtitle: The phone in your pocket — and what it reports back
+subtitle: De-Googling your phone without replacing it
 category: google
 difficulty: 5
 what_it_is: >
-  Android is Google's mobile operating system, running on roughly 72% of the world's smartphones.
-  A standard Android device with Google services sends data to Google servers constantly —
-  location, app usage, contacts, call logs, and more. Google Services Framework, Google Play
-  Services, and the suite of Google apps are deeply embedded in most Android phones.
+  Android is Google's mobile operating system, running on roughly 72% of the world's
+  smartphones. The "Android" you use from Samsung, OnePlus, or Motorola is heavily
+  customized with each manufacturer's additions — and with Google's services baked in
+  at a deep level. Google Play Services, Google Services Framework, and the suite of
+  Google apps run persistently in the background with elevated permissions, collecting
+  data continuously.
 privacy_case: >
-  Research has shown that a stock Android device with default settings sends location data to
-  Google roughly every 20 minutes, even with location services "off." Google Play Services
-  runs persistently in the background with elevated permissions. Your Android phone is, by
-  design, a Google data collection device that also makes calls.
+  Research from Trinity College Dublin found that a stock Android device sends data to
+  Google at roughly 8.8MB per day even when sitting idle — compared to 0.52MB for an
+  equivalent iOS device. Location data, nearby WiFi networks, app usage, and device
+  identifiers all transmit to Google servers regardless of settings. The gap between
+  "turned off" and "actually off" is significant on Android in ways it isn't on iOS.
 what_you_lose:
-  - The Google Play Store (largest app ecosystem)
+  - Google Play Store (largest app ecosystem, 3.5 million+ apps)
   - Google Pay
-  - Google Assistant integration
+  - Google Assistant
   - Seamless Google account integration
+  - Some banking and streaming apps that require Google Play Protect
 honest_assessment: >
-  This is the most complex migration on this page. Leaving Android fully means either switching
-  to iPhone or running a de-Googled Android (like GrapheneOS on a Pixel). Both are significant
-  commitments. The more realistic middle ground: use iPhone, or use Android with privacy-respecting
-  app choices while minimizing Google service use. Full de-Googled Android is for the technically
-  committed only.
+  You have two real options: switch to a de-Googled Android (GrapheneOS or CalyxOS on
+  compatible hardware) or reduce Google's data collection while staying on stock Android.
+  A third option — switching to iPhone — is not recommended here because Apple is its own
+  ecosystem you may want to leave (see the Apple guide). The privacy-first path is
+  GrapheneOS; the practical path is stock Android with reduced permissions.
+note_on_iphone: >
+  iPhone is not listed as a recommended alternative here because this site will cover
+  leaving Apple's ecosystem as well. iPhone trades Google's surveillance for Apple's
+  ecosystem lock-in. For users leaving Google who don't want to enter another closed
+  ecosystem, de-Googled Android is the more consistent choice.
 alternatives:
-  - name: iPhone (iOS)
-    url: https://apple.com/iphone
-    notes: >
-      Apple's privacy practices are significantly better than Google's by design — Apple's
-      business model doesn't depend on data collection. App Tracking Transparency requires
-      apps to ask permission before tracking. iMessage and FaceTime are end-to-end encrypted.
-      The most practical full Android alternative for most people.
   - name: GrapheneOS
     url: https://grapheneos.org
     notes: >
-      Privacy-hardened Android, runs on Google Pixel hardware. No Google services.
-      Excellent security model. You can install sandboxed Google Play if needed for specific apps.
-      For technically committed privacy users. Not for the faint of heart.
+      Privacy-hardened Android, runs on Google Pixel hardware only (Pixel 6 and newer
+      recommended). No Google services by default. Excellent security model — frequently
+      cited as the most secure mobile OS available. You can install a sandboxed version
+      of Google Play if you need specific apps — it runs in an isolated container with
+      no special permissions. Full documentation at grapheneos.org. Best for
+      privacy-committed users willing to invest setup time.
   - name: CalyxOS
     url: https://calyxos.org
     notes: >
-      De-Googled Android with microG (a free implementation of some Google services).
-      More user-friendly than GrapheneOS for people who need some Android app compatibility.
-  - name: Fairphone (Android + /e/ OS)
+      De-Googled Android with microG — a free, open-source implementation of some
+      Google services that allows most Android apps to work. More compatible than
+      GrapheneOS for users who need common apps. Runs on Pixel and some other devices.
+      Good middle ground between stock Android and full de-Googling.
+  - name: /e/ OS (Murena)
+    url: https://murena.io
+    notes: >
+      De-Googled Android with its own app store and cloud services (Murena Cloud).
+      Available pre-installed on Murena-brand hardware. More user-friendly than
+      GrapheneOS or CalyxOS. Good for non-technical users who want a de-Googled phone
+      without significant setup effort.
+  - name: Fairphone with /e/ OS
     url: https://shop.fairphone.com
     notes: >
-      Ethically sourced, repairable hardware with de-Googled Android (/e/ OS) option.
-      Available in Europe. Combines privacy and hardware ethics.
-the_privacy_minimum: >
-  If you're staying on Android and not ready for a full switch:
-  Remove or disable all Google apps you don't use. Use DuckDuckGo instead of Chrome.
-  Turn off all Google location history in account settings. Use Signal instead of
-  Google Messages. Use a VPN. These don't eliminate Google data collection but reduce it.
+      Ethically sourced, user-repairable hardware available with /e/ OS pre-installed.
+      Available in Europe. Combines privacy, repairability, and ethical manufacturing.
+      The most principled hardware choice.
+reducing_google_on_stock_android:
+  intro: "If you're staying on stock Android and not ready for a full switch, these reduce data collection meaningfully:"
+  steps:
+    - Revoke location permission from Google apps you don't actively use
+    - Disable Google's ad ID (Settings → Privacy → Ads → Delete advertising ID)
+    - Turn off Google Web & App Activity at myaccount.google.com
+    - Replace Google Chrome with Firefox or Brave
+    - Replace Google Search with DuckDuckGo or Brave Search
+    - Replace Google Messages with Signal
+    - Replace Gmail with Proton Mail or Fastmail
+    - Use a VPN (Proton VPN free tier or Mullvad)
+    - Install F-Droid for open-source apps that don't require Google Play
 migration_steps:
-  - If switching to iPhone, use the "Move to iOS" app to transfer contacts, photos, and messages
-  - Export Android contacts to a .vcf file before switching
-  - Identify which apps you use daily and confirm iOS equivalents exist
-  - Sign up for iCloud (5GB free; paid tiers for more)
-  - If staying on Android, install GrapheneOS (requires Pixel hardware; detailed instructions at grapheneos.org)
+  - If switching to GrapheneOS, verify your Pixel model is supported at grapheneos.org/faq
+  - Follow GrapheneOS installation guide (web installer is straightforward for Pixel users)
+  - Install sandboxed Google Play if you need banking or streaming apps
+  - Set up Proton Mail, Proton Drive, and Signal as your core communication/storage stack
+  - For contacts and calendar, use a self-hosted solution (Nextcloud) or Proton Calendar
+  - For navigation, install OsmAnd or Organic Maps
+  - Replace the Google apps you use one at a time, verifying each replacement works before removing the next

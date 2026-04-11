@@ -1,0 +1,69 @@
+slug: apple-tv-itunes
+title: Apple TV+ & iTunes Purchases
+subtitle: The DRM wall — what you bought and what you'll lose
+category: apple
+difficulty: 5
+what_it_is: >
+  Apple sells movies, TV shows, and books through the iTunes Store (now Apple TV and
+  Apple Books), and offers Apple TV+ as a subscription streaming service at $9.99/month.
+  This is the most acute DRM problem in the Apple ecosystem: content you've paid for
+  can only be watched on Apple devices or via the Apple TV app on select third-party
+  hardware (Roku, Fire TV, Smart TVs). There is no legal way to export an iTunes
+  purchased film and play it on a non-Apple, non-Apple-TV-app device.
+the_hard_truth: >
+  If you've spent hundreds of dollars on iTunes movies over the years, you cannot take
+  that library with you when you leave Apple. Your purchases are FairPlay DRM-locked.
+  Apple does not provide a DRM-free export option. The content remains accessible
+  through the Apple TV app on supported devices (including some Roku and Fire TV
+  hardware), but it is not portable to a Linux machine, a de-Googled Android phone,
+  or a Windows media server.
+what_you_lose:
+  - All purchased iTunes movies and TV shows on non-Apple/non-Apple-TV-app devices
+  - Apple TV+ original content subscription (can be canceled, not portable)
+  - iTunes music purchases from the pre-streaming era (though Apple Music DRM has been removed for most purchased tracks — see note)
+  - Apple Books purchased content
+itunes_music_note: >
+  Music purchased from iTunes and downloaded to your library is DRM-free MP3/AAC and
+  fully portable. You own those files. This is the one exception. If you have a local
+  iTunes music library from the pre-streaming era, those files are yours to keep.
+apple_books_note: >
+  Books purchased from Apple Books are DRM-locked to Apple's ecosystem. No legal export
+  option exists. This is the same situation as Kindle — you licensed the book, you didn't
+  buy it. See the general note on DRM in the iCloud guide.
+itunes_movie_options:
+  - Continue accessing purchased content via the Apple TV app — available on Roku, Fire TV, Samsung/LG/Sony Smart TVs, and PlayStation. You don't need an Apple device, just the Apple TV app and your Apple ID.
+  - Accept the loss and rebuild your library on a DRM-free platform going forward
+  - Purchase future movies from Vudu or Movies Anywhere — both offer DRM-free downloads in many cases and Movies Anywhere links purchases across multiple storefronts
+movies_anywhere:
+  description: >
+    Movies Anywhere (moviesanywhere.com) links your iTunes, Vudu, Google Play, and Amazon
+    movie purchases into one library. If a movie is available on Movies Anywhere, a purchase
+    on any connected storefront is accessible on all others. This is the closest thing to
+    portability for digital movie purchases.
+  caveat: >
+    Not all iTunes purchases are Movies Anywhere eligible — Disney, Universal, and some
+    other studios participate, but not all. Check moviesanywhere.com before assuming your
+    library will transfer.
+alternatives:
+  - name: Movies Anywhere
+    url: https://moviesanywhere.com
+    notes: Connect your iTunes library. Some purchases become cross-platform. Free service.
+  - name: Vudu
+    url: https://vudu.com
+    notes: Walmart-owned digital storefront. Strong DRM-free download selection. Connected to Movies Anywhere.
+  - name: Kaleidescape
+    url: https://kaleidescape.com
+    notes: Premium home theater platform with full DRM-free 4K downloads. Expensive but actually portable. For enthusiasts.
+  - name: Plex
+    url: https://plex.tv
+    notes: >
+      Self-hosted media server. If you own physical Blu-rays, rip them to your own Plex library
+      and stream to any device. No DRM, no subscription required for local streaming.
+      Legal to rip Blu-rays you own in most jurisdictions for personal use.
+migration_steps:
+  - Connect your Apple ID to Movies Anywhere (moviesanywhere.com) and check which purchases transfer
+  - Install the Apple TV app on your Roku or Smart TV — maintain access to your iTunes library there
+  - Export your DRM-free iTunes music files to a local drive before leaving Apple
+  - Cancel Apple TV+ subscription (Settings → [your name] → Subscriptions)
+  - Accept the genuine loss of DRM-locked content that doesn't have Movies Anywhere equivalents
+  - For future purchases, use Movies Anywhere-compatible storefronts (Vudu) or buy physical media

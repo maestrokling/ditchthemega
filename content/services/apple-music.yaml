@@ -1,0 +1,59 @@
+slug: apple-music
+title: Apple Music
+subtitle: Your music library — and the difference between streaming and owned
+category: apple
+difficulty: 2
+what_it_is: >
+  Apple Music is a $10.99/month ($16.99/family) streaming service with 100 million songs,
+  lossless and Dolby Atmos audio, radio stations, and deep integration with Apple devices.
+  It also includes iTunes Match, which uploads your personal music library to iCloud
+  and lets you access it anywhere. The key distinction: music you stream through Apple Music
+  is different from music you purchased on iTunes, which is DRM-free.
+important_distinction: >
+  Music you purchased on iTunes (pre-streaming era) is DRM-free and fully portable.
+  You own those files. Export them and they're yours on any device.
+  Music you access via Apple Music subscription is licensed streaming — it disappears
+  when you cancel. This is the same as Spotify, Tidal, or any other streaming service.
+what_you_lose:
+  - Apple Music's streaming catalog (same content as Spotify, but better audio quality)
+  - Dolby Atmos spatial audio (distinctive Apple Music feature)
+  - iTunes Match (your personal library in iCloud)
+  - Seamless Siri integration and CarPlay music control
+  - Apple One bundle pricing if you're combining services
+honest_assessment: >
+  Apple Music is the easiest Apple service to leave. Every major streaming alternative
+  (Spotify, Tidal, Amazon Music, YouTube Music) has comparable catalogs. The transition
+  is: export your liked songs/playlists, sign up for an alternative, and cancel Apple Music.
+  Tools like SongShift and Soundiiz automate playlist migration.
+data_to_export:
+  - Export your iTunes purchased music library (File → Library → Export Library in iTunes/Music app)
+  - Purchased music files are at ~/Music/Music/Media/Music on Mac — back these up
+  - Export playlists (File → Library → Export Playlist → M3U format)
+  - Use SongShift (iOS) or Soundiiz (web) to migrate playlists to Spotify/Tidal
+alternatives:
+  - name: Spotify
+    url: https://spotify.com
+    cost: $9.99/month individual; $14.99/month family
+    notes: Largest catalog, best playlist discovery, most cross-platform. Standard quality audio (no lossless). Best for discovery.
+  - name: Tidal
+    url: https://tidal.com
+    cost: $10.99/month; $19.99/month HiFi
+    notes: Lossless and Dolby Atmos audio matching Apple Music quality. Smaller user base. Best for audiophiles.
+  - name: Amazon Music Unlimited
+    url: https://music.amazon.com
+    cost: $8.99/month Prime members; $10.99 otherwise
+    notes: Full HD and Ultra HD lossless. Good catalog. Integrates with Alexa. Not an exit from Amazon.
+  - name: YouTube Music
+    url: https://music.youtube.com
+    cost: $10.99/month
+    notes: Best for finding live recordings, covers, and rare tracks. Transitions Google account.
+  - name: Plex (self-hosted music)
+    url: https://plex.tv
+    notes: Host your own music library on your own hardware. Stream to any device. Own your library completely.
+migration_steps:
+  - Export your iTunes purchased music files to an external drive (they're DRM-free, you own them)
+  - Use SongShift (iOS app, free for limited transfers) or Soundiiz (web, $4.50 one-time) to export playlists
+  - Sign up for Spotify or Tidal and import your playlists
+  - Verify the transfer is complete
+  - Cancel Apple Music (Settings → [your name] → Subscriptions → Apple Music → Cancel)
+  - Import your purchased iTunes music files into your new player of choice

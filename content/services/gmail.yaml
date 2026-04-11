@@ -4,69 +4,90 @@ subtitle: Leaving Google's email — and the inbox it's been reading
 category: google
 difficulty: 3
 what_it_is: >
-  Gmail is Google's free email service with 1.8 billion users. It offers 15GB free storage,
-  excellent spam filtering, and deep integration with Google's other services. The tradeoff:
-  Google scans email content to build advertising profiles. Every email you send or receive
-  contributes to Google's picture of your interests, relationships, and behavior.
+  Gmail is Google's free email service with 1.8 billion users. It offers 15GB free storage
+  shared with Drive and Photos, excellent spam filtering, and deep integration with Google's
+  other services. The tradeoff: your inbox is the master key to your entire digital life.
+  Every account recovery, every password reset, every purchase confirmation flows through it.
+  Who holds that key matters.
 privacy_case: >
-  Google's terms permit using the content of your emails for advertising targeting.
-  While Google stopped using email content for personalized ads in Gmail in 2017,
-  they still use data from Gmail (purchase confirmations, travel itineraries, subscriptions)
-  to personalize ads across Google's network. Your inbox is also the recovery address for
-  most of your other accounts — it's the master key to your digital life. Who holds that
-  key matters.
+  Google's terms permit using email content for product improvement and to power features
+  like Smart Reply and automatic calendar event creation. More significantly, Gmail is deeply
+  integrated into Google's advertising profile — purchase confirmations, travel itineraries,
+  subscription renewals, and delivery notifications all contribute to what Google knows about
+  you. In 2022, Google disclosed it had given government entities access to Gmail data in
+  response to legal demands over 11,000 times. Your inbox is not private.
 what_you_lose:
   - 15GB free storage shared across Gmail, Drive, and Photos
-  - Gmail's excellent spam filtering
-  - Google integration (Calendar, Drive, Meet, etc.)
-  - The familiarity of an interface you've used for years
+  - Best-in-class spam filtering (genuinely excellent)
+  - Google Workspace integration (Calendar, Meet, Drive, Docs)
+  - Smart features (Smart Reply, Smart Compose, automatic event creation)
+  - The familiarity of an interface most people have used for over a decade
 honest_assessment: >
-  Email migration is real work. Your address is on everything. Changing it means updating
-  accounts, notifying contacts, and dealing with email that keeps arriving at the old address
-  for months. This is a multi-month project, not an afternoon task. The payoff is meaningful —
-  email is the most sensitive data stream in most people's digital lives — but be realistic
-  about the effort.
+  Email migration is real work, and it's not a weekend project. Your address is on
+  hundreds of accounts. Changing it means updating financial institutions, government
+  accounts, subscriptions, contacts, and everything else — a process that takes weeks
+  to months. Keep your Gmail address accessible for a long time after migrating; you'll
+  keep getting mail there for years. The right approach is gradual migration, not a
+  hard cutover.
+the_key_insight: >
+  Your email is the recovery address for everything else. Before migrating, audit which
+  accounts use your Gmail for login or recovery: financial accounts, government accounts,
+  work accounts, anything important. Change those to your new address first, before
+  anything else. Losing access to the recovery email for your bank account is a serious problem.
 data_to_export:
-  - Use Google Takeout (takeout.google.com) to download all email as .mbox files
-  - Export contacts (also via Takeout or contacts.google.com → Export)
-  - Download Drive files if you use Google Drive
-  - Note any Google services using this Gmail as the recovery/login email
+  - Google Takeout (takeout.google.com) → select Mail → export as .mbox files
+  - Export Contacts via contacts.google.com → Export → Google CSV
+  - Download Calendar events via Google Takeout → select Calendar → export as .ical
+  - Note which services use your Gmail for 2FA/recovery before migrating
+migration_strategy:
+  - Phase 1 (week 1) — Create new email account and update critical accounts (bank, financial, government, healthcare)
+  - Phase 2 (weeks 2-4) — Set up Gmail forwarding to your new address and add an auto-reply noting the change
+  - Phase 3 (months 1-3) — Update remaining accounts as you encounter them in daily use
+  - Phase 4 (month 3-6) — Monitor forwarded mail; only deactivate Gmail when you stop receiving important mail there
+  - Final step — Export all mail via Takeout, delete account at myaccount.google.com
 alternatives:
   - name: Proton Mail
     url: https://proton.me/mail
-    cost: Free up to 1GB; from $3.99/month for more storage
+    cost: Free up to 1GB; from $3.99/month for 15GB+
     notes: >
-      End-to-end encrypted. Based in Switzerland. Zero access to your email content.
-      The most privacy-respecting major email provider. ProtonPass, ProtonVPN, and
-      ProtonDrive available as a full ecosystem replacement.
+      End-to-end encrypted by default. Based in Switzerland under Swiss privacy law.
+      Zero-knowledge architecture — Proton cannot read your email. ProtonVPN, ProtonDrive,
+      ProtonPass, and ProtonCalendar available as a complete ecosystem replacement.
+      Custom domains supported. Best overall privacy-first Gmail replacement.
   - name: Fastmail
     url: https://fastmail.com
     cost: From $3/month
     notes: >
-      Fast, reliable, excellent interface. Not end-to-end encrypted by default,
-      but no advertising and strong privacy practices. Good choice for users who
-      want Gmail-quality UX without Google. Based in Australia.
+      Fast, reliable, excellent interface. Not end-to-end encrypted by default, but
+      no advertising and strong privacy commitments. Best UX of any Gmail alternative —
+      feels modern without feeling like Google. Custom domains, solid iOS/Android apps.
+      Australian company; strong privacy practices.
   - name: Tutanota
     url: https://tutanota.com
     cost: Free tier available; from €1/month
-    notes: End-to-end encrypted. Open source. German-based. Strong privacy. Simpler than Proton.
-  - name: Apple iCloud Mail
-    url: https://icloud.com
-    cost: Free with Apple ID (5GB shared)
     notes: >
-      Good option for Apple ecosystem users. Not end-to-end encrypted, but Apple
-      has strong privacy practices and no ad business. Free with Apple devices.
+      End-to-end encrypted. Open source. German-based (EU privacy law). Simpler
+      than Proton. Good for people who want encryption without complexity. Calendar included.
   - name: Hey
     url: https://hey.com
     cost: $99/year
     notes: >
-      Opinionated email redesign from Basecamp. No ads, no tracking. Different workflow
-      (screening, stacks, imbox). Worth trying if you want to rethink email entirely.
+      Opinionated email redesign from Basecamp — the Imbox, the Feed, the Paper Trail.
+      Forces you to screen senders before their emails arrive. No ads, no tracking.
+      Best choice for people who want to rethink how email works, not just who hosts it.
+  - name: iCloud Mail
+    url: https://icloud.com/mail
+    cost: Free 5GB with Apple ID
+    notes: >
+      Solid choice for Apple ecosystem users. Apple's business model doesn't depend
+      on reading your email. Not end-to-end encrypted, but privacy practices
+      significantly better than Google's. Hide My Email feature creates disposable
+      addresses for signups. Note — covered in the Apple guide for users leaving Apple.
 migration_steps:
-  - Export all Gmail via Google Takeout (takeout.google.com) — select Mail → export as .mbox
-  - Create new email account at Proton Mail (or your preferred alternative)
-  - Set up Gmail forwarding to your new address while transitioning (Gmail Settings → Forwarding)
-  - Update email on your most important accounts first — bank, financial, work, key services
-  - Add a Gmail auto-reply noting your new email address
-  - Over the next 30–60 days, update remaining accounts as you encounter them
-  - After 3–6 months, when you stop seeing important mail arrive at Gmail, close the account
+  - Create your new email account first (Proton Mail or Fastmail recommended)
+  - Enable Gmail forwarding to your new address (Gmail → Settings → Forwarding)
+  - Update your five most critical accounts (bank, financial, government ID, healthcare, phone carrier) to the new address immediately
+  - Add a Gmail vacation auto-reply noting your new address for contacts
+  - Export all Gmail via Google Takeout — keep the archive, you'll want it
+  - Over the next 60–90 days, update accounts as emails arrive at Gmail
+  - After 3–6 months, when you stop seeing important mail, delete your Google account

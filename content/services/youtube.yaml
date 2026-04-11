@@ -1,65 +1,88 @@
 slug: youtube
 title: YouTube
-subtitle: The hardest Google service to leave — honestly
+subtitle: The hardest Google service to leave — and why partial migration is honest
 category: google
 difficulty: 4
 what_it_is: >
-  YouTube is the world's second-largest search engine and the dominant video platform
-  with 2.7 billion monthly users. It's owned by Google and powers an enormous advertising
-  surveillance apparatus. Your watch history, search history, and behavior on YouTube
-  build one of the most detailed interest profiles Google maintains.
+  YouTube is the world's second-largest search engine and the dominant video platform,
+  owned by Google since 2006. 2.7 billion people use it monthly. It hosts virtually
+  all long-form video content worth watching — tutorials, documentaries, news analysis,
+  educational content, entertainment, and live streams. Unlike most Google services,
+  the content itself is on YouTube. You can't take it with you the way you can take
+  your email or your photos.
 privacy_case: >
-  YouTube's recommendation algorithm is designed to maximize watch time, which often means
-  maximizing emotional engagement. YouTube knows more about your interests, opinions, and
-  information diet than almost any other platform. It also tracks your viewing even when
-  you're not logged in via cookies and fingerprinting.
+  YouTube's recommendation algorithm is designed to maximize watch time, which means
+  maximizing engagement — and research consistently shows that engagement correlates
+  with emotional arousal, controversy, and outrage. What you watch on YouTube contributes
+  to Google's most detailed interest profile — more revealing than search history
+  because video watching takes time and indicates genuine interest. YouTube tracks your
+  viewing even when you're logged out, via cookies and browser fingerprinting.
 what_you_lose:
   - The world's largest video library (genuinely irreplaceable for many use cases)
-  - Creator subscriptions and notification system
-  - YouTube Music (if you use it)
-  - Live streaming content
-  - YouTube Premium (ad-free + background play + YouTube Music)
+  - Creator subscription and notification system
+  - YouTube Premium (ad-free + background play on mobile + YouTube Music)
+  - Live streaming access
+  - YouTube Music library
 honest_assessment: >
-  This is the hardest Google service to leave because the content itself is on YouTube.
-  Unlike Gmail (you can move your email) or Google Search (you can use DuckDuckGo),
-  YouTube videos are not available elsewhere. The strategy here is less "leave YouTube"
-  and more "use YouTube on your terms, with less surveillance." Full departure is only
-  realistic if you genuinely don't need it.
+  Full YouTube departure is only realistic if you genuinely don't need the content —
+  and for most people, you do. The strategy here is "use YouTube on your terms" rather
+  than "leave YouTube entirely." Specifically: watch via Invidious (no tracking, no
+  recommendations pulling you in), support creators via Nebula or Patreon for the ones
+  you care about, and break the recommendation algorithm's hold on your time.
+the_real_problem: >
+  The recommendation algorithm is the actual issue, not just the privacy. YouTube is
+  specifically designed to keep you watching longer than you intended. The solution to
+  that problem — watching via Invidious, which has no recommendation engine — is often
+  more valuable than the privacy improvement itself.
 alternatives:
-  - name: Invidious (YouTube without Google)
+  - name: Invidious
     url: https://invidious.io
     notes: >
-      Open-source YouTube front-end. Watches YouTube videos without Google knowing.
-      No tracking, no algorithm, no ads. Find an instance at invidious.io.
-      Best option for people who need YouTube content but want privacy.
-  - name: Odysee / LBRY
-    url: https://odysee.com
-    notes: >
-      Decentralized video platform. Many YouTubers cross-post here. No algorithmic
-      recommendation rabbit holes. Smaller catalog but growing.
+      Open-source YouTube front-end that lets you watch YouTube content without Google
+      tracking you and without the recommendation algorithm driving you down rabbit holes.
+      No account required. Find a public instance at invidious.io. Works for most videos.
+      No ads. Best first step for anyone who uses YouTube heavily.
   - name: Nebula
     url: https://nebula.tv
     cost: $5/month or $30/year
     notes: >
-      Creator-owned streaming platform. Many popular educational YouTubers
-      (CGP Grey, Wendover, Kurzgesagt, etc.) post here early or exclusively.
-      Ad-free. Subscription supports creators directly.
-  - name: Vimeo
-    url: https://vimeo.com
-    notes: Better video quality, filmmaker-focused. Niche but excellent for arts/documentary content.
+      Creator-owned streaming platform. Many of the best educational and documentary
+      YouTubers (CGP Grey, Wendover Productions, Kurzgesagt, MKBHD, Real Engineering,
+      Legal Eagle, Answer in Progress) post here first or exclusively.
+      Ad-free. $30/year directly supports the creators. Best paid YouTube alternative.
+  - name: Odysee / LBRY
+    url: https://odysee.com
+    notes: >
+      Decentralized video platform built on blockchain. Many YouTube creators
+      cross-post here. No algorithmic recommendations unless you opt in.
+      Free. Smaller catalog than YouTube but growing.
   - name: PeerTube
     url: https://joinpeertube.org
     notes: >
-      Decentralized, open-source video hosting. Federated network of instances.
-      Very small catalog currently. For the technically inclined.
-the_privacy_minimum: >
-  If you can't leave YouTube entirely, these reduce the surveillance without giving up content:
-  use Invidious or a privacy-respecting browser extension (uBlock Origin + SponsorBlock),
-  watch logged out, or use YouTube via a VPN. YouTube Premium ($13.99/month) removes ads
-  but doesn't reduce Google's data collection.
+      Federated, open-source video hosting. Each instance is independently run.
+      Very small catalog. For technical users who want fully decentralized video.
+  - name: Vimeo
+    url: https://vimeo.com
+    notes: >
+      Higher-quality video hosting focused on creative professionals. Strong for
+      short films, art, and documentary content. Smaller catalog than YouTube.
+  - name: Rumble
+    url: https://rumble.com
+    notes: >
+      Free speech video platform. Growing creator base. Worth knowing about as
+      a YouTube alternative, though content skews politically toward one side.
+de_googling_youtube_without_leaving:
+  - Watch via Invidious to remove tracking and the recommendation engine
+  - Use uBlock Origin to remove ads if you watch on YouTube.com directly
+  - Install the SponsorBlock extension to skip sponsored segments within videos
+  - Don't stay logged into Google while browsing YouTube
+  - Delete your YouTube watch history regularly at myaccount.google.com/data-and-privacy
+  - For creators you financially support, move to their Patreon or direct membership instead of YouTube channel memberships
 migration_steps:
-  - Export your subscription list and watch history via Google Takeout
-  - Try Invidious for 2 weeks — it plays YouTube videos without the tracking
-  - Check which of your subscribed creators are on Nebula (many educational channels are)
-  - If you use YouTube Music, see the music alternatives page for replacements
-  - For creators you support financially, consider direct Patreon support instead of YouTube channel memberships
+  - Install Invidious as your default YouTube viewer (bookmark an instance from invidious.io)
+  - Export your subscription list via Google Takeout → select YouTube → export subscriptions
+  - Check which subscribed creators are on Nebula — subscribe there for $30/year
+  - Export your watch history if you want a record (Google Takeout → YouTube → watch-history.json)
+  - Delete YouTube watch history in your Google account
+  - Disable YouTube History in Google account settings to stop future tracking
+  - Cancel YouTube Premium if you have it — replace background play with NewPipe (Android) or Invidious

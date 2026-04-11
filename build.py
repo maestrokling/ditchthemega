@@ -89,6 +89,7 @@ CATEGORY_LABELS = {
     "data-privacy":   "Data & Privacy",
     "seller":         "For Sellers",
     "google":         "Google",
+    "apple":          "Apple",
     "alternatives":   "Alternatives",
     "meta":           "Reference",
 }
@@ -509,6 +510,14 @@ def build_landing():
       <span class="door-status open">Guide available →</span>
     </div>
   </a>
+  <a href="/apple/" class="door door-open">
+    <div class="door-inner">
+      <span class="door-icon">🍎</span>
+      <h2>Apple</h2>
+      <p>iCloud, iTunes purchases, App Store, Apple Music, Find My</p>
+      <span class="door-status open">Guide available →</span>
+    </div>
+  </a>
   <div class="door door-coming">
     <div class="door-inner">
       <span class="door-icon">👤</span>
@@ -517,14 +526,7 @@ def build_landing():
       <span class="door-status coming">Coming soon</span>
     </div>
   </div>
-  <div class="door door-coming">
-    <div class="door-inner">
-      <span class="door-icon">🍎</span>
-      <h2>Apple</h2>
-      <p>iCloud, App Store, Apple One, Find My</p>
-      <span class="door-status coming">Coming soon</span>
-    </div>
-  </div>
+
   <div class="door door-coming">
     <div class="door-inner">
       <span class="door-icon">🪟</span>
@@ -603,11 +605,13 @@ def build_about():
 
 def build_sitemap(services):
     urls = [SITE_URL + "/", SITE_URL + "/amazon/", SITE_URL + "/amazon/sellers/",
-            SITE_URL + "/google/", SITE_URL + "/alternatives/", SITE_URL + "/about/"]
+            SITE_URL + "/google/", SITE_URL + "/apple/", SITE_URL + "/alternatives/", SITE_URL + "/about/"]
     for svc in services:
         cat = svc.get("category","")
         if cat == "google":
             urls.append(f"{SITE_URL}/google/{svc['slug']}/")
+        elif cat == "apple":
+            urls.append(f"{SITE_URL}/apple/{svc['slug']}/")
         elif cat == "alternatives":
             urls.append(f"{SITE_URL}/alternatives/{svc['slug']}/")
         else:
@@ -785,6 +789,118 @@ def build_google_service_page(svc):
         "\n".join(sections)
     )
 
+def build_apple_hub(services):
+    apple_svcs = [s for s in services if s.get("category") == "apple"]
+    cards = ""
+    for svc in apple_svcs:
+        slug = svc["slug"]
+        title = svc["title"]
+        subtitle = svc.get("subtitle","")
+        diff = svc.get("difficulty",0)
+        diff_label = DIFF_LABEL[diff] if diff else ""
+        diff_class = DIFF_CLASS[diff] if diff else "d1"
+        cards += f'''<a href="/apple/{slug}/" class="service-card">
+  <div class="service-card-inner">
+    <h2>{e(title)}</h2>
+    <p>{e(subtitle)}</p>
+    {"" if not diff else f'<span class="difficulty {diff_class}">{diff_label}</span>'}
+  </div>
+</a>'''
+
+    content = f'''<div class="page-hero amazon-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › Apple</div>
+  <h1>Leaving the Apple Ecosystem</h1>
+  <p class="subtitle">Apple\'s lock-in is different from Amazon\'s or Google\'s. It\'s not about surveillance — it\'s about DRM.<br>
+  Content you purchased through Apple cannot legally be transferred to other platforms. Understand what you\'re leaving before you go.</p>
+</div>
+<div class="card card-caution" style="margin-bottom:1.5rem;">
+  <h2>⚠️ Read this before anything else</h2>
+  <p>Movies, TV shows, and books purchased through iTunes and Apple Books are DRM-locked to Apple\'s ecosystem.
+  There is no legal way to export them to another platform. Audit your purchases before leaving.
+  See the <a href="/apple/apple-tv-itunes/">iTunes purchases guide</a> for your options.</p>
+</div>
+<div class="service-grid">
+{cards}
+</div>'''
+
+    return page_shell(
+        "Leave Apple — Complete Exit Guide | DitchTheMega",
+        "Practical guides to leaving Apple\'s ecosystem — iCloud, iTunes purchases, App Store, Apple Music, and Apple ID. Honest about DRM tradeoffs.",
+        f"{SITE_URL}/apple/",
+        content
+    )
+
+def build_apple_service_page(svc):
+    """Apple service pages route to /apple/slug/"""
+    slug = svc["slug"]
+    title = svc["title"]
+    subtitle = svc.get("subtitle","")
+    sections = []
+    sections.append(f'<div class="page-hero"><div class="breadcrumb"><a href="/">Home</a> › <a href="/apple/">Apple</a> › {e(title)}</div><h1>{e(title)}</h1><p class="subtitle">{e(subtitle)}</p></div>')
+
+    for field, label, card_class in [
+        ("drm_note", "⚠️ DRM — what you can\'t take with you", "card-note"),
+        ("the_drm_warning", "⚠️ Before you leave Apple", "card-note"),
+        ("the_hard_truth", "⚠️ The hard truth", "card-caution"),
+        ("important_distinction", "Important distinction", "card-honest"),
+        ("the_purchase_problem", "The purchase problem", "card-caution"),
+        ("privacy_case", "Privacy case", "card-privacy"),
+    ]:
+        if svc.get(field):
+            sections.append(f'<section class="card {card_class}"><h2>{label}</h2><p>{e(svc[field])}</p></section>')
+
+    if svc.get("what_it_is"):
+        sections.append(f'<section class="card"><h2>What it is</h2><p>{e(svc["what_it_is"])}</p></section>')
+    if svc.get("what_icloud_holds"):
+        sections.append(f'<section class="card"><h2>What iCloud holds</h2>{render_list(svc["what_icloud_holds"])}</section>')
+    if svc.get("what_you_lose"):
+        sections.append(f'<section class="card"><h2>What you lose</h2>{render_list(svc["what_you_lose"])}</section>')
+    if svc.get("honest_assessment"):
+        sections.append(f'<section class="card card-honest"><h2>Honest assessment</h2><p>{e(svc["honest_assessment"])}</p></section>')
+    if svc.get("itunes_music_note"):
+        sections.append(f'<section class="card card-honest"><h2>iTunes music note</h2><p>{e(svc["itunes_music_note"])}</p></section>')
+    if svc.get("itunes_movie_options"):
+        sections.append(f'<section class="card"><h2>Your options for iTunes movies</h2>{render_list(svc["itunes_movie_options"])}</section>')
+    if svc.get("movies_anywhere"):
+        ma = svc["movies_anywhere"]
+        sections.append(f'<section class="card card-honest"><h2>Movies Anywhere</h2><p>{e(ma.get("description",""))}</p><p style="color:#94a3b8;font-size:0.85rem;margin-top:.5rem;">{e(ma.get("caveat",""))}</p></section>')
+    if svc.get("audit_first"):
+        sections.append(f'<section class="card card-steps"><h2>Audit your purchases first</h2><p>{e(svc["audit_first"])}</p></section>')
+    if svc.get("cross_platform_apps"):
+        sections.append(f'<section class="card"><h2>Cross-platform alternatives exist for most apps</h2><p>{e(svc["cross_platform_apps"])}</p></section>')
+    if svc.get("apple_subscriptions_warning"):
+        sections.append(f'<section class="card card-caution"><h2>⚠️ Cancel subscriptions before leaving</h2><p>{e(svc["apple_subscriptions_warning"])}</p></section>')
+    if svc.get("before_you_close"):
+        sections.append(f'<section class="card card-steps"><h2>Before you close your Apple ID</h2>{render_list(svc["before_you_close"])}</section>')
+    if svc.get("find_my_privacy"):
+        sections.append(f'<section class="card card-honest"><h2>Find My privacy — the good news</h2><p>{e(svc["find_my_privacy"])}</p></section>')
+    if svc.get("find_my_alternatives"):
+        sections.append(f'<section class="card"><h2>Find My alternatives</h2>{render_list(svc["find_my_alternatives"])}</section>')
+    if svc.get("data_to_export"):
+        sections.append(f'<section class="card"><h2>Data to export first</h2>{render_list(svc["data_to_export"])}</section>')
+    if svc.get("purchased_content_options"):
+        sections.append(f'<section class="card"><h2>Purchased content options</h2>{render_list(svc["purchased_content_options"])}</section>')
+    if svc.get("migration_strategy"):
+        sections.append(f'<section class="card card-steps"><h2>Migration strategy</h2>{render_list(svc["migration_strategy"])}</section>')
+    if svc.get("alternatives"):
+        sections.append(f'<section class="card"><h2>Alternatives</h2>{render_alternatives(svc["alternatives"])}</section>')
+    if svc.get("reducing_google_on_stock_android") or svc.get("note_on_iphone"):
+        if svc.get("note_on_iphone"):
+            sections.append(f'<section class="card card-note"><h2>Why iPhone isn\'t listed here</h2><p>{e(svc["note_on_iphone"])}</p></section>')
+    if svc.get("migration_steps"):
+        sections.append(f'<section class="card card-steps"><h2>Migration steps</h2>{render_steps(svc["migration_steps"])}</section>')
+    related = RELATED.get(slug, [])
+    if related:
+        links = "".join(f'<li><a href="/apple/{r_slug}/">{e(r_title)}</a></li>' for r_slug, r_title in related)
+        sections.append(f'<section class="card"><h2>Related guides</h2><ul>{links}</ul></section>')
+    description = subtitle or f"How to leave {title} — DRM considerations, alternatives, and migration guide."
+    return page_shell(
+        f"{title} — DitchTheMega",
+        description,
+        f"{SITE_URL}/apple/{slug}/",
+        "\n".join(sections)
+    )
+
 def main():
     os.makedirs(PUBLIC_DIR, exist_ok=True)
 
@@ -830,7 +946,7 @@ def main():
     for svc in services:
         slug = svc["slug"]
         cat  = svc.get("category","")
-        if cat in ("meta", "seller", "google", "alternatives"):
+        if cat in ("meta", "seller", "google", "alternatives", "apple"):
             continue  # handled separately below
         out_dir = f"{PUBLIC_DIR}/amazon/{slug}"
         os.makedirs(out_dir, exist_ok=True)
@@ -855,6 +971,21 @@ def main():
         with open(f"{out_dir}/index.html", "w") as f:
             f.write(build_alternatives_page(svc))
         print(f"Built: alternatives/{slug}/index.html")
+
+    # Apple hub
+    os.makedirs(f"{PUBLIC_DIR}/apple", exist_ok=True)
+    with open(f"{PUBLIC_DIR}/apple/index.html", "w") as f:
+        f.write(build_apple_hub(services))
+    print("Built: apple/index.html")
+
+    # Apple service pages
+    for svc in [s for s in services if s.get("category") == "apple"]:
+        slug = svc["slug"]
+        out_dir = f"{PUBLIC_DIR}/apple/{slug}"
+        os.makedirs(out_dir, exist_ok=True)
+        with open(f"{out_dir}/index.html", "w") as f:
+            f.write(build_apple_service_page(svc))
+        print(f"Built: apple/{slug}/index.html")
 
     # Sitemap (add sellers hub)
     with open(f"{PUBLIC_DIR}/sitemap.xml", "w") as f:

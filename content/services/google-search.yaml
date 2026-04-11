@@ -5,57 +5,83 @@ category: google
 difficulty: 2
 what_it_is: >
   Google Search processes 8.5 billion searches per day and holds roughly 92% of the global
-  search market. Every search you make contributes to a detailed profile of your interests,
-  concerns, health questions, political views, and intentions. Google uses this data for
-  advertising across its entire network — not just on Google Search, but on every site
-  running Google Ads.
+  search market. It is also one of the most comprehensive surveillance systems ever built.
+  Every search you run is logged, timestamped, and connected to your identity — building
+  a profile that reveals your health concerns, political views, financial situation,
+  relationship status, and private fears. Google uses this data across its entire
+  advertising network, not just on Google.com.
 privacy_case: >
-  Google's search history is among the most intimate data it holds. People search things
-  they wouldn't tell their doctor, their spouse, or their employer. Google keeps this history
-  indefinitely unless you manually delete it. In 2023, Google was ordered to pay $5 billion
-  in a class action lawsuit over tracking users in "Incognito" mode, which turned out not
-  to be as private as users believed.
+  In 2023, Google settled a $5 billion class action lawsuit after it was found to be
+  tracking users in "Incognito" mode — which turned out not to be private from Google.
+  In 2024, leaked Google documents revealed that Google does collect and use data it
+  previously claimed it didn't, including data from supposedly private browsing.
+  Search history has been subpoenaed in criminal investigations, divorce proceedings,
+  and employment disputes. People search things they wouldn't tell their doctor.
+  Google keeps that history indefinitely unless you manually delete it.
 what_you_lose:
-  - Google's search quality, which is genuinely better for some query types
+  - Google's genuine quality advantage on some query types (very recent news, local search, highly specific technical queries)
   - Google Maps integration in search results
   - Google Shopping integration
-  - Personalized results based on your history and location
+  - Personalized results based on years of search history
+  - Knowledge panels and featured snippets for some queries
 honest_assessment: >
-  DuckDuckGo and Brave Search have closed the quality gap significantly in the last few years.
-  For most queries, they return comparable results. Google remains better for local searches,
-  very recent news, and highly specific technical queries. Many people who switch report
-  that they barely notice the difference after the first week.
+  DuckDuckGo, Brave Search, and Kagi have closed the quality gap significantly.
+  For the vast majority of everyday searches — recipes, product research, definitions,
+  news, how-to instructions — they return comparable results. Google's advantages are
+  real but narrow: it's better at local search, very recent events (last few hours),
+  and some highly technical queries. Most users who switch report they notice the
+  difference only occasionally after the first two weeks.
+practical_tip: >
+  The DuckDuckGo bang syntax is a superpower: type "!g your query" to search Google
+  directly when you need it, without switching your default engine. Use it for the 5%
+  of searches where Google is genuinely better. You get privacy by default with a
+  Google escape hatch when needed.
 alternatives:
   - name: DuckDuckGo
     url: https://duckduckgo.com
     notes: >
-      No tracking. No search history. No profiling. Results are good for most queries.
-      !Bangs feature lets you search other sites directly (e.g. !a for Amazon, !w for Wikipedia).
-      The default privacy-respecting search choice.
+      No tracking. No search history. No profiling. Results powered by Bing with
+      additional sources. Good for most queries. Bang syntax (!a for Amazon, !w for
+      Wikipedia, !g for Google, !yt for YouTube) lets you redirect searches anywhere.
+      Free browser extension blocks trackers across the web.
   - name: Brave Search
     url: https://search.brave.com
     notes: >
-      Independent search index (not Google or Bing results). Completely private.
-      Strong results. Part of the Brave browser ecosystem but works in any browser.
+      Fully independent search index — not Google, not Bing. No tracking. Strong
+      results, especially for tech queries. Part of the Brave browser ecosystem but
+      works in any browser. Growing fast and closing the quality gap quickly.
   - name: Startpage
     url: https://startpage.com
     notes: >
-      Returns Google results without the tracking. Privacy proxy for Google.
-      Good transition option if you want Google quality without Google tracking.
+      Returns actual Google results without Google tracking you. Acts as a privacy
+      proxy for Google's index. Best transition option — Google quality immediately,
+      no data sent to Google. Good bridge while you adjust.
   - name: Kagi
     url: https://kagi.com
     cost: From $5/month
     notes: >
-      Paid search — the theory being that if you're not the product, you're the customer.
-      Highly customizable. Excellent results. No ads. Growing following among technical users.
+      Paid search — no advertising, you're the customer not the product. Highly
+      customizable result rankings (boost or block specific sites). Excellent quality,
+      often better than Google for research queries. Fastest-growing alternative among
+      technical users. The $5/month price is worth evaluating.
   - name: Ecosia
     url: https://ecosia.org
-    notes: Uses ad revenue to plant trees. Privacy better than Google. Results powered by Bing.
+    notes: >
+      Plants trees with ad revenue from searches. Better privacy than Google. Results
+      powered by Bing. Good choice for users who want to align searching with environmental values.
+how_to_switch:
+  chrome: Settings → Search engine → Manage search engines → Add DuckDuckGo → Set as default
+  safari: Settings → Safari → Search Engine → DuckDuckGo
+  firefox: Settings → Search → Default Search Engine → DuckDuckGo
+  edge: Settings → Privacy, search and services → Address bar and search → DuckDuckGo
+deleting_history: >
+  Delete your Google Search history at myaccount.google.com → Data & Privacy →
+  My Activity → Delete activity by → All time. Also turn off "Web & App Activity"
+  to stop future logging.
 migration_steps:
-  - Change your browser's default search engine to DuckDuckGo or Brave Search
-  - Chrome: Settings → Search engine → Change to DuckDuckGo
-  - Safari: Settings → Safari → Search Engine → DuckDuckGo
-  - Firefox: Settings → Search → Default Search Engine → DuckDuckGo
-  - Use it for 2 weeks before evaluating — the habit takes time to break
-  - If you find DuckDuckGo results lacking for specific queries, add "!g" to search Google directly (DuckDuckGo bang syntax) rather than switching back entirely
-  - Delete your Google Search history at myaccount.google.com/data-and-privacy → Delete activity
+  - Change your browser's default search engine to DuckDuckGo or Brave Search today
+  - Use it for 2 weeks before evaluating — habit is 80% of the perceived quality gap
+  - When DuckDuckGo results feel weak, add "!g" to your query to search Google directly
+  - Delete your Google Search history at myaccount.google.com/data-and-privacy
+  - Turn off Web & App Activity in Google account settings to stop future data collection
+  - If you want better results and don't mind paying, try Kagi for a month ($5)

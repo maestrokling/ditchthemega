@@ -1,0 +1,86 @@
+slug: icloud
+title: iCloud
+subtitle: Before you leave Apple, understand what iCloud holds — and what you can lose
+category: apple
+difficulty: 4
+what_it_is: >
+  iCloud is Apple's cloud sync and storage service, deeply woven into every Apple device.
+  It backs up your iPhone, syncs photos, stores documents, manages passwords (iCloud Keychain),
+  and enables Find My. At $0.99/month for 50GB or $2.99/month for 200GB, it's inexpensive.
+  The problem: iCloud stores data that is critical to your device functionality, and much
+  of it is not portable in the way that email or photos are. Leaving Apple means understanding
+  exactly what iCloud holds and what happens to each piece.
+the_drm_warning: >
+  This is the most important thing to understand before leaving Apple: content you purchased
+  through Apple — movies, TV shows, books, music (pre-streaming era) — is DRM-locked to Apple's
+  ecosystem. If you leave Apple, you cannot take that content with you to other platforms.
+  There is no legal way to export a purchased iTunes movie and watch it on a non-Apple device.
+  Before leaving, audit every piece of purchased content and make a deliberate decision about
+  what you're willing to lose. This is Apple's most significant lock-in mechanism.
+what_icloud_holds:
+  - iPhone/iPad/Mac backup (device state, app data, settings)
+  - Photos and videos (iCloud Photos)
+  - Documents (iCloud Drive)
+  - Passwords (iCloud Keychain)
+  - Contacts and Calendar
+  - Messages (iMessage history, if iCloud Messages is on)
+  - Health data
+  - Find My location data
+  - App data for apps that use iCloud sync
+  - Email (iCloud Mail)
+  - Purchased content licenses (not the files — the right to access them)
+what_you_lose:
+  - Access to purchased iTunes movies, TV shows, and books on non-Apple devices
+  - iMessage (blue bubble encryption) — your contacts on Apple devices will see green SMS
+  - AirDrop, AirPlay, Handoff, Universal Clipboard between devices
+  - Find My network access
+  - Seamless device switching within Apple ecosystem
+honest_assessment: >
+  Leaving Apple is harder than leaving Amazon or Google because Apple's DRM is more absolute.
+  Amazon will let you download Kindle books (though with DRM). Google will export your photos.
+  Apple will let you export your data — but it won't let you take your purchased movies and TV shows
+  to another platform. That's the honest tradeoff. Audit your purchases before deciding.
+data_to_export:
+  - Apple Data Privacy page (privacy.apple.com) → Request a copy of your data
+  - Photos → export original files from Photos app (File → Export → Export Originals)
+  - Contacts → open Contacts → File → Export → Contacts Archive (.abbu) or vCard (.vcf)
+  - Calendar → open Calendar → File → Export → Calendar Archive (.icbu) or .ics files
+  - iCloud Keychain passwords → export via System Settings → Passwords → Export (CSV)
+  - Notes → export from Notes app (File → Export as PDF or plain text)
+  - Health data → Health app → export (XML format)
+  - Messages → use iMazing software to export iMessage history (paid, worth it)
+  - Purchases → audit all purchased content at account.apple.com → Purchase History
+purchased_content_options:
+  - Movies/TV (iTunes) — no export option. You can continue to access them via Apple TV app even without iCloud, but you need an Apple ID and cannot transfer to another platform.
+  - Books (Apple Books) — DRM-locked to Apple ecosystem. No legal export for purchased content.
+  - Music — if you bought music before Apple Music streaming era, iTunes Match or download to files. Streaming music has no ownership component.
+  - Apps — licenses tied to Apple ID. If you leave Apple entirely, you lose access.
+alternatives:
+  - name: Proton Drive
+    url: https://proton.me/drive
+    cost: 1GB free; from $3.99/month 200GB
+    notes: End-to-end encrypted cloud storage. Replaces iCloud Drive for documents.
+  - name: Google Drive / OneDrive
+    url: https://drive.google.com
+    notes: More storage per dollar than iCloud, but trades Apple's privacy for Google's or Microsoft's. Not a privacy win, but a portability win.
+  - name: Bitwarden
+    url: https://bitwarden.com
+    cost: Free for individuals; $10/year for premium
+    notes: Open-source password manager. Replaces iCloud Keychain. Works on any platform — Android, Windows, Linux, browser.
+  - name: Standard Notes
+    url: https://standardnotes.com
+    notes: End-to-end encrypted notes. Replaces Apple Notes. Cross-platform.
+  - name: Signal
+    url: https://signal.org
+    notes: Replaces iMessage for encrypted messaging. Works on Android and desktop. The people you message also need Signal.
+migration_steps:
+  - Request your data at privacy.apple.com — this gives you most iCloud data
+  - Export photos with originals from the Photos app before disabling iCloud Photos
+  - Export contacts and calendars to standard formats (vCard and .ics)
+  - Export passwords from iCloud Keychain to a password manager (Bitwarden recommended)
+  - Audit all purchased content at account.apple.com and decide what you're willing to lose
+  - Set up Proton Drive or another cloud storage service for documents
+  - Set up Bitwarden to replace Keychain
+  - Migrate contacts to your new email provider's contact system
+  - Disable iCloud sync for each category in Settings → [your name] → iCloud
+  - After confirming all data is migrated, sign out of iCloud

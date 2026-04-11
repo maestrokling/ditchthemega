@@ -1,0 +1,50 @@
+slug: app-store
+title: App Store & Purchased Apps
+subtitle: Apps you bought — and why you can't take them with you
+category: apple
+difficulty: 3
+what_it_is: >
+  The App Store is Apple's only official way to install apps on iPhone and iPad.
+  Unlike Google's Play Store, Apple prohibits sideloading on iOS entirely (with limited
+  EU exceptions starting 2024). Every app you've downloaded from the App Store is
+  licensed to your Apple ID, not owned by you, and only usable on Apple hardware.
+the_purchase_problem: >
+  Paid apps are licenses, not purchases. If you leave Apple and stop using iOS entirely,
+  you lose access to every app you've ever paid for — there is no Android equivalent to
+  transfer to and no refund mechanism for apps you've had for years. Before leaving iOS,
+  export any data stored in your paid apps and note which ones have cross-platform alternatives.
+what_you_lose:
+  - All paid app purchases (non-transferable, Apple-platform only)
+  - In-app purchases tied to iOS apps
+  - Subscriptions managed through Apple's payment system (you'll need to cancel separately)
+  - Apple Arcade access
+honest_assessment: >
+  Most apps have Android equivalents. The App Store is not a significant lock-in for most
+  users because the apps they actually use daily (email, messaging, maps, browser, productivity)
+  all have Android versions. The exception is specialty paid apps, especially creative tools
+  (Procreate, LumaFusion, Darkroom) that are iOS-only and have no equivalent on Android.
+  Audit your paid apps before deciding to leave.
+audit_first:
+  - Open App Store → your profile → Purchased → not on this iPhone
+  - Note any paid apps you actually use regularly
+  - Check if Android equivalents exist for each
+  - For iOS-only apps with no Android equivalent, this may be a genuine reason to stay in the Apple ecosystem — at least for now
+cross_platform_apps: >
+  The following categories of apps have strong cross-platform alternatives:
+  email (Proton Mail, Fastmail), messaging (Signal, WhatsApp, Telegram),
+  notes (Standard Notes, Obsidian, Notion), password manager (Bitwarden),
+  browser (Firefox, Brave, Chrome), productivity (Microsoft Office, Google Docs),
+  music (Spotify, Amazon Music, YouTube Music), podcasts (Pocket Casts, Overcast has no Android version),
+  navigation (OsmAnd, HERE WeGo, Google Maps)
+apple_subscriptions_warning: >
+  Subscriptions you pay for through Apple's in-app purchase system (Netflix, Spotify, Duolingo, etc.)
+  must be canceled through Apple, not through the app itself. If you leave iPhone without
+  canceling, you'll continue being charged. Cancel at Settings → [your name] → Subscriptions
+  before switching.
+migration_steps:
+  - Open Settings → [your name] → Subscriptions and cancel any you want to end
+  - Audit paid apps (App Store → profile → Purchased) and note iOS-only tools you'd lose
+  - Export data from any iOS-only apps before leaving (photos, documents, exports)
+  - For Android, set up a Google account or GrapheneOS to access the Play Store
+  - Re-download free apps from the Play Store on Android — paid apps will need to be repurchased
+  - Cancel Apple Arcade if subscribed (Settings → [your name] → Subscriptions)

@@ -1,0 +1,49 @@
+slug: find-my-apple-id
+title: Apple ID, Find My & Account Closure
+subtitle: The account that ties everything together
+category: apple
+difficulty: 3
+what_it_is: >
+  Your Apple ID is the account underlying every Apple service — iCloud, App Store,
+  Apple Music, Find My, iMessage, FaceTime, and every Apple device you've ever owned.
+  Find My uses a combination of GPS, Bluetooth, and Apple's vast device network to
+  locate your Apple devices and AirTags. Closing your Apple ID is the final step of
+  leaving Apple — and it's irreversible.
+before_you_close:
+  - Export all data from privacy.apple.com first — this is a comprehensive data download
+  - Export all photos from iCloud Photos as original files
+  - Export contacts, calendars, and notes
+  - Export passwords from iCloud Keychain
+  - Audit all iTunes/Apple Books/App Store purchases — these will become inaccessible
+  - Make sure Find My is disabled on all your devices (required before deactivation)
+  - Cancel all active subscriptions — Apple TV+, Apple Music, Apple One, iCloud+ storage
+  - Sign out of iCloud on all Apple devices (Settings → [your name] → Sign Out)
+find_my_privacy: >
+  Find My is genuinely privacy-respecting compared to Google's equivalent. Apple's
+  Find My network is end-to-end encrypted and anonymous — Apple cannot see the location
+  data. Third parties cannot track your devices through Find My. This is one area where
+  Apple's privacy practices are legitimately excellent and worth acknowledging.
+find_my_alternatives:
+  - Tile trackers (tile.com) work across platforms
+  - Samsung SmartTags work with Android
+  - Chipolo works across platforms
+  - AirTags only work with Apple's Find My network — they stop functioning if you close your Apple ID
+data_to_export:
+  - All iCloud data at privacy.apple.com → Request a copy of your data (takes 7 days)
+  - Health data from the Health app → export (generates XML)
+  - Screen Time data and reports
+  - Apple Pay transaction history (export before closing)
+how_to_close_apple_id:
+  - Go to privacy.apple.com → Continue → Request to delete your account
+  - Apple will ask you to confirm which data will be deleted
+  - You'll receive a verification code and have to wait a review period
+  - After confirmation, your Apple ID is permanently deleted
+  - This cannot be undone
+migration_steps:
+  - Request full data export at privacy.apple.com (do this first — it takes up to 7 days)
+  - Cancel all subscriptions (Settings → [your name] → Subscriptions)
+  - Sign out of iCloud on every Apple device (Settings → [your name] → Sign Out)
+  - Deactivate iMessage on your iPhone (Settings → Messages → iMessage → toggle off) — this is important or SMS messages to your number may get lost after switching
+  - Disable Find My on all devices
+  - Set up alternative services (Bitwarden for passwords, Proton Drive for documents, etc.)
+  - Once everything is migrated and confirmed, request account deletion at privacy.apple.com
