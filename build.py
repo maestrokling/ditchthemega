@@ -805,6 +805,16 @@ def build_google_hub(services):
   <p class="subtitle">Google isn\'t a search engine. It\'s a surveillance network that also does search, email, maps, video, and your phone.<br>
   Here\'s how to reduce your dependency, service by service.</p>
 </div>
+<div class="card card-honest" style="margin-bottom:1.5rem;">
+  <h2>What Google genuinely does better than any alternative</h2>
+  <ul>
+    <li><strong>Google Maps business data</strong> — hours, reviews, real-time traffic. No alternative matches the density. Use it in a browser when you need it; don\'t make it the default app.</li>
+    <li><strong>YouTube\'s content library</strong> — no alternative platform has the same breadth. Watch without tracking (Invidious, Brave) rather than pretending alternatives don\'t exist.</li>
+    <li><strong>Google Search quality</strong> — for very recent news, local results, and specific technical queries, Google is still ahead. DuckDuckGo covers 95% of daily use.</li>
+    <li><strong>Google Scholar</strong> — for academic research, no real equivalent yet.</li>
+    <li><strong>Gmail deliverability</strong> — Proton and Tuta occasionally land in spam at servers that implicitly trust Gmail. Real consideration for professional email.</li>
+  </ul>
+</div>
 <div class="service-grid">
 {cards}
 </div>'''
@@ -975,6 +985,17 @@ def build_apple_hub(services):
   There is no legal way to export them to another platform. Audit your purchases before leaving.
   See the <a href="/apple/apple-your-content/">Your Digital Content guide</a> for the full picture.</p>
 </div>
+<div class="card card-honest" style="margin-bottom:1.5rem;">
+  <h2>What you genuinely lose when you leave Apple</h2>
+  <ul>
+    <li><strong>iTunes/Apple Books purchases</strong> — DRM-locked, not transferable to other platforms</li>
+    <li><strong>iMessage</strong> — end-to-end encryption with your Apple contacts; green bubble fallback is unencrypted SMS</li>
+    <li><strong>AirDrop, Handoff, Universal Clipboard</strong> — seamless cross-device workflows with no Android/Windows equivalent</li>
+    <li><strong>Apple Watch full functionality</strong> — requires iPhone; leaving iPhone severely limits Watch capabilities</li>
+    <li><strong>Apple\'s privacy advantage</strong> — Apple\'s data practices are genuinely better than most alternatives; leaving for Google trades lock-in for surveillance</li>
+    <li><strong>Build quality and ecosystem coherence</strong> — Apple hardware and software are designed together in ways Android/Windows aren\'t</li>
+  </ul>
+</div>
 <div class="service-grid">
 {cards}
 </div>'''
@@ -1061,7 +1082,7 @@ def build_apple_service_page(svc):
         "\n".join(sections)
     )
 
-def build_generic_hub(services, category, slug_prefix, title, subtitle, description, canonical):
+def build_generic_hub(services, category, slug_prefix, title, subtitle, description, canonical, **kwargs):
     svcs = [s for s in services if s.get("category") == category]
     cards = ""
     for svc in svcs:
@@ -1078,11 +1099,14 @@ def build_generic_hub(services, category, slug_prefix, title, subtitle, descript
     {"" if not diff else f'<span class="difficulty {diff_class}">{diff_label}</span>'}
   </div>
 </a>'''
+    # Extra content: what you genuinely lose (passed via lose_html)
+    lose_html = kwargs.get('lose_html', '')
     content = f'''<div class="page-hero amazon-hero">
   <div class="breadcrumb"><a href="/">Home</a> › {e(title)}</div>
   <h1>{e(title)}</h1>
   <p class="subtitle">{e(subtitle)}</p>
 </div>
+{lose_html}
 <div class="service-grid">
 {cards}
 </div>'''
@@ -1457,6 +1481,28 @@ def build_google_your_content():
   <p>The main <a href="/google/">Google exit guide</a> covers the data pipeline: replacing Chrome, search, Gmail, Maps, and Android\'s default Google integration.</p>
 </section>
 
+<h2>Section 4 — The approach we don\'t recommend</h2>
+
+<section class="card card-note">
+  <h2>Google DRM tools — a shorter section</h2>
+  <p>Google\'s content ecosystem has significantly less DRM lock-in than Apple\'s or Amazon\'s. Most Google Play Books titles use Adobe DRM (interoperable across many readers) or are DRM-free. Google participates in Movies Anywhere, making movie purchases accessible across platforms. The urgency of DRM removal is lower here than with Kindle or Audible.</p>
+  <p>For titles with Adobe DRM: the same Calibre plugin ecosystem discussed in the Amazon guide handles Adobe DRM. The same legal landscape applies — DMCA Section 1201, circumvention illegal regardless of purchase, enforcement focused on tool makers not end users. The same risks are real.</p>
+  <p>Our position: We believe purchased content should be owned. The law says otherwise. Tools exist. Risks are real. Adults can make their own decisions with full information. That is all.</p>
+  <p>The structural solution: check whether your Google Play Books titles are DRM-free before assuming they\'re locked. Many are. For future ebook purchases, prefer DRM-free sources.</p>
+</section>
+
+<h2>What Google genuinely does better than any alternative</h2>
+
+<section class="card card-honest">
+  <ul>
+    <li><strong>Google Maps business data</strong> — hours, reviews, real-time info. No alternative matches the density. Use OsmAnd or Apple Maps for navigation; use a browser (not the app, not signed in) for business lookups.</li>
+    <li><strong>YouTube\'s content library</strong> — no alternative platform has the same breadth. Watch without tracking (Invidious, Brave browser) rather than pretending alternatives exist.</li>
+    <li><strong>Google Scholar</strong> — academic research. No real equivalent yet.</li>
+    <li><strong>Gmail\'s deliverability</strong> — Proton and Tuta emails occasionally land in spam at servers that implicitly trust Gmail. Real consideration for professional email.</li>
+    <li><strong>Google Translate</strong> — DeepL is better for many language pairs, but Google covers more languages and has camera translation and conversation mode.</li>
+  </ul>
+</section>
+
 <section class="card">
   <h2>Related guides</h2>
   <ul>
@@ -1538,6 +1584,28 @@ def build_meta_your_content():
   <p>Removing all your content and changing your name is not deletion. Your advertising profile still exists. Your data remains. Use the real deletion: <strong>facebook.com/help/delete_account</strong>. 30-day grace period. Deletion completes in up to 90 days. Some data (messages you sent to others) may persist in the other person\'s account.</p>
 </section>
 
+<h2>The approach we don\'t recommend</h2>
+
+<section class="card card-note">
+  <h2>Data scraping tools and fake deletion</h2>
+  <p>Tools exist that can bulk-download your Instagram posts, your Facebook data, and in some cases the posts of others through browser automation or API scraping. Meta\'s Terms of Service prohibit automated scraping. Using these tools can result in account suspension or permanent ban. In some cases, Meta has pursued legal action against scraping tool operators.</p>
+  <p>For your own data, the Download Your Information tool is the legal path and provides the same or better output. We recommend using it.</p>
+  <p><strong>Fake account deletion warning:</strong> Removing all your content and changing your name is not deletion. Your advertising profile remains. Your data stays on Meta\'s servers. Use the real deletion process: facebook.com/help/delete_account. The 30-day grace period exists — use it. After 30 days, deletion begins and is permanent.</p>
+  <p>Our position: The official export tools are comprehensive. The reason to use the tools over scrapers is that they\'re more complete, less risky, and you don\'t leave a trace of your own data behind on an unauthorized tool\'s servers.</p>
+</section>
+
+<h2>What Meta genuinely does that nothing else does</h2>
+
+<section class="card card-honest">
+  <ul>
+    <li><strong>Your social graph</strong> — the specific network of people you\'re connected to, the shared history, the groups you\'ve been part of for years. This doesn\'t exist elsewhere and can\'t be transferred.</li>
+    <li><strong>Memories / On This Day</strong> — the curated history of what you posted and who you were with, surfaced unexpectedly. This is by design. It keeps you on the platform. It\'s also, sometimes, genuinely meaningful.</li>
+    <li><strong>Community groups</strong> — neighborhood groups, parent groups, hobby communities, support communities. Many have no equivalent elsewhere. Some do (Discord, Reddit, Nextdoor). Many don\'t.</li>
+    <li><strong>Event discovery</strong> — for local events, Facebook Events has no real equivalent for the "what\'s happening near me this weekend" use case.</li>
+    <li><strong>Messenger with the deceased</strong> — if you have message threads with people who are no longer alive, those conversations may exist nowhere else. Export them before leaving. This is one of Meta\'s genuinely irreplaceable things.</li>
+  </ul>
+</section>
+
 <section class="card">
   <h2>Related guides</h2>
   <ul>
@@ -1603,6 +1671,26 @@ def build_microsoft_your_content():
     <li><strong>For PC gaming going forward:</strong> <a href="https://gog.com" target="_blank" rel="noopener">GOG.com</a> sells DRM-free games. You download the installer. It runs without any account or online check. You own it like a file on your hard drive.</li>
     <li><strong>Microsoft Store movies:</strong> Microsoft participates in Movies Anywhere. Link your account at moviesanywhere.com — eligible purchases become accessible on Apple TV, Amazon, Google, and Vudu.</li>
     <li><strong>Minecraft Java Edition:</strong> Worlds are local save files. Fully portable. Copy the saves folder.</li>
+  </ul>
+</section>
+
+<h2>The approach we don\'t recommend</h2>
+
+<section class="card card-note">
+  <h2>Xbox game DRM and Microsoft Store movies</h2>
+  <p>Xbox digital games use Microsoft\'s DRM — they require an account check to run. Game cracking and DRM removal for Xbox games is primarily associated with piracy rather than personal backup. We mention it only for completeness.</p>
+  <p>Microsoft Store movie purchases: Microsoft participates in Movies Anywhere, making most purchases accessible across platforms already. The DRM removal question is largely resolved by that portability.</p>
+  <p>Our position: Same as the other guides. GOG.com is the structural solution for PC gaming — buy DRM-free and own the installer outright. Movies Anywhere addresses the movie side.</p>
+</section>
+
+<h2>What Microsoft genuinely does better</h2>
+
+<section class="card card-honest">
+  <ul>
+    <li><strong>Excel for complex models</strong> — nothing fully matches Excel for advanced pivot tables, financial models, and complex macros. LibreOffice handles 90% of use cases. The 10% is real.</li>
+    <li><strong>Office format compatibility</strong> — .docx and .xlsx are the universal standard for business document exchange. LibreOffice conversion is good but not perfect on complex documents.</li>
+    <li><strong>Enterprise integration</strong> — Active Directory, Exchange, Teams, SharePoint, and Azure create dependencies in organizational contexts that are genuinely hard to replace without a company-wide commitment.</li>
+    <li><strong>Xbox Game Pass value</strong> — $15/month for hundreds of games is genuinely good value if you\'re a gamer. No equivalent exists in the same price bracket.</li>
   </ul>
 </section>
 
@@ -2071,7 +2159,17 @@ def main():
             "Leaving the Meta Ecosystem",
             "Facebook, Instagram, WhatsApp, and Threads. Here's how to reduce your exposure to Meta's surveillance infrastructure.",
             "Practical guides to leaving Facebook, Instagram, WhatsApp, and Threads. No lectures. Just the steps.",
-            f"{SITE_URL}/meta/"))
+            f"{SITE_URL}/meta/",
+            lose_html='''<div class="card card-honest" style="margin-bottom:1.5rem;">
+  <h2>What you genuinely lose when you leave Meta</h2>
+  <ul>
+    <li><strong>Your social graph</strong> \u2014 the specific network of people you\u2019re connected to, the shared history, the groups. It doesn\u2019t transfer anywhere.</li>
+    <li><strong>Community groups</strong> \u2014 neighborhood groups, parent groups, hobby communities. Many have no equivalent elsewhere.</li>
+    <li><strong>Event discovery</strong> \u2014 for local events, Facebook Events has no real equivalent for casual \u201cwhat\u2019s happening near me\u201d discovery.</li>
+    <li><strong>Memories and On This Day</strong> \u2014 the curated history surfaced unexpectedly. It\u2019s by design. It\u2019s also sometimes genuinely meaningful.</li>
+    <li><strong>Messenger threads with the deceased</strong> \u2014 conversations with people who are no longer alive may exist nowhere else. Export before leaving.</li>
+  </ul>
+</div>'''))
     print("Built: meta/index.html")
     for svc in [s for s in services if s.get("category") == "meta"]:
         slug = svc["slug"]
@@ -2095,7 +2193,17 @@ def main():
             "Leaving the Microsoft Ecosystem",
             "Windows, Microsoft 365, LinkedIn, and OneDrive. Here's how to reduce your dependency on Microsoft's stack.",
             "Practical guides to leaving Windows, Microsoft 365, LinkedIn, and OneDrive. Honest about what stays Windows-only.",
-            f"{SITE_URL}/microsoft/"))
+            f"{SITE_URL}/microsoft/",
+            lose_html='''<div class="card card-honest" style="margin-bottom:1.5rem;">
+  <h2>What you genuinely lose when you leave Microsoft</h2>
+  <ul>
+    <li><strong>Excel for complex models</strong> \u2014 nothing fully matches Excel for advanced pivot tables, financial models, and macros. LibreOffice handles 90%. The 10% is real.</li>
+    <li><strong>Office format compatibility</strong> \u2014 .docx and .xlsx are the universal business document standard. Conversion is good but not perfect on complex documents.</li>
+    <li><strong>Xbox game library</strong> \u2014 digital game purchases are tied to your Microsoft account. GOG.com is the DRM-free alternative for future purchases.</li>
+    <li><strong>LinkedIn professional presence</strong> \u2014 for job seekers and B2B professionals, LinkedIn remains where opportunities happen. Leaving has real career implications.</li>
+    <li><strong>Enterprise integration</strong> \u2014 Active Directory, Teams, SharePoint. In organizational contexts, these dependencies are structural and hard to replace.</li>
+  </ul>
+</div>'''))
     print("Built: microsoft/index.html")
     for svc in [s for s in services if s.get("category") == "microsoft"]:
         slug = svc["slug"]
