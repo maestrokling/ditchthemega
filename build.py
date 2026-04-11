@@ -660,6 +660,245 @@ def build_dtm_privacy():
         content
     )
 
+def build_guide_home_automation():
+    content = '''
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › Guides › Secure Home Automation</div>
+  <h1>Secure Home Automation Without Big Tech</h1>
+  <p class="subtitle">The complete guide to running a smart home that keeps all your data on hardware you own, in your house, on your network. No cloud. No subscription. No surveillance.</p>
+</div>
+
+<section class="card card-privacy">
+  <h2>The problem with Alexa, Google Home, and HomeKit</h2>
+  <p>Every major smart home ecosystem sends your data to the cloud. Your voice commands. Your daily routines. When you leave and when you come home. When you turn on the lights and when you go to sleep. Which rooms you use and when. Amazon and Google use this data for advertising and product development. Apple is more privacy-respecting but still cloud-dependent for most functions.</p>
+  <p>A fully functional, locally controlled smart home exists. It keeps all your data on hardware you own, in your house, on your network. The answer is Home Assistant.</p>
+</section>
+
+<h2>What is Home Assistant?</h2>
+<section class="card">
+  <p>Home Assistant is a free, open-source home automation platform that runs on a small computer in your home. It communicates with your smart devices locally over your home network. Your data never leaves your house. There is no monthly fee. There is no cloud dependency. The project is managed by the Open Home Foundation, a nonprofit that cannot be sold or acquired.</p>
+  <ul>
+    <li>600,000+ active installations worldwide</li>
+    <li>3,500+ integrations with smart home devices and services</li>
+    <li>Support for Zigbee, Z-Wave, Matter, Thread, WiFi, and Bluetooth devices</li>
+    <li>Built-in local voice assistant (Assist) that processes voice commands on your hardware without sending audio anywhere</li>
+    <li>&ldquo;Works with Home Assistant&rdquo; certification program that verifies local operation without cloud subscriptions</li>
+  </ul>
+</section>
+
+<h2>What you need to get started</h2>
+
+<section class="card">
+  <h2>Hardware options</h2>
+  <ul>
+    <li><strong>Home Assistant Green (~$99)</strong> — The official plug-and-play device. No assembly. Plug in, connect to network, open a browser. Best starting point for non-technical users.</li>
+    <li><strong>Home Assistant Yellow (~$150)</strong> — More powerful, with built-in Zigbee/Thread radio. One device handles both hub and device communication.</li>
+    <li><strong>Raspberry Pi 4 or 5 ($35–$80 + accessories)</strong> — The DIY option. Flash Home Assistant OS to an SD card. 15 minutes of setup if comfortable with this.</li>
+    <li><strong>Any old PC or mini-PC</strong> — Home Assistant runs on any x86 machine. An old laptop, a NUC, a mini-PC. Install Home Assistant OS or run it in Docker.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Communication radios (you may need one or more)</h2>
+  <ul>
+    <li><strong>Zigbee radio (Home Assistant SkyConnect, ~$30)</strong> — For Zigbee devices (IKEA, Aqara, Hue, Sonoff). Plugs into USB.</li>
+    <li><strong>Z-Wave radio (Zooz ZST39, ~$30)</strong> — For Z-Wave devices (many locks, sensors, thermostats). Plugs into USB.</li>
+    <li><strong>Matter/Thread</strong> — Supported natively in newer Home Assistant hardware. The emerging cross-platform standard.</li>
+    <li><strong>WiFi devices</strong> — No additional radio needed. Many smart plugs, lights, and switches use WiFi with local APIs.</li>
+  </ul>
+  <p><strong>Total cost to start:</strong> $99 (Home Assistant Green) to $150 (Yellow with radio). Comparable to buying an Echo, but with no subscription and no surveillance.</p>
+</section>
+
+<h2>What devices work</h2>
+
+<section class="card">
+  <h2>Lighting</h2>
+  <ul>
+    <li>Philips Hue — works locally via Zigbee, bypassing the Hue cloud</li>
+    <li>IKEA Tradfri — Zigbee, fully local, ~$8 per bulb</li>
+    <li>Nanoleaf — Matter-compatible</li>
+    <li>Any Zigbee-compatible bulb or switch</li>
+  </ul>
+  <h2>Thermostats</h2>
+  <ul>
+    <li>Ecobee — cloud integration, functional</li>
+    <li>Generic Zigbee/Z-Wave thermostats — fully local, best for full local control</li>
+    <li>Honeywell T6 Pro Z-Wave — controlled entirely through Home Assistant with no cloud involvement</li>
+  </ul>
+  <h2>Locks</h2>
+  <ul>
+    <li>Yale (Z-Wave models) — fully local</li>
+    <li>Schlage (Z-Wave models) — fully local</li>
+    <li>Any Z-Wave lock communicates over a local mesh network. The company could disappear and your lock still works.</li>
+  </ul>
+  <h2>Cameras</h2>
+  <ul>
+    <li><strong>UniFi Protect</strong> — local NVR, no cloud required; the gold standard for privacy-respecting cameras</li>
+    <li><strong>Reolink</strong> — RTSP streams, local recording, Works with Home Assistant certified</li>
+    <li><strong>Frigate</strong> — open-source NVR that runs alongside Home Assistant; AI object detection running locally</li>
+    <li><strong>Avoid:</strong> Ring (Amazon, cloud-dependent, law enforcement partnerships), Wyze (cloud-dependent, security incidents), Nest cameras (Google)</li>
+  </ul>
+  <h2>Sensors &amp; plugs</h2>
+  <ul>
+    <li>Aqara — Zigbee; motion, temperature, door/window, water leak sensors; inexpensive</li>
+    <li>Shelly — WiFi, local API, very popular in the Home Assistant community</li>
+    <li>TP-Link Kasa — WiFi, local API</li>
+    <li>Any Zigbee or Z-Wave plug/switch</li>
+  </ul>
+</section>
+
+<h2>How automations work</h2>
+<section class="card">
+  <p>Home Assistant automations run locally on your hub. They don\'t phone home. They don\'t check with a server. Examples:</p>
+  <ul>
+    <li>Motion detected in the hallway after sunset → turn on light at 30% brightness. Turn off after 5 minutes of no motion.</li>
+    <li>Front door unlocked → disarm security system, turn on entryway light, send notification to phone.</li>
+    <li>Nobody home (based on phone GPS via HA companion app, sent directly to your hub) → set thermostat to away mode, lock doors, arm security.</li>
+    <li>Washing machine power drops below 5 watts (smart plug) → notification: &ldquo;Laundry is done.&rdquo;</li>
+  </ul>
+  <p>All of these run <strong>without the internet</strong>. If your internet goes down, your automations keep working.</p>
+</section>
+
+<h2>Honest tradeoffs</h2>
+<section class="card card-honest">
+  <ul>
+    <li><strong>Setup is harder than Alexa.</strong> The initial setup takes 1–4 hours depending on how many devices you have. It\'s not difficult, but it requires more attention than a consumer product.</li>
+    <li><strong>The learning curve is real but manageable.</strong> Home Assistant has gotten dramatically easier. The visual automation editor and device auto-discovery mean you rarely need to touch YAML anymore.</li>
+    <li><strong>Some devices still need the cloud.</strong> Ecobee, Ring, Nest, and many WiFi devices phone home to their manufacturer. Home Assistant can integrate with these, but the device itself still sends data to the manufacturer. For full local control, choose Zigbee, Z-Wave, or Matter devices.</li>
+    <li><strong>Remote access requires one extra step.</strong> By default, Home Assistant is only accessible on your home network. Nabu Casa ($6.50/month) adds encrypted remote access and funds development. Or set up a VPN yourself for free.</li>
+    <li><strong>Assist is not a general-purpose AI assistant.</strong> It handles device control commands extremely well. It doesn\'t handle trivia, news briefings, shopping orders, or skills.</li>
+  </ul>
+</section>
+
+<h2>Starter shopping list</h2>
+<section class="card card-steps">
+  <h2>Under $200 — lighting and basic automation</h2>
+  <ul>
+    <li>Home Assistant Green: $99</li>
+    <li>Home Assistant SkyConnect (Zigbee/Thread radio): $30</li>
+    <li>4x IKEA Tradfri Zigbee smart bulbs: ~$32 ($8 each)</li>
+    <li>1x Aqara Zigbee motion sensor: ~$16</li>
+    <li>1x Aqara Zigbee door/window sensor: ~$14</li>
+    <li><strong>Total: ~$191</strong></li>
+  </ul>
+  <p>You get: Smart lighting in 4 rooms, motion-activated hallway light, door detection, all local, all private.</p>
+
+  <h2>Under $500 — adds thermostat and lock</h2>
+  <ul>
+    <li>Everything above: $191</li>
+    <li>Honeywell T6 Pro Z-Wave thermostat: ~$130</li>
+    <li>Zooz ZST39 Z-Wave USB stick: ~$30</li>
+    <li>Yale Assure Z-Wave deadbolt: ~$140</li>
+    <li><strong>Total: ~$491</strong></li>
+  </ul>
+</section>
+
+<h2>Questions people actually ask</h2>
+
+<section class="card">
+  <h2>Can I lock/unlock doors and control my thermostat by voice without Alexa or Google?</h2>
+  <p>Yes. Home Assistant\'s built-in voice assistant (Assist) handles this entirely locally. The entire chain: you speak → Whisper (open-source speech recognition on your hardware) converts speech to text → Home Assistant interprets the command → Z-Wave signal goes to your lock or thermostat. No internet required. No cloud. No audio stored anywhere.</p>
+  <p>Specific commands work well: &ldquo;Lock the front door,&rdquo; &ldquo;Set the thermostat to 72,&rdquo; &ldquo;Turn off all lights,&rdquo; &ldquo;Is the garage door open?&rdquo;</p>
+</section>
+
+<section class="card">
+  <h2>How good is voice recognition compared to Alexa?</h2>
+  <p>Honest answer: Assist is good at direct commands and not good at conversational or ambiguous requests.</p>
+  <p><strong>Works well:</strong> &ldquo;Turn on kitchen lights,&rdquo; &ldquo;Set thermostat to 72,&rdquo; &ldquo;Lock front door,&rdquo; &ldquo;Turn off all lights,&rdquo; sensor state queries.</p>
+  <p><strong>May require specific phrasing:</strong> &ldquo;Make it warmer&rdquo; (say &ldquo;Set thermostat to 74&rdquo; instead). Custom scenes work if named clearly.</p>
+  <p><strong>Doesn\'t work:</strong> General knowledge, conversational follow-ups, Alexa skills, ordering pizza, playing trivia.</p>
+  <p><strong>Improving:</strong> The Home Assistant community is integrating local LLMs into Assist for better natural language understanding. This is an active development area in 2026 and improving with every release.</p>
+</section>
+
+<section class="card">
+  <h2>Do automations still work if the internet goes down?</h2>
+  <p>Yes. All automations run on your local hub. Motion-triggered lights, thermostat schedules, door automations, security arming — all continue without internet. Devices that depend on their manufacturer\'s cloud (Ecobee, Ring, Nest) stop working during an outage, but that\'s not a Home Assistant limitation. Zigbee, Z-Wave, Thread, and Matter devices with local control continue to function regardless.</p>
+</section>
+
+<section class="card">
+  <h2>Can I check cameras from my phone when away from home?</h2>
+  <p>Yes, with one extra step:</p>
+  <ul>
+    <li><strong>Nabu Casa ($6.50/month)</strong> — Official encrypted relay. Your camera feeds and controls are accessible from anywhere via the HA app. Nabu Casa doesn\'t store your data; it relays the encrypted connection. The fee funds Home Assistant development.</li>
+    <li><strong>VPN (free, technical)</strong> — WireGuard on your router makes your phone virtually on your home network. No third party involved.</li>
+    <li><strong>Reverse proxy (free, most technical)</strong> — Expose Home Assistant via HTTPS with a domain name. Requires DNS and SSL knowledge.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Can my family, partner, and guests use it?</h2>
+  <p>Yes. Multiple approaches: individual user accounts with permission levels in the HA companion app; wall-mounted tablets running the HA dashboard (no app needed for guests); physical Z-Wave switches that work like normal switches for anyone; Assist voice satellites in rooms.</p>
+</section>
+
+<section class="card">
+  <h2>I\'m not technical. Can I actually do this?</h2>
+  <p>With Home Assistant Green: close to consumer-grade. Plug in, open browser, follow wizard. Auto-discovery finds many devices. Zigbee pairing is click → pair mode → done. Visual automation editor for common setups.</p>
+  <p>The honest comparison:</p>
+  <ul>
+    <li>Setting up an Echo: 5 minutes</li>
+    <li>Setting up Home Assistant Green with 5 devices: 1–2 hours</li>
+    <li>Setting up Home Assistant with 30 devices and 15 automations: a weekend project</li>
+    <li>Maintenance after initial setup: about the same as any smart home system</li>
+  </ul>
+  <p>The learning curve is front-loaded. The first weekend is the hardest. After that, adding devices and automations gets faster.</p>
+</section>
+
+<section class="card">
+  <h2>What\'s the easiest first step?</h2>
+  <p>Start with smart lighting. Buy the Home Assistant Green ($99), a Zigbee USB stick ($30), and 3–5 IKEA Tradfri Zigbee bulbs ($8 each). Set up one automation: motion sensor turns on the hallway light after sunset. Total cost under $180. Total setup time about an hour. You now have a locally controlled, private smart lighting system that nobody is surveilling.</p>
+</section>
+
+<section class="card">
+  <h2>Can I keep using Alexa or Google alongside Home Assistant?</h2>
+  <p>Yes. Home Assistant integrates with both. In this configuration: your voice command goes through Amazon (Alexa processes speech) → Alexa sends the command to Home Assistant → Home Assistant sends it to your device locally. Amazon hears &ldquo;turn on the kitchen lights.&rdquo; Amazon does not know the state of your lights, your automation schedule, your sensor data, or anything else. This is a reasonable transition strategy: keep Alexa\'s polished voice interface while moving device control to Home Assistant.</p>
+</section>
+
+<section class="card">
+  <h2>How does Home Assistant compare to Apple HomeKit?</h2>
+  <p>HomeKit is the closest mainstream ecosystem to Home Assistant\'s privacy model. Apple doesn\'t use your home automation data for advertising and processes many commands locally. For Apple users who want privacy and simplicity, HomeKit is a reasonable choice.</p>
+  <p><strong>Home Assistant advantages:</strong> 3,500+ device integrations vs HomeKit\'s ~1,000; much more powerful automations; runs on any hardware; fully customizable dashboards; Assist voice processing is fully local (Siri sends some data to Apple).</p>
+  <p><strong>HomeKit advantages:</strong> Simpler setup (scan a code); seamless Apple ecosystem integration; family sharing is easier; iPhone Control Center and lock screen integration.</p>
+  <p>They can coexist. Home Assistant has a HomeKit Bridge integration that exposes HA devices to HomeKit. Many people run Home Assistant for heavy lifting and use HomeKit as a secondary iPhone control interface.</p>
+</section>
+
+<section class="card">
+  <h2>What happens if Home Assistant as a project shuts down?</h2>
+  <p>Home Assistant is managed by the Open Home Foundation, a nonprofit that cannot be sold or acquired. The software is open source (Apache 2.0). Even if the organization ceased to exist, the code is public and the community would continue it. Compare this to commercial platforms: when Google killed Works with Nest, when Samsung stopped supporting SmartThings Hub V1, when Wink started charging monthly fees to avoid shutdown — customers were stranded. Home Assistant can\'t strand you because your automations run on your hardware.</p>
+</section>
+
+<section class="card">
+  <h2>Is Home Assistant secure?</h2>
+  <p>Generally more secure than cloud-based smart homes because your devices are not exposed to the internet by default. In cloud-based systems, your devices communicate with internet servers; a breach of those servers can expose your home. In Home Assistant, devices talk to a hub on your local network, not reachable from outside unless you configure it.</p>
+  <p>Best practices: keep Home Assistant updated (automatic by default); use strong passwords + 2FA; use Nabu Casa or VPN for remote access rather than directly exposing to internet; consider putting IoT devices on a separate VLAN; prefer Zigbee/Z-Wave/Thread over WiFi where possible.</p>
+</section>
+
+<section class="card">
+  <h2>Resources</h2>
+  <ul>
+    <li><a href="https://home-assistant.io" target="_blank" rel="noopener">home-assistant.io</a> — official site, documentation, hardware</li>
+    <li><a href="https://community.home-assistant.io" target="_blank" rel="noopener">community.home-assistant.io</a> — forum, 700,000+ members</li>
+    <li><a href="https://www.reddit.com/r/homeassistant" target="_blank" rel="noopener">r/homeassistant</a> — 450,000+ members; questions always answered</li>
+    <li><a href="https://www.youtube.com/@HomeAssistant" target="_blank" rel="noopener">Home Assistant YouTube</a> — official tutorials</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/amazon/alexa/">Alexa & Smart Home — migration guide</a></li>
+    <li><a href="/amazon/alexa-deep-dive/">Home Assistant setup — device-by-device migration from Alexa</a></li>
+    <li><a href="/alternatives/smart-home/">Smart Home alternatives overview</a></li>
+    <li><a href="/amazon/ring/">Ring replacement — UniFi, Eufy, Reolink</a></li>
+  </ul>
+</section>
+'''
+    return page_shell(
+        "Secure Home Automation Without Big Tech | DitchTheMega",
+        "The complete guide to Home Assistant: local smart home control with no cloud, no subscription, and no surveillance. Hardware options, device compatibility, Q&A.",
+        f"{SITE_URL}/guides/secure-home-automation/",
+        content
+    )
+
 def build_dtm_terms():
     content = '''
 <div class="page-hero">
@@ -826,32 +1065,376 @@ def build_google_hub(services):
         content
     )
 
+def alt_entry(name, url, replaces, privacy, free_tier, cost, platform, tradeoff):
+    free_badge = '<span class="alt-badge alt-free">Free tier</span>' if free_tier else ''
+    cost_str = f'<span class="alt-badge alt-cost">{e(cost)}</span>' if cost else ''
+    return f'''<div class="alt-entry">
+  <div class="alt-header">
+    <a href="{e(url)}" target="_blank" rel="noopener" class="alt-name">{e(name)}</a>
+    {free_badge}{cost_str}
+  </div>
+  <div class="alt-meta">
+    <span><strong>Replaces:</strong> {e(replaces)}</span>
+    <span><strong>Privacy:</strong> {e(privacy)}</span>
+    <span><strong>Platforms:</strong> {e(platform)}</span>
+  </div>
+  <p class="alt-tradeoff"><strong>Honest tradeoff:</strong> {e(tradeoff)}</p>
+</div>'''
+
+ALT_STYLE = '''<style>
+  .alt-entry{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin-bottom:1rem}
+  .alt-header{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.6rem}
+  .alt-name{font-size:1rem;font-weight:700;color:#f59e0b;text-decoration:none}
+  .alt-name:hover{text-decoration:underline}
+  .alt-badge{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:20px}
+  .alt-free{background:#052e16;color:#86efac}
+  .alt-cost{background:#1e2433;color:#94a3b8}
+  .alt-meta{display:grid;gap:.3rem;margin-bottom:.5rem;font-size:.85rem;color:#94a3b8}
+  .alt-tradeoff{font-size:.875rem;color:#64748b}
+  .alt-section{margin-bottom:2.5rem}
+  .alt-section h2{font-size:1.1rem;font-weight:700;color:#f1f5f9;border-bottom:1px solid var(--border);padding-bottom:.5rem;margin-bottom:1rem}
+  .aff-note{background:#1a1205;border:1px solid #78350f;border-radius:8px;padding:.75rem 1rem;margin-bottom:1.5rem;font-size:.8rem;color:#d1d5db}
+</style>'''
+
+def build_alternatives_category_page(slug, title, description, sections_html):
+    content = f'''{ALT_STYLE}
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="/alternatives/">Alternatives</a> › {e(title)}</div>
+  <h1>{e(title)}</h1>
+  <p class="subtitle">{e(description)}</p>
+</div>
+<div class="aff-note">ℹ️ This page is affiliate-free. Recommendations exist because they\'re good, not because we earn a commission. The rest of DitchTheMega has <a href="/about/#affiliate" style="color:#fcd34d;">disclosed affiliate links</a> where they exist. Not here.</div>
+{sections_html}
+<section class="card"><h2>Related guides</h2><ul>
+<li><a href="/alternatives/">All alternatives categories</a></li>
+<li><a href="/what-is-lock-in/">What is ecosystem lock-in?</a></li>
+</ul></section>'''
+    return page_shell(
+        f"{title} | DitchTheMega",
+        description,
+        f"{SITE_URL}/alternatives/{slug}/",
+        content
+    )
+
+def build_alternatives_pages():
+    pages = {}
+
+    # Email
+    pages["email"] = build_alternatives_category_page("email",
+        "Email Alternatives",
+        "Privacy-respecting alternatives to Gmail, Outlook, and Yahoo Mail.",
+        '<div class="alt-section"><h2>Email providers</h2>\n' +
+        alt_entry("Proton Mail", "https://proton.me/mail", "Gmail, Outlook, Yahoo Mail",
+            "End-to-end encrypted; Swiss jurisdiction; Proton cannot read your email",
+            True, "From $3.99/month", "Web, iOS, Android, desktop",
+            "Occasional deliverability issues to servers that implicitly trust Gmail; small storage on free tier") +
+        alt_entry("Tuta", "https://tuta.com", "Gmail, Outlook",
+            "End-to-end encrypted including subject lines; German jurisdiction; post-quantum encryption",
+            True, "From €1/month", "Web, iOS, Android, desktop",
+            "Smaller ecosystem than Proton; contacts can\'t decrypt your emails unless they also use Tuta") +
+        alt_entry("Fastmail", "https://fastmail.com", "Gmail, Outlook",
+            "Not end-to-end encrypted, but privacy-respecting; no advertising; Australian company",
+            False, "From $3/month", "Web, iOS, Android",
+            "Not encrypted at rest like Proton/Tuta; better UX than both") +
+        "</div>")
+
+    # Cloud Storage
+    pages["cloud-storage"] = build_alternatives_category_page("cloud-storage",
+        "Cloud Storage Alternatives",
+        "Privacy-respecting alternatives to Google Drive, OneDrive, iCloud, and Dropbox.",
+        '<div class="alt-section"><h2>Cloud storage</h2>\n' +
+        alt_entry("Proton Drive", "https://proton.me/drive", "Google Drive, OneDrive, iCloud Drive",
+            "End-to-end encrypted; files private even from Proton",
+            True, "From $3.99/month", "Web, iOS, Android, desktop",
+            "Smaller storage on free tier than Google; newer and still building features") +
+        alt_entry("Cryptomator", "https://cryptomator.org", "Google Drive, Dropbox, any cloud provider",
+            "Client-side encryption layer for any cloud; you control the encryption key",
+            True, "$14.99 one-time (mobile)", "Windows, Mac, Linux, iOS, Android",
+            "Adds a layer of setup complexity; the vault must be unlocked before accessing files") +
+        alt_entry("Nextcloud", "https://nextcloud.com", "Google Drive, OneDrive",
+            "Self-hosted; you control the server; zero third-party involvement",
+            True, "Free (self-hosted)", "Web, iOS, Android, desktop",
+            "Requires your own server hardware or a hosting provider; more setup than commercial cloud") +
+        alt_entry("Synology NAS", "https://synology.com", "Google Photos, iCloud, Google Drive",
+            "Local storage on your hardware; nothing leaves your home",
+            False, "$200–500 hardware (one-time)", "Web, iOS, Android, desktop",
+            "One-time hardware cost; electricity; no off-site backup unless configured") +
+        "</div>")
+
+    # Browsers & Search
+    pages["browsers-and-search"] = build_alternatives_category_page("browsers-and-search",
+        "Browser & Search Alternatives",
+        "Privacy-respecting alternatives to Chrome, Edge, and Google Search.",
+        '<div class="alt-section"><h2>Browsers</h2>\n' +
+        alt_entry("Brave", "https://brave.com", "Chrome, Edge",
+            "Chromium-based; built-in ad and tracker blocking; no telemetry to Google",
+            True, "Free", "Windows, Mac, Linux, iOS, Android",
+            "Some sites have issues with Brave\'s ad blocking; Brave has its own ad network (opt-in)") +
+        alt_entry("Firefox", "https://firefox.com", "Chrome, Edge",
+            "Independent engine; Mozilla nonprofit; customizable privacy settings",
+            True, "Free", "Windows, Mac, Linux, iOS, Android",
+            "Slightly slower on some sites than Chromium-based browsers; requires configuration for maximum privacy") +
+        "</div>\n<div class=\"alt-section\"><h2>Search engines</h2>\n" +
+        alt_entry("Brave Search", "https://search.brave.com", "Google Search, Bing",
+            "Independent search index; not a Google or Bing wrapper; no tracking",
+            True, "Free", "Web, browser integration",
+            "Smaller index than Google; occasional gaps on very specific or very recent queries") +
+        alt_entry("DuckDuckGo", "https://duckduckgo.com", "Google Search",
+            "No search history; no profiling; !bang syntax for quick searches",
+            True, "Free", "Web, browser, iOS, Android",
+            "Partially powered by Bing; less strong on local search than Google") +
+        alt_entry("Startpage", "https://startpage.com", "Google Search",
+            "Returns Google results without Google tracking you; privacy proxy for Google\'s index",
+            True, "Free", "Web",
+            "Still effectively using Google\'s index; best transition option if Google result quality matters") +
+        alt_entry("Kagi", "https://kagi.com", "Google Search",
+            "Paid search; no advertising; you\'re the customer not the product; highly customizable",
+            False, "From $5/month", "Web, browser integration",
+            "Costs money; worth evaluating for a month to see if quality justifies the price") +
+        "</div>")
+
+    # Messaging
+    pages["messaging"] = build_alternatives_category_page("messaging",
+        "Messaging Alternatives",
+        "Privacy-respecting alternatives to WhatsApp, iMessage, Facebook Messenger, and SMS.",
+        '<div class="alt-section"><h2>Messaging apps</h2>\n' +
+        alt_entry("Signal", "https://signal.org", "WhatsApp, iMessage, Facebook Messenger",
+            "End-to-end encrypted by default; open source; nonprofit; no metadata collection",
+            True, "Free", "iOS, Android, Windows, Mac, Linux",
+            "Your contacts also need Signal; green bubble equivalent when messaging non-Signal users") +
+        alt_entry("Element (Matrix)", "https://element.io", "WhatsApp, Slack, Discord",
+            "Decentralized, federated, open source; can self-host your own server",
+            True, "Free", "iOS, Android, Web, desktop",
+            "More technical setup; smaller user base than Signal; powerful for teams and communities") +
+        "</div>")
+
+    # Password Managers
+    pages["password-managers"] = build_alternatives_category_page("password-managers",
+        "Password Manager Alternatives",
+        "Privacy-respecting alternatives to Google Password Manager, iCloud Keychain, and LastPass.",
+        '<div class="alt-section"><h2>Password managers</h2>\n' +
+        alt_entry("Bitwarden", "https://bitwarden.com", "Google Password Manager, iCloud Keychain, LastPass",
+            "Open source; audited; can be self-hosted; excellent free tier",
+            True, "Free / $10/year premium", "iOS, Android, Web, all browsers, desktop",
+            "Cloud-synced by default (though you can self-host); no offline access without the app") +
+        alt_entry("Proton Pass", "https://proton.me/pass", "Google Password Manager, iCloud Keychain",
+            "End-to-end encrypted; integrated with Proton ecosystem; email aliases included",
+            True, "Free / included in Proton plans", "iOS, Android, Web, all browsers",
+            "Newer than Bitwarden; smaller feature set but catching up") +
+        alt_entry("KeePassXC", "https://keepassxc.org", "Any cloud password manager",
+            "Fully local; vault is a file on your device; never touches a server",
+            True, "Free", "Windows, Mac, Linux",
+            "No automatic sync between devices; you manage your vault file manually") +
+        "</div>")
+
+    # VPN
+    pages["vpn"] = build_alternatives_category_page("vpn",
+        "VPN Alternatives",
+        "VPNs that don\'t log your activity. (Most commercial VPNs do.)",
+        '<div class="alt-section"><h2>Privacy-respecting VPNs</h2>\n' +
+        alt_entry("Mullvad", "https://mullvad.net", "ISP tracking; commercial VPNs that log",
+            "No account required; no email; pay with cash; the most anonymous VPN",
+            False, "€5/month", "Windows, Mac, Linux, iOS, Android",
+            "Account number instead of email means harder to recover if lost; no free tier") +
+        alt_entry("Proton VPN", "https://protonvpn.com", "ISP tracking; commercial logging VPNs",
+            "Audited no-logs; open source; free tier has no data limit",
+            True, "Free / from $4.99/month", "Windows, Mac, Linux, iOS, Android",
+            "Free tier is slower and limited to three countries") +
+        "</div>")
+
+    # Maps
+    pages["maps-and-navigation"] = build_alternatives_category_page("maps-and-navigation",
+        "Maps & Navigation Alternatives",
+        "Privacy-respecting alternatives to Google Maps and Waze.",
+        '<div class="alt-section"><h2>Navigation apps</h2>\n' +
+        alt_entry("Apple Maps", "https://apple.com/maps", "Google Maps",
+            "On-device processing where possible; no persistent location history sent to Apple",
+            True, "Free", "iOS, macOS, iPadOS",
+            "Apple-ecosystem only; business data density still catching up to Google") +
+        alt_entry("OsmAnd", "https://osmand.net", "Google Maps, Waze",
+            "Open source; offline maps; OpenStreetMap data; no tracking",
+            True, "Free / $9.99 OsmAnd+", "iOS, Android",
+            "Weaker on business hours and real-time traffic; more features than most people need") +
+        alt_entry("Organic Maps", "https://organicmaps.app", "Google Maps",
+            "Open source; offline-first; no tracking; no ads",
+            True, "Free", "iOS, Android",
+            "Focused on navigation and hiking; thinner on business listings and transit") +
+        "</div>")
+
+    # Productivity
+    pages["productivity"] = build_alternatives_category_page("productivity",
+        "Productivity Alternatives",
+        "Alternatives to Google Docs, Microsoft 365, Notion, Evernote, and OneNote.",
+        '<div class="alt-section"><h2>Office suites</h2>\n' +
+        alt_entry("LibreOffice", "https://libreoffice.org", "Microsoft 365, Google Docs/Sheets/Slides",
+            "Free; open source; local; handles most Office formats",
+            True, "Free", "Windows, Mac, Linux",
+            "The 10% of complex Office documents (advanced macros, pivot tables) may not convert perfectly") +
+        alt_entry("CryptPad", "https://cryptpad.fr", "Google Docs, Microsoft 365",
+            "End-to-end encrypted; open source; nonprofit; collaborative",
+            True, "Free / from €5/month", "Web",
+            "Smaller feature set than Google Docs; occasional performance issues on large documents") +
+        alt_entry("OnlyOffice", "https://onlyoffice.com", "Microsoft 365, Google Docs",
+            "Open source; high Office format compatibility",
+            True, "Free desktop / paid server", "Windows, Mac, Linux, Web",
+            "Closer to Microsoft\'s UI than LibreOffice; better format fidelity on complex documents") +
+        "</div>\n<div class=\"alt-section\"><h2>Notes</h2>\n" +
+        alt_entry("Obsidian", "https://obsidian.md", "Notion, Evernote, OneNote, Google Keep",
+            "Local-first; Markdown; no cloud unless you choose sync",
+            True, "Free / $8/month sync", "Windows, Mac, Linux, iOS, Android",
+            "No web app; notes are plain text Markdown files; less structured than Notion") +
+        alt_entry("Standard Notes", "https://standardnotes.com", "Evernote, Google Keep, Apple Notes",
+            "End-to-end encrypted; open source; notes are yours forever",
+            True, "Free / from $3.33/month", "Web, iOS, Android, desktop",
+            "Simpler than Obsidian; fewer features but cleaner interface") +
+        "</div>")
+
+    # Streaming
+    pages["streaming"] = build_alternatives_category_page("streaming",
+        "Streaming Alternatives",
+        "Important note: streaming alternatives are lateral moves, not privacy upgrades.",
+        '<div class="alt-section"><h2>The honest truth about streaming</h2>\n' +
+        '<div class="card card-note"><p>All streaming services track your viewing habits. There is no privacy-respecting streaming alternative. Switching from Prime Video to Netflix trades Amazon\'s surveillance for Netflix\'s. The recommendation is to use streaming services in a privacy-focused browser (Brave, Firefox) without being signed into a Google/Amazon/Apple account where possible.</p>' +
+        '<p>For music: buy DRM-free from Bandcamp. For movies and TV shows: physical media (Blu-ray) is the only DRM-free option. Your library\'s DVD loan program is free.</p></div>\n' +
+        '<h2>If you want to move between streaming services</h2>\n' +
+        alt_entry("Tidal", "https://tidal.com", "Spotify, Apple Music, Amazon Music",
+            "Independent (not a Big Five company); higher audio quality (HiFi/Atmos)",
+            False, "From $10.99/month", "Web, iOS, Android, desktop",
+            "Smaller catalog in some regions; Jay-Z ownership means less neutral than Mullvad or Signal") +
+        alt_entry("Bandcamp", "https://bandcamp.com", "Spotify, Apple Music (for purchases)",
+            "Artists receive majority of revenue; DRM-free MP3/FLAC downloads",
+            True, "Pay-per-album", "Web, iOS, Android",
+            "Not a full streaming library replacement; best for artists you actively want to support") +
+        "</div>")
+
+    # Gaming
+    pages["gaming"] = build_alternatives_category_page("gaming",
+        "Gaming Alternatives",
+        "DRM-free and more portable alternatives to the Xbox Store, Amazon Games, and Google Play Games.",
+        '<div class="alt-section"><h2>PC gaming platforms</h2>\n' +
+        alt_entry("GOG.com", "https://gog.com", "Xbox Store, Amazon Games, Epic Games Store",
+            "DRM-free; you own the installer; runs without any account or internet check",
+            False, "Pay-per-game", "Windows, Mac, Linux",
+            "Smaller library than Steam; focuses on quality over quantity; older games especially well-represented") +
+        alt_entry("itch.io", "https://itch.io", "Xbox Store, Steam (indie games)",
+            "Many games are DRM-free; indie-first; creator-friendly revenue split",
+            True, "Pay-per-game", "Windows, Mac, Linux",
+            "Indie-focused; not a source for AAA games") +
+        alt_entry("Steam", "https://store.steampowered.com", "Xbox Store, Amazon Games",
+            "Most portable DRM of the major PC stores; long track record; generous refunds",
+            False, "Pay-per-game", "Windows, Mac, Linux (via Proton)",
+            "Not DRM-free; requires the Steam client; but more portable than Xbox/PlayStation/Epic stores") +
+        "</div>")
+
+    # Smart Home
+    pages["smart-home"] = build_alternatives_category_page("smart-home",
+        "Smart Home Alternatives",
+        "Privacy-respecting alternatives to Alexa, Google Home, and Ring.",
+        '<div class="alt-section"><h2>Smart home platform</h2>\n' +
+        alt_entry("Home Assistant", "https://home-assistant.io", "Amazon Alexa/Echo, Google Home/Nest, Apple HomeKit",
+            "Open source; runs locally; your data never leaves your house; no subscription",
+            True, "Free (hardware: $99 Green, $150 Yellow)", "Any device with a browser; native iOS/Android app",
+            "Setup takes 1–2 hours; learning curve is real but front-loaded; much more powerful than Alexa once running") +
+        "</div>\n<div class=\"alt-section\"><h2>Cameras (Ring alternatives)</h2>\n" +
+        alt_entry("UniFi Protect", "https://ui.com/camera-security", "Ring, Nest cameras",
+            "Local storage only; footage never sent to a cloud server; no subscription required",
+            False, "Hardware: $100–400 NVR + cameras", "Web, iOS, Android",
+            "Requires a UniFi NVR or Dream Machine; higher upfront cost; best-in-class for privacy") +
+        alt_entry("Reolink", "https://reolink.com", "Ring, Wyze",
+            "Local storage via SD card or NAS; optional cloud (not required)",
+            False, "$30–$100 per camera", "Web, iOS, Android",
+            "Good value; cloud optional not required; less polished app than Ring") +
+        "</div>\n<p style=\"margin-top:1rem;\"><a href=\"/guides/secure-home-automation/\">See the complete Home Assistant guide →</a></p>")
+
+    # Shopping
+    pages["shopping"] = build_alternatives_category_page("shopping",
+        "Shopping Alternatives",
+        "Where to buy things online that isn\'t Amazon, by category.",
+        '<div class="alt-section"><h2>General merchandise</h2>\n' +
+        alt_entry("Walmart.com", "https://walmart.com", "Amazon general shopping",
+            "No Amazon relationship; Walmart+ for shipping",
+            False, "$98/year Walmart+", "Web, iOS, Android",
+            "Narrower selection than Amazon for niche items; no third-party marketplace concerns") +
+        alt_entry("Target.com", "https://target.com", "Amazon general shopping",
+            "No Amazon relationship; same-day via Shipt in many areas",
+            False, "$99/year Target Circle 360", "Web, iOS, Android",
+            "Stronger for household, grocery, clothing; weaker for electronics and niche items") +
+        "</div>\n<div class=\"alt-section\"><h2>Books</h2>\n" +
+        alt_entry("Bookshop.org", "https://bookshop.org", "Amazon books",
+            "10% of every purchase supports independent bookstores",
+            False, "Same prices as Amazon", "Web",
+            "No used books; no Kindle format; print and DRM-free ebook for some publishers") +
+        alt_entry("ThriftBooks", "https://thriftbooks.com", "Amazon used books",
+            "No Amazon relationship",
+            False, "Pay-per-book", "Web, iOS, Android",
+            "Used only; slightly slower shipping than Amazon") +
+        alt_entry("Libby (your library)", "https://libbyapp.com", "Kindle Unlimited, Audible",
+            "Free; library card is a subscription you\'ve already paid for",
+            True, "Free", "iOS, Android, Kindle",
+            "Wait times on popular titles; can\'t keep books forever") +
+        "</div>\n<div class=\"alt-section\"><h2>Pet supplies</h2>\n" +
+        alt_entry("Chewy", "https://chewy.com", "Amazon pet supplies",
+            "No Amazon relationship; often cheaper than Amazon on pet food",
+            False, "Free shipping on $49+", "Web, iOS, Android",
+            "Pet-specific only; $49 minimum for free shipping") +
+        "</div>\n<div class=\"alt-section\"><h2>Household & cleaning</h2>\n" +
+        alt_entry("Grove Collaborative", "https://grove.co", "Amazon Subscribe & Save (household)",
+            "B Corp; no Amazon relationship",
+            False, "Free shipping with membership", "Web, iOS, Android",
+            "Natural/eco-focused; subscription model; smaller selection than Amazon") +
+        "</div>")
+
+    return pages
+
 def build_alternatives_hub(services):
-    alt_svcs = [s for s in services if s.get("category") == "alternatives"]
-    cards = ""
-    for svc in alt_svcs:
-        slug = svc["slug"]
-        title = svc["title"]
-        subtitle = svc.get("meta_description","")
-        cards += f'''<a href="/alternatives/{slug}/" class="service-card">
+    # Category pages (new expanded alternatives)
+    cat_pages = [
+        ("email", "Email", "Gmail, Outlook, Yahoo Mail"),
+        ("cloud-storage", "Cloud Storage", "Google Drive, OneDrive, iCloud"),
+        ("browsers-and-search", "Browsers & Search", "Chrome, Google Search, Edge"),
+        ("messaging", "Messaging", "WhatsApp, iMessage, Messenger"),
+        ("password-managers", "Password Managers", "Google Passwords, iCloud Keychain"),
+        ("vpn", "VPN", "Commercial logging VPNs; ISP tracking"),
+        ("maps-and-navigation", "Maps & Navigation", "Google Maps, Waze"),
+        ("productivity", "Productivity", "Google Docs, Microsoft 365, Notion"),
+        ("streaming", "Streaming", "Prime Video, Apple TV+, YouTube Premium"),
+        ("gaming", "Gaming", "Xbox Store, Amazon Games"),
+        ("smart-home", "Smart Home", "Alexa, Google Home, Ring"),
+        ("shopping", "Shopping", "Amazon general shopping"),
+    ]
+    cat_cards = "".join(f'''<a href="/alternatives/{slug}/" class="service-card">
   <div class="service-card-inner">
     <h2>{e(title)}</h2>
-    <p style="font-size:0.8rem;color:#64748b;">{e(subtitle[:100])}</p>
+    <p style="font-size:.8rem;color:#64748b;">Replaces: {e(replaces)}</p>
   </div>
-</a>'''
+</a>''' for slug, title, replaces in cat_pages)
+
+    # Legacy YAML-driven pages (Amazon-specific comparisons)
+    alt_svcs = [s for s in services if s.get("category") == "alternatives"]
+    legacy_cards = "".join(f'''<a href="/alternatives/{svc["slug"]}/" class="service-card">
+  <div class="service-card-inner">
+    <h2>{e(svc["title"])}</h2>
+    <p style="font-size:.8rem;color:#64748b;">{e(svc.get("meta_description","")[:80])}</p>
+  </div>
+</a>''' for svc in alt_svcs)
 
     content = f'''<div class="page-hero amazon-hero">
   <div class="breadcrumb"><a href="/">Home</a> › Alternatives</div>
-  <h1>Amazon Alternatives by Category</h1>
-  <p class="subtitle">The best replacements for Amazon, category by category. Honest comparisons, real prices, genuine tradeoffs.</p>
+  <h1>Privacy-Respecting Alternatives</h1>
+  <p class="subtitle">For every Big Tech service you use, there is a privacy-respecting option that works. Some are better. Some are harder. All of them let you leave.</p>
 </div>
+<div style="background:#1a1205;border:1px solid #78350f;border-radius:8px;padding:.75rem 1rem;margin-bottom:1.5rem;font-size:.8rem;color:#d1d5db;">ℹ️ These pages are affiliate-free. Every recommendation exists because it\'s good, not because we earn a commission.</div>
 <div class="service-grid">
-{cards}
+{cat_cards}
+</div>
+<h2 style="margin-top:2rem;margin-bottom:1rem;color:#f1f5f9;">Amazon shopping comparisons</h2>
+<div class="service-grid">
+{legacy_cards}
 </div>'''
 
     return page_shell(
-        "Amazon Alternatives — DitchTheMega",
-        "The best Amazon alternatives by category — books, electronics, pet supplies, Prime, and more. Honest comparisons.",
+        "Privacy-Respecting Alternatives — DitchTheMega",
+        "Alternatives to Gmail, Google Drive, Chrome, WhatsApp, iCloud, Alexa, and more. Honest comparisons. No affiliate links.",
         f"{SITE_URL}/alternatives/",
         content
     )
@@ -2219,6 +2802,22 @@ def main():
     with open(f"{out_dir}/index.html", "w") as f:
         f.write(build_microsoft_your_content())
     print("Built: microsoft/your-content/index.html")
+
+    # Secure Home Automation guide
+    out_dir = f"{PUBLIC_DIR}/guides/secure-home-automation"
+    os.makedirs(out_dir, exist_ok=True)
+    with open(f"{out_dir}/index.html", "w") as f:
+        f.write(build_guide_home_automation())
+    print("Built: guides/secure-home-automation/index.html")
+
+    # Expanded alternatives category pages
+    alt_pages = build_alternatives_pages()
+    for slug, content in alt_pages.items():
+        out_dir = f"{PUBLIC_DIR}/alternatives/{slug}"
+        os.makedirs(out_dir, exist_ok=True)
+        with open(f"{out_dir}/index.html", "w") as f:
+            f.write(content)
+        print(f"Built: alternatives/{slug}/index.html")
 
     # Sitemap (add sellers hub)
     with open(f"{PUBLIC_DIR}/sitemap.xml", "w") as f:
