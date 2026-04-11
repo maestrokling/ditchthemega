@@ -1,0 +1,58 @@
+slug: apple-account-deletion
+title: Closing Your Apple ID
+subtitle: What happens permanently — and what to do first
+category: apple
+difficulty: 3
+what_it_is: >
+  Your Apple ID is the account that ties every Apple service together. Closing it is
+  permanent and irreversible. Before you do it, there is a specific sequence of steps
+  that prevents losing access to content and accounts you depend on. The 7-day grace
+  period is your safety net — use it.
+permanent_losses:
+  - All iTunes/Apple TV movie and TV show purchases (access ends permanently)
+  - All Apple Books purchases (inaccessible after account closure)
+  - All App Store purchases (apps still installed continue to work but cannot be re-downloaded)
+  - iCloud data not exported before deletion (photos, documents, notes, email)
+  - iMessage history (if not exported using iMazing or similar)
+  - Access to any third-party services where you signed in with Apple
+pre_deletion_checklist:
+  - Export all iCloud data at privacy.apple.com (allows up to 4 weeks of preparation)
+  - Download all iCloud Photos as originals from the Photos app or iCloud.com
+  - Export contacts as vCard, calendars as .ics files
+  - Export iMessage history using iMazing (Mac/Windows app) if you want to preserve it
+  - Export passwords from iCloud Keychain to a new password manager (Bitwarden, 1Password)
+  - Export Health data from the Health app (profile → Export All Health Data)
+  - Cancel all active subscriptions FIRST (Settings → [your name] → Subscriptions)
+  - Cancel iCloud+ storage plan if you have one
+  - Cancel Apple TV+, Apple Music, Apple One, Apple Arcade, Apple News+ separately if applicable
+  - Sign out of iCloud on every Apple device (Settings → [your name] → Sign Out)
+  - Disable Find My on all devices (required before deletion)
+  - Review Sign in with Apple — find all third-party services where you used Apple login
+sign_in_with_apple:
+  - Go to appleid.apple.com → Sign In & Security → Apps & Websites Using Apple ID
+  - For each service listed, set up a different login method before closing your Apple ID
+  - If you used "Hide my email" to create relay addresses, those addresses stop working when you close your account
+digital_legacy:
+  - Apple's Digital Legacy program lets you designate people who can access your data after death
+  - If someone in your life has passed away and you need to access their Apple account, see closingaccounts.com for guidance on the process
+  - Setting up your own Digital Legacy before leaving Apple is optional but may be worth doing
+grace_period: >
+  After submitting the deletion request, Apple gives you a 7-day waiting period during
+  which you can cancel the deletion if you change your mind. After 7 days, deletion begins
+  and cannot be stopped. The process completes within 14 days. Some data (transaction
+  records for tax and legal purposes) may be retained longer per Apple's legal obligations.
+how_to_delete:
+  - Go to privacy.apple.com
+  - Sign in with your Apple ID
+  - Click "Request to delete your account"
+  - Review what data will be deleted and confirm you've backed up everything
+  - Choose a reason (required)
+  - Apple sends a verification code to your trusted phone number
+  - After verification, the 7-day grace period begins
+migration_steps:
+  - Work through the pre-deletion checklist above completely before starting the deletion
+  - Confirm all services that used Sign in with Apple have been migrated to a new login
+  - Cancel all subscriptions individually — deletion may not automatically cancel them
+  - Submit deletion request at privacy.apple.com
+  - Keep your phone accessible for the verification code
+  - After 7 days and confirmation the deletion has completed, remove Apple devices from trusted device list

@@ -1,0 +1,80 @@
+slug: microsoft-windows-alternatives
+title: Windows Alternatives
+subtitle: When to leave Windows, when to stay, and what to use instead
+category: microsoft
+difficulty: 4
+what_it_is: >
+  Windows runs on roughly 73% of the world's desktop computers. It's also the most
+  data-collecting consumer operating system available — telemetry, Recall, Cortana,
+  OneDrive auto-upload, and deep Microsoft account integration all contribute to
+  Microsoft's profile of you. But the honest question before considering a switch:
+  do you actually need to leave Windows, or do you just need to adjust your settings?
+the_honest_assessment: >
+  Most consumers don't need to leave Windows for privacy reasons. The data collection
+  is real, but it's largely containable with the right settings: disable telemetry,
+  use a local account instead of a Microsoft account, turn off Recall, uninstall Cortana,
+  set Firefox or Brave as your default browser. You get a substantially less surveillance-heavy
+  Windows experience without the disruption of switching operating systems.
+  The reasons to actually leave Windows are: you want an open-source OS you can fully
+  audit; you want the freedom from licensing costs; you're a developer who prefers Linux
+  tooling; or you have a philosophical commitment to software freedom.
+windows_privacy_settings:
+  - Use a local account (Settings → Accounts → Your info → Sign in with a local account instead)
+  - Disable telemetry (Settings → Privacy & Security → Diagnostics & feedback → Basic or off)
+  - Turn off advertising ID (Settings → Privacy & Security → General → toggle off all)
+  - Disable Recall (Settings → Privacy & Security → Recall → turn off)
+  - Turn off Cortana completely (Settings → Cortana → off)
+  - Set Firefox or Brave as default browser, DuckDuckGo as default search
+  - Disable OneDrive auto-start if you don't want it (Task Manager → Startup → Microsoft OneDrive → Disable)
+  - Review app permissions (Settings → Privacy & Security → each category) and revoke unnecessary access
+  - Turn off Windows Hello facial recognition if preferred
+when_to_actually_switch:
+  - You're a developer and prefer Linux tooling (terminal, package managers, dev environments)
+  - You want full control over your OS with no proprietary code you can't audit
+  - Your hardware is older and Windows 11 is too demanding or unsupported
+  - Gaming is not your primary use case (Linux gaming has improved dramatically but still has gaps)
+  - You're comfortable with occasional troubleshooting
+alternatives:
+  - name: Ubuntu
+    url: https://ubuntu.com
+    notes: >
+      The most user-friendly Linux distribution. Free. Open source. Strong community support.
+      Excellent for general computing, web browsing, email, and productivity.
+      Default desktop feels like a modern OS. Best starting point for Windows users.
+  - name: Linux Mint
+    url: https://linuxmint.com
+    notes: >
+      Based on Ubuntu. Designed to look and feel like Windows — taskbar at the bottom,
+      Start menu equivalent, familiar layout. Lowest friction transition from Windows.
+      Recommended for first-time Linux users from Windows.
+  - name: Fedora
+    url: https://fedoraproject.org
+    notes: >
+      More cutting-edge than Ubuntu/Mint. Excellent hardware support. Popular among developers
+      and technical users. Uses GNOME desktop by default.
+  - name: Pop!_OS
+    url: https://pop.system76.com
+    notes: >
+      Gaming-focused Ubuntu variant from System76. Excellent Nvidia support. Tiling window
+      manager option for power users. Good choice for gamers considering Linux.
+  - name: Tails
+    url: https://tails.boum.org
+    notes: >
+      Privacy-first OS that runs from a USB drive and leaves no trace on the computer.
+      For users who need maximum privacy and anonymity. Not a daily driver — specific use case.
+gaming_on_linux: >
+  Linux gaming has improved dramatically. Steam's Proton compatibility layer runs most
+  Windows games on Linux without any extra effort. The Steam Deck runs Linux. Native Linux
+  games are common. The games that don't work: primarily anti-cheat titles (many competitive
+  multiplayer games use anti-cheat software that doesn't work on Linux) and some older DRM-
+  protected titles. Check protondb.com for compatibility status on specific games.
+  If gaming matters to you, check your most-played games on ProtonDB before switching.
+migration_steps:
+  - Before switching, check your must-have applications for Linux compatibility
+  - Download a Linux Mint ISO and create a bootable USB drive (free, takes 15 minutes)
+  - Boot from the USB (no installation required) and try the OS on your hardware
+  - Test your peripherals, verify your WiFi works, open your most important apps
+  - If everything works, install alongside Windows (dual boot) — this gives you a safe exit back
+  - Run Linux as your primary OS for 30 days before removing Windows
+  - After 30 days, if you haven't needed Windows for anything: remove it or keep the dual boot as a safety net
+  - Your files from Windows are accessible in Linux if on the same drive (NTFS support is built-in)

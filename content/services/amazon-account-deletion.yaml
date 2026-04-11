@@ -1,0 +1,65 @@
+slug: amazon-account-deletion
+title: Closing Your Amazon Account
+subtitle: What you lose permanently — and what to do in the right order
+category: reference
+difficulty: 3
+what_it_is: >
+  Closing your Amazon account is permanent and irreversible. Everything tied to your
+  Amazon ID — purchases, Kindle library, Audible library, Prime Video purchases, order
+  history — becomes inaccessible. The order in which you do things matters significantly.
+permanent_losses:
+  - All Kindle book purchases (library permanently inaccessible)
+  - All Audible audiobook purchases (accessible only while account is active)
+  - All Prime Video movie and TV purchases (accessible only while account is active)
+  - Complete order history and purchase records
+  - Amazon Prime benefits (pro-rated refund may be available if recent)
+  - Amazon Photos storage (export all photos first)
+  - Amazon Pay connections with third-party services
+  - Any Amazon store credit or gift card balances (use before closing)
+pre_deletion_checklist:
+  - Export your complete Amazon data first at amazon.com/privacycentral (takes 1-7 days to prepare)
+  - Download all Amazon Photos (unlimited storage ends when account closes)
+  - Export Kindle highlights and notes at read.amazon.com/notebook
+  - Decide your Kindle library plan — keep account active for access, or accept the sunk cost
+  - Cancel Amazon Prime (get prorated refund if recent renewal) — or let it lapse
+  - Cancel all Subscribe & Save orders
+  - Cancel Audible subscription (separate from account closure — your purchased audiobooks remain accessible until account closes)
+  - Cancel Kindle Unlimited if subscribed
+  - Cancel any Prime Video channel add-ons
+  - Check for and use any Amazon store credit or gift card balances
+  - Update payment methods on other services that use Amazon Pay
+  - Note any third-party services where you login with your Amazon account
+  - Check Movies Anywhere — link before closing if you have Prime Video purchases you want on other platforms
+the_kindle_audible_decision: >
+  Before closing your account, decide what to do with your Kindle and Audible libraries.
+  Option 1: Keep your Amazon account active but stop using it (free, no subscription required).
+  Your libraries remain accessible indefinitely. This is the pragmatic choice for most people.
+  Option 2: Accept the content loss and close the account. Calculate what your library is
+  worth to you realistically — most books were read once. The practical value of access
+  may be lower than you think.
+movies_anywhere_note: >
+  If you have Prime Video movie purchases, link your Amazon account to moviesanywhere.com
+  BEFORE closing it. Eligible purchases become accessible on Apple TV, Google Play, Vudu,
+  and other linked platforms. This is the only way to preserve access to digital movie
+  purchases across platform closure.
+how_to_close:
+  - Go to amazon.com/privacycentral → Manage Your Data → Close Your Account
+  - Review the confirmation page carefully — it lists what you'll lose
+  - Amazon requires you to confirm you've downloaded your data and understand the losses
+  - Submit closure request
+  - Amazon may send a verification email before processing
+  - Some account closures take a few days to process fully
+migration_steps:
+  - Request your complete data download at amazon.com/privacycentral first
+  - Link Amazon to Movies Anywhere if you have Prime Video purchases
+  - Use any gift card balances or store credit
+  - Cancel all subscriptions individually before closing
+  - Update Amazon Pay connections on any third-party services
+  - Download all Amazon Photos
+  - Export Kindle highlights and notes
+  - Make your Kindle/Audible library decision
+  - Submit account closure request
+closing_accounts_note: >
+  If you are closing this Amazon account because the account holder has passed away,
+  see closingaccounts.com for guidance specific to bereavement — including how to handle
+  Amazon Pharmacy prescriptions, digital content, and estate-specific considerations.

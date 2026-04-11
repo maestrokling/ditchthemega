@@ -1,0 +1,80 @@
+slug: microsoft-office-alternatives
+title: Microsoft Office Alternatives
+subtitle: The 90/10 rule — and when alternatives are genuinely enough
+category: microsoft
+difficulty: 2
+what_it_is: >
+  Microsoft Office (now Microsoft 365) is the most widely used productivity software suite
+  in the world. Word, Excel, and PowerPoint are the de facto standard formats for business
+  documents. The .docx, .xlsx, and .pptx formats are everywhere. Leaving Microsoft Office
+  means choosing an alternative that can open these formats, even if it can't perfectly
+  replicate every feature.
+the_90_10_rule: >
+  90% of Office documents open and work correctly in LibreOffice or Google Docs. The other
+  10% involves features that break: complex macros, advanced Excel pivot tables and financial
+  models, precise PowerPoint animations, custom fonts that aren't installed, and documents
+  with embedded objects (charts linked to Excel sheets, Word mail merges).
+  If your work involves the 10% — complex Excel models, heavily formatted business reports,
+  advanced PowerPoint — you likely need to maintain some access to Office. If your work is
+  writing, basic spreadsheets, and presentations, LibreOffice or Google Docs handles it fine.
+what_you_lose:
+  - Native compatibility with complex Office documents (the 10%)
+  - Microsoft's AI features (Copilot) if you use them
+  - OneDrive integration (replaceable with other cloud storage)
+  - Real-time co-editing with Office users (Google Docs has this; LibreOffice less so)
+honest_assessment: >
+  For personal use — writing documents, tracking household finances, making occasional
+  presentations — LibreOffice is genuinely excellent and completely free. For professional
+  use where you exchange documents with organizations that expect pixel-perfect Office
+  formatting, the compatibility gaps are real and will cause friction. The honest question
+  is which category your actual use falls into.
+alternatives:
+  - name: LibreOffice
+    url: https://libreoffice.org
+    cost: Free, open source
+    notes: >
+      The gold standard free Office alternative. Writer (Word), Calc (Excel), Impress
+      (PowerPoint), Base (Access), Draw, Math. Opens and saves Microsoft formats.
+      Runs locally, no subscription, no cloud required. Works on Windows, Mac, Linux.
+      Best for users who want desktop Office without the subscription and data collection.
+  - name: OnlyOffice
+    url: https://onlyoffice.com
+    cost: Free desktop version; paid for server
+    notes: >
+      Higher Microsoft format fidelity than LibreOffice for complex documents. Slightly
+      closer to Office's UI if you want familiarity. Good option for users with complex
+      documents who need better compatibility than LibreOffice provides.
+  - name: CryptPad
+    url: https://cryptpad.fr
+    cost: Free tier; from €5/month for more storage
+    notes: >
+      End-to-end encrypted, open source, runs in browser. Document, spreadsheet, and
+      presentation editing with privacy. No account required for basic use.
+      Ideal for sensitive documents you don't want on Microsoft's or Google's servers.
+  - name: Google Docs / Sheets / Slides
+    url: https://docs.google.com
+    cost: Free
+    notes: >
+      Excellent real-time collaboration. Opens and exports Microsoft formats. Widely used.
+      Trades Microsoft's data collection for Google's — not a privacy win, but a
+      vendor independence win. Files stored in Google Drive.
+  - name: Proton Docs
+    url: https://proton.me/docs
+    notes: >
+      End-to-end encrypted document editing from Proton. Newer and still developing.
+      Good if you're already in the Proton ecosystem.
+format_strategy: >
+  The most durable approach: keep documents in cross-platform formats where possible.
+  Write in plain text or Markdown when you can (converts to anything). Use PDF for
+  documents that need precise formatting (send to print, legal documents, anything
+  where layout matters). Use .docx or .xlsx only when someone else requires it.
+  This reduces your Office dependency to the minimum without requiring you to refuse
+  to accept Office files.
+migration_steps:
+  - Install LibreOffice on your computer (free, no account needed)
+  - Open a sample of your most important existing documents to verify they look correct
+  - For any that don't look right, determine if they use complex features or are just basic documents with formatting issues
+  - Set LibreOffice as the default app for .docx, .xlsx, .pptx files
+  - Cancel Microsoft 365 subscription after confirming LibreOffice handles your workflow
+  - Move documents from OneDrive to Proton Drive, Nextcloud, or local storage
+  - For documents that need pixel-perfect compatibility, save as PDF when sharing externally

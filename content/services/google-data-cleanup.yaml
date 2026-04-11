@@ -1,0 +1,106 @@
+slug: google-data-cleanup
+title: Google Data Cleanup Walkthrough
+subtitle: Step-by-step instructions for deleting what Google has collected about you
+category: google
+difficulty: 2
+what_it_is: >
+  Google has been collecting data about you across every service you've used. This guide
+  walks you through each cleanup tool in the order that gives you the most immediate
+  privacy benefit. You can do this whether or not you're leaving Google entirely —
+  cleaning up your data history is worthwhile even if you keep using Google services.
+  Expect this to take 1-2 focused hours.
+why_this_matters: >
+  Google's data collection is extensive in ways most people don't fully realize until
+  they look at it. Your location history is a timeline of everywhere you've been.
+  Your voice history is actual audio recordings. Your ad profile reveals what Google
+  infers about your income, relationships, health, and interests. The cleanup tools
+  exist and are effective — but they're not surfaced prominently. This guide surfaces them.
+step_1_web_activity:
+  url: myactivity.google.com
+  title: Delete your Web & App Activity
+  steps:
+    - Go to myactivity.google.com
+    - Click "Delete activity by" (left sidebar on desktop, menu on mobile)
+    - Select "All time" under date range
+    - Select "All products" to cover everything
+    - Click Delete → confirm
+    - After deleting, go back and click "Turn off" under Web & App Activity
+    - Set auto-delete to 3 months or less (settings icon → Auto-delete activity)
+  what_you_delete: Every Google search, every Chrome page visited while signed in, every app interaction, every voice search — timestamped and attributed to your account.
+step_2_location:
+  url: timeline.google.com
+  title: Delete your Location History
+  steps:
+    - Go to timeline.google.com
+    - Look at your timeline. This is often the most shocking part — a complete record of everywhere you've been.
+    - Click the gear/settings icon → "Delete all Location History"
+    - Confirm deletion
+    - Also: go to myactivity.google.com/activitycontrols → Location History → turn off
+    - Set auto-delete to 3 months (same settings)
+    - On your Android phone, go to Settings → Location → Google Location History → turn off (this is a separate toggle from the account setting — both must be off)
+  what_you_delete: Every location your devices were at, timestamped, with the transit mode (walking, driving, transit). Every place you've ever been with a Google-connected device.
+step_3_youtube:
+  url: myactivity.google.com
+  title: Delete your YouTube History
+  steps:
+    - Go to myactivity.google.com
+    - Click "Filter by date & product" → select YouTube
+    - Click "Delete activity by" → All time → YouTube → Delete
+    - Go to myactivity.google.com/activitycontrols → YouTube History → turn off
+    - Set auto-delete to 3 months
+  what_you_delete: Every video you've watched (with how long you watched), every YouTube search, every comment interaction. This data drives Google's ad profile across its entire network.
+step_4_voice:
+  url: myactivity.google.com
+  title: Delete Voice & Audio Activity
+  steps:
+    - Go to myactivity.google.com
+    - Filter by Voice & Audio
+    - Click "Delete activity by" → All time → All products → Delete
+    - Play a few recordings before deleting if you want to hear what was captured
+    - After deleting, go to myactivity.google.com/activitycontrols → Voice & Audio Activity → Pause
+  what_you_delete: Actual audio recordings of every Google Assistant command, every "Hey Google," every voice search. These are real recordings stored on Google's servers.
+step_5_ads:
+  url: adssettings.google.com
+  title: Review and reset your ad profile
+  steps:
+    - Go to adssettings.google.com
+    - Click through each inferred category Google has assigned to you
+    - Delete any categories that are wrong, sensitive, or you simply don't want Google to have
+    - Toggle off "Ad personalization" (this doesn't delete the profile but stops Google from using it for ad targeting)
+    - Note the "Sensitive ad categories" section — you can opt out of specific types of targeted advertising here
+  what_you_see: Google's inferences about your age, income level, marital status, parental status, interests, and more. This is what advertisers pay to access.
+step_6_dashboard:
+  url: myaccount.google.com/dashboard
+  title: Review Google Dashboard
+  steps:
+    - Go to myaccount.google.com/dashboard
+    - This shows a summary of data across all Google services you've used
+    - Click through each service to see what's stored
+    - Delete data from services you no longer use
+    - For services you've stopped using, consider removing them from your Google account entirely
+  what_you_see: A comprehensive inventory of all Google services you've connected to your account, with data counts for each.
+step_7_export:
+  url: takeout.google.com
+  title: Download everything before deleting your account (optional but recommended)
+  steps:
+    - Go to takeout.google.com
+    - Click "Deselect all" then manually select what you want
+    - At minimum, select Gmail, Photos, Contacts, Calendar, Drive, and your activity data
+    - Choose export format (ZIP files) and frequency (one-time export)
+    - Request export — for large accounts, this may take hours or days
+    - Download the files when notified and store them on a local drive or encrypted cloud storage
+  why: Having a personal archive of your Google data means you can verify what you've exported before deleting anything, and you have a reference if you need historical information after leaving.
+account_deletion:
+  url: myaccount.google.com
+  steps:
+    - Only proceed when you've completed Phase 2 (Gmail migration) and verified no important services depend on your Google account
+    - Go to myaccount.google.com → Data & Privacy → Delete your Google Account
+    - 30-day grace period applies — the account can be recovered within 30 days
+    - After 30 days, deletion is permanent
+    - Google retains some data longer for legal and business purposes
+migration_steps:
+  - Block 1-2 hours with your phone and laptop
+  - Follow steps 1-6 in order — web activity first (biggest impact), location second, then the rest
+  - Download a Takeout archive if you want a personal record before cleanup
+  - Turn off all the activity controls to prevent future collection
+  - If you're not ready to delete your account, you can complete all cleanup steps while keeping the account active

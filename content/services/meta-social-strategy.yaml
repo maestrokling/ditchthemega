@@ -1,0 +1,59 @@
+slug: meta-social-strategy
+title: Social Replacement Strategy
+subtitle: Maintaining relationships without Meta's platforms
+category: meta
+difficulty: 4
+what_it_is: >
+  This is the hardest part of leaving Meta. You can export your photos and posts in an
+  afternoon. What you can't export is your social graph — the relationships, communities,
+  and easy access to the people in your life that Meta's platforms provide. This page is
+  about the work of maintaining those connections through other means.
+honest_acknowledgment: >
+  For some people, the social cost of leaving Meta is genuinely significant and not fully
+  replaceable. The neighborhood Facebook group. The family WhatsApp thread. The Instagram
+  account where you keep up with someone you'd otherwise lose touch with. We're not going
+  to pretend these losses are trivial. We're going to help you navigate them as well as
+  possible.
+before_you_leave:
+  - Export your complete data from Facebook and Instagram (it takes time — start before you're ready to leave)
+  - Make a list of the 30-50 people you actually want to stay in touch with. Not your 847 followers. The real ones.
+  - For each of those people, note what communication channel actually works for them (phone, email, another app)
+  - Identify which Facebook groups or Instagram communities genuinely matter to you
+  - Check if those communities exist elsewhere (Discord, Reddit, Slack, email lists, forums)
+  - For groups that only exist on Facebook, consider whether you can maintain a minimal Facebook presence just for those groups
+contact_collection:
+  - Text your most important contacts directly and ask for their phone number or email if you don't have it
+  - Update your address book with the contact information of people you'd regret losing touch with
+  - Don't wait until you're leaving — do this now, before you make any departure announcement
+  - Phone numbers and email addresses are yours. They work regardless of which platform either of you uses.
+announcing_your_departure:
+  - Post a departure announcement with where to find you (email, Signal handle, new platform)
+  - Give people a few weeks notice before deactivating
+  - Pin the post or update your bio with your new contact info
+  - Make the announcement personal and specific — "text me at [number]" converts better than "find me on Mastodon"
+group_alternatives:
+  - neighborhood_groups: Nextdoor (purpose-built for neighborhood communities)
+  - hobby_groups: Discord (excellent for interest communities with real-time chat), Reddit (for discovery and discussion), dedicated forums
+  - family_groups: A group text (Signal recommended, works without a platform)
+  - work_colleagues: Your actual work tools (Slack, Teams, email)
+  - support_groups: Many have email lists, forums, or Discord servers as Meta-independent alternatives
+minimal_facebook:
+  - Facebook allows you to deactivate your profile (makes it invisible) while keeping Messenger active
+  - Some people maintain a minimal Facebook presence specifically for groups, with profile deactivated
+  - You can set your profile to Friends Only visibility and just use it for groups without a social presence
+  - This is a reasonable middle position if there are specific groups with no alternative
+the_honest_timeline: >
+  The social adjustment takes months, not days. You'll notice Meta's absence most in the first
+  two weeks. By month two, the people who matter will have found new ways to reach you.
+  By month three, you'll have stopped thinking about what you're missing. Some connections
+  will fade — the ones that only existed on the platform, not the ones that mattered.
+  The 30-day grace period on Facebook account deletion exists for a reason. Use it.
+migration_steps:
+  - Download your data archive from all Meta platforms
+  - Make your contact list — the real 30-50 people
+  - Collect phone numbers and emails for everyone on the list
+  - Identify your important groups and find alternatives where they exist
+  - Announce your departure with clear forwarding information
+  - Install Signal and invite your most important contacts
+  - Deactivate (not delete) your Facebook account for 30 days first
+  - After 30 days, evaluate: what did you actually miss? Delete or return based on reality, not assumption.

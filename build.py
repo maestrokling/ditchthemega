@@ -291,6 +291,10 @@ def build_service_page(svc):
     if svc.get("account_deletion_warning"):
         sections.append(f'<section class="card card-note"><h2>⚠️ Before you close your account</h2><p>{e(svc["account_deletion_warning"])}</p></section>')
 
+    # ClosingAccounts cross-link
+    if svc.get("closing_accounts_note"):
+        sections.append(f'<section class="card"><h2>Closing this account after a death?</h2><p>{e(svc["closing_accounts_note"])}</p><p style="margin-top:.5rem;"><a href="https://closingaccounts.com" target="_blank" rel="noopener">Visit closingaccounts.com →</a></p></section>')
+
     # How to cancel
     if svc.get("how_to_cancel"):
         cf = svc.get("cancelfreely_link","")
@@ -788,6 +792,12 @@ def build_google_hub(services):
     <p>What to export, what transfers, what Google keeps</p>
   </div>
 </a>'''
+    cards += '''<a href="/google/google-data-cleanup/" class="service-card">
+  <div class="service-card-inner">
+    <h2>Data Cleanup Walkthrough</h2>
+    <p>Step-by-step: delete what Google has collected about you</p>
+  </div>
+</a>'''
 
     content = f'''<div class="page-hero amazon-hero">
   <div class="breadcrumb"><a href="/">Home</a> › Google</div>
@@ -1016,6 +1026,10 @@ def build_apple_service_page(svc):
         sections.append(f'<section class="card"><h2>Cross-platform alternatives exist for most apps</h2><p>{e(svc["cross_platform_apps"])}</p></section>')
     if svc.get("apple_subscriptions_warning"):
         sections.append(f'<section class="card card-caution"><h2>⚠️ Cancel subscriptions before leaving</h2><p>{e(svc["apple_subscriptions_warning"])}</p></section>')
+    if svc.get("digital_legacy"):
+        dl = svc["digital_legacy"]
+        dl_html = render_list(dl) if isinstance(dl, list) else f'<p>{e(dl)}</p>'
+        sections.append(f'<section class="card"><h2>Digital Legacy & Closing Accounts</h2>{dl_html}<p style="margin-top:.5rem;">If someone in your life has passed away and you need to access their Apple account, see <a href="https://closingaccounts.com" target="_blank" rel="noopener">closingaccounts.com</a> for guidance specific to bereavement.</p></section>')
     if svc.get("before_you_close"):
         sections.append(f'<section class="card card-steps"><h2>Before you close your Apple ID</h2>{render_list(svc["before_you_close"])}</section>')
     if svc.get("find_my_privacy"):
@@ -1338,6 +1352,41 @@ def build_google_cutting_pipeline():
         "A phased, realistic guide to leaving Google. Stop the flow of new data and drain the reservoir of what Google already holds. Takes about 3 months. Start with the browser.",
         f"{SITE_URL}/google/cutting-the-pipeline/",
         content
+    )
+
+def build_google_data_cleanup_page(svc):
+    slug = svc["slug"]
+    sections = []
+    sections.append(f'<div class="page-hero"><div class="breadcrumb"><a href="/">Home</a> › <a href="/google/">Google</a> › Data Cleanup</div><h1>{e(svc["title"])}</h1><p class="subtitle">{e(svc.get("subtitle",""))}</p></div>')
+    if svc.get("why_this_matters"):
+        sections.append(f'<section class="card card-privacy"><h2>Why this matters</h2><p>{e(svc["why_this_matters"])}</p></section>')
+    # Each step
+    step_keys = [("step_1_web_activity","Step 1"),("step_2_location","Step 2"),("step_3_youtube","Step 3"),("step_4_voice","Step 4"),("step_5_ads","Step 5"),("step_6_dashboard","Step 6"),("step_7_export","Step 7")]
+    for key, label in step_keys:
+        step = svc.get(key)
+        if not step: continue
+        title = e(step.get("title",""))
+        url = step.get("url","")
+        steps_list = step.get("steps",[])
+        what = e(step.get("what_you_delete") or step.get("what_you_see") or step.get("why",""))
+        url_link = f' → <a href="{e(url)}" target="_blank" rel="noopener">{e(url)}</a>' if url else ""
+        steps_html = "".join(f"<li>{e(s)}</li>" for s in steps_list)
+        what_html = f'<p class="alt-cost" style="margin-top:.5rem;"><strong>What you delete/see:</strong> {what}</p>' if what else ""
+        sections.append(f'<section class="card card-steps"><h2>{label}: {title}{url_link}</h2><ol>{steps_html}</ol>{what_html}</section>')
+    if svc.get("account_deletion"):
+        ad = svc["account_deletion"]
+        url = ad.get("url","")
+        url_link = f' → <a href="{e(url)}" target="_blank" rel="noopener">{e(url)}</a>' if url else ""
+        steps_html = "".join(f"<li>{e(s)}</li>" for s in ad.get("steps",[]))
+        sections.append(f'<section class="card"><h2>Deleting your account{url_link}</h2><ol>{steps_html}</ol></section>')
+    if svc.get("migration_steps"):
+        sections.append(f'<section class="card card-steps"><h2>How to approach this</h2>{render_steps(svc["migration_steps"])}</section>')
+    sections.append('<section class="card"><h2>Related guides</h2><ul><li><a href="/google/cutting-the-pipeline/">Cutting the Pipeline — the full 3-month de-Google plan</a></li><li><a href="/google/your-content/">Your Google content — what to export</a></li></ul></section>')
+    return page_shell(
+        f"{svc['title']} | DitchTheMega",
+        svc.get("subtitle",""),
+        f"{SITE_URL}/google/{slug}/",
+        "\n".join(sections)
     )
 
 def build_google_your_content():
@@ -1937,7 +1986,10 @@ def main():
         out_dir = f"{PUBLIC_DIR}/google/{slug}"
         os.makedirs(out_dir, exist_ok=True)
         with open(f"{out_dir}/index.html", "w") as f:
-            f.write(build_google_service_page(svc))
+            if slug == "google-data-cleanup":
+                f.write(build_google_data_cleanup_page(svc))
+            else:
+                f.write(build_google_service_page(svc))
         print(f"Built: google/{slug}/index.html")
 
     # Alternatives pages
