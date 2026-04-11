@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Assistant Setup Guide — DitchTheMega</title>
+  <meta name="description" content="The complete walkthrough for leaving Alexa behind">
+  <link rel="canonical" href="https://ditchthemega.com/amazon/alexa-deep-dive/">
+  <meta property="og:title" content="Home Assistant Setup Guide — DitchTheMega">
+  <meta property="og:description" content="The complete walkthrough for leaving Alexa behind">
+  <meta property="og:url" content="https://ditchthemega.com/amazon/alexa-deep-dive/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo",
+"name":"How to leave Home Assistant Setup Guide",
+"description":"The complete walkthrough for leaving Alexa behind",
+"step":[{"@type":"HowToStep","text":"Choose your hardware (Home Assistant Green is the easiest; Raspberry Pi 4 is the most flexible)"},
+{"@type":"HowToStep","text":"Flash and install Home Assistant OS (full instructions at home-assistant.io/installation)"},
+{"@type":"HowToStep","text":"Connect to homeassistant.local:8123 and complete onboarding"},
+{"@type":"HowToStep","text":"Go to Settings \u2192 Integrations \u2192 Add Integration \u2192 search for each of your device brands"},
+{"@type":"HowToStep","text":"Let HA auto-discover devices; manually add any it misses using their IP addresses"},
+{"@type":"HowToStep","text":"Recreate your key Alexa Routines as HA Automations (more powerful, runs locally)"},
+{"@type":"HowToStep","text":"Install the HA companion app on your phone (iOS or Android) for remote control + presence detection"},
+{"@type":"HowToStep","text":"Test everything thoroughly before decommissioning Alexa"},
+{"@type":"HowToStep","text":"Deregister Echo devices in the Alexa app (Devices \u2192 select device \u2192 Deregister)"},
+{"@type":"HowToStep","text":"Delete Alexa voice history at alexa.amazon.com \u2192 History \u2192 Delete All Recordings"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://ditchthemega.com/"},
+  {"@type":"ListItem","position":2,"name":"Amazon","item":"https://ditchthemega.com/amazon/"},
+  {"@type":"ListItem","position":3,"name":"Home Assistant Setup Guide","item":"https://ditchthemega.com/amazon/alexa-deep-dive/"}
+]}
+</script>
+</head>
+<body>
+<header>
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">DitchTheMega</a>
+    <a href="/amazon/" class="nav-link">Amazon Guide</a>
+    <a href="/about/" class="nav-link">About</a>
+  </nav>
+</header>
+<main>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="/amazon/">Amazon</a> › Home Assistant Setup Guide</div>
+  <h1>Home Assistant Setup Guide</h1>
+  <p class="subtitle">The complete walkthrough for leaving Alexa behind</p>
+  <span class="difficulty d4">Complex migration</span>
+</div>
+<section class="card"><h2>What it is</h2><p>Home Assistant is open-source smart home software that runs locally on your own hardware. No cloud. No subscription. No Amazon. Your automations, your devices, your data — all on a computer in your home. It supports over 3,000 integrations and is actively maintained by a large open-source community. This is the privacy-first gold standard for smart home control.
+</p></section>
+<section class="card card-steps"><h2>Migration steps</h2><ol><li>Choose your hardware (Home Assistant Green is the easiest; Raspberry Pi 4 is the most flexible)</li><li>Flash and install Home Assistant OS (full instructions at home-assistant.io/installation)</li><li>Connect to homeassistant.local:8123 and complete onboarding</li><li>Go to Settings → Integrations → Add Integration → search for each of your device brands</li><li>Let HA auto-discover devices; manually add any it misses using their IP addresses</li><li>Recreate your key Alexa Routines as HA Automations (more powerful, runs locally)</li><li>Install the HA companion app on your phone (iOS or Android) for remote control + presence detection</li><li>Test everything thoroughly before decommissioning Alexa</li><li>Deregister Echo devices in the Alexa app (Devices → select device → Deregister)</li><li>Delete Alexa voice history at alexa.amazon.com → History → Delete All Recordings</li></ol></section>
+<section class="card"><h2>Hardware options</h2><div class="device-item"><h3><strong>Raspberry Pi 4 (2GB or 4GB)</strong> <span class="alt-cost">~$45–65</span></h3><p>The classic choice. Widely supported. Huge community. Buy from an official reseller. You&#x27;ll also need a microSD card (32GB+) or USB SSD (recommended for reliability).
+</p></div><div class="device-item"><h3><strong>Raspberry Pi 5 (4GB)</strong> <span class="alt-cost">~$70–80</span></h3><p>Noticeably faster than Pi 4. Recommended if available. Same setup process.</p></div><div class="device-item"><h3><a href="https://www.home-assistant.io/green/" target="_blank" rel="noopener">Home Assistant Green</a> <span class="alt-cost">~$99</span></h3><p>Purpose-built, plug-and-play. The easiest way to get started. No SD card needed. Officially supported hardware from the Home Assistant project.
+</p></div><div class="device-item"><h3><a href="https://www.home-assistant.io/yellow/" target="_blank" rel="noopener">Home Assistant Yellow</a> <span class="alt-cost">~$130–200</span></h3><p>Includes Zigbee radio built-in. Best choice if you have Zigbee devices (many smart bulbs and sensors). Requires a Raspberry Pi CM4 module.
+</p></div><div class="device-item"><h3><strong>Intel NUC / mini PC</strong> <span class="alt-cost">$100–300</span></h3><p>More powerful. Better for large installations or if you want to run other services (media server, VPN) on the same hardware. Any x86 mini PC works.
+</p></div><div class="device-item"><h3><strong>Old laptop / desktop</strong> <span class="alt-cost">Free (hardware you own)</span></h3><p>Works perfectly. Slightly more power draw. Good way to start before buying dedicated hardware.</p></div></section>
+<section class="card card-steps"><h2>Installation steps</h2><ol><li>Download the Home Assistant OS image from home-assistant.io/installation</li><li>Flash it to your microSD card or USB SSD using Balena Etcher (free, easy)</li><li>Insert the card/drive into your Raspberry Pi, connect ethernet and power</li><li>Wait 5–10 minutes for first boot (it downloads updates automatically)</li><li>Open a browser and go to homeassistant.local:8123</li><li>Follow the onboarding wizard to create your account and name your home</li><li>Home Assistant will auto-discover devices already on your network</li></ol></section>
+<section class="card"><h2>Migrating your devices</h2><p>Most smart home devices support multiple ecosystems. Here&#x27;s how to check and migrate each type. The process is usually: check compatibility → add integration in HA →  reconfigure device if needed → remove from Alexa.
+</p><div class="device-item"><h3>Smart Bulbs (Philips Hue, LIFX, Govee, TP-Link Kasa)</h3><p>Most work directly. In Home Assistant → Settings → Integrations → search for your brand. Philips Hue: just enter your bridge IP. LIFX: auto-discovers. Govee: uses the Govee integration (may need API key from Govee app).
+</p></div><div class="device-item"><h3>Smart Plugs (Kasa, Wemo, Meross)</h3><p>TP-Link Kasa: excellent native integration, auto-discovers. Wemo: supported. For new purchases, look for Matter-compatible plugs — they work with everything.
+</p></div><div class="device-item"><h3>Smart Thermostat (Nest, Ecobee)</h3><p>Ecobee: excellent native integration. Nest: works via Google account integration (ironic, but functional). Both support temperature automation in HA.
+</p></div><div class="device-item"><h3>Smart Locks (Schlage, Yale, August)</h3><p>August: use the August integration. Schlage Encode: Z-Wave or WiFi versions — the Z-Wave version requires a Z-Wave USB stick but is more reliable. Yale Assure: supports Z-Wave and Zigbee.
+</p></div><div class="device-item"><h3>Zigbee Devices (many brands)</h3><p>Zigbee is a local, low-power protocol. Requires a Zigbee USB stick (ConBee II or Sonoff Zigbee 3.0 dongle, ~$20). Then add the ZHA integration in HA. Zigbee devices pair directly to HA — no cloud at all.
+</p></div><div class="device-item"><h3>Z-Wave Devices</h3><p>Z-Wave is another local protocol, excellent for locks and sensors. Requires a Z-Wave USB stick (Zooz 800 Series, ~$30). Add the Z-Wave integration in HA.
+</p></div><div class="device-item"><h3>Echo Devices</h3><p>Echo hardware only works as Alexa endpoints — you can&#x27;t redirect them to HA. You can use Echo devices as TTS speakers via the Alexa Media Player integration (keeps the speaker, removes the assistant dependency) — or donate/recycle them.
+</p></div></section>
+<section class="card"><h2>Voice control alternatives</h2><ul><li><strong>Home Assistant Assist (built-in)</strong> — HA&#x27;s own voice assistant, processed 100% locally. Works via the HA app on your phone. Not as natural as Alexa, but improving rapidly. Zero cloud dependency.
+</li><li><strong>Siri via Homebridge / HomeKit</strong> — Install Homebridge on the same Pi to expose HA devices to Apple HomeKit. Then &quot;Hey Siri, turn off the living room lights&quot; works — processed on Apple&#x27;s servers, but not Amazon&#x27;s.
+</li><li><strong>Google Assistant</strong> — You can expose HA to Google Assistant via Nabu Casa ($6.50/month cloud subscription that funds HA development) or local Google Home integration. Trades Amazon for Google.
+</li><li><strong>Wyoming Protocol + local LLM</strong> — Advanced: run a local speech-to-text model (Whisper) on the same hardware. Fully local, zero cloud. HA 2024+ supports this natively. Requires more powerful hardware (Pi 5 or mini PC recommended).
+</li></ul></section>
+<section class="card"><h2>What Home Assistant can do that Alexa can't</h2><div class="loss-item"><h3>Automations</h3><p>HA automations are far more powerful than Alexa Routines. Trigger on sunrise/sunset, presence detection (your phone arriving home), sensor values, time, or any device state. If/then/else logic. Multi-step sequences. Delay actions. No cloud needed.
+</p></div><div class="loss-item"><h3>Dashboards</h3><p>Build custom control panels for any device in your home. Wall-mounted tablet as a home control panel is a popular use case. Lovelace UI is drag-and-drop.
+</p></div><div class="loss-item"><h3>Presence detection</h3><p>Use your phone&#x27;s GPS or Bluetooth to detect who&#x27;s home. Automatically run different scenes when you arrive or leave. No Alexa Guard needed.
+</p></div><div class="loss-item"><h3>Energy monitoring</h3><p>Track energy usage per device. Many smart plugs report wattage. HA aggregates it into dashboards. Know exactly what&#x27;s costing you electricity.
+</p></div><div class="loss-item"><h3>Remote access</h3><p>Nabu Casa ($6.50/month) gives you secure remote access without port forwarding. Or self-configure with a VPN (Tailscale, free tier works well). 
+</p></div></section>
+<section class="card"><h2>Resources</h2><ul><li><a href="https://www.home-assistant.io/docs/" target="_blank" rel="noopener">Home Assistant documentation</a></li><li><a href="https://reddit.com/r/homeassistant" target="_blank" rel="noopener">r/homeassistant</a> — 1.2 million members. Most questions already answered.</li><li><a href="https://community.home-assistant.io" target="_blank" rel="noopener">Home Assistant Community Forum</a></li><li><a href="https://www.youtube.com/@EverythingSmartHome" target="_blank" rel="noopener">Everything Smart Home (YouTube)</a> — Excellent video tutorials for every integration.</li></ul></section>
+<section class="card"><h2>Related guides</h2><ul><li><a href="/amazon/alexa/">Alexa &amp; Smart Home</a></li><li><a href="/amazon/ring/">Ring Security</a></li><li><a href="/amazon/data-export/">Your Amazon Data</a></li></ul></section>
+</main>
+<footer>
+  <p>Free. Open source. No tracking. No affiliate links.</p>
+  <p>Part of the data sovereignty toolkit: 
+     <a href="https://cancelfreely.com">CancelFreely</a> &middot; 
+     <a href="https://deletefreely.com">DeleteFreely</a>
+  </p>
+  <p><a href="https://github.com/maestrokling/ditchthemega">GitHub</a> &middot; <a href="/about/">About</a></p>
+</footer>
+</body>
+</html>

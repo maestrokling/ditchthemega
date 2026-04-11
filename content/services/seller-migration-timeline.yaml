@@ -1,0 +1,78 @@
+slug: seller-migration-timeline
+title: The 90-Day Migration Plan
+subtitle: How to reduce Amazon dependency without killing your revenue
+category: seller
+difficulty: 3
+what_it_is: >
+  Leaving Amazon as a seller isn't a single decision — it's a 12–18 month operational
+  shift. Go too fast and you crater revenue. Go too slow and nothing changes. This plan
+  gets you from 100% Amazon-dependent to a diversified business in 90 days, with
+  milestones you can actually hit.
+honest_assessment: >
+  Most sellers who "try to diversify" fail because they do too much at once and do
+  none of it well. The plan below is sequential for a reason: each phase builds the
+  infrastructure the next phase needs. Don't skip ahead.
+guiding_principles:
+  - Never reduce Amazon revenue before direct channel revenue is replacing it
+  - Build your email list from day one — it's the only asset Amazon can't take from you
+  - One new channel at a time. Master it before adding the next.
+  - Track blended CAC (customer acquisition cost) by channel monthly, not just ROAS
+  - The goal at 90 days is not "off Amazon" — it's "less dependent than I was"
+phase_1:
+  title: Days 1–30 — Foundation
+  subtitle: Build what Amazon prevented you from having
+  tasks:
+    - Register your brand domain if you don't have one
+    - Set up Shopify (or WooCommerce) — use a clean, fast theme; don't over-design it
+    - Import your top 10 Amazon SKUs to your own store
+    - Install Klaviyo and configure 3 essential email flows — welcome series, post-purchase, abandoned cart
+    - Install Meta Pixel on your site (you need 1,000+ events before Meta ads work; start accumulating now)
+    - Set up Google Merchant Center and connect it to your Shopify store (free product listings start immediately)
+    - Design a package insert for Amazon orders — "Register your purchase at [yoursite.com] for warranty/support." This is how you start building your list from your existing Amazon sales.
+    - Do NOT launch ads yet. You need 30 days of pixel data first.
+  milestone: Your direct store is live. Package inserts are in your shipments. Google free listings are active. Pixel is running.
+
+phase_2:
+  title: Days 31–60 — First Direct Revenue
+  subtitle: Turn on paid acquisition and prove the economics work
+  tasks:
+    - Launch Google Shopping campaigns for your top 5 SKUs. Start at $20–30/day budget.
+    - Track your Google Shopping ACoS vs. your Amazon PPC ACoS for the same SKUs. Most sellers find Google is 15–25% cheaper.
+    - Apply for Walmart Marketplace (account approval takes 2–4 weeks; apply now so you're ready at day 60)
+    - Audit your email list growth from package inserts — how many customers are registering? Optimize the offer if <2% conversion.
+    - Set up your first Facebook/Instagram retargeting campaign targeting website visitors (you now have 30 days of pixel data)
+    - Do NOT pull Amazon PPC budget yet. You're adding, not replacing.
+  milestone: First direct channel sales. Google Shopping producing measurable revenue. Walmart application submitted or approved. Email list growing.
+
+phase_3:
+  title: Days 61–90 — Diversification in Motion
+  subtitle: Add Walmart, optimize what's working, set 6-month targets
+  tasks:
+    - List your top 20 SKUs on Walmart Marketplace (if approved)
+    - Compare Walmart sell-through vs. Amazon for the same SKUs after 2–3 weeks
+    - Review Google Shopping performance — pause SKUs with poor ROAS, increase budget on winners
+    - Run a 30-day email campaign to your growing direct list — product story, brand values, exclusive offer. This is relationship-building that Amazon made impossible.
+    - Calculate your actual revenue split — what % is Amazon now vs. 90 days ago?
+    - Set your 6-month target — most advisors suggest 60% Amazon / 40% other as the first milestone
+    - Identify your next channel for months 4–6 (TikTok Shop? Etsy? Faire for wholesale?)
+  milestone: Walmart live. Direct channel at measurable % of revenue. Email list is an actual asset. Clear roadmap for months 4–6.
+
+what_success_looks_like:
+  - Day 90 Amazon revenue: still roughly the same (you haven't cut it yet)
+  - Day 90 total revenue: higher than day 1 (you've added channels, not replaced)
+  - Day 90 email list: 200–500+ direct customers who registered through Amazon package inserts
+  - Day 90 Google Shopping: running and profitable
+  - Day 90 Walmart: live or in approval queue
+  - Day 90 mindset: Amazon is now one channel, not your business
+what_not_to_do:
+  - Don't reduce Amazon PPC before direct channel revenue justifies it
+  - Don't launch 4 channels simultaneously — you'll do all of them badly
+  - Don't skip the email list — it's the most durable asset you'll build
+  - Don't let Amazon account health slip while building alternatives (suspension risk is highest when you're distracted)
+  - Don't expect Google Shopping to replace Amazon volume in 90 days — it won't. The goal is proving it works at small scale.
+migration_steps:
+  - Read the Seller Assessment page first — know exactly where you're dependent before you start
+  - Bookmark the Building a Direct Channel and Financial Reality pages — reference them throughout
+  - Execute Phase 1 completely before starting Phase 2
+  - Track one metric weekly — Amazon revenue % of total. Watch it decline slowly over time.
+  - At 12 months, reassess. Most sellers who execute this plan are at 50–60% Amazon by month 12.

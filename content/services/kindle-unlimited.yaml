@@ -1,0 +1,81 @@
+slug: kindle-unlimited
+title: Kindle Unlimited
+subtitle: The subscription, not the device
+category: digital-content
+difficulty: 1
+what_it_is: >
+  Kindle Unlimited is a $11.99/month ebook subscription — not to be confused with
+  Kindle (the device and purchased ebook ecosystem). KU gives you access to a rotating
+  library of ~4 million titles for as long as you're subscribed. When you cancel, the
+  borrowed books disappear. You own nothing you read through KU, but you also lose
+  nothing you purchased separately.
+what_you_lose:
+  - Access to the ~4 million KU titles (borrowed books disappear immediately on cancellation)
+  - Kindle Unlimited magazine and audiobook selection
+  - The ability to "try" books cheaply before committing
+honest_assessment: >
+  Kindle Unlimited is one of the more cancellable Amazon subscriptions — there's no
+  DRM extraction issue, no migration complexity, no hardware dependency. You borrowed
+  books; when you stop paying, they go away. The main question is just whether the
+  alternatives give you enough to read. For most people, they more than do.
+  
+  Notable exception: KU is a major revenue source for indie authors. Some authors
+  publish KU-exclusive titles (not available elsewhere). If you follow specific indie
+  authors heavily, check where their titles are available before canceling.
+data_to_export:
+  - Your reading history and highlights (export at read.amazon.com/notebook before canceling)
+  - Note any KU-exclusive titles you want to finish — complete before canceling
+  - KU titles you've borrowed disappear on cancellation; nothing to migrate
+how_to_cancel:
+  - Amazon account → Memberships & Subscriptions → Kindle Unlimited → Cancel Membership
+  - Amazon will offer a pause option
+  - Access continues until end of current billing period
+cancelfreely_link: https://cancelfreely.com/cancel/kindle-unlimited
+alternatives:
+  - name: Libby / OverDrive
+    url: https://libbyapp.com
+    notes: >
+      Free with your library card. Thousands of ebooks and audiobooks. Honestly,
+      for most readers, this replaces KU entirely at zero cost. Wait times on
+      popular titles, but your library card is a subscription you already paid for.
+      Works on Kindle devices too (via Amazon's Send to Kindle from Libby).
+  - name: Scribd
+    url: https://www.scribd.com
+    cost: $11.99/month
+    notes: >
+      Same price as KU. Broader content: ebooks, audiobooks, magazines, sheet music,
+      documents. Better for audiobooks than KU. Catalog has been reduced over the years
+      but still substantial.
+  - name: Hoopla
+    url: https://www.hoopladigital.com
+    notes: >
+      Free with library card (different from Libby). No wait times — instant access.
+      Smaller catalog but strong for comics/graphic novels, manga, and audiobooks.
+      Funded by your library.
+  - name: Standard Ebooks
+    url: https://standardebooks.org
+    notes: >
+      Free. Beautifully formatted public domain classics. If you read older literature,
+      this is exceptional quality with no subscription needed.
+  - name: Project Gutenberg
+    url: https://www.gutenberg.org
+    notes: Free. 70,000+ public domain books. Less polished formatting than Standard Ebooks but massive catalog.
+  - name: Humble Bundle (books)
+    url: https://www.humblebundle.com/books
+    notes: DRM-free ebook bundles at steep discounts (typically $1–18 for 10–30 books). Check monthly.
+  - name: Buy DRM-free
+    notes: >
+      Smashwords, Draft2Digital, and direct publisher stores sell DRM-free ebooks.
+      You actually own them. Kobo also sells DRM-free from many publishers.
+kindle_device_note: >
+  Canceling Kindle Unlimited does NOT affect your Kindle device or purchased ebooks.
+  Your purchased library is separate and remains accessible. See the Kindle & Digital Books
+  guide for migrating away from purchased Kindle ebooks and the device ecosystem.
+migration_steps:
+  - Export your reading highlights and notes at read.amazon.com/notebook
+  - Finish any KU titles you're currently reading before canceling
+  - Get a library card if you don't have one (most US cities offer digital-only cards online)
+  - Install Libby and link your library card — browse the ebook and audiobook catalog
+  - Sign up for Hoopla with the same library card for instant-access titles
+  - Cancel Kindle Unlimited (Account → Memberships & Subscriptions → Kindle Unlimited → Cancel)
+  - Check Humble Bundle once a month for discounted DRM-free ebook bundles

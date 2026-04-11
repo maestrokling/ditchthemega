@@ -15,18 +15,21 @@ SITE_URL    = "https://ditchthemega.com"
 RELATED = {
     "prime":          [("shopping", "Amazon Shopping"), ("prime-video", "Prime Video"), ("subscribe-save", "Subscribe & Save"), ("data-export", "Your Amazon Data")],
     "shopping":       [("prime", "Amazon Prime"), ("subscribe-save", "Subscribe & Save"), ("what-you-lose", "What You Actually Lose")],
-    "kindle":         [("audible", "Audible"), ("prime-video", "Prime Video"), ("data-export", "Your Amazon Data")],
+    "kindle":         [("kindle-unlimited", "Kindle Unlimited"), ("audible", "Audible"), ("prime-video", "Prime Video"), ("data-export", "Your Amazon Data")],
     "audible":        [("kindle", "Kindle & Digital Books"), ("prime-video", "Prime Video")],
     "prime-video":    [("prime", "Amazon Prime"), ("audible", "Audible"), ("kindle", "Kindle & Digital Books")],
-    "alexa":          [("ring", "Ring Security"), ("photos", "Amazon Photos"), ("data-export", "Your Amazon Data")],
+    "alexa":          [("alexa-deep-dive", "Home Assistant Setup Guide"), ("ring", "Ring Security"), ("photos", "Amazon Photos"), ("data-export", "Your Amazon Data")],
     "ring":           [("alexa", "Alexa & Smart Home"), ("photos", "Amazon Photos"), ("data-export", "Your Amazon Data")],
     "photos":         [("alexa", "Alexa & Smart Home"), ("data-export", "Your Amazon Data")],
     "pharmacy":       [("data-export", "Your Amazon Data"), ("subscribe-save", "Subscribe & Save")],
     "subscribe-save": [("prime", "Amazon Prime"), ("shopping", "Amazon Shopping")],
     "data-export":    [("ring", "Ring Security"), ("alexa", "Alexa & Smart Home"), ("kindle", "Kindle & Digital Books")],
     "what-you-lose":  [("prime", "Amazon Prime"), ("shopping", "Amazon Shopping"), ("alexa", "Alexa & Smart Home")],
-    "seller-assessment":      [("seller-direct-channel", "Building a Direct Channel"), ("seller-marketplaces", "Alternative Marketplaces"), ("seller-financials", "The Financial Reality")],
-    "seller-direct-channel":  [("seller-assessment", "Seller Assessment"), ("seller-marketplaces", "Alternative Marketplaces"), ("seller-advertising", "Advertising Without Amazon")],
+    "kindle-unlimited":       [("kindle", "Kindle & Digital Books"), ("audible", "Audible"), ("prime", "Amazon Prime")],
+    "alexa-deep-dive":        [("alexa", "Alexa & Smart Home"), ("ring", "Ring Security"), ("data-export", "Your Amazon Data")],
+    "seller-migration-timeline": [("seller-assessment", "Seller Assessment"), ("seller-direct-channel", "Building a Direct Channel"), ("seller-financials", "The Financial Reality")],
+    "seller-assessment":      [("seller-direct-channel", "Building a Direct Channel"), ("seller-marketplaces", "Alternative Marketplaces"), ("seller-financials", "The Financial Reality"), ("seller-migration-timeline", "90-Day Migration Plan")],
+    "seller-direct-channel":  [("seller-assessment", "Seller Assessment"), ("seller-migration-timeline", "90-Day Migration Plan"), ("seller-marketplaces", "Alternative Marketplaces"), ("seller-advertising", "Advertising Without Amazon")],
     "seller-marketplaces":    [("seller-assessment", "Seller Assessment"), ("seller-fulfillment", "Fulfillment Without FBA"), ("seller-financials", "The Financial Reality")],
     "seller-fulfillment":     [("seller-assessment", "Seller Assessment"), ("seller-financials", "The Financial Reality"), ("seller-direct-channel", "Building a Direct Channel")],
     "seller-financials":      [("seller-assessment", "Seller Assessment"), ("seller-fulfillment", "Fulfillment Without FBA"), ("seller-advertising", "Advertising Without Amazon")],
@@ -270,6 +273,72 @@ def build_service_page(svc):
     # Migration steps
     if svc.get("migration_steps"):
         sections.append(f'<section class="card card-steps"><h2>Migration steps</h2>{render_steps(svc["migration_steps"])}</section>')
+
+    # Hardware options (alexa-deep-dive)
+    if svc.get("hardware_options"):
+        hw_html = ""
+        for h in svc["hardware_options"]:
+            name = e(h.get("name",""))
+            cost = e(h.get("cost",""))
+            note = e(h.get("notes",""))
+            url  = h.get("url","")
+            link = f'<a href="{e(url)}" target="_blank" rel="noopener">{name}</a>' if url else f"<strong>{name}</strong>"
+            hw_html += f'<div class="device-item"><h3>{link} <span class="alt-cost">{cost}</span></h3><p>{note}</p></div>'
+        sections.append(f'<section class="card"><h2>Hardware options</h2>{hw_html}</section>')
+
+    if svc.get("installation_steps"):
+        sections.append(f'<section class="card card-steps"><h2>Installation steps</h2>{render_steps(svc["installation_steps"])}</section>')
+
+    if svc.get("migrating_alexa_devices"):
+        mad = svc["migrating_alexa_devices"]
+        intro = e(mad.get("intro",""))
+        devs_html = f"<p>{intro}</p>" if intro else ""
+        for d in mad.get("devices",[]):
+            devs_html += f'<div class="device-item"><h3>{e(d["type"])}</h3><p>{e(d["notes"])}</p></div>'
+        sections.append(f'<section class="card"><h2>Migrating your devices</h2>{devs_html}</section>')
+
+    if svc.get("voice_control_alternatives"):
+        sections.append(f'<section class="card"><h2>Voice control alternatives</h2>{render_alternatives(svc["voice_control_alternatives"])}</section>')
+
+    if svc.get("advanced_features"):
+        af_html = ""
+        for f_ in svc["advanced_features"]:
+            af_html += f'<div class="loss-item"><h3>{e(f_["title"])}</h3><p>{e(f_["detail"])}</p></div>'
+        sections.append(f'<section class="card"><h2>What Home Assistant can do that Alexa can\'t</h2>{af_html}</section>')
+
+    if svc.get("resources"):
+        res_html = ""
+        for r in svc["resources"]:
+            name = e(r.get("name",""))
+            url  = r.get("url","")
+            note = e(r.get("notes",""))
+            link = f'<a href="{e(url)}" target="_blank" rel="noopener">{name}</a>' if url else f"<strong>{name}</strong>"
+            res_html += f"<li>{link}" + (f" — {note}" if note else "") + "</li>"
+        sections.append(f'<section class="card"><h2>Resources</h2><ul>{res_html}</ul></section>')
+
+    # Seller migration timeline phases
+    if svc.get("guiding_principles"):
+        sections.append(f'<section class="card card-honest"><h2>Guiding principles</h2>{render_list(svc["guiding_principles"])}</section>')
+
+    for phase_key, phase_label in [("phase_1","Phase 1"), ("phase_2","Phase 2"), ("phase_3","Phase 3")]:
+        if svc.get(phase_key):
+            ph = svc[phase_key]
+            title_ph = e(ph.get("title", phase_label))
+            sub_ph   = e(ph.get("subtitle",""))
+            tasks    = ph.get("tasks",[])
+            milestone = e(ph.get("milestone",""))
+            tasks_html = render_steps(tasks)
+            ms_html = f'<p class="alt-cost" style="margin-top:.75rem;"><strong>Milestone:</strong> {milestone}</p>' if milestone else ""
+            sections.append(f'<section class="card card-steps"><h2>{title_ph}</h2><p style="color:#94a3b8;margin-bottom:.75rem;">{sub_ph}</p>{tasks_html}{ms_html}</section>')
+
+    if svc.get("what_success_looks_like"):
+        sections.append(f'<section class="card card-honest"><h2>What success looks like at day 90</h2>{render_list(svc["what_success_looks_like"])}</section>')
+
+    if svc.get("what_not_to_do"):
+        sections.append(f'<section class="card card-privacy"><h2>What not to do</h2>{render_list(svc["what_not_to_do"])}</section>')
+
+    if svc.get("kindle_device_note"):
+        sections.append(f'<section class="card card-note"><h2>Note: Kindle device vs. Kindle Unlimited</h2><p>{e(svc["kindle_device_note"])}</p></section>')
 
     # Related guides
     related = RELATED.get(slug, [])

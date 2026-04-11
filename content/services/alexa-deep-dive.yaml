@@ -1,0 +1,155 @@
+slug: alexa-deep-dive
+title: Home Assistant Setup Guide
+subtitle: The complete walkthrough for leaving Alexa behind
+category: smart-home
+difficulty: 4
+what_it_is: >
+  Home Assistant is open-source smart home software that runs locally on your own hardware.
+  No cloud. No subscription. No Amazon. Your automations, your devices, your data —
+  all on a computer in your home. It supports over 3,000 integrations and is actively
+  maintained by a large open-source community. This is the privacy-first gold standard
+  for smart home control.
+why_home_assistant: >
+  When you use Alexa, every voice command, every automation trigger, every light toggle
+  is logged on Amazon's servers. Home Assistant runs entirely on your local network.
+  The only data that leaves your home is what you explicitly choose to share.
+  It also happens to be more powerful than Alexa — automations Alexa can't do at all
+  are table stakes in Home Assistant.
+hardware_options:
+  - name: Raspberry Pi 4 (2GB or 4GB)
+    cost: ~$45–65
+    notes: >
+      The classic choice. Widely supported. Huge community. Buy from an official reseller.
+      You'll also need a microSD card (32GB+) or USB SSD (recommended for reliability).
+  - name: Raspberry Pi 5 (4GB)
+    cost: ~$70–80
+    notes: Noticeably faster than Pi 4. Recommended if available. Same setup process.
+  - name: Home Assistant Green
+    url: https://www.home-assistant.io/green/
+    cost: ~$99
+    notes: >
+      Purpose-built, plug-and-play. The easiest way to get started. No SD card needed.
+      Officially supported hardware from the Home Assistant project.
+  - name: Home Assistant Yellow
+    url: https://www.home-assistant.io/yellow/
+    cost: ~$130–200
+    notes: >
+      Includes Zigbee radio built-in. Best choice if you have Zigbee devices (many smart
+      bulbs and sensors). Requires a Raspberry Pi CM4 module.
+  - name: Intel NUC / mini PC
+    cost: $100–300
+    notes: >
+      More powerful. Better for large installations or if you want to run other services
+      (media server, VPN) on the same hardware. Any x86 mini PC works.
+  - name: Old laptop / desktop
+    cost: Free (hardware you own)
+    notes: Works perfectly. Slightly more power draw. Good way to start before buying dedicated hardware.
+installation_steps:
+  - Download the Home Assistant OS image from home-assistant.io/installation
+  - Flash it to your microSD card or USB SSD using Balena Etcher (free, easy)
+  - Insert the card/drive into your Raspberry Pi, connect ethernet and power
+  - Wait 5–10 minutes for first boot (it downloads updates automatically)
+  - Open a browser and go to homeassistant.local:8123
+  - Follow the onboarding wizard to create your account and name your home
+  - Home Assistant will auto-discover devices already on your network
+migrating_alexa_devices:
+  intro: >
+    Most smart home devices support multiple ecosystems. Here's how to check and migrate
+    each type. The process is usually: check compatibility → add integration in HA → 
+    reconfigure device if needed → remove from Alexa.
+  devices:
+    - type: Smart Bulbs (Philips Hue, LIFX, Govee, TP-Link Kasa)
+      notes: >
+        Most work directly. In Home Assistant → Settings → Integrations → search for
+        your brand. Philips Hue: just enter your bridge IP. LIFX: auto-discovers.
+        Govee: uses the Govee integration (may need API key from Govee app).
+    - type: Smart Plugs (Kasa, Wemo, Meross)
+      notes: >
+        TP-Link Kasa: excellent native integration, auto-discovers. Wemo: supported.
+        For new purchases, look for Matter-compatible plugs — they work with everything.
+    - type: Smart Thermostat (Nest, Ecobee)
+      notes: >
+        Ecobee: excellent native integration. Nest: works via Google account integration
+        (ironic, but functional). Both support temperature automation in HA.
+    - type: Smart Locks (Schlage, Yale, August)
+      notes: >
+        August: use the August integration. Schlage Encode: Z-Wave or WiFi versions —
+        the Z-Wave version requires a Z-Wave USB stick but is more reliable.
+        Yale Assure: supports Z-Wave and Zigbee.
+    - type: Zigbee Devices (many brands)
+      notes: >
+        Zigbee is a local, low-power protocol. Requires a Zigbee USB stick (ConBee II
+        or Sonoff Zigbee 3.0 dongle, ~$20). Then add the ZHA integration in HA.
+        Zigbee devices pair directly to HA — no cloud at all.
+    - type: Z-Wave Devices
+      notes: >
+        Z-Wave is another local protocol, excellent for locks and sensors. Requires a
+        Z-Wave USB stick (Zooz 800 Series, ~$30). Add the Z-Wave integration in HA.
+    - type: Echo Devices
+      notes: >
+        Echo hardware only works as Alexa endpoints — you can't redirect them to HA.
+        You can use Echo devices as TTS speakers via the Alexa Media Player integration
+        (keeps the speaker, removes the assistant dependency) — or donate/recycle them.
+voice_control_alternatives:
+  - name: Home Assistant Assist (built-in)
+    notes: >
+      HA's own voice assistant, processed 100% locally. Works via the HA app on your
+      phone. Not as natural as Alexa, but improving rapidly. Zero cloud dependency.
+  - name: Siri via Homebridge / HomeKit
+    notes: >
+      Install Homebridge on the same Pi to expose HA devices to Apple HomeKit.
+      Then "Hey Siri, turn off the living room lights" works — processed on Apple's
+      servers, but not Amazon's.
+  - name: Google Assistant
+    notes: >
+      You can expose HA to Google Assistant via Nabu Casa ($6.50/month cloud subscription
+      that funds HA development) or local Google Home integration. Trades Amazon for Google.
+  - name: Wyoming Protocol + local LLM
+    notes: >
+      Advanced: run a local speech-to-text model (Whisper) on the same hardware.
+      Fully local, zero cloud. HA 2024+ supports this natively. Requires more powerful
+      hardware (Pi 5 or mini PC recommended).
+advanced_features:
+  - title: Automations
+    detail: >
+      HA automations are far more powerful than Alexa Routines. Trigger on sunrise/sunset,
+      presence detection (your phone arriving home), sensor values, time, or any device
+      state. If/then/else logic. Multi-step sequences. Delay actions. No cloud needed.
+  - title: Dashboards
+    detail: >
+      Build custom control panels for any device in your home. Wall-mounted tablet as a
+      home control panel is a popular use case. Lovelace UI is drag-and-drop.
+  - title: Presence detection
+    detail: >
+      Use your phone's GPS or Bluetooth to detect who's home. Automatically run different
+      scenes when you arrive or leave. No Alexa Guard needed.
+  - title: Energy monitoring
+    detail: >
+      Track energy usage per device. Many smart plugs report wattage. HA aggregates it
+      into dashboards. Know exactly what's costing you electricity.
+  - title: Remote access
+    detail: >
+      Nabu Casa ($6.50/month) gives you secure remote access without port forwarding.
+      Or self-configure with a VPN (Tailscale, free tier works well). 
+migration_steps:
+  - Choose your hardware (Home Assistant Green is the easiest; Raspberry Pi 4 is the most flexible)
+  - Flash and install Home Assistant OS (full instructions at home-assistant.io/installation)
+  - Connect to homeassistant.local:8123 and complete onboarding
+  - Go to Settings → Integrations → Add Integration → search for each of your device brands
+  - Let HA auto-discover devices; manually add any it misses using their IP addresses
+  - Recreate your key Alexa Routines as HA Automations (more powerful, runs locally)
+  - Install the HA companion app on your phone (iOS or Android) for remote control + presence detection
+  - Test everything thoroughly before decommissioning Alexa
+  - Deregister Echo devices in the Alexa app (Devices → select device → Deregister)
+  - Delete Alexa voice history at alexa.amazon.com → History → Delete All Recordings
+resources:
+  - name: Home Assistant documentation
+    url: https://www.home-assistant.io/docs/
+  - name: r/homeassistant
+    url: https://reddit.com/r/homeassistant
+    notes: 1.2 million members. Most questions already answered.
+  - name: Home Assistant Community Forum
+    url: https://community.home-assistant.io
+  - name: Everything Smart Home (YouTube)
+    url: https://www.youtube.com/@EverythingSmartHome
+    notes: Excellent video tutorials for every integration.
