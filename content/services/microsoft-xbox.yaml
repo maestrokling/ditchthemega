@@ -1,0 +1,65 @@
+slug: microsoft-xbox
+title: Xbox & Game Purchases
+subtitle: Digital games you bought — and how to own your gaming library
+category: microsoft
+difficulty: 3
+what_it_is: >
+  Xbox is Microsoft's gaming platform spanning hardware (Xbox Series X/S, Xbox One) and
+  PC gaming through the Xbox app for Windows. Digital game purchases, Game Pass subscriptions,
+  and in-game purchases are tied to your Microsoft account. The Xbox Store is DRM-locked —
+  games require a Microsoft account to verify ownership and will not run without it.
+what_you_lose:
+  - Xbox digital game purchases on non-Microsoft platforms
+  - Game Pass library access when subscription ends
+  - Xbox achievements and gamerscore
+  - Xbox-exclusive titles (Halo, Forza, Gears, Microsoft Flight Simulator) on non-Xbox/PC platforms
+honest_assessment: >
+  Xbox's digital game DRM is similar to PlayStation's and Nintendo's — all console game stores
+  work the same way. Your digital purchases are tied to your account and your hardware ecosystem.
+  The practical difference: Xbox games are also available on Windows PC through the Xbox app, giving
+  you more hardware flexibility than PlayStation or Nintendo. For PC gamers specifically, GOG.com
+  is the meaningful alternative because it sells DRM-free games you actually own.
+keep_your_account: >
+  If you're leaving Microsoft's other services but still want your game library, keep your
+  Microsoft account. It's free. Your games are tied to it, not to a paid subscription. You
+  don't need Microsoft 365 or Xbox Live Gold to access games you've purchased.
+game_pass_clarity: >
+  Game Pass is a subscription, not a purchase. The games in your Game Pass library are not yours —
+  they're accessible while you pay, and gone when you stop. This is the same as Netflix.
+  Games you've purchased separately from the Xbox Store remain accessible after canceling Game Pass.
+alternatives:
+  - name: GOG.com
+    url: https://gog.com
+    notes: >
+      The gold standard for PC game ownership. DRM-free games. You download the installer.
+      It runs without any launcher, account check, or internet connection. You own the file
+      like a program on your hard drive. GOG has thousands of titles including major releases.
+      If you're going to buy PC games, GOG is how you actually own them.
+  - name: Steam
+    url: https://store.steampowered.com
+    notes: >
+      The dominant PC gaming platform. Not DRM-free (most games require the Steam client),
+      but Steam's market position, long track record, and generous refund policy make it
+      a more stable long-term choice than the Xbox Store. The Steam Deck shows Valve's
+      commitment to hardware diversity. A better alternative to Xbox Store for PC gaming.
+  - name: Itch.io
+    url: https://itch.io
+    notes: >
+      Indie game marketplace. Many games are DRM-free. Strong for independent developers.
+      Not a replacement for AAA titles but excellent for indie games.
+  - name: Epic Games Store
+    url: https://store.epicgames.com
+    notes: >
+      Offers frequent free games. Large library. DRM varies by publisher. Better revenue
+      share for developers than Steam. A viable alternative for specific titles.
+movies_anywhere_note: >
+  Microsoft participates in Movies Anywhere for digital movie purchases through the Microsoft Store.
+  Link your Microsoft account at moviesanywhere.com — eligible movie purchases become accessible
+  on Apple TV, Amazon, Google Play, and Vudu.
+migration_steps:
+  - Keep your Microsoft account if you want to preserve your game library (free to maintain)
+  - For future PC game purchases, buy from GOG.com (DRM-free) or Steam (more portable than Xbox Store)
+  - Cancel Xbox Game Pass if subscribed — library access ends, but separately purchased games stay
+  - For Xbox-exclusive titles you love, this may be a reason to keep a minimal Xbox presence
+  - Link Microsoft account to Movies Anywhere for any digital movie purchases
+  - Cancel Xbox Live Gold / Xbox Game Pass Ultimate if no longer using Xbox hardware

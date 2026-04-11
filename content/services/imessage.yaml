@@ -1,0 +1,84 @@
+slug: imessage
+title: iMessage Replacement
+subtitle: The blue bubble problem — and what it actually costs you
+category: apple
+difficulty: 3
+what_it_is: >
+  iMessage is Apple's messaging platform built into the iPhone Messages app. When both
+  sender and recipient have iPhones, messages are end-to-end encrypted, send over WiFi
+  or data (not SMS), and support high-resolution photo sharing, read receipts, typing
+  indicators, and message reactions. When one party uses Android or another non-Apple
+  device, the message falls back to SMS — unencrypted, through your carrier, with no
+  read receipts and compressed media. This creates the green vs. blue bubble distinction.
+privacy_case: >
+  iMessage messages between Apple users are end-to-end encrypted and are not accessible
+  to Apple (with limited exceptions for iCloud backup — if you back up iMessages to iCloud,
+  Apple has a key). Message metadata (who you message, when, how often) is retained by Apple.
+  The encryption is genuine and among the best in mainstream consumer messaging.
+what_you_lose:
+  - End-to-end encrypted messaging with iPhone contacts by default
+  - High-resolution photo and video sharing without compression
+  - Read receipts and typing indicators
+  - Message reactions (tapbacks) that work natively
+  - iMessage games and other Apple-specific extensions
+  - Seamless transition between SMS and encrypted messaging in one app
+  - Integration with other Apple devices (messages sync across iPhone, Mac, iPad)
+honest_assessment: >
+  iMessage is genuinely excellent. The encryption is real. The UX is seamless. The social
+  pressure around "green bubbles" is a documented phenomenon — particularly among younger users
+  in the US where iMessage dominates. Leaving iPhone in the US means navigating this social
+  pressure. The honest answer: most people stop caring about green bubbles within a few weeks.
+  The real loss is convenience (one app for all messages) and the encrypted default with your
+  iPhone-using friends.
+the_green_bubble_issue: >
+  In the US, roughly 57% of smartphones are iPhones. If most of your social network uses
+  iPhones, leaving will affect your group chats. iMessage group chats with one Android user
+  fall back to MMS for everyone — lower quality, carrier costs, no encryption. This is the
+  most significant social friction of leaving iPhone in the US. In most of the rest of the
+  world, WhatsApp is the dominant messaging app regardless of device, making this less relevant.
+critical_first_step: >
+  BEFORE switching away from iPhone, deactivate iMessage: Settings → Messages → iMessage → toggle OFF.
+  If you don't do this, Apple's system may continue routing messages addressed to your phone number
+  to iMessage even after you switch to Android. Those messages will show as delivered on the sender's
+  end but you will never receive them. This is a well-documented problem that has locked people out
+  of messages for weeks. Deactivate iMessage FIRST.
+deregister_tool: >
+  If you've already switched to Android without deactivating iMessage, Apple provides a
+  deregistration tool at selfsolve.apple.com/deregister-imessage. Enter your phone number.
+  This should release your number from iMessage routing.
+alternatives:
+  - name: Signal
+    url: https://signal.org
+    notes: >
+      End-to-end encrypted by default. Open source. No ads. No metadata collection.
+      The privacy-first iMessage replacement. Works on iPhone, Android, desktop.
+      Your contacts also need Signal — the challenge is adoption.
+  - name: WhatsApp
+    url: https://whatsapp.com
+    notes: >
+      2 billion users globally. End-to-end encrypted messages. Works on all platforms.
+      Owned by Meta — trades Apple's data collection for Meta's metadata collection.
+      Better for international contacts. Best for groups where everyone already uses it.
+  - name: Google Messages (RCS)
+    url: https://messages.google.com
+    notes: >
+      Android's default messaging app supports RCS (Rich Communication Services) —
+      a modern SMS replacement with read receipts, typing indicators, high-res media,
+      and encryption between RCS-enabled users. Apple added RCS support in iOS 18
+      (2024), which means iPhone users can now exchange RCS messages with Android users.
+      Not end-to-end encrypted by default between carriers (E2E encryption requires
+      both parties to be on Google Messages).
+  - name: Telegram
+    url: https://telegram.org
+    notes: >
+      Large user base. Good features. Important caveat: standard Telegram messages
+      are NOT end-to-end encrypted by default. Only "Secret Chats" are. Privacy-
+      conscious users should be aware of this distinction.
+migration_steps:
+  - Deactivate iMessage on your iPhone BEFORE switching (Settings → Messages → iMessage → off)
+  - If already switched, use selfsolve.apple.com/deregister-imessage to release your number
+  - Install Signal on your current iPhone and invite key contacts before switching
+  - Create Signal groups to replace your most important iMessage groups
+  - Set Signal as your default messaging app on Android after switching
+  - For contacts who won't switch to Signal, WhatsApp or RCS (Google Messages) cover the gap
+  - Give it three weeks — the adjustment period is real but temporary

@@ -161,7 +161,7 @@ def footer_html():
      <a href="https://cancelfreely.com">CancelFreely</a> &middot; 
      <a href="https://deletefreely.com">DeleteFreely</a>
   </p>
-  <p><a href="/about/">About</a> &middot; <a href="https://ko-fi.com/cancelfreely" target="_blank" rel="noopener">☕ Buy us a coffee</a></p>
+  <p><a href="/about/">About</a> &middot; <a href="/what-is-lock-in/">What Is Lock-In?</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="https://ko-fi.com/cancelfreely" target="_blank" rel="noopener">☕ Buy us a coffee</a></p>
 </footer>'''
 
 def page_shell(title, description, canonical, content, extra_head=""):
@@ -569,6 +569,113 @@ def build_landing():
         extra_head=website_schema
     )
 
+def build_what_is_lock_in():
+    content = '''
+<div class="page-hero">
+  <h1>What Is Ecosystem Lock-In?</h1>
+  <p class="subtitle">Why leaving Big Tech is harder than canceling a subscription — and how to think about it.</p>
+</div>
+
+<section class="card">
+  <h2>Not all lock-in is the same</h2>
+  <p>"Lock-in" gets used loosely to mean "hard to leave." But the reasons it\'s hard to leave are very different across companies, and understanding which type of lock-in you\'re facing tells you what kind of migration work is ahead of you.</p>
+  <p>There are three types:</p>
+</section>
+
+<section class="card card-caution">
+  <h2>Type 1: Content lock-in (DRM)</h2>
+  <p>You paid for something, but you don\'t own it. Your Kindle books, your iTunes movies, your Audible audiobooks, your Apple Books purchases — these are licenses, not property. They are encrypted with DRM (Digital Rights Management) and can only be accessed through the company\'s software on the company\'s approved devices.</p>
+  <p>If you leave the ecosystem and close your account, the content is gone. There is no legal way to export it in a format that works elsewhere. The button that said \"Buy\" meant \"License under our terms.\"</p>
+  <p><strong>Who does this:</strong> Amazon (Kindle, Audible, Prime Video), Apple (iTunes movies, Apple Books, App Store), Google (some Play Books, Play Movies), Microsoft (Xbox games, Microsoft Store movies).</p>
+  <p><strong>The structural solution:</strong> Stop buying DRM-locked content. Buy DRM-free ebooks from Kobo, Smashwords, or publishers directly. Buy audiobooks from Libro.fm. Buy movies on physical media or through Movies Anywhere-linked storefronts. Buy PC games from GOG.com. Going forward, you own what you buy.</p>
+</section>
+
+<section class="card card-privacy">
+  <h2>Type 2: Data lock-in (surveillance)</h2>
+  <p>You didn\'t buy anything — the product was you. Google has fifteen years of your search history, location history, email content, YouTube watch history, and voice commands. Meta has your social graph, your messages, your behavioral profile. These companies don\'t lock up your content — they lock up their knowledge of you.</p>
+  <p>You can export your files in an afternoon. Your data shadow is not in the export. Google\'s model of your behavior — the advertising profile, the predictions, the inferences drawn from a decade of queries — is not a file you can download and take with you. It remains on Google\'s servers whether or not you\'ve exported your photos.</p>
+  <p><strong>Who does this:</strong> Google (the most extensive), Meta (social and behavioral data), Amazon (purchase and voice data), Microsoft (enterprise and telemetry data).</p>
+  <p><strong>The structural solution:</strong> Stop the flow, then drain the reservoir. Replace the services that collect the most data per day first (browser, search engine, maps, Android). Then delete the historical data that\'s already been collected. The Google guide covers this in the <a href="/google/cutting-the-pipeline/">Cutting the Pipeline</a> five-phase plan.</p>
+</section>
+
+<section class="card card-honest">
+  <h2>Type 3: Social lock-in (network effects)</h2>
+  <p>Your family is on Facebook. Your friends are on Instagram. Your group chat is on WhatsApp. The restaurant you like posts specials on Instagram stories. This isn\'t technical lock-in at all — it\'s social infrastructure that happens to run on private platforms.</p>
+  <p>You can export all your photos and posts from Meta\'s platforms in an afternoon. What you can\'t export is your social graph. The connections, the groups, the communities. These exist on Facebook because your people are on Facebook. No technical solution changes that.</p>
+  <p><strong>Who does this:</strong> Meta (the purest example), Apple (iMessage creates a social pressure dynamic unique to the US), to a lesser extent Google (Gmail is where people expect to reach you).</p>
+  <p><strong>The structural solution:</strong> Collect contact information (phone numbers, email addresses) before leaving. Move to platforms where relationships can exist independent of any single company\'s servers — direct text, email, Signal. Accept that some connections will fade. This is the cost of leaving, and it\'s worth being honest about.</p>
+</section>
+
+<section class="card">
+  <h2>Why this matters</h2>
+  <p>Knowing which type of lock-in you\'re facing tells you where to focus your energy:</p>
+  <ul>
+    <li>If your biggest concern is <strong>content lock-in</strong>, the work is exporting what you can, accepting the sunk cost of what you can\'t, and changing your purchasing habits going forward.</li>
+    <li>If your biggest concern is <strong>data surveillance</strong>, the work is replacing the high-leakage services first and systematically deleting the historical record.</li>
+    <li>If your biggest concern is <strong>social lock-in</strong>, the work is slower and more personal: migrating relationships rather than files, and accepting that some friction is unavoidable.</li>
+  </ul>
+  <p>Most people face all three, with different weights for different companies. That\'s why this site is organized by company rather than by type of content — because leaving Amazon is mostly a content-lock-in problem, leaving Google is mostly a data-surveillance problem, and leaving Meta is mostly a social-lock-in problem.</p>
+</section>
+
+<section class="card">
+  <h2>Where to start</h2>
+  <div class="timeline-nav" style="margin-top:.5rem;">
+    <a href="/amazon/" class="timeline-card"><div class="when">Content lock-in</div><div class="what">Amazon — Kindle, Audible, Prime Video</div></a>
+    <a href="/google/cutting-the-pipeline/" class="timeline-card"><div class="when">Data surveillance</div><div class="what">Google — The 3-month pipeline plan</div></a>
+    <a href="/meta/" class="timeline-card"><div class="when">Social lock-in</div><div class="what">Meta — Facebook, Instagram, WhatsApp</div></a>
+    <a href="/apple/" class="timeline-card"><div class="when">All three types</div><div class="what">Apple — DRM + hardware + social</div></a>
+    <a href="/microsoft/" class="timeline-card"><div class="when">Lightest lock-in</div><div class="what">Microsoft — easiest consumer exit</div></a>
+  </div>
+</section>
+'''
+    return page_shell(
+        "What Is Ecosystem Lock-In? | DitchTheMega",
+        "Why leaving Big Tech is harder than canceling a subscription. Three types of lock-in: DRM content, data surveillance, and social networks. Understanding which you face tells you what work is ahead.",
+        f"{SITE_URL}/what-is-lock-in/",
+        content
+    )
+
+def build_dtm_privacy():
+    content = '''
+<div class="page-hero">
+  <h1>Privacy Policy</h1>
+</div>
+<section class="card">
+  <p>DitchTheMega collects no personal data. We use no analytics. We set no cookies. We don\'t track your browsing. We don\'t know who you are. We don\'t want to know who you are.</p>
+  <p>The site is static HTML served through Cloudflare Pages. No server-side code processes your requests. No database stores your visits.</p>
+  <p>Some links on this site are affiliate links, clearly marked with an <span class="aff-badge">aff</span> badge. If you click one and make a purchase, we may earn a commission. We do not track which users click which links beyond what the affiliate program provider tracks at their end.</p>
+  <p>If you email us, we receive your email. We don\'t add you to a list. We don\'t sell your address. We reply if a reply is needed and that\'s the end of it.</p>
+  <p>This site exists to help you take control of your data. We start by not taking any of it.</p>
+  <p style="color:var(--text-light);font-size:0.8rem;">Last updated: April 2026</p>
+</section>
+'''
+    return page_shell(
+        "Privacy Policy | DitchTheMega",
+        "DitchTheMega collects no personal data. No analytics, no cookies, no tracking.",
+        f"{SITE_URL}/privacy/",
+        content
+    )
+
+def build_dtm_terms():
+    content = '''
+<div class="page-hero">
+  <h1>Terms of Use</h1>
+</div>
+<section class="card">
+  <p>DitchTheMega provides general information about leaving Big Tech ecosystems. It is not legal advice. We make reasonable efforts to keep information accurate and current but cannot guarantee accuracy. Use at your own risk.</p>
+  <p>Information about DRM circumvention tools is provided for informational purposes only. We do not recommend, endorse, or provide instructions for circumventing DRM. Laws governing DRM circumvention vary by jurisdiction. Nothing on this site should be construed as legal guidance about DRM removal.</p>
+  <p>Links to third-party sites are not endorsements. Some links are affiliate links, disclosed on every page where they appear. We are not responsible for the practices of the services we document or link to.</p>
+  <p>Affiliate links are clearly marked. We only link to services we would recommend regardless of whether an affiliate program exists.</p>
+  <p style="color:var(--text-light);font-size:0.8rem;">Last updated: April 2026</p>
+</section>
+'''
+    return page_shell(
+        "Terms of Use | DitchTheMega",
+        "DitchTheMega provides general information, not legal advice. DRM information is informational only.",
+        f"{SITE_URL}/terms/",
+        content
+    )
+
 def build_about():
     content = '''<div class="page-hero">
   <h1>About DitchTheMega</h1>
@@ -621,7 +728,8 @@ def build_about():
 def build_sitemap(services):
     urls = [SITE_URL + "/", SITE_URL + "/amazon/", SITE_URL + "/amazon/sellers/",
             SITE_URL + "/google/", SITE_URL + "/apple/", SITE_URL + "/meta/",
-            SITE_URL + "/microsoft/", SITE_URL + "/alternatives/", SITE_URL + "/about/"]
+            SITE_URL + "/microsoft/", SITE_URL + "/alternatives/", SITE_URL + "/about/",
+            SITE_URL + "/what-is-lock-in/", SITE_URL + "/privacy/", SITE_URL + "/terms/"]
     for svc in services:
         cat = svc.get("category","")
         if cat == "google":
@@ -1869,6 +1977,26 @@ def main():
     with open(f"{out_dir}/index.html", "w") as f:
         f.write(build_apple_your_content())
     print("Built: apple/apple-your-content/index.html")
+
+    # What Is Lock-In framework page
+    out_dir = f"{PUBLIC_DIR}/what-is-lock-in"
+    os.makedirs(out_dir, exist_ok=True)
+    with open(f"{out_dir}/index.html", "w") as f:
+        f.write(build_what_is_lock_in())
+    print("Built: what-is-lock-in/index.html")
+
+    # Privacy and Terms pages
+    out_dir = f"{PUBLIC_DIR}/privacy"
+    os.makedirs(out_dir, exist_ok=True)
+    with open(f"{out_dir}/index.html", "w") as f:
+        f.write(build_dtm_privacy())
+    print("Built: privacy/index.html")
+
+    out_dir = f"{PUBLIC_DIR}/terms"
+    os.makedirs(out_dir, exist_ok=True)
+    with open(f"{out_dir}/index.html", "w") as f:
+        f.write(build_dtm_terms())
+    print("Built: terms/index.html")
 
     # Google Cutting the Pipeline
     out_dir = f"{PUBLIC_DIR}/google/cutting-the-pipeline"

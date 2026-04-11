@@ -1,0 +1,53 @@
+slug: apple-hardware
+title: Hardware Migration
+subtitle: Leaving iPhone, Mac, iPad — and the ecosystem chain that connects them
+category: apple
+difficulty: 5
+what_it_is: >
+  Apple's hardware is the most tightly integrated in the consumer market. iPhone, Mac,
+  iPad, Apple Watch, AirPods, and Apple TV aren't just individual products — they're
+  designed to work together in ways that create compounding dependencies. Understanding
+  the ecosystem chain before you leave is how you avoid the most painful surprises.
+the_ecosystem_chain:
+  - iMessage: Works only between Apple devices. Leaving iPhone means your messages to iPhone users show as green SMS bubbles — unencrypted, through your carrier, without read receipts or high-res photo sharing.
+  - AirDrop: Apple-only file transfer. No equivalent on Android. Replace with cross-platform options (local network sharing apps, Bluetooth, cloud share links).
+  - Handoff / Universal Clipboard: Copy on iPhone, paste on Mac. Works only within Apple ecosystem. No equivalent when mixed.
+  - AirPlay: Stream from iPhone/Mac to Apple TV or AirPlay-compatible speakers. Android and Windows have Chromecast and Miracast as partial equivalents but they're separate ecosystems.
+  - AirPods: Work with any Bluetooth device, but automatic switching, Siri integration, and spatial audio work fully only with Apple devices. Leaving iPhone means losing automatic ear detection for phone calls and seamless switching.
+  - Apple Watch: Requires iPhone. Not compatible with Android. If you leave iPhone, your Apple Watch becomes a very expensive fitness tracker with limited functionality.
+  - iMessage: See above. The most painful piece of the chain for most people.
+honest_assessment: >
+  The hardware migration is harder than the software migration because of the physical
+  dependencies. Your Apple Watch stops working as a full device. Your AirPods lose features.
+  Your Macs still work but lose Handoff and AirDrop convenience. These are real costs.
+  The right sequence is: choose your destination first (Android phone, Windows/Linux laptop),
+  then plan how to handle each dependent device.
+leaving_iphone:
+  - Choose your Android device before migrating. GrapheneOS on Pixel for maximum privacy, Samsung Galaxy for familiarity, Pixel stock for clean Android.
+  - Use Apple's "Move to iOS" app in reverse — Android doesn't have an official iPhone migration tool, but Google Drive can back up contacts, photos, and some app data.
+  - Export contacts as vCard from iCloud (contacts.google.com alternative) before leaving.
+  - Download all photos from iCloud before switching.
+  - Export iMessage history using iMazing (Mac/Windows app, paid) — there's no free built-in way to preserve iMessage history.
+  - Deactivate iMessage BEFORE switching to Android (Settings → Messages → iMessage → off). If you don't, SMS messages sent to your number may get lost for weeks while Apple's system holds them.
+  - Set up Signal, WhatsApp, or Google Messages on Android to maintain messaging with your contacts.
+leaving_mac:
+  - Mac-specific apps (Final Cut Pro, Logic Pro, Motion, MainStage) have no direct equivalents. Assess your workflow dependencies before migrating.
+  - Most productivity, communication, and creative apps have cross-platform versions or web apps. Document your must-have apps first.
+  - Migration options — Windows (most compatible for mainstream software), Linux (best privacy, most technical).
+  - Back up everything with Time Machine before switching. Copy the backup to an external drive.
+  - Standard file formats (PDF, .docx, .mp4, etc.) work everywhere. Apple-proprietary formats (.pages, .numbers, .key) need conversion or will open in LibreOffice with some quality loss.
+apple_watch_decision:
+  - If you leave iPhone, your Apple Watch loses: cellular calling and texting, many third-party apps that require iPhone, and all features that require a paired iPhone for connectivity.
+  - Alternatives to consider for a new smartwatch — Wear OS watches (Pixel Watch, Samsung Galaxy Watch) work with Android, Garmin watches for fitness-focused users, Fitbit (Google-owned) for health tracking.
+  - If you want to keep your Apple Watch, you need to keep an iPhone to pair it to. This is a real constraint.
+migration_steps:
+  - Deactivate iMessage on your iPhone before switching to Android (critical — do this first)
+  - Download all iCloud Photos as originals
+  - Export contacts as vCard (iCloud.com → Contacts → Export)
+  - Export iMessage history using iMazing if you want to preserve it
+  - Back up your iPhone fully to iCloud or a Mac
+  - Set up your new Android device
+  - Install Signal or WhatsApp and notify your most important contacts
+  - Accept that green bubbles will happen — most people stop noticing within a few weeks
+  - Decide about Apple Watch — keep with a secondary iPhone, replace with a Wear OS watch, or switch to a fitness tracker
+  - For Mac, assess your app dependencies before choosing Windows or Linux as your destination
