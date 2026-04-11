@@ -11,6 +11,28 @@ CONTENT_DIR = "content/services"
 PUBLIC_DIR  = "public"
 SITE_URL    = "https://ditchthemega.com"
 
+# Related guides map: slug → list of (slug, title) to show as related
+RELATED = {
+    "prime":          [("shopping", "Amazon Shopping"), ("prime-video", "Prime Video"), ("subscribe-save", "Subscribe & Save"), ("data-export", "Your Amazon Data")],
+    "shopping":       [("prime", "Amazon Prime"), ("subscribe-save", "Subscribe & Save"), ("what-you-lose", "What You Actually Lose")],
+    "kindle":         [("audible", "Audible"), ("prime-video", "Prime Video"), ("data-export", "Your Amazon Data")],
+    "audible":        [("kindle", "Kindle & Digital Books"), ("prime-video", "Prime Video")],
+    "prime-video":    [("prime", "Amazon Prime"), ("audible", "Audible"), ("kindle", "Kindle & Digital Books")],
+    "alexa":          [("ring", "Ring Security"), ("photos", "Amazon Photos"), ("data-export", "Your Amazon Data")],
+    "ring":           [("alexa", "Alexa & Smart Home"), ("photos", "Amazon Photos"), ("data-export", "Your Amazon Data")],
+    "photos":         [("alexa", "Alexa & Smart Home"), ("data-export", "Your Amazon Data")],
+    "pharmacy":       [("data-export", "Your Amazon Data"), ("subscribe-save", "Subscribe & Save")],
+    "subscribe-save": [("prime", "Amazon Prime"), ("shopping", "Amazon Shopping")],
+    "data-export":    [("ring", "Ring Security"), ("alexa", "Alexa & Smart Home"), ("kindle", "Kindle & Digital Books")],
+    "what-you-lose":  [("prime", "Amazon Prime"), ("shopping", "Amazon Shopping"), ("alexa", "Alexa & Smart Home")],
+    "seller-assessment":      [("seller-direct-channel", "Building a Direct Channel"), ("seller-marketplaces", "Alternative Marketplaces"), ("seller-financials", "The Financial Reality")],
+    "seller-direct-channel":  [("seller-assessment", "Seller Assessment"), ("seller-marketplaces", "Alternative Marketplaces"), ("seller-advertising", "Advertising Without Amazon")],
+    "seller-marketplaces":    [("seller-assessment", "Seller Assessment"), ("seller-fulfillment", "Fulfillment Without FBA"), ("seller-financials", "The Financial Reality")],
+    "seller-fulfillment":     [("seller-assessment", "Seller Assessment"), ("seller-financials", "The Financial Reality"), ("seller-direct-channel", "Building a Direct Channel")],
+    "seller-financials":      [("seller-assessment", "Seller Assessment"), ("seller-fulfillment", "Fulfillment Without FBA"), ("seller-advertising", "Advertising Without Amazon")],
+    "seller-advertising":     [("seller-direct-channel", "Building a Direct Channel"), ("seller-marketplaces", "Alternative Marketplaces"), ("seller-financials", "The Financial Reality")],
+}
+
 CATEGORY_LABELS = {
     "membership":     "Membership",
     "shopping":       "Shopping",
@@ -248,6 +270,12 @@ def build_service_page(svc):
     # Migration steps
     if svc.get("migration_steps"):
         sections.append(f'<section class="card card-steps"><h2>Migration steps</h2>{render_steps(svc["migration_steps"])}</section>')
+
+    # Related guides
+    related = RELATED.get(slug, [])
+    if related:
+        links = "".join(f'<li><a href="/amazon/{r_slug}/">{e(r_title)}</a></li>' for r_slug, r_title in related)
+        sections.append(f'<section class="card"><h2>Related guides</h2><ul>{links}</ul></section>')
 
     content = "\n".join(sections)
     canonical = f"{SITE_URL}/amazon/{slug}/"
