@@ -1,0 +1,65 @@
+slug: youtube
+title: YouTube
+subtitle: The hardest Google service to leave — honestly
+category: google
+difficulty: 4
+what_it_is: >
+  YouTube is the world's second-largest search engine and the dominant video platform
+  with 2.7 billion monthly users. It's owned by Google and powers an enormous advertising
+  surveillance apparatus. Your watch history, search history, and behavior on YouTube
+  build one of the most detailed interest profiles Google maintains.
+privacy_case: >
+  YouTube's recommendation algorithm is designed to maximize watch time, which often means
+  maximizing emotional engagement. YouTube knows more about your interests, opinions, and
+  information diet than almost any other platform. It also tracks your viewing even when
+  you're not logged in via cookies and fingerprinting.
+what_you_lose:
+  - The world's largest video library (genuinely irreplaceable for many use cases)
+  - Creator subscriptions and notification system
+  - YouTube Music (if you use it)
+  - Live streaming content
+  - YouTube Premium (ad-free + background play + YouTube Music)
+honest_assessment: >
+  This is the hardest Google service to leave because the content itself is on YouTube.
+  Unlike Gmail (you can move your email) or Google Search (you can use DuckDuckGo),
+  YouTube videos are not available elsewhere. The strategy here is less "leave YouTube"
+  and more "use YouTube on your terms, with less surveillance." Full departure is only
+  realistic if you genuinely don't need it.
+alternatives:
+  - name: Invidious (YouTube without Google)
+    url: https://invidious.io
+    notes: >
+      Open-source YouTube front-end. Watches YouTube videos without Google knowing.
+      No tracking, no algorithm, no ads. Find an instance at invidious.io.
+      Best option for people who need YouTube content but want privacy.
+  - name: Odysee / LBRY
+    url: https://odysee.com
+    notes: >
+      Decentralized video platform. Many YouTubers cross-post here. No algorithmic
+      recommendation rabbit holes. Smaller catalog but growing.
+  - name: Nebula
+    url: https://nebula.tv
+    cost: $5/month or $30/year
+    notes: >
+      Creator-owned streaming platform. Many popular educational YouTubers
+      (CGP Grey, Wendover, Kurzgesagt, etc.) post here early or exclusively.
+      Ad-free. Subscription supports creators directly.
+  - name: Vimeo
+    url: https://vimeo.com
+    notes: Better video quality, filmmaker-focused. Niche but excellent for arts/documentary content.
+  - name: PeerTube
+    url: https://joinpeertube.org
+    notes: >
+      Decentralized, open-source video hosting. Federated network of instances.
+      Very small catalog currently. For the technically inclined.
+the_privacy_minimum: >
+  If you can't leave YouTube entirely, these reduce the surveillance without giving up content:
+  use Invidious or a privacy-respecting browser extension (uBlock Origin + SponsorBlock),
+  watch logged out, or use YouTube via a VPN. YouTube Premium ($13.99/month) removes ads
+  but doesn't reduce Google's data collection.
+migration_steps:
+  - Export your subscription list and watch history via Google Takeout
+  - Try Invidious for 2 weeks — it plays YouTube videos without the tracking
+  - Check which of your subscribed creators are on Nebula (many educational channels are)
+  - If you use YouTube Music, see the music alternatives page for replacements
+  - For creators you support financially, consider direct Patreon support instead of YouTube channel memberships

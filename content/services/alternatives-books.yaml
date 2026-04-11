@@ -1,0 +1,86 @@
+slug: alternatives-books
+title: Best Alternatives to Amazon for Books
+meta_description: The best places to buy books online that aren't Amazon — Bookshop.org, ThriftBooks, your library, and more. Honest comparison with prices and tradeoffs.
+category: alternatives
+target_query: "amazon alternatives books"
+intro: >
+  Amazon sells more books than anyone. It's also the reason thousands of independent
+  bookstores have closed. The good news: the alternatives are genuinely excellent,
+  often cheaper, and in some cases better than Amazon for discovering what to read next.
+options:
+  - name: Bookshop.org
+    url: https://bookshop.org
+    best_for: Supporting independent bookstores
+    price_vs_amazon: Same list price as Amazon for new books
+    shipping: Free shipping over $35; otherwise $4.99
+    pros:
+      - 10% of every purchase goes to independent bookstores
+      - Same prices as Amazon for most new titles
+      - Good discovery features (staff picks, lists)
+    cons:
+      - No used books
+      - Slower shipping than Prime
+    verdict: Best default replacement for buying new books online. Same price, better values.
+
+  - name: ThriftBooks
+    url: https://thriftbooks.com
+    best_for: Used books at steep discounts
+    price_vs_amazon: Often 50–80% cheaper than Amazon for used
+    shipping: Free shipping on orders over $15
+    pros:
+      - Dramatically cheaper than Amazon for used books
+      - Good condition grading system
+      - Loyalty program earns free books
+    cons:
+      - Used only (no new books)
+      - Slower shipping
+    verdict: Best for used books. If you don't need a book immediately, almost always cheaper than Amazon.
+
+  - name: Libby / OverDrive
+    url: https://libbyapp.com
+    best_for: Free ebooks and audiobooks
+    price_vs_amazon: Free
+    shipping: Instant digital delivery
+    pros:
+      - Completely free with library card
+      - Works on Kindle, phones, tablets
+      - Audiobooks included
+    cons:
+      - Wait times on popular titles
+      - Limited to library catalog
+    verdict: Criminally underused. Your library card is a subscription you already paid for.
+
+  - name: Hoopla
+    url: https://hoopladigital.com
+    best_for: Instant library books with no wait times
+    price_vs_amazon: Free
+    shipping: Instant digital delivery
+    pros:
+      - No wait times (unlike Libby)
+      - Strong comics/graphic novel selection
+      - Free with library card
+    cons:
+      - Smaller catalog than Libby
+      - Monthly checkout limit
+    verdict: Use alongside Libby. If Libby has a wait, check Hoopla first.
+
+  - name: Kobo
+    url: https://kobo.com
+    best_for: Ebook purchases without Amazon DRM
+    price_vs_amazon: Comparable to Kindle prices
+    shipping: Instant digital delivery
+    pros:
+      - Open epub format (you actually own the file)
+      - Excellent hardware (Kobo e-readers rival Kindle)
+      - Integrates with Libby for library books
+    cons:
+      - Smaller catalog than Kindle for some niche titles
+    verdict: Best Kindle replacement. Buy ebooks you actually own.
+
+honest_assessment: >
+  For most readers, the combination of Bookshop.org (new books) + ThriftBooks (used books) +
+  Libby (free library ebooks/audiobooks) covers 95% of what they used Amazon for.
+  The only thing you lose is Prime shipping speed. If you're not in a rush, you lose nothing else.
+bottom_line: >
+  Amazon's book dominance is a choice, not a necessity. The alternatives are here. They're good.
+  And your purchases at Bookshop.org directly fund the independent bookstores Amazon displaced.

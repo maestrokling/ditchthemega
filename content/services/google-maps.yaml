@@ -1,0 +1,60 @@
+slug: google-maps
+title: Google Maps
+subtitle: Your location history is more revealing than you think
+category: google
+difficulty: 2
+what_it_is: >
+  Google Maps is the dominant navigation and mapping service with 1 billion monthly users.
+  With location history enabled, Google records everywhere you go — every commute, every
+  medical appointment, every place of worship, every late-night location. This data is
+  stored indefinitely and has been used in criminal investigations.
+privacy_case: >
+  In 2023, Google was ordered by the FTC to delete location data it had improperly retained.
+  More significantly, Google has complied with "geofence warrants" — law enforcement requests
+  for all devices located near a specific place at a specific time. Your location history
+  on Google Maps is not just a convenience feature; it's a record of your life that third
+  parties can access under certain legal circumstances.
+what_you_lose:
+  - Google Maps' superior business data (reviews, hours, photos)
+  - Live traffic and transit information
+  - Integration with Google Search and Gmail
+  - Street View
+honest_assessment: >
+  Apple Maps and Google Maps are now genuinely competitive for navigation in most cities.
+  The gap that existed 5 years ago is largely closed. For international travel, Google Maps
+  still has better coverage in some regions. For US navigation, Apple Maps is excellent.
+  The transition is lower-friction than most people expect.
+data_to_export:
+  - Delete your Google Location History at myaccount.google.com/maps/yourdata
+  - Turn off Location History in Google account settings
+  - Export location data via Google Takeout if you want a record before deleting
+alternatives:
+  - name: Apple Maps
+    url: https://apple.com/maps
+    notes: >
+      Privacy-first navigation. On-device processing where possible. No persistent
+      location history sent to Apple. Excellent navigation quality in the US and Europe.
+      Now includes indoor maps, transit, and cycling directions. Best choice for iPhone users.
+  - name: OsmAnd
+    url: https://osmand.net
+    cost: Free; paid version available
+    notes: >
+      Open-source, based on OpenStreetMap. Offline maps. No data collection. Works
+      without internet. Best for privacy-focused users or frequent travelers who want
+      offline capability.
+  - name: Organic Maps
+    url: https://organicmaps.app
+    notes: >
+      Free, open-source, based on OpenStreetMap. Beautiful interface. Offline-first.
+      No tracking, no ads. Excellent for hiking and cycling. Simpler than OsmAnd.
+  - name: HERE WeGo
+    url: https://wego.here.com
+    notes: >
+      Nokia-spinoff mapping service. Good offline maps. Less surveillance than Google.
+      Good for car navigation.
+migration_steps:
+  - On iPhone, set Apple Maps as your default maps app (Settings → Maps)
+  - Use Apple Maps for 2 weeks for daily navigation before evaluating
+  - Delete your Google Location History at myaccount.google.com/maps/yourdata
+  - Turn off "Location History" in your Google Account settings
+  - Install OsmAnd or Organic Maps for offline maps when traveling internationally

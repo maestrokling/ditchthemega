@@ -1,0 +1,72 @@
+slug: gmail
+title: Gmail
+subtitle: Leaving Google's email — and the inbox it's been reading
+category: google
+difficulty: 3
+what_it_is: >
+  Gmail is Google's free email service with 1.8 billion users. It offers 15GB free storage,
+  excellent spam filtering, and deep integration with Google's other services. The tradeoff:
+  Google scans email content to build advertising profiles. Every email you send or receive
+  contributes to Google's picture of your interests, relationships, and behavior.
+privacy_case: >
+  Google's terms permit using the content of your emails for advertising targeting.
+  While Google stopped using email content for personalized ads in Gmail in 2017,
+  they still use data from Gmail (purchase confirmations, travel itineraries, subscriptions)
+  to personalize ads across Google's network. Your inbox is also the recovery address for
+  most of your other accounts — it's the master key to your digital life. Who holds that
+  key matters.
+what_you_lose:
+  - 15GB free storage shared across Gmail, Drive, and Photos
+  - Gmail's excellent spam filtering
+  - Google integration (Calendar, Drive, Meet, etc.)
+  - The familiarity of an interface you've used for years
+honest_assessment: >
+  Email migration is real work. Your address is on everything. Changing it means updating
+  accounts, notifying contacts, and dealing with email that keeps arriving at the old address
+  for months. This is a multi-month project, not an afternoon task. The payoff is meaningful —
+  email is the most sensitive data stream in most people's digital lives — but be realistic
+  about the effort.
+data_to_export:
+  - Use Google Takeout (takeout.google.com) to download all email as .mbox files
+  - Export contacts (also via Takeout or contacts.google.com → Export)
+  - Download Drive files if you use Google Drive
+  - Note any Google services using this Gmail as the recovery/login email
+alternatives:
+  - name: Proton Mail
+    url: https://proton.me/mail
+    cost: Free up to 1GB; from $3.99/month for more storage
+    notes: >
+      End-to-end encrypted. Based in Switzerland. Zero access to your email content.
+      The most privacy-respecting major email provider. ProtonPass, ProtonVPN, and
+      ProtonDrive available as a full ecosystem replacement.
+  - name: Fastmail
+    url: https://fastmail.com
+    cost: From $3/month
+    notes: >
+      Fast, reliable, excellent interface. Not end-to-end encrypted by default,
+      but no advertising and strong privacy practices. Good choice for users who
+      want Gmail-quality UX without Google. Based in Australia.
+  - name: Tutanota
+    url: https://tutanota.com
+    cost: Free tier available; from €1/month
+    notes: End-to-end encrypted. Open source. German-based. Strong privacy. Simpler than Proton.
+  - name: Apple iCloud Mail
+    url: https://icloud.com
+    cost: Free with Apple ID (5GB shared)
+    notes: >
+      Good option for Apple ecosystem users. Not end-to-end encrypted, but Apple
+      has strong privacy practices and no ad business. Free with Apple devices.
+  - name: Hey
+    url: https://hey.com
+    cost: $99/year
+    notes: >
+      Opinionated email redesign from Basecamp. No ads, no tracking. Different workflow
+      (screening, stacks, imbox). Worth trying if you want to rethink email entirely.
+migration_steps:
+  - Export all Gmail via Google Takeout (takeout.google.com) — select Mail → export as .mbox
+  - Create new email account at Proton Mail (or your preferred alternative)
+  - Set up Gmail forwarding to your new address while transitioning (Gmail Settings → Forwarding)
+  - Update email on your most important accounts first — bank, financial, work, key services
+  - Add a Gmail auto-reply noting your new email address
+  - Over the next 30–60 days, update remaining accounts as you encounter them
+  - After 3–6 months, when you stop seeing important mail arrive at Gmail, close the account

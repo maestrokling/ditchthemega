@@ -1,0 +1,93 @@
+slug: alternatives-electronics
+title: Best Alternatives to Amazon for Electronics
+meta_description: Where to buy electronics that isn't Amazon — Best Buy, B&H Photo, Newegg, and direct from manufacturers. Price match, warranty, and what you actually gain.
+category: alternatives
+target_query: "amazon alternatives electronics"
+intro: >
+  Electronics is one of the easiest categories to move away from Amazon.
+  Several major retailers match prices, have physical stores for returns and support,
+  and don't compete with their own marketplace sellers the way Amazon does.
+options:
+  - name: Best Buy
+    url: https://bestbuy.com
+    best_for: General consumer electronics
+    price_vs_amazon: Price-match guarantee — they match Amazon prices
+    shipping: Free shipping on most orders; same-day pickup at stores nationwide
+    pros:
+      - Price-match guarantee (show them the Amazon price, they match it)
+      - Physical stores for hands-on demos and returns
+      - Geek Squad for installation and support
+      - Same-day in-store pickup
+      - Extended warranty options
+    cons:
+      - Less selection than Amazon for niche components
+      - Some items are Best Buy exclusives at higher prices
+    verdict: Best default Amazon replacement for consumer electronics. Same price, better support, physical locations.
+
+  - name: B&H Photo
+    url: https://bhphotovideo.com
+    best_for: Cameras, audio, professional equipment
+    price_vs_amazon: Competitive; often lower on professional gear
+    shipping: Free shipping on most orders over $49
+    pros:
+      - Exceptional selection of professional cameras, audio, video, and tech
+      - Knowledgeable staff (famous for their expertise)
+      - No marketplace sellers — everything sold by B&H directly
+      - Trusted for high-value purchases
+    cons:
+      - Closed Friday nights and Saturdays (observes Shabbat)
+      - Less strong for commodity electronics
+    verdict: The best place to buy cameras, audio equipment, and professional tech. Often better than Amazon on price and far better on trust.
+
+  - name: Newegg
+    url: https://newegg.com
+    best_for: PC components, peripherals, computer hardware
+    price_vs_amazon: Competitive to lower, especially for components
+    shipping: Free shipping on many items; fast
+    pros:
+      - Dominant selection for PC components (CPUs, GPUs, RAM, storage)
+      - Detailed technical specs and compatibility tools
+      - Strong community reviews from technical users
+    cons:
+      - Has expanded to third-party sellers; some quality issues
+      - Less strong for general consumer electronics
+    verdict: Best for PC builders and anyone buying computer components. Still the go-to for hardware.
+
+  - name: Direct from manufacturer
+    url: null
+    best_for: Apple, Samsung, Sony, Dell, HP, and other major brands
+    price_vs_amazon: Often same or lower; warranty direct from manufacturer
+    shipping: Free shipping; often includes setup support
+    pros:
+      - Buy directly from Apple, Samsung, Sony, Dell, etc.
+      - Manufacturer warranty and support with no middleman
+      - Sometimes better deals (trade-in programs, bundles)
+      - No counterfeit risk (a real problem on Amazon for certain electronics)
+    cons:
+      - Only covers that brand's products
+    verdict: For major brand electronics (phone, laptop, TV), always check the manufacturer's website first. Amazon is a middleman here.
+
+  - name: Micro Center
+    url: https://microcenter.com
+    best_for: In-person electronics, especially PC components
+    price_vs_amazon: Often lower on components; famous for deals
+    shipping: In-store only (25 US locations)
+    pros:
+      - Legendary prices on PC components
+      - Hands-on shopping experience
+      - Knowledgeable staff
+    cons:
+      - Only 25 US locations; not available everywhere
+      - Online selection limited
+    verdict: If you have one near you, Micro Center beats Amazon on PC components consistently. Worth the trip.
+
+honest_assessment: >
+  Amazon's electronics marketplace has a real counterfeit problem. Fake cables, fake batteries,
+  fake memory cards sold by third-party sellers under misleading listings. Best Buy, B&H, Newegg,
+  and manufacturer direct don't have this problem because they control their inventory.
+  For anything where authenticity matters — camera equipment, cables, batteries — Amazon is
+  actually the riskier option.
+bottom_line: >
+  Best Buy for general electronics (price-match eliminates the cost advantage). B&H for professional
+  gear. Newegg for PC components. Manufacturer direct for major brand purchases. Amazon is the
+  middleman here — not the only option.

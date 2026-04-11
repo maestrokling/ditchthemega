@@ -88,6 +88,8 @@ CATEGORY_LABELS = {
     "health":         "Health",
     "data-privacy":   "Data & Privacy",
     "seller":         "For Sellers",
+    "google":         "Google",
+    "alternatives":   "Alternatives",
     "meta":           "Reference",
 }
 
@@ -499,14 +501,14 @@ def build_landing():
       <span class="door-status open">Guide available →</span>
     </div>
   </a>
-  <div class="door door-coming">
+  <a href="/google/" class="door door-open">
     <div class="door-inner">
       <span class="door-icon">🔍</span>
       <h2>Google</h2>
-      <p>Search, Gmail, Maps, YouTube, Android, Drive</p>
-      <span class="door-status coming">Coming soon</span>
+      <p>Search, Gmail, Maps, YouTube, Android, Photos</p>
+      <span class="door-status open">Guide available →</span>
     </div>
-  </div>
+  </a>
   <div class="door door-coming">
     <div class="door-inner">
       <span class="door-icon">👤</span>
@@ -600,9 +602,16 @@ def build_about():
     )
 
 def build_sitemap(services):
-    urls = [SITE_URL + "/", SITE_URL + "/amazon/", SITE_URL + "/amazon/sellers/", SITE_URL + "/about/"]
+    urls = [SITE_URL + "/", SITE_URL + "/amazon/", SITE_URL + "/amazon/sellers/",
+            SITE_URL + "/google/", SITE_URL + "/alternatives/", SITE_URL + "/about/"]
     for svc in services:
-        urls.append(f"{SITE_URL}/amazon/{svc['slug']}/")
+        cat = svc.get("category","")
+        if cat == "google":
+            urls.append(f"{SITE_URL}/google/{svc['slug']}/")
+        elif cat == "alternatives":
+            urls.append(f"{SITE_URL}/alternatives/{svc['slug']}/")
+        else:
+            urls.append(f"{SITE_URL}/amazon/{svc['slug']}/")
     today = date.today().isoformat()
     items = "\n".join(
         f"  <url><loc>{u}</loc><lastmod>{today}</lastmod></url>" for u in urls
@@ -611,6 +620,170 @@ def build_sitemap(services):
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {items}
 </urlset>'''
+
+def build_google_hub(services):
+    google_svcs = [s for s in services if s.get("category") == "google"]
+    cards = ""
+    for svc in google_svcs:
+        slug = svc["slug"]
+        title = svc["title"]
+        subtitle = svc.get("subtitle","")
+        diff = svc.get("difficulty",0)
+        diff_label = DIFF_LABEL[diff] if diff else ""
+        diff_class = DIFF_CLASS[diff] if diff else "d1"
+        cards += f'''<a href="/google/{slug}/" class="service-card">
+  <div class="service-card-inner">
+    <h2>{e(title)}</h2>
+    <p>{e(subtitle)}</p>
+    {"" if not diff else f'<span class="difficulty {diff_class}">{diff_label}</span>'}
+  </div>
+</a>'''
+
+    content = f'''<div class="page-hero amazon-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › Google</div>
+  <h1>Leaving the Google Ecosystem</h1>
+  <p class="subtitle">Google isn\'t a search engine. It\'s a surveillance network that also does search, email, maps, video, and your phone.<br>
+  Here\'s how to reduce your dependency, service by service.</p>
+</div>
+<div class="service-grid">
+{cards}
+</div>'''
+
+    return page_shell(
+        "Leave Google — Complete Exit Guide | DitchTheMega",
+        "Practical guides to leaving Google services — Gmail, Google Search, Maps, YouTube, Photos, and Android. Free. No tracking.",
+        f"{SITE_URL}/google/",
+        content
+    )
+
+def build_alternatives_hub(services):
+    alt_svcs = [s for s in services if s.get("category") == "alternatives"]
+    cards = ""
+    for svc in alt_svcs:
+        slug = svc["slug"]
+        title = svc["title"]
+        subtitle = svc.get("meta_description","")
+        cards += f'''<a href="/alternatives/{slug}/" class="service-card">
+  <div class="service-card-inner">
+    <h2>{e(title)}</h2>
+    <p style="font-size:0.8rem;color:#64748b;">{e(subtitle[:100])}</p>
+  </div>
+</a>'''
+
+    content = f'''<div class="page-hero amazon-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › Alternatives</div>
+  <h1>Amazon Alternatives by Category</h1>
+  <p class="subtitle">The best replacements for Amazon, category by category. Honest comparisons, real prices, genuine tradeoffs.</p>
+</div>
+<div class="service-grid">
+{cards}
+</div>'''
+
+    return page_shell(
+        "Amazon Alternatives — DitchTheMega",
+        "The best Amazon alternatives by category — books, electronics, pet supplies, Prime, and more. Honest comparisons.",
+        f"{SITE_URL}/alternatives/",
+        content
+    )
+
+def build_alternatives_page(svc):
+    slug = svc["slug"]
+    title = svc["title"]
+    description = svc.get("meta_description","")
+    intro = svc.get("intro","")
+    the_math = svc.get("the_math",{})
+    options = svc.get("options",[])
+    honest = svc.get("honest_assessment","")
+    bottom_line = svc.get("bottom_line","")
+
+    sections = []
+    sections.append(f'<div class="page-hero"><div class="breadcrumb"><a href="/">Home</a> › <a href="/alternatives/">Alternatives</a> › {e(title)}</div><h1>{e(title)}</h1></div>')
+
+    if intro:
+        sections.append(f'<section class="card"><p>{e(intro)}</p></section>')
+
+    if the_math:
+        sections.append(f'<section class="card card-honest"><h2>{e(the_math.get("title",""))}</h2><p>{e(the_math.get("content",""))}</p></section>')
+
+    for opt in options:
+        name = e(opt.get("name",""))
+        url  = opt.get("url","")
+        cost = e(opt.get("cost",""))
+        best = e(opt.get("best_for",""))
+        price_note = e(opt.get("price_vs_amazon",""))
+        shipping = e(opt.get("shipping",""))
+        pros = opt.get("pros",[])
+        cons = opt.get("cons",[])
+        verdict = e(opt.get("verdict",""))
+        dest = affiliate_url(url)
+        aff = ' <span class="aff-badge" title="Affiliate link">aff</span>' if is_affiliate(url) else ""
+        rel = 'noopener sponsored' if is_affiliate(url) else 'noopener'
+        link = f'<a href="{e(dest)}" target="_blank" rel="{rel}">{name}</a>{aff}' if url else f'<strong>{name}</strong>'
+        cost_str = f' <span class="alt-cost">{cost}</span>' if cost else ""
+        pros_html = "".join(f"<li>{e(p)}</li>" for p in pros)
+        cons_html = "".join(f"<li>{e(c)}</li>" for c in cons)
+        detail = f'<p><strong>Best for:</strong> {best}</p>' if best else ""
+        detail += f'<p><strong>Price vs Amazon:</strong> {price_note}</p>' if price_note else ""
+        detail += f'<p><strong>Shipping:</strong> {shipping}</p>' if shipping else ""
+        detail += f'<ul>{pros_html}</ul>' if pros else ""
+        if cons:
+            detail += f'<p style="color:#94a3b8;font-size:0.85rem;"><strong>Tradeoffs:</strong></p><ul style="color:#94a3b8;font-size:0.85rem;">{cons_html}</ul>'
+        verdict_html = f'<div class="can-wait" style="margin-top:.75rem;"><strong>Verdict:</strong> {verdict}</div>' if verdict else ""
+        sections.append(f'<section class="card"><h2>{link}{cost_str}</h2>{detail}{verdict_html}</section>')
+
+    if honest:
+        sections.append(f'<section class="card card-honest"><h2>Honest assessment</h2><p>{e(honest)}</p></section>')
+    if bottom_line:
+        sections.append(f'<section class="card card-steps"><h2>Bottom line</h2><p>{e(bottom_line)}</p></section>')
+
+    return page_shell(
+        f"{title} | DitchTheMega",
+        description,
+        f"{SITE_URL}/alternatives/{slug}/",
+        "\n".join(sections)
+    )
+
+def build_google_service_page(svc):
+    """Google service pages route to /google/slug/ instead of /amazon/slug/"""
+    slug = svc["slug"]
+    title = svc["title"]
+    subtitle = svc.get("subtitle","")
+    # Temporarily patch slug for breadcrumb and canonical
+    svc["_google"] = True
+    sections = []
+    sections.append(f'<div class="page-hero"><div class="breadcrumb"><a href="/">Home</a> › <a href="/google/">Google</a> › {e(title)}</div><h1>{e(title)}</h1><p class="subtitle">{e(subtitle)}</p></div>')
+    # Reuse the build_service_page logic by temporarily masking category
+    orig_cat = svc.get("category")
+    svc["category"] = "_skip_"
+    # call the inner render logic inline
+    if svc.get("privacy_case"):
+        sections.append(f'<section class="card card-privacy"><h2>⚠️ The privacy case</h2><p>{e(svc["privacy_case"])}</p></section>')
+    if svc.get("what_it_is"):
+        sections.append(f'<section class="card"><h2>What it is</h2><p>{e(svc["what_it_is"])}</p></section>')
+    if svc.get("what_you_lose"):
+        sections.append(f'<section class="card"><h2>What you lose</h2>{render_list(svc["what_you_lose"])}</section>')
+    if svc.get("honest_assessment"):
+        sections.append(f'<section class="card card-honest"><h2>Honest assessment</h2><p>{e(svc["honest_assessment"])}</p></section>')
+    if svc.get("the_privacy_minimum"):
+        sections.append(f'<section class="card card-note"><h2>The privacy minimum</h2><p>{e(svc["the_privacy_minimum"])}</p></section>')
+    if svc.get("data_to_export"):
+        sections.append(f'<section class="card"><h2>Data to export first</h2>{render_list(svc["data_to_export"])}</section>')
+    if svc.get("alternatives"):
+        sections.append(f'<section class="card"><h2>Alternatives</h2>{render_alternatives(svc["alternatives"])}</section>')
+    if svc.get("migration_steps"):
+        sections.append(f'<section class="card card-steps"><h2>Migration steps</h2>{render_steps(svc["migration_steps"])}</section>')
+    related = RELATED.get(slug, [])
+    if related:
+        links = "".join(f'<li><a href="/google/{r_slug}/">{e(r_title)}</a></li>' for r_slug, r_title in related)
+        sections.append(f'<section class="card"><h2>Related guides</h2><ul>{links}</ul></section>')
+    svc["category"] = orig_cat
+    description = subtitle or f"How to leave {title} — alternatives, data export, and migration guide."
+    return page_shell(
+        f"{title} — DitchTheMega",
+        description,
+        f"{SITE_URL}/google/{slug}/",
+        "\n".join(sections)
+    )
 
 def main():
     os.makedirs(PUBLIC_DIR, exist_ok=True)
@@ -641,14 +814,47 @@ def main():
         f.write(build_sellers_hub(services))
     print("Built: amazon/sellers/index.html")
 
+    # Google hub
+    os.makedirs(f"{PUBLIC_DIR}/google", exist_ok=True)
+    with open(f"{PUBLIC_DIR}/google/index.html", "w") as f:
+        f.write(build_google_hub(services))
+    print("Built: google/index.html")
+
+    # Alternatives hub
+    os.makedirs(f"{PUBLIC_DIR}/alternatives", exist_ok=True)
+    with open(f"{PUBLIC_DIR}/alternatives/index.html", "w") as f:
+        f.write(build_alternatives_hub(services))
+    print("Built: alternatives/index.html")
+
     # Service pages
     for svc in services:
         slug = svc["slug"]
+        cat  = svc.get("category","")
+        if cat in ("meta", "seller", "google", "alternatives"):
+            continue  # handled separately below
         out_dir = f"{PUBLIC_DIR}/amazon/{slug}"
         os.makedirs(out_dir, exist_ok=True)
         with open(f"{out_dir}/index.html", "w") as f:
             f.write(build_service_page(svc))
         print(f"Built: amazon/{slug}/index.html")
+
+    # Google service pages
+    for svc in [s for s in services if s.get("category") == "google"]:
+        slug = svc["slug"]
+        out_dir = f"{PUBLIC_DIR}/google/{slug}"
+        os.makedirs(out_dir, exist_ok=True)
+        with open(f"{out_dir}/index.html", "w") as f:
+            f.write(build_google_service_page(svc))
+        print(f"Built: google/{slug}/index.html")
+
+    # Alternatives pages
+    for svc in [s for s in services if s.get("category") == "alternatives"]:
+        slug = svc["slug"]
+        out_dir = f"{PUBLIC_DIR}/alternatives/{slug}"
+        os.makedirs(out_dir, exist_ok=True)
+        with open(f"{out_dir}/index.html", "w") as f:
+            f.write(build_alternatives_page(svc))
+        print(f"Built: alternatives/{slug}/index.html")
 
     # Sitemap (add sellers hub)
     with open(f"{PUBLIC_DIR}/sitemap.xml", "w") as f:
@@ -660,7 +866,8 @@ def main():
         f.write(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
     print("Built: robots.txt")
 
-    print(f"\nDone. {len(services) + 3} pages generated in {PUBLIC_DIR}/")
+    page_count = len([s for s in services if s.get('category') not in ('meta',)]) + 5  # hubs + about
+    print(f"\nDone. {page_count}+ pages generated in {PUBLIC_DIR}/")
 
 if __name__ == "__main__":
     main()

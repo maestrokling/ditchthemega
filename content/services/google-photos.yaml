@@ -1,0 +1,74 @@
+slug: google-photos
+title: Google Photos
+subtitle: Your photo library — and what Google does with it
+category: google
+difficulty: 3
+what_it_is: >
+  Google Photos offers 15GB free storage (shared with Gmail and Drive) and unlimited
+  storage for photos backed up at "Storage Saver" quality. It includes AI-powered
+  organization, facial recognition, search by content, and automatic albums. It's
+  genuinely excellent software. It also gives Google access to every photo you've
+  ever taken — including photos of your home, your family, your documents, your face.
+privacy_case: >
+  Google uses photo content for its AI models and to improve its products. Facial
+  recognition data is collected from your photos. In 2021, Google ended its free
+  unlimited storage, requiring payment for additional storage — which also gave many
+  users their first reason to reconsider the arrangement.
+what_you_lose:
+  - The best AI-powered photo organization available (genuinely hard to match)
+  - Facial recognition and object search
+  - Seamless Android integration
+  - 15GB free storage
+honest_assessment: >
+  Google Photos is arguably the best photo management software that exists. The alternatives
+  are meaningfully worse at AI organization. iCloud Photos is close on Apple devices.
+  Everything else involves tradeoffs in features, storage cost, or complexity.
+  The privacy argument is strong; the convenience argument for staying is also strong.
+  This is one where the honest answer is: it depends on how much the privacy tradeoff matters to you.
+data_to_export:
+  - Google Takeout (takeout.google.com) → select Google Photos → export all albums
+  - Large libraries may require multiple exports (Google splits into 2GB files)
+  - Alternatively, download albums directly in Google Photos → select → three dots → Download
+alternatives:
+  - name: Apple iCloud Photos
+    url: https://icloud.com/photos
+    cost: 5GB free; $0.99/month 50GB; $2.99/month 200GB
+    notes: >
+      Best alternative for iPhone users. On-device processing for facial recognition
+      (not sent to Apple's servers). Seamless iPhone integration. iCloud Shared Photo
+      Library for families. Better privacy than Google; slightly weaker AI organization.
+  - name: Proton Drive
+    url: https://proton.me/drive
+    cost: 1GB free; from $3.99/month 200GB
+    notes: >
+      End-to-end encrypted. Photos stay private even from Proton. No AI organization —
+      it's encrypted storage, not smart photo management. Best for people who prioritize
+      privacy over features.
+  - name: Immich (self-hosted)
+    url: https://immich.app
+    cost: Free (you provide the hardware)
+    notes: >
+      Open-source Google Photos alternative. Self-hosted on your own server or NAS.
+      Facial recognition, album organization, mobile backup. Full Google Photos feature
+      set with zero cloud dependency. Requires technical setup.
+  - name: Synology Photos (NAS)
+    url: https://synology.com
+    cost: One-time hardware ($200–400) + free software
+    notes: >
+      Run your own photo server at home. Synology Photos includes facial recognition,
+      albums, and mobile backup. One-time hardware cost, no ongoing subscription.
+      Excellent for families wanting local control.
+  - name: Amazon Photos
+    url: https://amazon.com/photos
+    cost: Unlimited for Prime members; 5GB free otherwise
+    notes: >
+      Trades Google's surveillance for Amazon's. Not a privacy win, but a consolidation
+      option if you're already a Prime member. Not recommended if you're trying to
+      leave both ecosystems.
+migration_steps:
+  - Export all photos via Google Takeout (allows organization by album)
+  - Choose your destination (iCloud for Apple users, Proton Drive for privacy, Immich for full control)
+  - Upload to your new home — most platforms have bulk import tools
+  - Set up automatic backup from your phone to the new service
+  - Verify backup is working correctly before deleting from Google Photos
+  - Delete photos from Google Photos after confirmed backup (Google Photos → Settings → Free up device storage won't help here — delete from Google's servers via takeout or manual deletion)
