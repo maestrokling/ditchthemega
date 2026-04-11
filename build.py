@@ -985,6 +985,260 @@ def build_generic_service_page(svc, slug_prefix):
     description = subtitle or f"How to leave {title} — privacy case, alternatives, and migration guide."
     return page_shell(f"{title} — DitchTheMega", description, f"{SITE_URL}/{slug_prefix}/{slug}/", "\n".join(sections))
 
+def build_your_content_page(ecosystem, slug_prefix, title_subtitle, intro, sections_html):
+    content = f'''
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="/{slug_prefix}/">{ecosystem}</a> › Your Digital Content</div>
+  <h1>Your Digital Content</h1>
+  <p class="subtitle">{title_subtitle}</p>
+</div>
+{intro}
+{sections_html}
+'''
+    return page_shell(
+        f"Your {ecosystem} Digital Content | DitchTheMega",
+        f"What you can take from {ecosystem}\'s ecosystem, what you can replace, and what you effectively lose.",
+        f"{SITE_URL}/{slug_prefix}/your-content/",
+        content
+    )
+
+def build_google_your_content():
+    intro = '''<div class="card card-honest">
+  <p>Google Takeout is one of the most comprehensive data export tools any tech company offers. Your content is mostly exportable. The problem isn\'t that Google traps your content. <strong>The problem is that Google keeps a shadow profile of everything you\'ve ever done — and that profile is not in the export.</strong></p>
+  <p>Leaving Google is less about taking your content and more about cutting the data pipeline.</p>
+</div>'''
+
+    sections = '''<h2>Section 1 — Content you own and can export</h2>
+<p style="margin-bottom:1rem;color:#94a3b8;font-size:0.9rem;">Start with <strong>takeout.google.com</strong> — one of the best data export tools in the industry.</p>
+
+<section class="card">
+  <h2>Gmail</h2>
+  <ul>
+    <li><strong>Google Takeout:</strong> select Gmail → exports as MBOX file (standard format, imports anywhere)</li>
+    <li><strong>IMAP:</strong> connect any email client (Thunderbird, Proton Bridge) → drag mail to new provider</li>
+    <li><strong>Direct migration:</strong> Proton Mail, Fastmail, and Tuta offer built-in Gmail import tools</li>
+  </ul>
+  <p class="card" style="background:#1a1205;border-color:#78350f;padding:.75rem 1rem;margin-top:.75rem;"><strong>Critical step people forget:</strong> Your Gmail address is probably the login for dozens of other services. Update every service that uses your Gmail before you stop using it. This takes weeks. Start early.</p>
+</section>
+
+<section class="card">
+  <h2>Google Photos</h2>
+  <p>Google Takeout exports your library as ZIP files with original JPEG, PNG, HEIC, MP4 files.</p>
+  <p><strong>Known issue:</strong> Takeout stores photo metadata (dates, locations, album info) in separate JSON sidecar files rather than embedded in the image EXIF. Without merging these, your exported photos lose date and location data. Use ExifTool or Google Photos Takeout Helper to merge them before importing elsewhere. Worth knowing before you export.</p>
+</section>
+
+<section class="card">
+  <h2>Google Drive, Calendar, Contacts</h2>
+  <ul>
+    <li><strong>Drive:</strong> Takeout exports everything. Google-native formats convert automatically: Docs → .docx, Sheets → .xlsx, Slides → .pptx. Verify complex documents after conversion.</li>
+    <li><strong>Calendar:</strong> Exports as .ics files — universal standard. Imports into any calendar app.</li>
+    <li><strong>Contacts:</strong> contacts.google.com → Export → vCard. Imports anywhere.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Location History</h2>
+  <p>Takeout exports your complete location history — everywhere you\'ve been, when, and how long. Download it if you want a personal record. Then <strong>delete it from Google\'s servers</strong> at myactivity.google.com.</p>
+  <p>This is one of the most sensitive datasets any company holds about you. Make a deliberate decision about whether you want Google to keep it.</p>
+</section>
+
+<h2>Section 2 — Content you can replace but not transfer</h2>
+
+<section class="card">
+  <h2>Google Play Books</h2>
+  <p><strong>Good news:</strong> Google uses Adobe DRM on most titles, not proprietary Google DRM. Some titles are DRM-free (publisher dependent). This makes Google\'s ebook store more portable than Amazon\'s or Apple\'s.</p>
+  <ul>
+    <li><strong>DRM-free titles:</strong> Download the EPUB. Works everywhere. Move to Calibre, Kobo, or any reading app.</li>
+    <li><strong>Adobe DRM titles:</strong> Readable in any Adobe Digital Editions-compatible app — Kobo, Nook, various third-party readers. Not locked to Google.</li>
+  </ul>
+  <p style="color:#94a3b8;font-size:0.875rem;">Overall: Google Play Books is the least locked-in ebook ecosystem among major platforms. If you buy ebooks from a major retailer, Google is the most portable choice.</p>
+</section>
+
+<section class="card">
+  <h2>Google Play Movies</h2>
+  <p>Google participates in Movies Anywhere. Link your Google account at moviesanywhere.com — eligible purchases become accessible on Apple TV, Amazon, Vudu, and other linked platforms.</p>
+  <p>Google\'s movie ecosystem is the most portable of the three major platforms thanks to Movies Anywhere. If you buy digital movies, Google is the best starting point for cross-platform access.</p>
+</section>
+
+<h2>Section 3 — Google\'s real lock-in isn\'t content</h2>
+
+<section class="card card-privacy">
+  <h2>The data shadow you can\'t export</h2>
+  <p>Google knows what you search for, watch, where you go, who you email, what you buy, what ads you click, what questions you ask at 3 AM, what symptoms you look up, what routes you drive, what restaurants you visit. Your content is exportable. <strong>Your data shadow is not.</strong></p>
+  <p>You can download your location history, but Google\'s model of your behavior — the advertising profile, the prediction engine, the inferences drawn from fifteen years of search queries — is not in the export.</p>
+  <p>You can export your files in an afternoon. Disentangling your life from Google\'s surveillance infrastructure takes months. Both are worth doing.</p>
+  <p>The main <a href="/google/">Google exit guide</a> covers the data pipeline: replacing Chrome, search, Gmail, Maps, and Android\'s default Google integration.</p>
+</section>
+
+<section class="card">
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/google/gmail/">Gmail — migration guide</a></li>
+    <li><a href="/google/google-photos/">Google Photos — export and alternatives</a></li>
+    <li><a href="/google/google-search/">Google Search — breaking the habit</a></li>
+    <li><a href="/amazon/your-content/">Compare: Amazon content lock-in</a></li>
+    <li><a href="/apple/apple-your-content/">Compare: Apple content lock-in</a></li>
+  </ul>
+</section>'''
+
+    return build_your_content_page("Google", "google",
+        "What you can take, what you can replace, and why Google\'s real lock-in isn\'t your content.",
+        intro, sections)
+
+def build_meta_your_content():
+    intro = '''<div class="card card-honest">
+  <p>Meta doesn\'t sell you ebooks, movies, or music. Meta\'s product is you.</p>
+  <p>Your \"content\" on Meta is your posts, photos, messages, friendships, group memberships, memories, and — if you\'ve been on Facebook since college — sixteen years of your life. <strong>Almost all of it is exportable. The technical lock-in is minimal. The emotional and social lock-in is enormous.</strong></p>
+</div>'''
+
+    sections = '''<h2>Section 1 — Content you own and can export</h2>
+
+<section class="card">
+  <h2>Facebook data</h2>
+  <p>facebook.com/dyi (Download Your Information). Choose all time, JSON format, high quality media.</p>
+  <p>What\'s included: every post, photo, video, comment, every Messenger message including group chats, your friends list, every event, marketplace activity, pages liked, groups, check-ins, every ad you\'ve clicked, and — often startlingly — every advertiser who uploaded your contact information to target you.</p>
+  <p><strong>Allow days for large archives.</strong> Request before you\'re ready to delete, not the same day.</p>
+</section>
+
+<section class="card">
+  <h2>Instagram data</h2>
+  <p>Instagram app → Settings → Your Activity → Download Your Information. Includes every photo/video you posted, Reels, DMs, followers/following list, comments, and likes.</p>
+</section>
+
+<section class="card">
+  <h2>WhatsApp data</h2>
+  <p>Settings → Chats → Export Chat. One conversation at a time — there is no bulk export. This is a deliberate design choice. You get text files with attached media (photos, videos, voice messages) in standard formats.</p>
+</section>
+
+<section class="card card-caution">
+  <h2>Messenger conversations with people who have died</h2>
+  <p>If you have Messenger conversations with someone who is no longer alive, export them before deleting your account. Once your account is deleted, these conversations are gone. This content may have deep personal value and exists nowhere else.</p>
+</section>
+
+<h2>Section 2 — What you can\'t take with you</h2>
+
+<section class="card">
+  <h2>Your social graph</h2>
+  <p>You can export your friends list as names and profile URLs. You cannot import a social graph into another platform. Your connections exist on Facebook because your connections are on Facebook.</p>
+  <p><strong>Before deactivating:</strong> collect phone numbers and email addresses of the 30–50 people you actually want to stay in touch with. Not your 847 Facebook friends. The real ones. Get their numbers. Text them.</p>
+</section>
+
+<section class="card">
+  <h2>Facebook Groups</h2>
+  <p>When you leave Facebook, you lose access to groups. For important communities (neighborhood, hobby, support groups), check whether they exist elsewhere — Discord, Reddit, a mailing list. Some people deactivate their profile but keep Messenger and group access. Facebook allows this.</p>
+</section>
+
+<section class="card">
+  <h2>Meta Quest VR purchases</h2>
+  <p>Games purchased through the Meta Quest Store are tied to your Meta account. Delete your account and they\'re gone, no refund.</p>
+  <ul>
+    <li><strong>Keep your Meta account solely for VR.</strong> You can delete Facebook, Instagram, and WhatsApp while maintaining a Meta account for Quest. VR purchases persist.</li>
+    <li><strong>Move to SteamVR</strong> for future PC VR purchases — more stable platform, longer track record.</li>
+  </ul>
+</section>
+
+<h2>Section 3 — The bigger picture</h2>
+
+<section class="card card-privacy">
+  <h2>Meta\'s lock-in is social, not technical</h2>
+  <p>Apple locks you in with hardware. Amazon with content. Google with data. <strong>Meta locks you in with people.</strong></p>
+  <p>Your family is on Facebook. Your friends are on Instagram. Your group chat is on WhatsApp. The cost of leaving Meta is not lost content or lost purchases. It\'s social friction: the conversations you miss, the events you don\'t hear about, the slow drift from people you used to be connected to effortlessly.</p>
+  <p>The 30-day grace period on account deletion means you can find out what you\'d actually lose before the decision is permanent. That\'s worth using.</p>
+</section>
+
+<section class="card">
+  <h2>Deleting your account correctly</h2>
+  <p>Removing all your content and changing your name is not deletion. Your advertising profile still exists. Your data remains. Use the real deletion: <strong>facebook.com/help/delete_account</strong>. 30-day grace period. Deletion completes in up to 90 days. Some data (messages you sent to others) may persist in the other person\'s account.</p>
+</section>
+
+<section class="card">
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/meta/facebook/">Facebook — migration guide</a></li>
+    <li><a href="/meta/instagram/">Instagram — alternatives</a></li>
+    <li><a href="/meta/whatsapp/">WhatsApp — Signal migration</a></li>
+    <li><a href="/amazon/your-content/">Compare: Amazon content lock-in</a></li>
+  </ul>
+</section>'''
+
+    return build_your_content_page("Meta", "meta",
+        "Your posts and photos are exportable. Your social graph is Meta\'s.",
+        intro, sections)
+
+def build_microsoft_your_content():
+    intro = '''<div class="card card-honest">
+  <p>Microsoft\'s consumer content lock-in is the lightest of any major tech company. Your Office documents are standard formats. Your email is IMAP. Your OneDrive files are just files. <strong>If you\'re going to leave a mega, this is the easy one on the content side.</strong></p>
+  <p>Where Microsoft locks you in is workflow, not content — especially in enterprise contexts. This page covers the consumer side.</p>
+</div>'''
+
+    sections = '''<h2>Section 1 — Content you own and can export</h2>
+
+<section class="card">
+  <h2>OneDrive files</h2>
+  <p>Your files sync to a local folder on your computer. Copy them. Or download from onedrive.live.com. Or use account.microsoft.com/privacy for a full data export.</p>
+  <p>Standard files. No DRM. No conversion needed.</p>
+</section>
+
+<section class="card">
+  <h2>Outlook email, contacts, and calendar</h2>
+  <ul>
+    <li><strong>Email:</strong> IMAP access from any email client. Same as Gmail — connect, sync, move.</li>
+    <li><strong>Contacts:</strong> outlook.live.com → People → Manage → Export contacts (CSV)</li>
+    <li><strong>Calendar:</strong> outlook.live.com → Calendar → Settings → publish calendar (ICS)</li>
+  </ul>
+  <p>Same warning as Gmail: if your @outlook.com, @hotmail.com, or @live.com address is used to log into other services, update those logins before you stop using it.</p>
+</section>
+
+<section class="card">
+  <h2>OneNote</h2>
+  <p>OneNote desktop (Windows): File → Export. Choose notebook/section/page. Export as PDF, Word, or .onepkg. The notebook structure (sections, pages, sub-pages) doesn\'t map cleanly to other note apps. Plan for manual migration. This is one of Microsoft\'s genuinely weak export paths.</p>
+  <p style="color:#94a3b8;font-size:0.875rem;">Third-party tools exist to convert OneNote to Markdown for import into Obsidian, Joplin, or Notion. Worth researching if you have extensive notebooks.</p>
+</section>
+
+<h2>Section 2 — Microsoft 365 cancellation</h2>
+
+<section class="card">
+  <h2>What happens when you cancel Microsoft 365</h2>
+  <ul>
+    <li>Office apps revert to read-only mode — you can view but not edit</li>
+    <li>OneDrive storage drops from 1TB to 5GB (files over 5GB become read-only; not immediately deleted)</li>
+    <li>Outlook continues working as a free email client with ads</li>
+  </ul>
+  <p>Replacements: <a href="https://libreoffice.org" target="_blank" rel="noopener">LibreOffice</a> (free, handles 90%+ of Office documents), <a href="https://onlyoffice.com" target="_blank" rel="noopener">OnlyOffice</a> (higher format fidelity), Google Docs (cloud-based), <a href="https://cryptpad.fr" target="_blank" rel="noopener">CryptPad</a> (encrypted, open source).</p>
+</section>
+
+<h2>Section 3 — Xbox and game purchases</h2>
+
+<section class="card">
+  <h2>Xbox digital games</h2>
+  <p>Game purchases are tied to your Microsoft account. Keep your account (free) and your library persists. Delete your account and your library is permanently inaccessible.</p>
+  <ul>
+    <li><strong>For PC gaming going forward:</strong> <a href="https://gog.com" target="_blank" rel="noopener">GOG.com</a> sells DRM-free games. You download the installer. It runs without any account or online check. You own it like a file on your hard drive.</li>
+    <li><strong>Microsoft Store movies:</strong> Microsoft participates in Movies Anywhere. Link your account at moviesanywhere.com — eligible purchases become accessible on Apple TV, Amazon, Google, and Vudu.</li>
+    <li><strong>Minecraft Java Edition:</strong> Worlds are local save files. Fully portable. Copy the saves folder.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>The real Microsoft lock-in</h2>
+  <p>Consumer Microsoft lock-in is the gentlest of the five. The real lock-in is enterprise: Active Directory, Exchange, Teams, SharePoint, Azure. These create structural organizational dependency that\'s nearly impossible to replace without a company-wide commitment.</p>
+  <p>If you\'re leaving Microsoft as a consumer, this page gives you everything you need. It\'s the easiest exit of the five.</p>
+</section>
+
+<section class="card">
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/microsoft/office365/">Microsoft 365 — alternatives</a></li>
+    <li><a href="/microsoft/onedrive/">OneDrive — replacements</a></li>
+    <li><a href="/microsoft/windows/">Windows — alternatives</a></li>
+    <li><a href="/amazon/your-content/">Compare: Amazon content lock-in</a></li>
+  </ul>
+</section>'''
+
+    return build_your_content_page("Microsoft", "microsoft",
+        "Your documents and email are portable. Your game library is the only real DRM concern — and it\'s the lightest of the five.",
+        intro, sections)
+
 def build_amazon_your_content():
     content = '''
 <div class="page-hero">
@@ -1386,6 +1640,13 @@ def main():
         f.write(build_apple_your_content())
     print("Built: apple/apple-your-content/index.html")
 
+    # Google Your Content
+    out_dir = f"{PUBLIC_DIR}/google/your-content"
+    os.makedirs(out_dir, exist_ok=True)
+    with open(f"{out_dir}/index.html", "w") as f:
+        f.write(build_google_your_content())
+    print("Built: google/your-content/index.html")
+
     # Meta hub and service pages
     os.makedirs(f"{PUBLIC_DIR}/meta", exist_ok=True)
     with open(f"{PUBLIC_DIR}/meta/index.html", "w") as f:
@@ -1403,6 +1664,13 @@ def main():
             f.write(build_generic_service_page(svc, "meta"))
         print(f"Built: meta/{slug}/index.html")
 
+    # Meta Your Content
+    out_dir = f"{PUBLIC_DIR}/meta/your-content"
+    os.makedirs(out_dir, exist_ok=True)
+    with open(f"{out_dir}/index.html", "w") as f:
+        f.write(build_meta_your_content())
+    print("Built: meta/your-content/index.html")
+
     # Microsoft hub and service pages
     os.makedirs(f"{PUBLIC_DIR}/microsoft", exist_ok=True)
     with open(f"{PUBLIC_DIR}/microsoft/index.html", "w") as f:
@@ -1419,6 +1687,13 @@ def main():
         with open(f"{out_dir}/index.html", "w") as f:
             f.write(build_generic_service_page(svc, "microsoft"))
         print(f"Built: microsoft/{slug}/index.html")
+
+    # Microsoft Your Content
+    out_dir = f"{PUBLIC_DIR}/microsoft/your-content"
+    os.makedirs(out_dir, exist_ok=True)
+    with open(f"{out_dir}/index.html", "w") as f:
+        f.write(build_microsoft_your_content())
+    print("Built: microsoft/your-content/index.html")
 
     # Sitemap (add sellers hub)
     with open(f"{PUBLIC_DIR}/sitemap.xml", "w") as f:

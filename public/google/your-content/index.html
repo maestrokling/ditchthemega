@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Google Digital Content | DitchTheMega</title>
+  <meta name="description" content="What you can take from Google&#x27;s ecosystem, what you can replace, and what you effectively lose.">
+  <link rel="canonical" href="https://ditchthemega.com/google/your-content/">
+  <meta property="og:title" content="Your Google Digital Content | DitchTheMega">
+  <meta property="og:description" content="What you can take from Google&#x27;s ecosystem, what you can replace, and what you effectively lose.">
+  <meta property="og:url" content="https://ditchthemega.com/google/your-content/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/style.css">
+  
+</head>
+<body>
+<header>
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">DitchTheMega</a>
+    <a href="/amazon/" class="nav-link">Amazon</a>
+    <a href="/google/" class="nav-link">Google</a>
+    <a href="/apple/" class="nav-link">Apple</a>
+    <a href="/meta/" class="nav-link">Meta</a>
+    <a href="/microsoft/" class="nav-link">Microsoft</a>
+    <a href="/alternatives/" class="nav-link">Alternatives</a>
+    <a href="/about/" class="nav-link">About</a>
+  </nav>
+</header>
+<main>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="/google/">Google</a> › Your Digital Content</div>
+  <h1>Your Digital Content</h1>
+  <p class="subtitle">What you can take, what you can replace, and why Google's real lock-in isn't your content.</p>
+</div>
+<div class="card card-honest">
+  <p>Google Takeout is one of the most comprehensive data export tools any tech company offers. Your content is mostly exportable. The problem isn't that Google traps your content. <strong>The problem is that Google keeps a shadow profile of everything you've ever done — and that profile is not in the export.</strong></p>
+  <p>Leaving Google is less about taking your content and more about cutting the data pipeline.</p>
+</div>
+<h2>Section 1 — Content you own and can export</h2>
+<p style="margin-bottom:1rem;color:#94a3b8;font-size:0.9rem;">Start with <strong>takeout.google.com</strong> — one of the best data export tools in the industry.</p>
+
+<section class="card">
+  <h2>Gmail</h2>
+  <ul>
+    <li><strong>Google Takeout:</strong> select Gmail → exports as MBOX file (standard format, imports anywhere)</li>
+    <li><strong>IMAP:</strong> connect any email client (Thunderbird, Proton Bridge) → drag mail to new provider</li>
+    <li><strong>Direct migration:</strong> Proton Mail, Fastmail, and Tuta offer built-in Gmail import tools</li>
+  </ul>
+  <p class="card" style="background:#1a1205;border-color:#78350f;padding:.75rem 1rem;margin-top:.75rem;"><strong>Critical step people forget:</strong> Your Gmail address is probably the login for dozens of other services. Update every service that uses your Gmail before you stop using it. This takes weeks. Start early.</p>
+</section>
+
+<section class="card">
+  <h2>Google Photos</h2>
+  <p>Google Takeout exports your library as ZIP files with original JPEG, PNG, HEIC, MP4 files.</p>
+  <p><strong>Known issue:</strong> Takeout stores photo metadata (dates, locations, album info) in separate JSON sidecar files rather than embedded in the image EXIF. Without merging these, your exported photos lose date and location data. Use ExifTool or Google Photos Takeout Helper to merge them before importing elsewhere. Worth knowing before you export.</p>
+</section>
+
+<section class="card">
+  <h2>Google Drive, Calendar, Contacts</h2>
+  <ul>
+    <li><strong>Drive:</strong> Takeout exports everything. Google-native formats convert automatically: Docs → .docx, Sheets → .xlsx, Slides → .pptx. Verify complex documents after conversion.</li>
+    <li><strong>Calendar:</strong> Exports as .ics files — universal standard. Imports into any calendar app.</li>
+    <li><strong>Contacts:</strong> contacts.google.com → Export → vCard. Imports anywhere.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Location History</h2>
+  <p>Takeout exports your complete location history — everywhere you've been, when, and how long. Download it if you want a personal record. Then <strong>delete it from Google's servers</strong> at myactivity.google.com.</p>
+  <p>This is one of the most sensitive datasets any company holds about you. Make a deliberate decision about whether you want Google to keep it.</p>
+</section>
+
+<h2>Section 2 — Content you can replace but not transfer</h2>
+
+<section class="card">
+  <h2>Google Play Books</h2>
+  <p><strong>Good news:</strong> Google uses Adobe DRM on most titles, not proprietary Google DRM. Some titles are DRM-free (publisher dependent). This makes Google's ebook store more portable than Amazon's or Apple's.</p>
+  <ul>
+    <li><strong>DRM-free titles:</strong> Download the EPUB. Works everywhere. Move to Calibre, Kobo, or any reading app.</li>
+    <li><strong>Adobe DRM titles:</strong> Readable in any Adobe Digital Editions-compatible app — Kobo, Nook, various third-party readers. Not locked to Google.</li>
+  </ul>
+  <p style="color:#94a3b8;font-size:0.875rem;">Overall: Google Play Books is the least locked-in ebook ecosystem among major platforms. If you buy ebooks from a major retailer, Google is the most portable choice.</p>
+</section>
+
+<section class="card">
+  <h2>Google Play Movies</h2>
+  <p>Google participates in Movies Anywhere. Link your Google account at moviesanywhere.com — eligible purchases become accessible on Apple TV, Amazon, Vudu, and other linked platforms.</p>
+  <p>Google's movie ecosystem is the most portable of the three major platforms thanks to Movies Anywhere. If you buy digital movies, Google is the best starting point for cross-platform access.</p>
+</section>
+
+<h2>Section 3 — Google's real lock-in isn't content</h2>
+
+<section class="card card-privacy">
+  <h2>The data shadow you can't export</h2>
+  <p>Google knows what you search for, watch, where you go, who you email, what you buy, what ads you click, what questions you ask at 3 AM, what symptoms you look up, what routes you drive, what restaurants you visit. Your content is exportable. <strong>Your data shadow is not.</strong></p>
+  <p>You can download your location history, but Google's model of your behavior — the advertising profile, the prediction engine, the inferences drawn from fifteen years of search queries — is not in the export.</p>
+  <p>You can export your files in an afternoon. Disentangling your life from Google's surveillance infrastructure takes months. Both are worth doing.</p>
+  <p>The main <a href="/google/">Google exit guide</a> covers the data pipeline: replacing Chrome, search, Gmail, Maps, and Android's default Google integration.</p>
+</section>
+
+<section class="card">
+  <h2>Related guides</h2>
+  <ul>
+    <li><a href="/google/gmail/">Gmail — migration guide</a></li>
+    <li><a href="/google/google-photos/">Google Photos — export and alternatives</a></li>
+    <li><a href="/google/google-search/">Google Search — breaking the habit</a></li>
+    <li><a href="/amazon/your-content/">Compare: Amazon content lock-in</a></li>
+    <li><a href="/apple/apple-your-content/">Compare: Apple content lock-in</a></li>
+  </ul>
+</section>
+
+</main>
+<footer>
+  <p>Free. Open source. No tracking. <a href="/about/#affiliate">Some links are affiliate links.</a> We only recommend services we'd list anyway.</p>
+  <p>Part of the data sovereignty toolkit: 
+     <a href="https://cancelfreely.com">CancelFreely</a> &middot; 
+     <a href="https://deletefreely.com">DeleteFreely</a>
+  </p>
+  <p><a href="/about/">About</a> &middot; <a href="https://ko-fi.com/cancelfreely" target="_blank" rel="noopener">☕ Buy us a coffee</a></p>
+</footer>
+</body>
+</html>
