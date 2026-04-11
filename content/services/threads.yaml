@@ -1,0 +1,48 @@
+slug: threads
+title: Threads
+subtitle: Instagram's Twitter clone — with all of Meta's data infrastructure
+category: meta
+difficulty: 1
+what_it_is: >
+  Threads is Meta's text-based social network launched in July 2023, directly integrated
+  with Instagram. It gained 100 million users in its first week, largely from the Twitter/X
+  exodus. It is built on Instagram's infrastructure, which means your Threads account is
+  linked to your Instagram account — you cannot delete Threads without deleting Instagram.
+privacy_case: >
+  Threads collects extensive data: health and fitness data, financial data, location,
+  browsing history, search history, identifiers, usage data, and sensitive information.
+  Apple's App Store privacy label for Threads is one of the most extensive data collection
+  disclosures in the App Store. It uses your Instagram social graph and feeds Meta's
+  advertising infrastructure.
+what_you_lose:
+  - Your Threads posts and replies
+  - Threads-specific followers
+  - The Instagram account that Threads is linked to (they cannot be separated currently)
+honest_assessment: >
+  Threads is the easiest Meta service to leave if you're already leaving Instagram —
+  they're linked, so Instagram account deletion includes Threads. If you use Instagram
+  but want to leave Threads specifically, you can deactivate Threads without deleting Instagram.
+data_to_export:
+  - Use Instagram's data download tool — Threads data is included
+  - Instagram → Settings → Your activity → Download your information
+alternatives:
+  - name: Mastodon
+    url: https://joinmastodon.org
+    notes: >
+      Decentralized, open-source, no algorithm, no ads. Threads is building ActivityPub
+      federation (same protocol as Mastodon), so your Mastodon followers can eventually
+      follow Threads accounts — but not vice versa in terms of data portability.
+  - name: Bluesky
+    url: https://bsky.app
+    notes: >
+      Jack Dorsey's decentralized Twitter alternative. AT Protocol. Growing community.
+      More mainstream feel than Mastodon. No ads yet. Best Twitter/Threads replacement for casual users.
+  - name: Post.news
+    url: https://post.news
+    notes: Journalist-focused social platform. Smaller but high-quality community for news and analysis.
+migration_steps:
+  - If leaving both Threads and Instagram, proceed with Instagram account deletion — Threads is deleted with it
+  - If keeping Instagram but leaving Threads — Settings → Account → Deactivate or delete Threads profile
+  - Note that as of 2024, deactivating Threads is separate from deactivating Instagram
+  - Export your data before deactivating
+  - Sign up for Mastodon or Bluesky and post your handle before departing

@@ -1,0 +1,58 @@
+slug: onedrive
+title: OneDrive
+subtitle: Microsoft's cloud storage — and what it scans
+category: microsoft
+difficulty: 2
+what_it_is: >
+  OneDrive is Microsoft's cloud storage service, included with Microsoft 365 (1TB) or
+  available free (5GB). It syncs files across Windows devices, integrates with Office apps,
+  and backs up your desktop, documents, and pictures folders automatically on Windows.
+  The integration is deep enough that many Windows users have OneDrive running without
+  realizing it.
+privacy_case: >
+  Microsoft scans OneDrive files for content that violates its Terms of Service.
+  In 2022, Microsoft began scanning personal photos stored in OneDrive as part of its
+  PhotoDNA and AI-based content scanning — content that is explicitly described as private.
+  Files stored in OneDrive are subject to Microsoft's terms and accessible to Microsoft
+  for compliance, legal, and service improvement purposes.
+what_you_lose:
+  - 1TB storage included with Microsoft 365 subscription
+  - Tight Windows integration (auto-backup of Desktop, Documents, Pictures)
+  - Office document sync and collaboration
+  - Photo backup from mobile
+honest_assessment: >
+  OneDrive is one of the easiest Microsoft services to replace because cloud storage
+  is a commodity. Proton Drive, iCloud (for Apple users), and Nextcloud all offer
+  equivalent or better privacy at competitive prices.
+data_to_export:
+  - Download all files from onedrive.live.com → select all → Download
+  - Or copy your OneDrive folder to a local external drive before disconnecting
+  - OneDrive files are standard files — no special export format needed
+alternatives:
+  - name: Proton Drive
+    url: https://proton.me/drive
+    cost: 1GB free; from $3.99/month 200GB
+    notes: End-to-end encrypted. Files private even from Proton. Good desktop and mobile apps.
+  - name: Nextcloud (self-hosted)
+    url: https://nextcloud.com
+    notes: >
+      Open-source cloud storage you run on your own hardware. No subscription fees.
+      Complete data sovereignty. Requires a server (can be a Raspberry Pi or cheap VPS).
+  - name: Synology Drive (NAS)
+    url: https://synology.com
+    notes: Run your own storage server at home. One-time hardware cost, no monthly fees.
+  - name: pCloud
+    url: https://pcloud.com
+    cost: From $4.99/month; lifetime plan available
+    notes: Swiss-based. Client-side encryption option. Lifetime plans for one-time purchase.
+  - name: Tresorit
+    url: https://tresorit.com
+    cost: From $10.42/month
+    notes: End-to-end encrypted. Zero-knowledge. European (Swiss/Hungarian). Strong for business.
+migration_steps:
+  - Download all OneDrive content to a local drive
+  - Choose your new cloud storage (Proton Drive recommended for privacy)
+  - Upload content to new storage service
+  - Unlink OneDrive from Windows (Settings → Accounts → Sync your settings; also unlink from system tray)
+  - Disable OneDrive auto-start (Task Manager → Startup → Microsoft OneDrive → Disable)
+  - Cancel OneDrive standalone subscription if applicable (usually bundled with Microsoft 365)

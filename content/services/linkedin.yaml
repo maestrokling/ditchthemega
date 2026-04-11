@@ -1,0 +1,60 @@
+slug: linkedin
+title: LinkedIn
+subtitle: The professional network that sells you to recruiters and advertisers
+category: microsoft
+difficulty: 2
+what_it_is: >
+  LinkedIn is Microsoft's professional social network with 1 billion members. It is the
+  dominant platform for professional networking, job searching, and B2B content. Acquired
+  by Microsoft in 2016 for $26.2 billion. LinkedIn collects your professional history,
+  connections, messages, content engagement, and browsing behavior for advertising and
+  recruiter targeting.
+privacy_case: >
+  LinkedIn uses your data for advertising and sells access to your profile to recruiters
+  through LinkedIn Recruiter. In 2021, data on 700 million LinkedIn users was scraped and
+  posted for sale. LinkedIn has also been caught tracking users across the web via cookies
+  and sharing data with advertising partners. In 2023, LinkedIn was fined by the EU for
+  violations of GDPR's data use restrictions.
+what_you_lose:
+  - Professional visibility (recruiters actively search LinkedIn)
+  - Network connections you've built over years
+  - Direct messages with professional contacts
+  - Job listings (LinkedIn has the largest job board for white-collar roles)
+  - Content distribution if you publish on LinkedIn
+honest_assessment: >
+  LinkedIn is one of the harder professional services to leave entirely because it's where
+  jobs are and where professional identity is increasingly established. If you're job searching
+  or in a field where LinkedIn is standard, departure is a real professional cost. The most
+  realistic path for most professionals is not leaving LinkedIn but reducing its data collection:
+  audit your data, lock down your settings, stop letting LinkedIn track you across the web.
+data_to_export:
+  - LinkedIn → Settings → Data privacy → Get a copy of your data
+  - Select all data including connections, messages, posts, job applications
+  - Download takes up to 24 hours to prepare
+alternatives:
+  - name: Personal website / portfolio
+    notes: >
+      The most durable professional presence you can build. SEO-indexed, fully controlled,
+      no algorithm. Pair with an email list for the people who matter most.
+  - name: GitHub (for technical professionals)
+    url: https://github.com
+    notes: Your commit history is a portfolio. Many technical hiring decisions are made based on GitHub profiles alone.
+  - name: AngelList / Wellfound
+    url: https://wellfound.com
+    notes: Startup-focused job platform. Alternative to LinkedIn for startup ecosystem jobs.
+  - name: Mastodon / professional communities
+    notes: Some professions have strong Mastodon communities (academics, journalists, technologists).
+reducing_linkedin_exposure:
+  - Settings → Data privacy → Manage your data and activity → review all settings
+  - Turn off LinkedIn's ability to use your data for third-party advertising
+  - Turn off "Share data for research and surveys"
+  - Clear your LinkedIn activity history
+  - Use LinkedIn only when logged in, not via web tracking
+  - Consider a LinkedIn Premium cancellation if you're paying — basic is sufficient for most users
+migration_steps:
+  - Download your full data archive (connections, messages, endorsements)
+  - Export connections as CSV to keep your professional contact list
+  - Audit your LinkedIn privacy settings (many data-sharing options are on by default)
+  - Build or improve your personal website as an alternative professional presence
+  - For job searching: try Indeed, Wellfound, or direct company career pages in parallel
+  - If you decide to leave, set profile to private first, then delete account at linkedin.com/help

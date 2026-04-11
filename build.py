@@ -90,6 +90,8 @@ CATEGORY_LABELS = {
     "seller":         "For Sellers",
     "google":         "Google",
     "apple":          "Apple",
+    "meta":           "Meta",
+    "microsoft":      "Microsoft",
     "alternatives":   "Alternatives",
     "meta":           "Reference",
 }
@@ -518,23 +520,23 @@ def build_landing():
       <span class="door-status open">Guide available →</span>
     </div>
   </a>
-  <div class="door door-coming">
+  <a href="/meta/" class="door door-open">
     <div class="door-inner">
       <span class="door-icon">👤</span>
       <h2>Meta</h2>
       <p>Facebook, Instagram, WhatsApp, Threads</p>
-      <span class="door-status coming">Coming soon</span>
+      <span class="door-status open">Guide available →</span>
     </div>
-  </div>
+  </a>
 
-  <div class="door door-coming">
+  <a href="/microsoft/" class="door door-open">
     <div class="door-inner">
       <span class="door-icon">🪟</span>
       <h2>Microsoft</h2>
-      <p>Windows, Office 365, LinkedIn, GitHub</p>
-      <span class="door-status coming">Coming soon</span>
+      <p>Windows, Microsoft 365, LinkedIn, OneDrive</p>
+      <span class="door-status open">Guide available →</span>
     </div>
-  </div>
+  </a>
 </div>
 <div class="philosophy">
   <p>No data collected. No affiliate links. No paid recommendations. 
@@ -605,13 +607,18 @@ def build_about():
 
 def build_sitemap(services):
     urls = [SITE_URL + "/", SITE_URL + "/amazon/", SITE_URL + "/amazon/sellers/",
-            SITE_URL + "/google/", SITE_URL + "/apple/", SITE_URL + "/alternatives/", SITE_URL + "/about/"]
+            SITE_URL + "/google/", SITE_URL + "/apple/", SITE_URL + "/meta/",
+            SITE_URL + "/microsoft/", SITE_URL + "/alternatives/", SITE_URL + "/about/"]
     for svc in services:
         cat = svc.get("category","")
         if cat == "google":
             urls.append(f"{SITE_URL}/google/{svc['slug']}/")
         elif cat == "apple":
             urls.append(f"{SITE_URL}/apple/{svc['slug']}/")
+        elif cat == "meta":
+            urls.append(f"{SITE_URL}/meta/{svc['slug']}/")
+        elif cat == "microsoft":
+            urls.append(f"{SITE_URL}/microsoft/{svc['slug']}/")
         elif cat == "alternatives":
             urls.append(f"{SITE_URL}/alternatives/{svc['slug']}/")
         else:
@@ -901,6 +908,67 @@ def build_apple_service_page(svc):
         "\n".join(sections)
     )
 
+def build_generic_hub(services, category, slug_prefix, title, subtitle, description, canonical):
+    svcs = [s for s in services if s.get("category") == category]
+    cards = ""
+    for svc in svcs:
+        s_slug = svc["slug"]
+        s_title = svc["title"]
+        s_subtitle = svc.get("subtitle","")
+        diff = svc.get("difficulty",0)
+        diff_label = DIFF_LABEL[diff] if diff else ""
+        diff_class = DIFF_CLASS[diff] if diff else "d1"
+        cards += f'''<a href="/{slug_prefix}/{s_slug}/" class="service-card">
+  <div class="service-card-inner">
+    <h2>{e(s_title)}</h2>
+    <p>{e(s_subtitle)}</p>
+    {"" if not diff else f'<span class="difficulty {diff_class}">{diff_label}</span>'}
+  </div>
+</a>'''
+    content = f'''<div class="page-hero amazon-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › {e(title)}</div>
+  <h1>{e(title)}</h1>
+  <p class="subtitle">{e(subtitle)}</p>
+</div>
+<div class="service-grid">
+{cards}
+</div>'''
+    return page_shell(f"{title} — DitchTheMega", description, canonical, content)
+
+def build_generic_service_page(svc, slug_prefix):
+    slug = svc["slug"]
+    title = svc["title"]
+    subtitle = svc.get("subtitle","")
+    sections = []
+    sections.append(f'<div class="page-hero"><div class="breadcrumb"><a href="/">Home</a> › <a href="/{slug_prefix}/">{slug_prefix.capitalize()}</a> › {e(title)}</div><h1>{e(title)}</h1><p class="subtitle">{e(subtitle)}</p></div>')
+    if svc.get("privacy_case"):
+        sections.append(f'<section class="card card-privacy"><h2>⚠️ Privacy case</h2><p>{e(svc["privacy_case"])}</p></section>')
+    if svc.get("what_it_is"):
+        sections.append(f'<section class="card"><h2>What it is</h2><p>{e(svc["what_it_is"])}</p></section>')
+    if svc.get("what_you_lose"):
+        sections.append(f'<section class="card"><h2>What you lose</h2>{render_list(svc["what_you_lose"])}</section>')
+    if svc.get("honest_assessment"):
+        sections.append(f'<section class="card card-honest"><h2>Honest assessment</h2><p>{e(svc["honest_assessment"])}</p></section>')
+    if svc.get("reducing_linkedin_exposure"):
+        sections.append(f'<section class="card card-note"><h2>If you\'re not ready to leave entirely</h2>{render_list(svc["reducing_linkedin_exposure"])}</section>')
+    if svc.get("reducing_privacy_on_windows"):
+        sections.append(f'<section class="card card-note"><h2>Reduce data collection without switching OS</h2>{render_list(svc["reducing_privacy_on_windows"])}</section>')
+    if svc.get("data_to_export"):
+        sections.append(f'<section class="card"><h2>Data to export first</h2>{render_list(svc["data_to_export"])}</section>')
+    if svc.get("account_deletion"):
+        sections.append(f'<section class="card"><h2>Deleting your account</h2>{render_list(svc["account_deletion"])}</section>')
+    if svc.get("alternatives"):
+        sections.append(f'<section class="card"><h2>Alternatives</h2>{render_alternatives(svc["alternatives"])}</section>')
+    if svc.get("migration_steps"):
+        sections.append(f'<section class="card card-steps"><h2>Migration steps</h2>{render_steps(svc["migration_steps"])}</section>')
+    related = RELATED.get(slug, [])
+    if related:
+        prefix = slug_prefix
+        links = "".join(f'<li><a href="/{prefix}/{r_slug}/">{e(r_title)}</a></li>' for r_slug, r_title in related)
+        sections.append(f'<section class="card"><h2>Related guides</h2><ul>{links}</ul></section>')
+    description = subtitle or f"How to leave {title} — privacy case, alternatives, and migration guide."
+    return page_shell(f"{title} — DitchTheMega", description, f"{SITE_URL}/{slug_prefix}/{slug}/", "\n".join(sections))
+
 def main():
     os.makedirs(PUBLIC_DIR, exist_ok=True)
 
@@ -946,7 +1014,7 @@ def main():
     for svc in services:
         slug = svc["slug"]
         cat  = svc.get("category","")
-        if cat in ("meta", "seller", "google", "alternatives", "apple"):
+        if cat in ("meta", "seller", "google", "alternatives", "apple", "microsoft", "amazon-meta"):
             continue  # handled separately below
         out_dir = f"{PUBLIC_DIR}/amazon/{slug}"
         os.makedirs(out_dir, exist_ok=True)
@@ -986,6 +1054,40 @@ def main():
         with open(f"{out_dir}/index.html", "w") as f:
             f.write(build_apple_service_page(svc))
         print(f"Built: apple/{slug}/index.html")
+
+    # Meta hub and service pages
+    os.makedirs(f"{PUBLIC_DIR}/meta", exist_ok=True)
+    with open(f"{PUBLIC_DIR}/meta/index.html", "w") as f:
+        f.write(build_generic_hub(services, "meta", "meta",
+            "Leaving the Meta Ecosystem",
+            "Facebook, Instagram, WhatsApp, and Threads. Here's how to reduce your exposure to Meta's surveillance infrastructure.",
+            "Practical guides to leaving Facebook, Instagram, WhatsApp, and Threads. No lectures. Just the steps.",
+            f"{SITE_URL}/meta/"))
+    print("Built: meta/index.html")
+    for svc in [s for s in services if s.get("category") == "meta"]:
+        slug = svc["slug"]
+        out_dir = f"{PUBLIC_DIR}/meta/{slug}"
+        os.makedirs(out_dir, exist_ok=True)
+        with open(f"{out_dir}/index.html", "w") as f:
+            f.write(build_generic_service_page(svc, "meta"))
+        print(f"Built: meta/{slug}/index.html")
+
+    # Microsoft hub and service pages
+    os.makedirs(f"{PUBLIC_DIR}/microsoft", exist_ok=True)
+    with open(f"{PUBLIC_DIR}/microsoft/index.html", "w") as f:
+        f.write(build_generic_hub(services, "microsoft", "microsoft",
+            "Leaving the Microsoft Ecosystem",
+            "Windows, Microsoft 365, LinkedIn, and OneDrive. Here's how to reduce your dependency on Microsoft's stack.",
+            "Practical guides to leaving Windows, Microsoft 365, LinkedIn, and OneDrive. Honest about what stays Windows-only.",
+            f"{SITE_URL}/microsoft/"))
+    print("Built: microsoft/index.html")
+    for svc in [s for s in services if s.get("category") == "microsoft"]:
+        slug = svc["slug"]
+        out_dir = f"{PUBLIC_DIR}/microsoft/{slug}"
+        os.makedirs(out_dir, exist_ok=True)
+        with open(f"{out_dir}/index.html", "w") as f:
+            f.write(build_generic_service_page(svc, "microsoft"))
+        print(f"Built: microsoft/{slug}/index.html")
 
     # Sitemap (add sellers hub)
     with open(f"{PUBLIC_DIR}/sitemap.xml", "w") as f:

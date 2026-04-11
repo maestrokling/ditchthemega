@@ -1,0 +1,63 @@
+slug: windows
+title: Windows
+subtitle: The operating system that reports back to Microsoft
+category: microsoft
+difficulty: 5
+what_it_is: >
+  Windows is Microsoft's desktop operating system with roughly 73% of the global PC market.
+  Windows 10 and 11 collect extensive telemetry data by default — usage patterns, app crashes,
+  typing data, location, and more — sent to Microsoft servers. Windows 11 requires a Microsoft
+  account for setup, tying your PC to your Microsoft identity. The operating system is also
+  deeply integrated with Microsoft's commercial ecosystem (Office, OneDrive, Edge, Teams, Bing).
+privacy_case: >
+  Windows 11 introduced Recall — an AI feature that takes screenshots of everything you do
+  on your computer and stores them locally for AI search. It was initially mandatory, then
+  made opt-in after significant backlash. The architecture — your entire computing history
+  stored in an AI-searchable database — represents a fundamentally new privacy risk.
+  Microsoft's telemetry collection on Windows is extensive and difficult to fully disable.
+what_you_lose:
+  - Broad software compatibility (some software runs only on Windows)
+  - Gaming (most games are Windows-first; some not available on Linux/Mac)
+  - Familiarity after years of use
+  - Microsoft Office native integration (though Office works on Mac and browser)
+honest_assessment: >
+  Switching operating systems is the most disruptive migration on this site. For most users,
+  it's not necessary — reducing Microsoft's data collection on Windows while staying on Windows
+  is a reasonable middle ground. Full departure is most realistic for users whose workflow
+  doesn't depend on Windows-only software.
+alternatives:
+  - name: Ubuntu Linux
+    url: https://ubuntu.com
+    notes: >
+      The most user-friendly Linux distribution. Free. Open source. No telemetry.
+      Excellent for general computing, browsing, email, and productivity.
+      Learning curve if you're Windows-only but manageable for most users.
+  - name: Linux Mint
+    url: https://linuxmint.com
+    notes: >
+      Based on Ubuntu. Designed to look and feel like Windows. Best Linux option
+      for Windows users making their first switch. Strong hardware compatibility.
+  - name: Fedora
+    url: https://fedoraproject.org
+    notes: More cutting-edge Linux. Good hardware support. Popular among developers.
+  - name: macOS (Apple)
+    url: https://apple.com/macos
+    notes: >
+      Note — covered in the Apple exit guide for those leaving Apple. Switching to macOS
+      means entering Apple's ecosystem, which has its own tradeoffs.
+reducing_privacy_on_windows:
+  - Disable telemetry (Settings → Privacy & Security → Diagnostics & feedback → set to Basic or turn off)
+  - Disable advertising ID (Settings → Privacy & Security → General → turn off all)
+  - Use Firefox or Brave instead of Microsoft Edge
+  - Use DuckDuckGo instead of Bing
+  - Disable Cortana and Windows search cloud features
+  - Turn off Recall (Settings → Privacy & Security → Recall)
+  - Use a local account instead of Microsoft account (possible in Professional edition)
+migration_steps:
+  - Assess your software dependencies — note any Windows-only apps you use
+  - Check if gaming is important — proton/Steam on Linux has improved dramatically but some games still don't work
+  - Try Ubuntu in a virtual machine or live USB before committing
+  - Back up everything to an external drive before switching
+  - Install Ubuntu or Linux Mint alongside Windows (dual boot) to ease transition
+  - Migrate documents, photos, and email to cross-platform services (Proton Drive, Proton Mail)
+  - After 30 days on Linux, decide whether to remove Windows entirely

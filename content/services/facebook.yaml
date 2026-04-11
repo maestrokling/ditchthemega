@@ -1,0 +1,69 @@
+slug: facebook
+title: Facebook
+subtitle: The social graph you built over 15 years — and what Meta did with it
+category: meta
+difficulty: 3
+what_it_is: >
+  Facebook has 3 billion monthly active users and is the largest social network in history.
+  It holds your social graph — the map of your relationships, your history, your photos,
+  your groups, your marketplace activity, your events. For many users, especially those
+  40+, it is the primary way they stay in contact with family and friends. It is also
+  one of the most comprehensive advertising surveillance platforms ever built.
+privacy_case: >
+  Facebook's entire business model is built on knowing more about you than anyone else
+  and selling access to your attention to advertisers. Meta has been fined over €2.3 billion
+  by EU regulators since 2018, primarily for privacy violations. In 2021, data on 533 million
+  users was leaked publicly. Facebook tracks you across the internet via the Meta Pixel,
+  embedded on millions of websites — even when you're not on Facebook. In 2022, internal
+  documents showed Facebook knowingly undermined teen mental health for engagement metrics.
+what_you_lose:
+  - Your social graph — the map of who you know online
+  - Groups (hobby groups, local community groups, buy/sell groups)
+  - Facebook Marketplace
+  - Events (the dominant platform for informal event coordination in many communities)
+  - Photos and memories you've shared over the years (export first)
+  - Facebook Login — the ability to log into other sites with Facebook (actually good to lose)
+honest_assessment: >
+  Facebook is the hardest social network to leave because it holds your relationships, not
+  just your content. You can export your photos and posts. You cannot export your social graph
+  — the connections, the groups, the community. If your social life is organized around Facebook
+  events and groups, leaving is a genuine loss that alternatives don't fully replace.
+  The honest question is not "which app replaces Facebook?" but "are the people I care about
+  willing to connect somewhere else?"
+data_to_export:
+  - Facebook → Settings → Your Facebook information → Download your information
+  - Select all data types — photos, posts, messages, friends list, groups, Marketplace history
+  - Download in JSON format (more complete than HTML)
+  - This can take hours for large accounts
+alternatives:
+  - name: Signal
+    url: https://signal.org
+    notes: End-to-end encrypted messaging. For staying in touch with people individually or in small groups.
+  - name: Mastodon
+    url: https://joinmastodon.org
+    notes: >
+      Decentralized, open-source social network. No algorithm, no ads, no data collection.
+      You choose your instance (community server). Growing rapidly since 2022 Twitter exodus.
+  - name: Nextdoor
+    url: https://nextdoor.com
+    notes: Neighborhood-specific community app. Better than Facebook Groups for local community.
+  - name: Meetup
+    url: https://meetup.com
+    notes: Event and group coordination, especially for hobby and interest groups.
+  - name: Discord
+    url: https://discord.com
+    notes: Community servers for interest groups. Strong for hobby communities and real-time discussion.
+  - name: Group chat (Signal, iMessage, WhatsApp)
+    notes: For friend and family groups, a group chat is often simpler than a social network.
+account_deletion:
+  - Download your data first (see above) — this takes time, start here
+  - Deactivate vs. Delete — deactivation hides your account but preserves data; deletion is permanent (after 30 days)
+  - Remove Facebook Login from third-party apps first (Settings → Security → Apps and Websites)
+  - Delete at facebook.com/help/delete_account
+  - After 30 days, the deletion is permanent
+migration_steps:
+  - Download your complete data archive and save it
+  - Notify your important contacts of where to find you (email, Signal, phone)
+  - Consider leaving key groups slowly rather than all at once — many groups have alternatives
+  - Remove Facebook Login from all third-party services (this is important — these logins break when you delete)
+  - Set account to inactive for 30 days if you're unsure, then delete

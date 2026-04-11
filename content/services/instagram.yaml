@@ -1,0 +1,63 @@
+slug: instagram
+title: Instagram
+subtitle: The visual portfolio Meta turned into an ad machine
+category: meta
+difficulty: 2
+what_it_is: >
+  Instagram is Meta's photo and video sharing platform with 2 billion monthly users.
+  Originally a simple photo-sharing app, it has been progressively redesigned to maximize
+  ad exposure and engagement. It also collects some of the most intimate behavioral data
+  Meta has — what you linger on, what you screenshot, who you DM, and what products
+  you browse — to build ad profiles of extraordinary precision.
+privacy_case: >
+  Instagram is integrated with Facebook's advertising infrastructure. Everything you do
+  on Instagram — who you follow, what you like, how long you look at each post, what you
+  save — feeds the same Meta ad profile as Facebook. Instagram has also been used to track
+  users' locations and browsing habits through the in-app browser, which injects tracking
+  code into external websites you visit via Instagram links.
+what_you_lose:
+  - Your follower and following network
+  - Direct messages (export before leaving)
+  - Posted photos and videos (export in original quality before leaving)
+  - Stories archive
+  - Reels you've created
+honest_assessment: >
+  Instagram is easier to leave than Facebook because it's primarily about content consumption
+  and expression, not social coordination. The content you've created can be exported.
+  The followers you've built cannot be transferred, but if you're primarily a consumer (not
+  a creator with a significant audience), the transition is minimal. Creators with large
+  audiences face a genuine loss.
+data_to_export:
+  - Instagram app → Settings → Your activity → Download your information
+  - Request all data including photos, videos, messages, followers, following
+  - Download in JSON format for completeness
+  - Original quality photos/videos are included in the download
+alternatives:
+  - name: Glass
+    url: https://glass.photo
+    cost: $29/year
+    notes: Photography-focused social network. No algorithm, chronological feed, no ads. Best for photography.
+  - name: Pixelfed
+    url: https://pixelfed.org
+    notes: >
+      Open-source, decentralized Instagram alternative. Part of the Fediverse — compatible with Mastodon.
+      No ads, no algorithm. You own your data.
+  - name: VSCO
+    url: https://vsco.co
+    notes: Photo editing + community. Less social pressure than Instagram. Strong photography community.
+  - name: Flickr
+    url: https://flickr.com
+    cost: Free for 1,000 photos; $8/month for unlimited
+    notes: Photo hosting with community. Older platform but high-quality photography community.
+  - name: BeReal
+    url: https://bere.al
+    notes: Authenticity-focused (real photos, no filters, no editing). Younger demographic.
+  - name: Your own website
+    notes: The most durable option for creators — a portfolio site you control, with an email list you own.
+migration_steps:
+  - Download your complete data archive (app → Settings → Your activity → Download your information)
+  - Announce your departure and where to find you (new platform, newsletter, website)
+  - Post your final post pointing followers to your new home
+  - Remove Meta Pixel tracking via in-app browser settings (Settings → Ads → Data about your activity from partners → toggle off)
+  - Delete Instagram account at instagram.com/accounts/remove/request/permanent/
+  - Note — Instagram and Facebook accounts are linked; deleting one doesn't delete the other

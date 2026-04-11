@@ -1,0 +1,66 @@
+slug: office365
+title: Microsoft 365 (Office)
+subtitle: The productivity suite that owns your documents
+category: microsoft
+difficulty: 3
+what_it_is: >
+  Microsoft 365 (formerly Office 365) is Microsoft's subscription productivity suite —
+  Word, Excel, PowerPoint, Outlook, Teams, OneDrive, and OneNote — at $6.99–$9.99/month
+  per person. It is the dominant office software globally, particularly in enterprise.
+  Documents created in Microsoft formats (.docx, .xlsx, .pptx) are the de facto standard
+  for business document exchange.
+privacy_case: >
+  Microsoft 365 processes your documents and emails on Microsoft servers. Microsoft uses
+  data from Office 365 to improve its AI features. Microsoft Copilot, the AI assistant
+  built into Microsoft 365, has access to all your documents and emails. Microsoft has also
+  faced scrutiny for how Teams data is stored and who can access it. In European organizations,
+  data sovereignty concerns have driven significant adoption of alternatives.
+what_you_lose:
+  - Dominant file format compatibility (.docx, .xlsx, .pptx are universal)
+  - Excel's advanced features (nothing fully matches Excel for complex spreadsheets)
+  - Outlook's integration with enterprise email systems
+  - Teams for workplace collaboration (in enterprise contexts)
+  - OneDrive storage included with subscription
+honest_assessment: >
+  For personal use, the alternatives are excellent and free. For enterprise or professional
+  use involving document exchange, the format compatibility issue is real — sending a
+  LibreOffice document to a law firm or accounting firm will cause friction. The most
+  pragmatic approach for most users is to keep documents in cross-platform formats (PDF, plain text,
+  Markdown) and only use .docx/.xlsx when externally required.
+alternatives:
+  - name: LibreOffice
+    url: https://libreoffice.org
+    cost: Free, open source
+    notes: >
+      Full Office suite. Word, Excel, PowerPoint equivalents. Opens and saves Microsoft formats.
+      Completely offline. No data collection. Best for users who need desktop Office without
+      the subscription and surveillance. Minor compatibility quirks on complex documents.
+  - name: Google Docs / Sheets / Slides
+    url: https://docs.google.com
+    cost: Free
+    notes: >
+      Browser-based. Excellent real-time collaboration. Trades Microsoft's surveillance for Google's.
+      Not a privacy win, but a vendor-independence win. Files stored in Google Drive.
+  - name: Proton Docs
+    url: https://proton.me/docs
+    cost: Included with Proton plans
+    notes: >
+      End-to-end encrypted document editing. New and improving. Privacy-first alternative
+      for users already in the Proton ecosystem.
+  - name: OnlyOffice
+    url: https://onlyoffice.com
+    notes: >
+      High Microsoft compatibility. Available desktop (free) and self-hosted server.
+      Better format fidelity than LibreOffice for complex documents.
+  - name: Nextcloud + Collabora Office
+    url: https://nextcloud.com
+    notes: >
+      Self-hosted cloud platform with integrated office suite. Full data sovereignty.
+      For technically inclined users who want complete control.
+migration_steps:
+  - Install LibreOffice — it opens all your existing .docx/.xlsx files
+  - Use Proton Drive or Nextcloud as your OneDrive replacement
+  - Convert frequently used documents to open formats (ODT, ODS) or keep as PDFs
+  - Cancel Microsoft 365 subscription
+  - For email, see the Outlook/email section
+  - For cloud storage, set up LibreOffice with a cloud sync folder

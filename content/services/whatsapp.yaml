@@ -1,0 +1,70 @@
+slug: whatsapp
+title: WhatsApp
+subtitle: End-to-end encrypted messages — owned by Meta
+category: meta
+difficulty: 3
+what_it_is: >
+  WhatsApp is the world's dominant messaging app with 2 billion users, particularly
+  outside the US. Messages are end-to-end encrypted by default — Meta cannot read them.
+  However, Meta can and does collect metadata: who you message, how often, when, your
+  contacts list, your phone's IP address, and your usage patterns. In 2021, WhatsApp
+  updated its privacy policy to explicitly allow sharing more data with Facebook for
+  advertising purposes, triggering a global backlash and mass migrations to Signal.
+privacy_case: >
+  The encryption is real. The metadata collection is also real. "WhatsApp can't read your
+  messages" and "WhatsApp knows a great deal about your communication patterns" are both
+  true simultaneously. Meta acquired WhatsApp in 2014 for $19 billion and has progressively
+  integrated it into its advertising infrastructure despite initial promises not to.
+  For users in the EU, GDPR limits some data sharing, but the underlying tension between
+  Meta's business model and user privacy remains.
+what_you_lose:
+  - Your contact network (everyone you currently communicate with via WhatsApp)
+  - Group chats you're in
+  - Message history (export before leaving)
+  - Voice and video calls (WhatsApp calls are encrypted and reliable)
+  - Status feature
+honest_assessment: >
+  WhatsApp's difficulty is entirely about network effects — the people you talk to are
+  on it. The messaging itself is encrypted. The app works well. The problem is who owns
+  it and what they do with your metadata. For US users, iMessage fills the gap for Apple
+  contacts, and Signal is the principled alternative. For international users, WhatsApp
+  is often the only way to stay in contact with family abroad, which makes migration
+  genuinely difficult.
+data_to_export:
+  - WhatsApp → Settings → Chats → Chat backup → Export chat (for individual chats)
+  - Or request account info at wa.me/dl (WhatsApp's data download portal)
+  - Exported chats are text files with media attachments
+alternatives:
+  - name: Signal
+    url: https://signal.org
+    notes: >
+      The gold standard for private messaging. End-to-end encrypted by default.
+      Open source. No ads. No metadata collection beyond phone number and last connection date.
+      Run by a nonprofit. Functionally similar to WhatsApp — messages, calls, groups, media.
+      The only meaningful tradeoff is that your contacts also need Signal.
+  - name: Telegram
+    url: https://telegram.org
+    notes: >
+      Large platform, good features, massive user base. Important caveat: standard Telegram
+      messages are NOT end-to-end encrypted by default. Only "Secret Chats" are E2E encrypted.
+      Better than WhatsApp for privacy-as-practice; not as strong as Signal for privacy-as-architecture.
+  - name: iMessage
+    url: https://apple.com/imessage
+    notes: >
+      End-to-end encrypted for Apple-to-Apple communication. Falls back to unencrypted SMS
+      for non-Apple contacts. Good for US users in the Apple ecosystem.
+      Not cross-platform — Android users get SMS fallback, which is unencrypted.
+  - name: Element (Matrix)
+    url: https://element.io
+    notes: >
+      Open-source, decentralized messaging. E2E encrypted. You can self-host your own
+      Matrix server. The most privacy-respecting option that's also federated and interoperable.
+migration_steps:
+  - Export important chats you want to keep before leaving
+  - Install Signal on your own device first
+  - Message your most important contacts directly and invite them to Signal
+  - For groups — create equivalent Signal groups and invite members
+  - International contacts are the hardest — be patient, this takes time
+  - After your key contacts have moved, announce your WhatsApp departure
+  - Delete WhatsApp account via Settings → Account → Delete my account
+  - Note — deleting your WhatsApp account does not delete your Meta account
