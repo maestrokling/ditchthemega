@@ -151,7 +151,7 @@ def footer_html():
      <a href="https://cancelfreely.com">CancelFreely</a> &middot; 
      <a href="https://deletefreely.com">DeleteFreely</a>
   </p>
-  <p><a href="https://github.com/maestrokling/ditchthemega">GitHub</a> &middot; <a href="/about/">About</a></p>
+  <p><a href="/about/">About</a></p>
 </footer>'''
 
 def page_shell(title, description, canonical, content, extra_head=""):
@@ -569,7 +569,7 @@ def build_about():
     <li><strong>No data collection.</strong> We don't track you. We don't have analytics. We don't use cookies.</li>
     <li><strong>No paid recommendations.</strong> No company pays to be listed. Recommendations exist because they're good.</li>
     <li><strong>Honest about tradeoffs.</strong> We have a page called <a href="/amazon/what-you-lose/">What You Actually Lose</a>. Amazon does some things well. We say so.</li>
-    <li><strong>Open source.</strong> All content is on <a href="https://github.com/maestrokling/ditchthemega" target="_blank" rel="noopener">GitHub</a>. Corrections and additions welcome.</li>
+    <li><strong>Honest about tradeoffs.</strong> Corrections and improvements are welcome — <a href="/about/#affiliate">see our principles</a>.</li>
   </ul>
 </section>
 <section class="card" id="affiliate">
@@ -586,6 +586,10 @@ def build_about():
     <li><a href="https://deletefreely.com">DeleteFreely</a> — delete your data from major companies. No affiliate links.</li>
     <li>DitchTheMega — leave the most entrenched ecosystems. Affiliate links disclosed.</li>
   </ul>
+</section>
+<section class="card">
+  <h2>Report an error</h2>
+  <p>Something wrong or out of date? <a href="mailto:hello@ditchthemega.com">Let us know</a>.</p>
 </section>'''
 
     return page_shell(
