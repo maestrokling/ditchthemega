@@ -149,6 +149,7 @@ def nav_html(active_slug=""):
     <a href="/apple/" class="nav-link">Apple</a>
     <a href="/meta/" class="nav-link">Meta</a>
     <a href="/microsoft/" class="nav-link">Microsoft</a>
+    <a href="/what-is-lock-in/" class="nav-link">What Is Lock-In?</a>
     <a href="/alternatives/" class="nav-link">Alternatives</a>
     <a href="/guides/secure-home-automation/" class="nav-link">Home Automation</a>
     <a href="/about/" class="nav-link">About</a>
@@ -496,6 +497,7 @@ def build_amazon_hub(services):
   <h1>Leaving the Amazon Ecosystem</h1>
   <p class="subtitle">Amazon isn't a store. It's twenty services wearing a trench coat.<br>
   Here's how to take it apart, service by service.</p>
+  <p style="margin-top:.5rem;font-size:.85rem;"><a href="/what-is-lock-in/" style="color:#94a3b8;">Why is this harder than canceling a subscription? →</a></p>
 </div>
 <div class="service-grid">
 {cards}
@@ -512,6 +514,9 @@ def build_landing():
     content = f'''<div class="landing-hero">
   <h1>Big Tech made it easy to move in.<br>We make it possible to move out.</h1>
   <p class="landing-sub">Practical, honest guides to leaving the platforms that have made themselves load-bearing in your life.<br>No lectures. No ideology. Just the map.</p>
+</div>
+<div class="card" style="margin-bottom:1.5rem;background:#161b27;border-color:#1e2433;">
+  <p style="font-size:.9rem;color:#94a3b8;">Leaving Big Tech is harder than canceling a subscription. Content you bought is locked to their ecosystem. Data you shared lives on their servers. Relationships you built exist only on their platforms. <a href="/what-is-lock-in/" style="color:#f59e0b;">Understand the three types of lock-in →</a></p>
 </div>
 <div class="doors-grid">
   <a href="/amazon/" class="door door-open">
@@ -1045,6 +1050,7 @@ def build_google_hub(services):
   <h1>Leaving the Google Ecosystem</h1>
   <p class="subtitle">Google isn\'t a search engine. It\'s a surveillance network that also does search, email, maps, video, and your phone.<br>
   Here\'s how to reduce your dependency, service by service.</p>
+  <p style="margin-top:.5rem;font-size:.85rem;"><a href="/what-is-lock-in/" style="color:#94a3b8;">Why is this harder than canceling a subscription? →</a></p>
 </div>
 <div class="card card-honest" style="margin-bottom:1.5rem;">
   <h2>What Google genuinely does better than any alternative</h2>
@@ -1563,6 +1569,7 @@ def build_apple_hub(services):
   <h1>Leaving the Apple Ecosystem</h1>
   <p class="subtitle">Apple\'s lock-in is different from Amazon\'s or Google\'s. It\'s not about surveillance — it\'s about DRM.<br>
   Content you purchased through Apple cannot legally be transferred to other platforms. Understand what you\'re leaving before you go.</p>
+  <p style="margin-top:.5rem;font-size:.85rem;"><a href="/what-is-lock-in/" style="color:#94a3b8;">Why is this harder than canceling a subscription? →</a></p>
 </div>
 <div class="card card-caution" style="margin-bottom:1.5rem;">
   <h2>⚠️ Read this before anything else</h2>
@@ -2742,7 +2749,7 @@ def main():
     with open(f"{PUBLIC_DIR}/meta/index.html", "w") as f:
         f.write(build_generic_hub(services, "meta", "meta",
             "Leaving the Meta Ecosystem",
-            "Facebook, Instagram, WhatsApp, and Threads. Here's how to reduce your exposure to Meta's surveillance infrastructure.",
+            "Facebook, Instagram, WhatsApp, and Threads. Here's how to reduce your exposure to Meta's surveillance infrastructure. <a href='/what-is-lock-in/' style='color:#94a3b8;font-size:.85rem;'>Why is this harder than canceling? &rarr;</a>",
             "Practical guides to leaving Facebook, Instagram, WhatsApp, and Threads. No lectures. Just the steps.",
             f"{SITE_URL}/meta/",
             lose_html='''<div class="card card-honest" style="margin-bottom:1.5rem;">
@@ -2776,7 +2783,7 @@ def main():
     with open(f"{PUBLIC_DIR}/microsoft/index.html", "w") as f:
         f.write(build_generic_hub(services, "microsoft", "microsoft",
             "Leaving the Microsoft Ecosystem",
-            "Windows, Microsoft 365, LinkedIn, and OneDrive. Here's how to reduce your dependency on Microsoft's stack.",
+            "Windows, Microsoft 365, LinkedIn, and OneDrive. Here's how to reduce your dependency on Microsoft's stack. <a href='/what-is-lock-in/' style='color:#94a3b8;font-size:.85rem;'>Why is this harder than canceling? &rarr;</a>",
             "Practical guides to leaving Windows, Microsoft 365, LinkedIn, and OneDrive. Honest about what stays Windows-only.",
             f"{SITE_URL}/microsoft/",
             lose_html='''<div class="card card-honest" style="margin-bottom:1.5rem;">
