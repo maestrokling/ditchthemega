@@ -449,10 +449,11 @@ def build_sellers_hub(services):
     )
 
 def build_amazon_hub(services):
-    # Filter to non-meta, non-seller services
+    # Filter to Amazon services only (exclude other mega-corp categories)
+    NON_AMAZON = {"meta", "seller", "google", "apple", "microsoft", "alternatives"}
     cards = ""
     for svc in services:
-        if svc.get("category") in ("meta", "seller"):
+        if svc.get("category") in NON_AMAZON:
             continue
         slug = svc["slug"]
         title = svc["title"]
