@@ -932,19 +932,31 @@ def build_about():
 </div>
 <section class="card">
   <h2>What this is</h2>
-  <p>A free, practical guide to extracting yourself from Big Tech ecosystems. Not a boycott manifesto. Not a moral lecture. A technical and practical guide that assumes you've already decided to reduce your dependence and need to know how.</p>
-  <p>The positioning: <em>You've decided to leave. Here's the map.</em></p>
+  <p>A free, practical guide to extracting yourself from Big Tech ecosystems: Amazon, Google, Apple, Meta, and Microsoft. Not a boycott manifesto. Not a moral lecture. A practical guide that assumes you\'ve already decided to reduce your dependence and need to know how.</p>
+  <p>You\'ve decided to leave. Here\'s the map.</p>
 </section>
 <section class="card">
-  <h2>What this isn't</h2>
-  <p>This site doesn't tell you <em>why</em> to leave Amazon. There are a hundred articles and a Netflix documentary for that. This site tells you <em>how</em>. Service by service. With real alternatives and honest assessments of what you gain and lose.</p>
+  <h2>What this isn\'t</h2>
+  <p>This site doesn\'t tell you <em>why</em> to leave. There are a hundred articles and documentaries for that. This site tells you <em>how</em> — service by service, company by company, with real alternatives and honest assessments of what you gain and what you lose. Including the things Big Tech does genuinely well that no single alternative matches.</p>
+</section>
+<section class="card">
+  <h2>What we cover</h2>
+  <ul>
+    <li><a href="/amazon/">Amazon</a> — Prime, Kindle, Audible, Alexa, Ring, Photos, Pharmacy, and more</li>
+    <li><a href="/google/">Google</a> — Gmail, Search, Maps, YouTube, Photos, Android</li>
+    <li><a href="/apple/">Apple</a> — iCloud, iTunes purchases, App Store, iMessage, hardware migration</li>
+    <li><a href="/meta/">Meta</a> — Facebook, Instagram, WhatsApp, Threads</li>
+    <li><a href="/microsoft/">Microsoft</a> — Windows, Microsoft 365, LinkedIn, OneDrive, Xbox</li>
+    <li><a href="/alternatives/">Alternatives</a> — email, cloud storage, browsers, messaging, password managers, VPN, and more</li>
+    <li><a href="/guides/secure-home-automation/">Secure Home Automation</a> — leaving Alexa and Google Home for a local-first setup</li>
+  </ul>
 </section>
 <section class="card">
   <h2>Principles</h2>
   <ul>
     <li><strong>No data collection.</strong> We don't track you. We don't have analytics. We don't use cookies.</li>
     <li><strong>No paid recommendations.</strong> No company pays to be listed. Recommendations exist because they're good.</li>
-    <li><strong>Honest about tradeoffs.</strong> We have a page called <a href="/amazon/what-you-lose/">What You Actually Lose</a>. Amazon does some things well. We say so.</li>
+    <li><strong>Honest about tradeoffs.</strong> Every company guide has a "what you genuinely lose" section. Big Tech does some things well. We say so.</li>
     <li><strong>Open to corrections.</strong> Something wrong or out of date? Corrections and improvements are welcome — <a href="/about/#affiliate">see our principles</a>.</li>
   </ul>
 </section>
@@ -965,7 +977,7 @@ def build_about():
 </section>
 <section class="card">
   <h2>Report an error</h2>
-  <p>Something wrong or out of date? <a href="mailto:hello@ditchthemega.com">Let us know</a>.</p>
+  <p>Something wrong or out of date? <a href="mailto:info@ditchthemega.com">Let us know</a>.</p>
 </section>'''
 
     return page_shell(
