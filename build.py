@@ -179,7 +179,9 @@ def page_shell(title, description, canonical, content, extra_head=""):
   <meta property="og:description" content="{e(description)}">
   <meta property="og:url" content="{e(canonical)}">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://ditchthemega.com/og-image.png">
+<meta name="twitter:image" content="https://ditchthemega.com/og-image.png">
   <link rel="stylesheet" href="/style.css">
   {extra_head}
 </head>
