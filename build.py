@@ -1577,6 +1577,15 @@ def build_apple_hub(services):
   </div>
 </a>'''
 
+    # Add Privacy Comparison as a custom card (not YAML-driven)
+    cards += '''<a href="/apple/privacy-comparison/" class="service-card">
+  <div class="service-card-inner">
+    <h2>Privacy vs Lock-In</h2>
+    <p>Why Apple&#39;s privacy is different than its lock-in — and what switching really means</p>
+    <span class="difficulty d2">Moderate</span>
+  </div>
+</a>'''
+
     content = f'''<div class="page-hero amazon-hero">
   <div class="breadcrumb"><a href="/">Home</a> › Apple</div>
   <h1>Leaving the Apple Ecosystem</h1>
@@ -2620,6 +2629,81 @@ def build_apple_your_content():
         content
     )
 
+def build_apple_privacy_comparison():
+    content = '''
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="/apple/">Apple</a> › Privacy vs Lock-In</div>
+  <h1>The Privacy Question</h1>
+  <p class="subtitle">We need to have an honest conversation before you leave Apple.</p>
+</div>
+<div class="card card-honest" style="margin-bottom:1.5rem;">
+  <p>This entire site exists to help you leave Big Tech ecosystems. Every guide we publish documents the lock-in, the data you can take with you, and the alternatives that exist. We believe you should be able to leave any ecosystem freely, and we build the tools to make that possible.</p>
+  <p>But leaving Apple is not the same as leaving Google, Amazon, or Meta. And the reason it&#39;s different is privacy.</p>
+  <p>Apple is not perfect. Apple&#39;s ecosystem is expensive, proprietary, and deliberately designed to make leaving difficult. The hardware lock-in is real. The DRM on purchased content is real. The iMessage social pressure is real. These are legitimate reasons to leave, and the rest of this guide covers all of them.</p>
+  <p>But on the specific question of how your data is handled, Apple is meaningfully better than the alternatives most people would switch to. If you leave Apple for Google&#39;s ecosystem without understanding this, you may solve a lock-in problem by creating a surveillance problem. That is a trade you should make knowingly, not accidentally.</p>
+</div>
+
+<h2>What Apple Actually Does Well</h2>
+<p>Apple&#39;s business model is selling hardware at a premium. Google&#39;s business model is selling your attention to advertisers. This difference shapes every product decision both companies make.</p>
+<ul>
+  <li><strong>On-device processing.</strong> Apple processes a remarkable amount of data on your device rather than sending it to their servers. Siri requests, photo recognition, text predictions, health data analysis, and many machine learning features run locally on your iPhone or Mac. When Apple does send data to their servers, they use techniques like differential privacy to add statistical noise that prevents individual identification. Google processes most of this on their servers, because processing it on their servers is how they build the advertising profile that funds the company.</li>
+  <li><strong>App Tracking Transparency.</strong> In 2021, Apple introduced a requirement that apps ask your permission before tracking you across other apps and websites. This single feature cost Meta an estimated $10 billion in advertising revenue in its first year. It is the most consequential consumer privacy feature any major tech company has shipped. Google has not implemented anything equivalent on Android; doing so would undermine their own advertising business.</li>
+  <li><strong>Minimal advertising profile.</strong> Apple runs an advertising business, but it is small relative to their revenue and does not depend on a detailed behavioral profile. Apple&#39;s ad targeting is based on broad demographics and the content you&#39;re currently viewing, not on a comprehensive history of your searches, locations, emails, and browsing.</li>
+  <li><strong>End-to-end encryption by default.</strong> iMessage and FaceTime are end-to-end encrypted. Apple cannot read your messages or listen to your calls even if compelled by law enforcement (assuming you have Advanced Data Protection enabled). Google Messages has added end-to-end encryption for RCS, but it is not enabled by default in all configurations.</li>
+  <li><strong>Advanced Data Protection.</strong> Apple offers an option to end-to-end encrypt nearly all iCloud data, including backups, photos, notes, and more. When enabled, Apple cannot access this data. This is a genuine zero-knowledge architecture for your cloud storage. Google does not offer an equivalent for Google Drive, Gmail, or Google Photos.</li>
+  <li><strong>Health data.</strong> Apple Health data is encrypted on-device and in iCloud (with Advanced Data Protection). Apple has consistently refused to monetize health data or share it with third parties.</li>
+</ul>
+
+<h2>What Apple Does Not Do Well</h2>
+<p>Acknowledging Apple&#39;s privacy strengths does not mean ignoring Apple&#39;s privacy weaknesses.</p>
+<ul>
+  <li><strong>Siri data collection.</strong> Apple was caught in 2019 having human contractors listen to Siri recordings for quality assurance without adequate disclosure. They reformed the program, but the incident revealed that &#34;privacy-focused&#34; does not mean &#34;perfect.&#34;</li>
+  <li><strong>CSAM scanning controversy.</strong> In 2021, Apple announced plans to scan photos on users&#39; devices for child sexual abuse material before upload to iCloud. The backlash was severe; privacy advocates argued that on-device scanning created a surveillance infrastructure that could be expanded to other content. Apple shelved the plan, but the fact that they designed it at all raised questions about their commitment to the principle that your device is yours.</li>
+  <li><strong>China and government compliance.</strong> Apple stores Chinese users&#39; iCloud data on servers operated by a Chinese state-owned company. This means the Chinese government has potential access to Chinese Apple users&#39; data. Apple&#39;s privacy protections are strong in countries with strong privacy laws. They are weaker where governments demand access.</li>
+  <li><strong>Closed source.</strong> Apple&#39;s software is largely closed source. When Apple says they process data on-device, you are trusting their claim. You cannot verify it the way you can verify an open-source application.</li>
+  <li><strong>App Store monopoly and data access.</strong> Apple&#39;s own apps have privileged access to device data that third-party apps do not. Apple is both the platform operator and a competitor to apps on that platform.</li>
+</ul>
+
+<h2>The Comparison That Matters</h2>
+<p>If you leave Apple, where are you going? That determines whether the move is a privacy upgrade, a lateral move, or a downgrade.</p>
+<ul>
+  <li><strong>Apple → Google (Android with Google Services):</strong> This is a privacy downgrade for most people. You gain openness and lose the privacy architecture Apple has built over fifteen years. Google will know your location, searches, emails, app usage, contacts, and browsing history.</li>
+  <li><strong>Apple → De-Googled Android (GrapheneOS on a Pixel):</strong> This is a privacy upgrade. GrapheneOS strips Google&#39;s surveillance infrastructure from Android while maintaining app compatibility. You get an open-source operating system and no data flowing to Google or Apple. The tradeoff is real — setup requires flashing a phone and some apps may not work correctly.</li>
+  <li><strong>Apple → Linux (desktop/laptop):</strong> A privacy upgrade on the desktop side. Linux distributions collect no telemetry by default. The tradeoff is software compatibility — some professional applications are not available on Linux.</li>
+  <li><strong>Apple → Microsoft (Windows):</strong> A lateral move at best. Windows collects telemetry by default and integrates with Microsoft&#39;s cloud services in ways that mirror Google&#39;s data collection. You gain hardware choice and lose Apple&#39;s privacy architecture.</li>
+</ul>
+
+<h2>The Honest Assessment</h2>
+<div class="card card-caution">
+  <p>If you are leaving Apple because of lock-in, DRM, hardware cost, repairability, or because you disagree with Apple&#39;s control over what you can install on your own device — these are all legitimate reasons. This guide exists to help you do it.</p>
+  <p>If you are leaving Apple because of privacy — pause. Apple&#39;s privacy is not perfect, and we have documented the weaknesses above. But Apple&#39;s privacy architecture is, on balance, the strongest of any major consumer technology ecosystem. Leaving Apple for Google without additional steps will almost certainly result in more of your personal data being collected, analyzed, and monetized.</p>
+  <p>The best outcome is not &#34;leave Apple for Google.&#34; The best outcome is &#34;leave Apple for an open, privacy-respecting stack.&#34; That means GrapheneOS on your phone, Linux on your computer, Proton for email, Signal for messaging, and DRM-free content purchases going forward. This is achievable — it is also more work than switching to a Samsung Galaxy with Google&#39;s defaults.</p>
+  <p>We are not telling you to stay with Apple. We are telling you to know what you are choosing.</p>
+</div>
+
+<h2>One More Thing</h2>
+<p>There is an irony in a site called &#34;Ditch the Mega&#34; telling you that one of the megas is better than the others on a specific dimension. We are comfortable with that irony because this site is built on honesty, not ideology. We are not anti-Big Tech for the sake of being anti-Big Tech. We are pro-choice in the literal sense: you should be able to choose your tools, your ecosystem, your level of privacy, and your level of convenience — with full information, not a sales pitch from any direction, including ours.</p>
+<p>Apple makes it hard to leave. That is a problem, and we document it. Apple also makes it hard for other companies to surveil you. That is a feature, and we document that too. Both things are true.</p>
+
+<div class="card" style="margin-top:2rem;">
+  <h3>Related guides</h3>
+  <ul>
+    <li><a href="/apple/">Full Apple exit guide</a></li>
+    <li><a href="/apple/apple-your-content/">Your Digital Content — DRM, what you keep, what you lose</a></li>
+    <li><a href="/google/cutting-the-pipeline/">Cutting the Google Pipeline — if you&#39;re considering Android, read this first</a></li>
+    <li><a href="/guides/secure-home-automation/">Replacing HomeKit with Home Assistant</a></li>
+    <li><a href="/alternatives/">Privacy-respecting alternatives across all categories</a></li>
+  </ul>
+</div>
+'''
+    return page_shell(
+        "Apple Privacy vs Google: Honest Comparison Before You Switch | DitchTheMega",
+        "Comparing Apple and Google on privacy \u2014 where Apple wins, where it doesn&#39;t, and what switching actually means for your data.",
+        f"{SITE_URL}/apple/privacy-comparison/",
+        content
+    )
+
+
 def main():
     os.makedirs(PUBLIC_DIR, exist_ok=True)
 
@@ -2722,6 +2806,13 @@ def main():
     with open(f"{out_dir}/index.html", "w") as f:
         f.write(build_apple_your_content())
     print("Built: apple/apple-your-content/index.html")
+
+    # Apple Privacy Comparison page (custom, not YAML-driven)
+    out_dir = f"{PUBLIC_DIR}/apple/privacy-comparison"
+    os.makedirs(out_dir, exist_ok=True)
+    with open(f"{out_dir}/index.html", "w") as f:
+        f.write(build_apple_privacy_comparison())
+    print("Built: apple/privacy-comparison/index.html")
 
     # What Is Lock-In framework page
     out_dir = f"{PUBLIC_DIR}/what-is-lock-in"
